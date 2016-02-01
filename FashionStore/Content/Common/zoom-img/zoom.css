@@ -1,0 +1,35 @@
+﻿
+
+.original {
+    float: left;
+    position: absolute;
+    overflow: hidden;
+}
+.zoomed{
+    float: left;
+    position: relative;
+    overflow: hidden;
+    left: 284px;
+    z-index: 1000;
+}
+
+
+
+.zoomed img{
+    height: 200px;
+    position: relative;
+}
+
+.mark {
+    opacity: .3;
+    border: 6px solid #fff;
+    background: #eee;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+
+
+

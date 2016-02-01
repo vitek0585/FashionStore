@@ -1,0 +1,1 @@
+Добавление поддержки медиазапросов min-width и max-width в Internet Explorer версий 6, 7 и 8
