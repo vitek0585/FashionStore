@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>about us</value>
+  </data>
+  <data name="Accept" xml:space="preserve">
+    <value>accept</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>my account</value>
+  </data>
+  <data name="AddToCart" xml:space="preserve">
+    <value>Add to cart</value>
+  </data>
+  <data name="AddToCartError" xml:space="preserve">
+    <value>the product has not been  added to the cart</value>
+  </data>
+  <data name="AddToCartSuccess" xml:space="preserve">
+    <value>the product has been successfully added to the cart</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Administration</value>
+  </data>
+  <data name="AllProducts" xml:space="preserve">
+    <value>All products</value>
+  </data>
+  <data name="AnotherError" xml:space="preserve">
+    <value>An error occurred</value>
+  </data>
+  <data name="Availability" xml:space="preserve">
+    <value>Availability</value>
+  </data>
+  <data name="BagEmpty" xml:space="preserve">
+    <value>your cart is empty</value>
+  </data>
+  <data name="BlockqouteDressFor" xml:space="preserve">
+    <value>More than 100 world-famous labels, including his own line of Fashion. As well as daily tips on style and fashion news.</value>
+  </data>
+  <data name="BlockqouteDressForTitle" xml:space="preserve">
+    <value>YOUR FAVORITE BRANDS
+UNDER THE SAME ROOF</value>
+  </data>
+  <data name="BuyNow" xml:space="preserve">
+    <value>buy now</value>
+  </data>
+  <data name="BuySuccess" xml:space="preserve">
+    <value>your order is accepted, in the near time our employee of shop will contact with you!</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CarouselTitle" xml:space="preserve">
+    <value>A collection of stylish dresses</value>
+  </data>
+  <data name="Cart" xml:space="preserve">
+    <value>Cart</value>
+  </data>
+  <data name="CartItems" xml:space="preserve">
+    <value>There is {0} item in your cart</value>
+  </data>
+  <data name="CartNoItems" xml:space="preserve">
+    <value>Your cart is empty</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>сategory</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="Checkout" xml:space="preserve">
+    <value>checkout</value>
+  </data>
+  <data name="ClearFilter" xml:space="preserve">
+    <value>clear filter</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>color</value>
+  </data>
+  <data name="ConfEmailPage" xml:space="preserve">
+    <value>Confirm Email</value>
+  </data>
+  <data name="ConfEmailSucces" xml:space="preserve">
+    <value>Thank you for confirming your email</value>
+  </data>
+  <data name="ConfirmPswd" xml:space="preserve">
+    <value>confirm password</value>
+  </data>
+  <data name="ConfirmPswdInValid" xml:space="preserve">
+    <value>password is not confirm</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>contact us</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="CurrencyUAH" xml:space="preserve">
+    <value>Ukraine Hryvna - UAH</value>
+  </data>
+  <data name="CurrencyUSD" xml:space="preserve">
+    <value>Dollar - USD</value>
+  </data>
+  <data name="CurrentLang" xml:space="preserve">
+    <value>en</value>
+  </data>
+  <data name="DataError" xml:space="preserve">
+    <value>data are not correct</value>
+  </data>
+  <data name="Desc" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Descriptions" xml:space="preserve">
+    <value>On the web-site of shop, you will be able to pick up a clothing suited to every fancy, ten of thousands of commodities is presented in him. Fashion renews the assortment every environment (by a commodity that was returned). Besides the brand of masculine, woman clothing, bags, and accessories in an online shop the known British brands, and also most popular brands of Europe and USA, are collected: Esprit, G - Star, Levi's, Ray - Ban, Diesel, Adidas et al. The assortment of commodity is counted mainly on young people in age from 16 35 to. Besides a shoe, clothing, bags and accessories of Fashion offers the wide assortment of cosmetic of the known brands of BOURJOIS, Rimmel London, Dr. Bronner. Also in a presence lower linen, accessories for hair, exclusive bijouterie, ecologically clean clothing and bags making on the basis of the time-processed raw material.</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="DoYouWantRemove" xml:space="preserve">
+    <value>do you want to delete the current product from the cart?</value>
+  </data>
+  <data name="DressFor" xml:space="preserve">
+    <value>dress for</value>
+  </data>
+  <data name="EmailDuplicat" xml:space="preserve">
+    <value>specified email already exists</value>
+  </data>
+  <data name="EmailInValid" xml:space="preserve">
+    <value>Email is required</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Exclusive" xml:space="preserve">
+    <value>exclusive</value>
+  </data>
+  <data name="ExtLgConf" xml:space="preserve">
+    <value>the page is external login confirmation</value>
+  </data>
+  <data name="FastCheckout" xml:space="preserve">
+    <value>quick order</value>
+  </data>
+  <data name="FastOrderTool" xml:space="preserve">
+    <value>You will need to indicate
+only the name and phone number</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>filter</value>
+  </data>
+  <data name="FilterPriceMore" xml:space="preserve">
+    <value>and more &lt;b class='color-h'&gt; {{{{(items|countPrice:{0}:{1}).length}}}}&lt;/b&gt;</value>
+  </data>
+  <data name="FootWearW" xml:space="preserve">
+    <value>women's shoes designed for casual wear , work, and recreation</value>
+  </data>
+  <data name="ForMan" xml:space="preserve">
+    <value>man</value>
+  </data>
+  <data name="ForWoman" xml:space="preserve">
+    <value>woman</value>
+  </data>
+  <data name="FullOrderTool" xml:space="preserve">
+    <value>The full order processing</value>
+  </data>
+  <data name="GoView" xml:space="preserve">
+    <value>view</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="InStock" xml:space="preserve">
+    <value>In stock</value>
+  </data>
+  <data name="InvalidLogin" xml:space="preserve">
+    <value>invalid login or password,email not confirmed,</value>
+  </data>
+  <data name="IsMan" xml:space="preserve">
+    <value>Man</value>
+  </data>
+  <data name="IsWoman" xml:space="preserve">
+    <value>Woman</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LatestPosts" xml:space="preserve">
+    <value>Latest posts</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Log In</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>Log Off</value>
+  </data>
+  <data name="Main" xml:space="preserve">
+    <value>main</value>
+  </data>
+  <data name="MoreUs" xml:space="preserve">
+    <value>More about us</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>name</value>
+  </data>
+  <data name="NameDuplicat" xml:space="preserve">
+    <value>specified name already exists</value>
+  </data>
+  <data name="NameInValid" xml:space="preserve">
+    <value>the user name should be minimum 3 and maximum 20 of latin characters, and first character must be a letter</value>
+  </data>
+  <data name="NewGoods" xml:space="preserve">
+    <value>New Arrivals</value>
+  </data>
+  <data name="NoEnoughtGoods" xml:space="preserve">
+    <value>Not enough goods {0} in stock (left {1})</value>
+  </data>
+  <data name="NotInStock" xml:space="preserve">
+    <value>Not in stock</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>password</value>
+  </data>
+  <data name="PaswdInValid" xml:space="preserve">
+    <value>Password is required (min 6 and max 20 latin characters) and start the latter</value>
+  </data>
+  <data name="PayMentMeth" xml:space="preserve">
+    <value>&lt;b&gt;PAYMENT METHODS:&lt;b&gt;&lt;/br&gt;
+Prepay by credit card or through PayPal.
+( If you want to pay for purchases using PayPal, Please ,
+select a currency other than the hryvnia )</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="ProductShop" xml:space="preserve">
+    <value>Products in shop</value>
+  </data>
+  <data name="Qty" xml:space="preserve">
+    <value>Qty</value>
+  </data>
+  <data name="RandProd" xml:space="preserve">
+    <value>random products</value>
+  </data>
+  <data name="ReadMore" xml:space="preserve">
+    <value>Read more</value>
+  </data>
+  <data name="RecentlyViewed" xml:space="preserve">
+    <value>Recently Viewed Products</value>
+  </data>
+  <data name="RegConfirmMessage" xml:space="preserve">
+    <value>your email has been sent a letter , click on the link above it and confirm registration</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Registration</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Remember me?</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Russian" xml:space="preserve">
+    <value>Russian</value>
+  </data>
+  <data name="Sale" xml:space="preserve">
+    <value>Sale</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="ShopOpt" xml:space="preserve">
+    <value>Shopping Options</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>size</value>
+  </data>
+  <data name="SortBy" xml:space="preserve">
+    <value>sort by</value>
+  </data>
+  <data name="SortByNew" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="SortByNone" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="SortByPriceAsc" xml:space="preserve">
+    <value>Price ascending</value>
+  </data>
+  <data name="SortByPriceDesc" xml:space="preserve">
+    <value>Price descending </value>
+  </data>
+  <data name="SubCategory" xml:space="preserve">
+    <value>Subcategory</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>action executed successfully</value>
+  </data>
+  <data name="Summa" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="PhoneInValid" xml:space="preserve">
+    <value>phone number is not valid ( the number should consist of 10 to 15 digits)</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>phone number</value>
+  </data>
+  <data name="TotalCoast" xml:space="preserve">
+    <value>total cost</value>
+  </data>
+  <data name="ToUp" xml:space="preserve">
+    <value>to up</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>purchase date </value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>history</value>
+  </data>
+  <data name="SocialAccount" xml:space="preserve">
+    <value>social account</value>
+  </data>
+  <data name="UserInfo" xml:space="preserve">
+    <value>information</value>
+  </data>
+  <data name="UserRoom" xml:space="preserve">
+    <value>personal cabinet of user</value>
+  </data>
+</root>
