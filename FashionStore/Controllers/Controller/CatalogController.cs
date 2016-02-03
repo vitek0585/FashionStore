@@ -1,9 +1,7 @@
 ﻿using System.Web.Mvc;
 using FashionStore.Controllers.Base;
-using FashionStore.Core.AppValue;
 using FashionStore.Models.Interfaces;
 using FashionStore.Service.Interfaces.Services;
-using FashionStore.WorkFlow.ViewedStorage;
 using WebCookie.Interfaces;
 
 namespace FashionStore.Controllers.Controller
@@ -61,7 +59,7 @@ namespace FashionStore.Controllers.Controller
         {
             var data = _categoryService.GetInformationAboutCategory<IFilterModel>(id, GetCurrentCurrency(),
                 GetCurrentLanguage());
-            return PartialView(data);
+            return PartialView("Partial/_Filter",data);
         }
 
         [ChildActionOnly, Route("Sale/{type}/{discount:min(0):max(100):int?}")]
@@ -69,27 +67,11 @@ namespace FashionStore.Controllers.Controller
         {
             var data = _categoryService.GetCategoriesSale<ICatModel>(type, GetCurrentLanguage(), discount);
 
-            return PartialView(data);
+            return PartialView("Partial/_Sale",data);
         }
 
         #endregion
 
-        #region Helper
-        [NonAction]
-        private RecentlyViewedStorage GetRecentlyViewed(int? id)
-        {
-            var viewed = (RecentlyViewedStorage)Session[ValuesApp.RecentlyViewed];
-            if (viewed == null)
-            {
-                Session[ValuesApp.RecentlyViewed] = viewed = new RecentlyViewedStorage(_sizeStorageViewed);
-            }
-
-            if (id.HasValue)
-                viewed.Add(id.Value);
-
-            return viewed;
-        }
-
-        #endregion
+        
     }
 }

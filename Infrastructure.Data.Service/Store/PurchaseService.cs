@@ -20,7 +20,7 @@ namespace FashionStore.Infastructure.Data.Service.Store
         private ISalePosRepository _salePos;
         private ISaleRepository _sale;
         private IExchangeRatesService _exchangeRates;
-        public PurchaseService(IGoodsRepository good, IClassificationGoodRepository classificationGood, IUnitOfWork unit,
+        public PurchaseService(IGoodsRepository good, IClassificationGoodRepository classificationGood, IUnitOfWorkStore unit,
             ISaleRepository sale, ISalePosRepository salePos, IExchangeRatesService exchangeRates)
         {
             _exchangeRates = exchangeRates;

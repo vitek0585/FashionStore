@@ -11,7 +11,7 @@ namespace FashionStore.Infastructure.Data.Service.Store
     public class SaleService : EntityService<Sale>, ISaleService
     {
         private IExchangeRatesService _ratesService;
-        public SaleService(IUnitOfWork unitOfWork, ISaleRepository repository, IExchangeRatesService ratesService)
+        public SaleService(IUnitOfWorkStore unitOfWork, ISaleRepository repository, IExchangeRatesService ratesService)
             : base(unitOfWork, repository)
         {
             _ratesService = ratesService;

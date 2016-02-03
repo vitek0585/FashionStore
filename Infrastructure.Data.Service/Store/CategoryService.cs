@@ -20,7 +20,7 @@ namespace FashionStore.Infastructure.Data.Service.Store
 
         private ICategoryTypeRepository _typeRepository;
         private IExchangeRatesService _exchangeRates;
-        public CategoryService(IUnitOfWork unitOfWork, ICategoryRepository repository, ICategoryTypeRepository typeRepository,
+        public CategoryService(IUnitOfWorkStore unitOfWork, ICategoryRepository repository, ICategoryTypeRepository typeRepository,
             IExchangeRatesService exchangeRates, IGoodsRepository goods)
             : base(unitOfWork, repository)
         {
@@ -79,7 +79,7 @@ namespace FashionStore.Infastructure.Data.Service.Store
                        });
 
 
-            return ReturnValue<TResult>(data);
+            return Mapper.DynamicMap<IEnumerable<TResult>>(data); //ReturnValue<TResult>(data);
 
         }
 

@@ -20,7 +20,7 @@ namespace FashionStore.Infastructure.Data.Service.Store
         private ICategoryRepository _category;
         private IExchangeRatesService _exchangeRates;
 
-        public GoodService(IUnitOfWork unitOfWork, IGoodsRepository repository, ICategoryRepository category,
+        public GoodService(IUnitOfWorkStore unitOfWork, IGoodsRepository repository, ICategoryRepository category,
             IExchangeRatesService exchangeRates)
             : base(unitOfWork, repository)
         {

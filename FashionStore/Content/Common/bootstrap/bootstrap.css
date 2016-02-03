@@ -1,17 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
-/*!
- * bootswatch v3.3.5
- * Homepage: http://bootswatch.com
- * Copyright 2012-2015 Thomas Park
- * Licensed under MIT
- * Based on Bootstrap
-*/
-/*!
- * Bootstrap v3.3.5 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -271,9 +259,9 @@ th {
   font-family: 'Glyphicons Halflings';
   /*src: url('/fonts/glyphicons-halflings-regular.eot');*/
  
-   src: url('../fonts/glyphicons-halflings-regular.eot');
+   src: url('/fonts/glyphicons-halflings-regular.eot');
 
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),  url('/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -2556,7 +2544,7 @@ input[type="checkbox"]:focus {
 output {
   display: block;
   padding-top: 9px;
-  ToString(CultureInfo.GetCultureInfo("en-us"))ze: 15px;
+  
   line-height: 1.4;
   color: #6f6f6f;
 }

@@ -1,0 +1,93 @@
+﻿@model ICategoryDescModel
+
+@{
+    ViewBag.Title = string.Concat(Model.CategoryName, "-", Model.TypeName);
+}
+<div id="notifyWin" class="success-notify notify"></div>
+<div class="container" ng-controller="prodCtrl">
+  
+    <div class="row row-nomargin row-nopadding">
+        <div class="col-xs-12">
+            @Html.GenerateBreadCrumbs(new BreadCrumbsCategory(Model.CategoryId, Url))
+        </div>
+        @*left side*@
+        <div class="col-xs-3">
+            @Html.Action("Filter", new {id = Model.CategoryId})
+            <hr/>
+            <h4 class="text-center text-uppercase">@Resource.Exclusive</h4>
+            @Html.Partial("Widgets/_ExclusiveGood")
+        </div>
+        @*right side*@
+        <div class="col-xs-9 all-product" ng-controller="pageCtrl" ng-init="category=@Model.CategoryId;clickPage(@ViewBag.Page)">
+            <div class="row row-nomargin">
+                <div class="text-center">
+                    <p class="separator"></p>
+                    <span class="separator-text">@Model.CategoryName</span>
+                </div>
+            </div>
+            @if (Model.Childrens.Any())
+            {
+                <div class="text-center text-uppercase color-h">@Resource.SubCategory</div>
+                <div class="flexbox-container">
+                    <ul class="list-inline">
+                        @foreach (var child in Model.Childrens)
+                        {
+                            <li>
+                                <a href="@Url.Action("Category", new {type = child.TypeByHref, id = child.CategoryId})">@child.CategoryName</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            }
+            <div class="row" style="min-height: 600px; margin-top: 5px">
+                @*Sort by*@
+                <div class="product-fomater text-right">
+                    <span class="text-uppercase small">@Resource.SortBy&nbsp;</span>
+                    <div az-suggest-box
+                         sb-list="[{name:'@Resource.SortByNone',sort:'none'},{name:'@Resource.SortByNew',sort:'date'},{name:'@Resource.SortByPriceDesc',sort:'priceDesc'},{name:'@Resource.SortByPriceAsc',sort:'priceAsc'}]"
+                         sb-model-selected="filter.sortBySelect"
+                         sb-selected-list-item-class="sb-list-item-checked"
+                         sb-close-list-on-select="true"
+                         sb-select-first-list-item="true"
+                         sb-not-remove-current="true"
+                         sb-max-selection="1"
+                         class="suggest-box sort-by text-left" ng-cloak>
+                        <div sb-trigger-area class="select">
+                            <div class="input">
+                                <div sb-selection-item>{{s.name}}</div>
+                            </div>
+                            <button><i class="fa fa-chevron-down"></i></button>
+                        </div>
+                        <ul class="dropdown">
+                            <li sb-dropdown-item class="item">{{i.name}}</li>
+                        </ul>
+                    </div>
+                </div>
+                @*End Sort by*@
+                <div ng-repeat="item in items|limitTo:items.length" class="col-xs-4">
+                    @Html.Partial("Widgets/_ProductsPartial")
+                </div>
+                <div class="loader-products" ng-show="isWait">
+                    <div class="flexbox-container" style="height: 100%">
+                        <img src="~/Image/loader.gif" alt="loading" style="height: 3em; width: 3em">
+                    </div>
+                </div>
+            </div>
+            <div paging-setup click-page="clickPage" info="info" class="paging"></div>
+        </div>
+        @*End Right side*@
+    </div>
+    @Html.Action("RecentlyViewedUser","Good")
+    @*social*@
+    @Html.Partial("Widgets/_SocialPartial")
+    @*End social*@
+    @Html.Partial("Widgets/_PayCardPartial")
+</div>
+
+
+@section scripts
+{
+    @Styles.Render("~/bundles/categoryCss")
+    @Scripts.Render("~/bundles/categoryJs")
+    
+}

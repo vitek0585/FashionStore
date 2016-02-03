@@ -1,0 +1,37 @@
+﻿@model IEnumerable<IGoodModel>
+@{
+    var hrefImage = "/Image/Products/";
+    var hrefProduct = "/Fashion/Good/";
+}
+@if (Model.Any())
+{
+    <div class="row row-nomargin">
+        <div class="text-center">
+            <p class="separator"></p>
+            <span class="separator-text">@Resource.RecentlyViewed</span>
+        </div>
+    </div>
+    <slick infinite="true" slides-to-show="5" slides-to-scroll="1" arrows="true" autoplay-speed="2000"
+           speed="500" autoplay="true" 
+           id="carousel-recently-viewed" ng-cloak="true">
+        @foreach (var item in Model)
+        {
+            int id = item.GoodId;
+            string photo = item.Photos.FirstOrDefault();
+            photo = photo != null ? string.Concat(hrefImage, photo) : "/Image/not-image.png";
+            string goodName = item.GoodName;
+
+            <div class="widget-random">
+                <a href="@hrefProduct@id">
+                    <div class="img hvr-recently-viewed rv-flexbox-container" style="background-image: url(@photo)">
+                        <p class="text-center text-uppercase rv-name-good">
+                            @goodName
+                        </p>
+                    </div>
+                </a>
+            </div>
+        }
+    </slick>
+}
+
+

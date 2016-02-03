@@ -23,7 +23,7 @@ namespace FashionStore.Infastructure.Data.Service.Store
         private const string _usd = "usd";
         private static object _sync = new object();
         private IExchangeRatesRepository _exchangeRates;
-        public ExchangeRatesService(IUnitOfWork unitOfWork, IExchangeRatesRepository repository, string url)
+        public ExchangeRatesService(IUnitOfWorkStore unitOfWork, IExchangeRatesRepository repository, string url)
             : base(unitOfWork, repository)
         {
             _exchangeRates = repository;

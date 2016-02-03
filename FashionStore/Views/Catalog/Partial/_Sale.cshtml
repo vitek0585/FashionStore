@@ -1,0 +1,22 @@
+﻿@model ITypeCategoryModel<ICategoryModel>
+
+@if (Model.Items.Any())
+{
+    <div class="margin-top">
+        <slick infinite="true" slides-to-show="4" slides-to-scroll="2" arrows="false" autoplay-speed="2000"
+               speed="500" autoplay="false" dots="true" >
+            @foreach (var category in Model.Items)
+            {
+                <div style="position: relative;display: inline-block;" class="category-widg">
+                    <div class="fast-info flexbox-container">
+                        <div class="text-center">
+                            <a href="@Url.Action("Category", "Catalog", new {type = Model.TypeByHref, id = category.CategoryId})" class="btn btn-primary btn-buy">@Resource.GoView</a>
+                        </div>
+                    </div>
+                    <div class="photo-sale" style="background-image:url(/Image/Categories/@category.Photo)"></div>
+                    <div class="text-center speed-info-title title-text-sale category-text-widg">@category.CategoryName</div>
+                </div>
+            }
+        </slick>
+    </div>
+}

@@ -1,0 +1,10 @@
+﻿<div class="row row-nomargin account-modal">
+    <div class="col-xs-8 col-xs-push-2">
+        <h2 class="text-center text-uppercase account-title">@Resource.LogIn</h2>
+        @Html.Partial("Auth/Form/LoginForm")
+        <spin-wait show-when="responseHandler.isBusy" />
+    </div>
+    
+    @Html.Partial("Auth/SocialButton")
+</div>
+

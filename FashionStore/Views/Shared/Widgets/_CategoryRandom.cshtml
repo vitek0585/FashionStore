@@ -1,0 +1,16 @@
+﻿@foreach (var cat in ViewBag.RandCategories as IEnumerable<ICategoryModel>)
+{
+    <div class="col-xs-3 category-widg">
+        <div style="position: relative;">
+            <div class="fast-info flexbox-container">
+                <div class="text-center">
+                    <a href="@Url.Action("Category","Catalog",new {type=cat.TypeByHref,id=cat.CategoryId})" class="btn btn-primary btn-buy">@Resource.GoView</a>
+                </div>
+            </div>
+            <img src="/Image/Categories/@cat.Photo" alt="" style="height: 250px; width: 100%" />
+        </div>
+        <div class="text-center speed-info-title title-text-sait">@cat.CategoryName</div>
+    </div>
+    }
+
+

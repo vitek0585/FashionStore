@@ -1,0 +1,48 @@
+﻿<div class="row footer ">
+    <div class="container">
+        <div class="col-xs-4">
+            <h3 class="text-uppercase">@Resource.Desc</h3>
+            <p class="text-justify">
+                @Resource.Descriptions
+            </p>
+        </div>
+        <div class="col-xs-3">
+            <div class="footer-col">
+                <h3 class="text-uppercase">@Resource.Info</h3>
+                <div class="footer-information text-uppercase">
+                    <ul>
+                        <li><a href="#">@Resource.AboutUs</a></li>
+                        <li><a href="#">@Resource.ContactUs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="footer-col">
+                <h3 class="text-uppercase">@Resource.Account</h3>
+                <div class="footer-information text-uppercase">
+                    <ul>
+                        @if (Request.IsAuthenticated)
+                        {
+                            <a href="javascript:document.getElementById('logoutForm').submit()">@Resource.LogOff</a>
+                        }
+                        else
+                        {
+                            <li><a href="javascript:document.getElementById('login').click()">@Resource.LogIn</a></li>
+                            <li><a href="javascript:document.getElementById('register').click()">@Resource.Register</a></li>
+
+                        }
+                        <li><a href="@Url.Action("Cart","Cart")">@Resource.Cart</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <div style="margin-top: 135%">
+                <h4>Vitek 2016</h4>
+                <h5><b>(095)0567-499</b></h5>
+            </div>
+        </div>
+    </div>
+</div>

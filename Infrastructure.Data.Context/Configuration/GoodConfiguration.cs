@@ -14,8 +14,8 @@ namespace FashionStore.Infrastructure.Data.Context.Store.Configuration
             Property(e => e.PriceUsd)
                .HasPrecision(18, 0);
 
-            HasRequired(g => g.GoodNameRu);
-            HasRequired(g => g.GoodNameEn);
+            Property(g => g.GoodNameRu).IsRequired();
+            Property(g => g.GoodNameEn).IsRequired();
 
             Property(g => g.DateCreate)
                 .HasColumnType("date");

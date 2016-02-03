@@ -37,7 +37,7 @@ namespace FashionStore.Controllers.Controller
         {
             var ids = RecentlyViewed(null).GetAll();
             var data = _goodService.GetGoods<IGoodModel>(ids, GetCurrentLanguage());
-            return PartialView(data);
+            return PartialView("Widgets/_RecentlyViewed",data);
 
         }
 

@@ -1,0 +1,85 @@
+﻿@model IEnumerable<ITypeCategoryModel<ICategoryModelBase>>
+@{
+    var banners = new Dictionary<int, Tuple<string, string>>()
+    {
+        {1,Tuple.Create("/Image/Banners/banner-fashion-men.jpg","0px")},
+        {2,Tuple.Create("/Image/Banners/banner-fashion-women.jpg","-30px")}
+
+    };
+    string isAutorize = TempData[ValuesApp.IsAutorize].IfNotNull(c => (bool)c).ToString().ToLowerInvariant();
+}
+
+<div>
+    <ul class="nav navbar-nav navbar-left">
+
+        @foreach (var item in Model)
+        {
+            @Html.Partial("NavBar/_MenuNav", item, new ViewDataDictionary() { { "settings", banners[item.TypeId] } })
+        }
+
+        @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+        {
+            @*<li>
+                @Html.ActionLink(Resource.Admin, "Index", new { action = "Index", controller = "Admin", area = "Administration" })
+            </li>*@
+        }
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+        @if (Request.IsAuthenticated)
+        {
+
+            <li>
+                @Html.ActionLink("Hello " + User.Identity.GetUserName(), "", "")
+            </li>
+            <li>
+                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+                {
+                    @Html.AntiForgeryToken()
+                }
+                <a href="javascript:document.getElementById('logoutForm').submit()">@Resource.LogOff</a>
+            </li>
+        }
+        else
+        {
+            <li ng-controller="modalCtrl" ng-init="isOpen('@isAutorize')?openModal('loginTmpl','loginCtrl'):''">
+                <a id="login" class="cursor-href" ng-click="openModal('loginTmpl','loginCtrl')">@Resource.LogIn</a>
+            </li>
+            <li ng-controller="modalCtrl">
+                <a id="register" class="cursor-href" ng-click="openModal('registerTmpl','regCtrl')">@Resource.Register</a>
+            </li>
+
+        }
+        @*Menu ICON*@
+        @*<li class="icon-menu">
+                <i class="menu-option glyphicon glyphicon-search"></i>
+            </li>*@
+        @Html.Partial("NavBar/_IconNav")
+        @if (Request.IsAuthenticated)
+        {
+            <li class="icon-menu">
+                <i class="menu-option glyphicon glyphicon-user">
+                    <a href="@Url.Action("Room","User")" class="href-strech">
+                    </a>
+                </i>
+            </li>
+        }
+        <li class="icon-menu" ng-controller="CartStateController as cartStateVm">
+            <i class="menu-option glyphicon glyphicon-shopping-cart">
+                <a href="@Url.Action("Cart","Cart")" class="href-strech">
+                </a>
+                <span class="cart-count" ng-if="cartStateVm.cart.length>0" ng-cloak>{{cartStateVm.cart.length}}</span>
+            </i>
+        </li>
+
+    </ul>
+</div>
+
+
+<script type="text/template" id="registerTmpl">
+    @Html.Partial("Auth/Register")
+</script>
+<script type="text/template" id="loginTmpl">
+    @Html.Partial("Auth/Login")
+</script>
+

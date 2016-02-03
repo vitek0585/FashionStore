@@ -1,4 +1,5 @@
-﻿using System.Security.Claims;
+﻿using System.Reflection;
+using System.Security.Claims;
 using System.Web.Helpers;
 using System.Web.Http;
 using System.Web.Mvc;
@@ -18,12 +19,15 @@ namespace FashionStore
 {
     public class StartIdentity
     {
+        private string _defaultLoginPage = "/Account/Login";
         public void Configuration(IAppBuilder app)
         {
             var config = new StartUpApp();
-            config.ConfigureAuth(app, "/Account/Login");
+            config.ConfigureAuth(app, _defaultLoginPage);
+            
             IoC.RegisterModule(new AnyModule());
             IoC.RegisterModule(new IdentityModule(app));
+            IoC.RegisterControllers(Assembly.GetExecutingAssembly());
 
             app.UseAutofacMvc();
             app.UseAutofacMiddleware(IoC.Scope);

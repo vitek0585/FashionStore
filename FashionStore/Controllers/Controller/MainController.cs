@@ -49,8 +49,8 @@ namespace FashionStore.Controllers.Controller
         }
         #region Child Action
         [ChildActionOnly]
-        [Route("NavBarMenu")]
-        public PartialViewResult NavBarMenu()
+        [Route("NavBar")]
+        public PartialViewResult NavBar()
         {
             var data = _categoryService.AllCategory<ITypeCategoryModel<ICategoryModelBase>>(GetCurrentLanguage());
             return PartialView(data);

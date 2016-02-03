@@ -5,7 +5,7 @@ using FashionStore.Service.Interfaces.UoW;
 
 namespace FashionStore.Infastructure.Data.Service.UoF
 {
-    public class UnitOfWorkStore : IUnitOfWork
+    public class UnitOfWorkStore : IUnitOfWorkStore
     {
         private DbContext _context;
         private DbContextTransaction _transaction;

@@ -1,0 +1,29 @@
+﻿@{
+    var hrefImage = "/Image/Products/";
+    var hrefProduct = "/Fashion/Good/";
+
+}
+<div class="col-xs-12 widget-exclusive row-nopadding" ng-controller="exclusiveCtrl">
+    <slick infinite="true" arrows="false" autoplay-speed="3000"
+           speed="500" data="exclusiveGoods" init-onload="true" autoplay="true" fade="true"
+           slides-to-scroll="1" slides-to-show="1" ng-cloak>
+        <div ng-repeat="item in exclusiveGoods">
+            <div>
+                <a href="{{::'@hrefProduct'+item.goodId}}">
+                    <div ng-if="item.photos[0]" class="img" ng-style="{'background-image':'url({{::'@hrefImage'+item.photos[0]}})'}"></div>
+                    <div ng-if="!item.photos[0]" class="img" style="background-image:url(/Image/not-image.png)"></div>
+                    <div>
+                        <div ng-if="::item.discount>0" class="text-uppercase sale-shape small">@Resource.Discount</div>
+                        <div class="text-uppercase text-center small padding-5">{{::item.goodName}}</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </slick>
+    <div class="loader-products" ng-if="isWaiter">
+        <div class="flexbox-container" style="height: 300px">
+            <img src="~/Image/loader.gif" alt="loading" style="height: 3em; width: 3em">
+        </div>
+    </div>
+</div>
+

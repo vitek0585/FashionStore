@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Reflection;
 using Autofac;
 using Autofac.Core;
@@ -27,17 +28,18 @@ namespace FashionStore.Application.Bootstrapper.InversionOfControl
             static NestedContainer()
             {
                 Builder = new ContainerBuilder();
-                Assembly assembly = Assembly.GetExecutingAssembly();
-
-                Builder.RegisterControllers(assembly).PropertiesAutowired();
-                Builder.RegisterApiControllers(assembly);
 
                 RegisterModule(new ContextStoreModule());
                 RegisterModule(new RepositoryModule());
                 RegisterModule(new ServiceModule());
             }
         }
-
+        public static void RegisterControllers(Assembly assembly)
+        {
+            NestedContainer.Builder.RegisterControllers(assembly).PropertiesAutowired();
+            NestedContainer.Builder.RegisterApiControllers(assembly);
+        }
+        
         public static void RegisterModule(IModule module)
         {
             NestedContainer.Builder.RegisterModule(module);

@@ -1,0 +1,142 @@
+﻿@{
+    ViewBag.Title = "fashion".ToUpper();
+
+}
+<div id="notifyWin" class="success-notify notify"></div>
+
+
+<div class="row home" ng-cloak id="container" ng-controller="ctrl">
+    <div class="index-caroudel shadow">
+        <slick infinite="true" slides-to-show="1" slides-to-scroll="1" arrows="true" autoplay-speed="2000" autoplay="true"
+               speed="700" fade="true"
+               id="carousel-base">
+            <div class="carousel-slide" style="background: url(/Image/Carousel/slide-fashion-women.jpg) no-repeat;background-position: 50%;" ng-init="slide={title:'@Resource.Discount', text:'@Resource.ToUp 20%'}">
+                @Html.Partial("Widgets/_CarouselSlide")
+            </div>
+            <div class="carousel-slide" style="background: url(/Image/Carousel/slide-fashion-women-2.jpg) no-repeat;background-position: 50%;" ng-init="slide={title:'@Resource.Discount', text:'@Resource.ToUp 20%'}">
+                @Html.Partial("Widgets/_CarouselSlide")
+            </div>
+            <div class="carousel-slide" style="background: url(/Image/Carousel/slide-fashion-women-3.jpg) no-repeat;background-position: 50%;" ng-init="slide={title:'@Resource.Discount', text:'@Resource.ToUp 20%'}">
+                @Html.Partial("Widgets/_CarouselSlide")
+            </div>
+        </slick>
+    </div>
+    <div class="prod-container">
+        @*Categories*@
+        <div class="row row-nomargin">
+            <div class="text-center">
+                <p class="separator"></p>
+                <span class="separator-text">@Resource.Categories</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 other-prod row-nomargin row-nopadding ">
+                @Html.Partial("Widgets/_CategoryRandom")
+            </div>
+        </div>
+        @*End Categories*@
+        @*New goods*@
+        <div class="row">
+            <div class="text-center">
+                <p class="separator"></p>
+                <span class="separator-text">@Resource.NewGoods</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div ng-if="items.length==0" style="height: 500px" class="text-center flexbox-container">
+                    <img src="~/Image/loader.gif" alt="loading">
+                </div>
+                <div class="col-xs-3 col-sm-2 anim-show" ng-repeat="item in items |limitTo:4 track by $index">
+                    @Html.Partial("Widgets/_ProductsPartial")
+                </div>
+            </div>
+        </div>
+        @*End new goods*@
+        @*Dress by type*@
+        <div class="row">
+            <div class="text-center">
+                <p class="separator"></p>
+                <span class="separator-text">@Resource.DressFor</span>
+            </div>
+        </div>
+        <div class="row blockquote-wrapper">
+            <div class="col-xs-9 col-xs-offset-3">
+                @Html.Partial("Widgets/_BlockqouteInfo", null, new ViewDataDictionary()
+                {
+                    {"src", @"/Image/blockqoute-dress-for.png"},
+                    {"title", Resource.BlockqouteDressForTitle},
+                    {"text", Resource.BlockqouteDressFor}
+                })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-10 col-xs-push-1 other-prod">
+                @Html.Partial("Partial/_FastBuyBigPartial", null,
+                    new ViewDataDictionary()
+                    {
+                        {"src", "/Image/dress-for-man.jpg"},
+                        {"gender", Resource.ForMan},
+                        {"href", "Men"}
+
+                    })
+                @Html.Partial("Partial/_FastBuyBigPartial", null,
+                    new ViewDataDictionary()
+                    {
+                        {"src", "/Image/Index/BigFast/img-1.jpg"},
+                        {"gender", Resource.ForWoman},
+                         {"href", "Women"}
+                    })
+            </div>
+        </div>
+        @*Posts*@
+        @*<div class="row">
+                <div class="text-center">
+                    <p class="separator"></p>
+                    <span class="separator-text">@Resource.LatestPosts</span>
+                </div>
+            </div>
+            <div class="row">
+
+                @Html.Partial("Partial/_PostsPartial", null,
+                    new ViewDataDictionary()
+                    {
+                        {"Path", @"/Image/Index/Posts/post1.jpg"},
+                        {"Title", "Lorem ipsum dolor"},
+                        {"Content", "This business template is suited for a corporate, advertising, media, design, hosting, it company, agency, studio etc. but it can easily be used for a personal page or a portfolio."}
+                    })
+                @Html.Partial("Partial/_PostsPartial", null,
+                    new ViewDataDictionary()
+                    {
+                        {"Path", @"/Image/Index/Posts/post2.jpg"},
+                        {"Title", "Lorem ipsum dolor"},
+                        {"Content", "This business template is suited for a corporate, advertising, media, design, hosting, it company, agency, studio etc. but it can easily be used for a personal page or a portfolio."}
+                    })
+            </div>*@
+        @*End Posts*@
+
+        @*social*@
+        @Html.Partial("Widgets/_SocialPartial")
+        @*End social*@
+    </div>
+</div>
+
+@section scripts
+{
+    @Styles.Render("~/bundles/mainCss")
+    @Scripts.Render("~/bundles/mainJs")
+
+    @*<link href="~/Content/ItemProd.css" rel="stylesheet" />
+        <script src="~/Scripts/Angular/Home/Index/Controller.js"></script>*@
+}
+
+
+
+
+
+
+
+
+
+
+

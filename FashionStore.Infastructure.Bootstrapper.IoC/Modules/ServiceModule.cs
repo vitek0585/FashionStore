@@ -5,6 +5,7 @@ using FashionStore.Domain.Interfaces.Repository;
 using FashionStore.Infastructure.Data.Identity.Interfaces.Service;
 using FashionStore.Infastructure.Data.Service.Identity;
 using FashionStore.Infastructure.Data.Service.Store;
+using FashionStore.Infastructure.Data.Service.UoF;
 using FashionStore.Service.Interfaces.Services;
 using FashionStore.Service.Interfaces.UoW;
 
@@ -14,6 +15,8 @@ namespace FashionStore.Application.Bootstrapper.InversionOfControl.Modules
     {
         protected override void Load(ContainerBuilder builder)
         {
+            builder.RegisterType<UnitOfWorkStore>().As<IUnitOfWorkStore>().InstancePerLifetimeScope();
+
             builder.RegisterType(typeof(GoodService)).As(typeof(IGoodService)).InstancePerLifetimeScope();
             builder.RegisterType(typeof(CategoryService)).As(typeof(ICategoryService)).InstancePerLifetimeScope();
             builder.RegisterType<PurchaseService>().As<IPurchaseService>().InstancePerLifetimeScope();
@@ -24,12 +27,11 @@ namespace FashionStore.Application.Bootstrapper.InversionOfControl.Modules
             uriBuilder.Path = "p24api/pubinfo";
             uriBuilder.Query = "json&exchange&coursid=5";
 
-            builder.Register(i => new ExchangeRatesService(DependencyResolver.Current.GetService<IUnitOfWork>(),
+            builder.Register(i => new ExchangeRatesService(DependencyResolver.Current.GetService<IUnitOfWorkStore>(),
                 DependencyResolver.Current.GetService<IExchangeRatesRepository>(), uriBuilder.ToString()))
                 .As<IExchangeRatesService>().InstancePerLifetimeScope();
 
             builder.RegisterType<SaleService>().As<ISaleService>().InstancePerLifetimeScope();
-            builder.RegisterType<UserAppService>().As<IUserAppService>().InstancePerLifetimeScope();
         }
     }
 }

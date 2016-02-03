@@ -59,8 +59,8 @@
       <HintPath>..\packages\Autofac.WebApi2.3.4.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="AutoMapper, Version=4.2.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.4.2.0\lib\net45\AutoMapper.dll</HintPath>
+    <Reference Include="AutoMapper, Version=4.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.1.1\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -215,6 +215,11 @@
     <Compile Include="Controllers\WebApi\GoodController.cs" />
     <Compile Include="Controllers\WebApi\PhotoController.cs" />
     <Compile Include="Core\AppValue\ValuesApp.cs" />
+    <Compile Include="Core\Bundles\FrameworkBundle.cs" />
+    <Compile Include="Core\Bundles\Catalog\CatalogBundle.cs" />
+    <Compile Include="Core\Bundles\Layout\LayuotBundle.cs" />
+    <Compile Include="Core\Bundles\Main\MainBundle.cs" />
+    <Compile Include="Core\Common\BaseBundle.cs" />
     <Compile Include="Core\Filter\ModelValidate\ValidateModelMvcAttribute.cs" />
     <Compile Include="Core\Filter\ModelValidate\ValidateModelHttpAttribute.cs" />
     <Compile Include="Core\WebApiFormatters\Interfaces\IUploadFile.cs" />
@@ -253,21 +258,132 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Common\bootstrap\bootstrap.css" />
-    <Content Include="Content\Common\bootstrap\bootstrap.min.css" />
     <Content Include="Content\Common\combo-box-bootstrap\bootstrap-select.css" />
     <Content Include="Content\Common\effect-button\hover.css" />
     <Content Include="Content\Common\modal\angular-fancy-modal.css" />
     <Content Include="Content\Common\notify\toaster.css" />
     <Content Include="Content\Common\range-slider\angular-range-slider.css" />
+    <Content Include="Content\Site\combo-box-filter.css" />
+    <Content Include="Content\Site\slick-carousel.css" />
     <Content Include="Content\Common\slick\slick-remake.css" />
     <Content Include="Content\Common\slick\slick-theme.css" />
     <Content Include="Content\Common\slick\slick.css" />
     <Content Include="Content\Common\tooltip\ng-tooltips.css" />
     <Content Include="Content\Common\zoom-img\zoom.css" />
+    <Content Include="Content\Site\additional-view.css" />
+    <Content Include="Content\Site\categories-men.css" />
+    <Content Include="Content\Site\categories-women.css" />
+    <Content Include="Content\Site\categories.css" />
+    <Content Include="Content\Site\detail-item.css" />
+    <Content Include="Content\Site\edit-image.css" />
+    <Content Include="Content\Site\item-prod.css" />
+    <Content Include="Content\Site\nav-bar.css" />
+    <Content Include="Content\Site\site.css" />
+    <Content Include="Content\Common\combo-box-select-item\suggest.box.css" />
+    <Content Include="Content\Site\widget-random.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\application\app-module\app.js" />
+    <Content Include="Image\ajax-loader.gif" />
+    <Content Include="Image\bag-empty.jpg" />
+    <Content Include="Image\Banners\banner-fashion-men.jpg" />
+    <Content Include="Image\Banners\banner-fashion-women.jpg" />
+    <Content Include="Image\Banners\banner-men-big.jpeg" />
+    <Content Include="Image\Banners\banner-men-big2.jpg" />
+    <Content Include="Image\Banners\banner-men-big3.jpg" />
+    <Content Include="Image\Banners\banner-men-big4.jpg" />
+    <Content Include="Image\Banners\banner-woman-big.jpg" />
+    <Content Include="Image\Banners\banner-woman-big2.jpg" />
+    <Content Include="Image\Banners\banner-woman-big3.jpg" />
+    <Content Include="Image\Banners\banner-woman-big4.jpg" />
+    <Content Include="Image\bg-login-2.gif" />
+    <Content Include="Image\bg-login.gif" />
+    <Content Include="Image\bg.jpg" />
+    <Content Include="Image\blockqoute-dress-for.png" />
+    <Content Include="Image\Carousel\banner-men-big.jpeg" />
+    <Content Include="Image\Carousel\banner-men-big.jpg" />
+    <Content Include="Image\Carousel\banner-men-big2.jpg" />
+    <Content Include="Image\Carousel\banner-men-big3.jpg" />
+    <Content Include="Image\Carousel\banner-men-big4.jpg" />
+    <Content Include="Image\Carousel\banner-women-big.jpg" />
+    <Content Include="Image\Carousel\banner-women-big2.jpg" />
+    <Content Include="Image\Carousel\banner-women-big3.jpg" />
+    <Content Include="Image\Carousel\banner-women-big4.jpg" />
+    <Content Include="Image\Carousel\slide-fashion-women-2.jpg" />
+    <Content Include="Image\Carousel\slide-fashion-women-3.jpg" />
+    <Content Include="Image\Carousel\slide-fashion-women.jpg" />
+    <Content Include="Image\Categories\accesories-m.jpg" />
+    <Content Include="Image\Categories\accesories-w.jpg" />
+    <Content Include="Image\Categories\adidas-w.jpg" />
+    <Content Include="Image\Categories\bags-w.jpg" />
+    <Content Include="Image\Categories\bruki-m.jpg" />
+    <Content Include="Image\Categories\domash-vesh-m.jpg" />
+    <Content Include="Image\Categories\dresses-w.jpg" />
+    <Content Include="Image\Categories\dzhemper-m.jpg" />
+    <Content Include="Image\Categories\for-miniature-girl-w.jpg" />
+    <Content Include="Image\Categories\jeans-m.jpg" />
+    <Content Include="Image\Categories\jeans-w.jpg" />
+    <Content Include="Image\Categories\kombinezon-w.jpg" />
+    <Content Include="Image\Categories\kostum-m.jpg" />
+    <Content Include="Image\Categories\kozha-kurtka-m.jpg" />
+    <Content Include="Image\Categories\leggins-w.jpg" />
+    <Content Include="Image\Categories\new-balance-w.jpg" />
+    <Content Include="Image\Categories\ochki-m.jpg" />
+    <Content Include="Image\Categories\palto-kurtki-w.jpg" />
+    <Content Include="Image\Categories\sapogi-w.jpg" />
+    <Content Include="Image\Categories\shirt-m.jpg" />
+    <Content Include="Image\Categories\shirt-w.jpg" />
+    <Content Include="Image\Categories\short-m.jpg" />
+    <Content Include="Image\Categories\shorty-w.jpg" />
+    <Content Include="Image\Categories\sweters-cardig-w.jpg" />
+    <Content Include="Image\Categories\tshirt-w.jpg" />
+    <Content Include="Image\Categories\tufli-m.jpg" />
+    <Content Include="Image\Categories\watch-m.jpg" />
+    <Content Include="Image\Categories\yubki-w.jpg" />
+    <Content Include="Image\dress-for-man.jpg" />
+    <Content Include="Image\icons-social.png" />
+    <Content Include="Image\Index\BigFast\img-1.jpg" />
+    <Content Include="Image\Index\BigFast\img-2.jpg" />
+    <Content Include="Image\Index\BigFast\img-3.jpg" />
+    <Content Include="Image\Index\cat-1.jpg" />
+    <Content Include="Image\Index\cat-2.jpg" />
+    <Content Include="Image\Index\cat-3.jpg" />
+    <Content Include="Image\Index\cat-4.jpg" />
+    <Content Include="Image\Index\Posts\post1.jpg" />
+    <Content Include="Image\Index\Posts\post2.jpg" />
+    <Content Include="Image\jackets-men-banner.jpg" />
+    <Content Include="Image\karty_oplaty.jpg" />
+    <Content Include="Image\load.gif" />
+    <Content Include="Image\loader.gif" />
+    <Content Include="Image\men-jackets-banner.jpg" />
+    <Content Include="Image\not-image.png" />
+    <Content Include="Image\pay-card.png" />
+    <Content Include="Image\sale-of-furniture.jpg" />
+    <Content Include="Image\spinner.gif" />
+    <Content Include="Image\temp\cardigan.jpg" />
+    <Content Include="Image\temp\cardigan1.jpg" />
+    <Content Include="Image\temp\cardigan2.jpg" />
+    <Content Include="Image\temp\carousel2.jpg" />
+    <Content Include="Image\temp\illusion.jpg" />
+    <Content Include="Image\temp\illusion1.jpg" />
+    <Content Include="Image\temp\illusion2.jpg" />
+    <Content Include="Image\temp\josefina.jpg" />
+    <Content Include="Image\temp\josefina1.jpg" />
+    <Content Include="Image\temp\josefina2.jpg" />
+    <Content Include="Image\temp\quilted.jpg" />
+    <Content Include="Image\temp\quilted1.jpg" />
+    <Content Include="Image\title.png" />
+    <Content Include="Image\twitter-icon.png" />
+    <Content Include="Image\womanfootwear.jpg" />
+    <Content Include="Scripts\application\app-module\global-app.js" />
+    <Content Include="Scripts\application\directives\dialog.window.js" />
+    <Content Include="Scripts\application\services\cart-svc.js" />
+    <Content Include="Scripts\application\services\http-svc.js" />
+    <Content Include="Scripts\application\view\catalog\controller\categories-ctrl.js" />
+    <Content Include="Scripts\application\view\catalog\controller\category-ctrl.js" />
+    <Content Include="Scripts\application\view\layout\controller\cart-state-ctrl.js" />
+    <Content Include="Scripts\application\view\layout\controller\modal-ctrl.js" />
+    <Content Include="Scripts\application\view\main\index\controller\index-ctrl.js" />
     <Content Include="Scripts\core\angular\combo-box-bootstrap\bootstrap-select.js" />
     <Content Include="Scripts\core\angular\combo-box-bootstrap\select-dir.js" />
     <Content Include="Scripts\core\angular\combo-box-selected-item\suggest.box.js" />
@@ -282,12 +398,15 @@
     <Content Include="Scripts\core\angular\range-slider\angular-range-slider.min.js" />
     <Content Include="Scripts\core\angular\slick\slick-angular.js" />
     <Content Include="Scripts\core\angular\slick\slick.min.js" />
+    <Content Include="Scripts\core\angular\spinner\Spinner.html" />
     <Content Include="Scripts\core\angular\spinner\spinner.js" />
     <Content Include="Scripts\core\angular\to-up-web-page\up-and-lazyLoad.js" />
     <Content Include="Scripts\core\angular\tooltip\ngtooltips.js" />
-    <Content Include="Scripts\core\ui-bootstrap\ui-bootstrap-tpls-1.0.0.min.js" />
+    <Content Include="Scripts\core\ui-bootstrap\ui-bootstrap-tpls-1.0.0.js" />
     <Content Include="Scripts\framework\angular\angular-animate\angular-animate.js" />
     <Content Include="Scripts\framework\angular\angular-animate\angular-animate.min.js" />
+    <Content Include="Scripts\framework\angular\angular.js" />
+    <Content Include="Scripts\framework\angular\angular.min.js" />
     <Content Include="Scripts\framework\angular\ui-router\angular-ui-router.js" />
     <Content Include="Scripts\framework\angular\ui-router\angular-ui-router.min.js" />
     <Content Include="Scripts\framework\bootstrap\bootstrap.js" />
@@ -317,15 +436,35 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\framework\jquery\jquery-1.10.2.min.map" />
+    <Content Include="Views\Main\Index.cshtml" />
+    <Content Include="Views\Shared\Footer\_Footer.cshtml" />
+    <Content Include="Views\Shared\NavBar.cshtml" />
+    <Content Include="Views\Shared\NavBar\_IconNav.cshtml" />
+    <Content Include="Views\Shared\NavBar\_MenuNav.cshtml" />
+    <Content Include="Views\Shared\Auth\Form\LoginForm.cshtml" />
+    <Content Include="Views\Shared\Auth\Form\RegisterForm.cshtml" />
+    <Content Include="Views\Shared\Auth\Login.cshtml" />
+    <Content Include="Views\Shared\Auth\Register.cshtml" />
+    <Content Include="Views\Shared\Auth\SocialButton.cshtml" />
+    <Content Include="Views\Shared\Widgets\_CarouselSlide.cshtml" />
+    <Content Include="Views\Shared\Widgets\_CategoryRandom.cshtml" />
+    <Content Include="Views\Main\Partial\_FastBuyBigPartial.cshtml" />
+    <Content Include="Views\Shared\Widgets\_InfoCartPartial.cshtml" />
+    <Content Include="Views\Shared\Widgets\_ProductsPartial.cshtml" />
+    <Content Include="Views\Shared\Widgets\_SocialPartial.cshtml" />
+    <Content Include="Views\Shared\Widgets\_BlockqouteInfo.cshtml" />
+    <Content Include="Views\Catalog\Categories.cshtml" />
+    <Content Include="Views\Catalog\Category.cshtml" />
+    <Content Include="Views\Catalog\Partial\_Filter.cshtml" />
+    <Content Include="Views\Catalog\Partial\_CategoryWidget.cshtml" />
+    <Content Include="Views\Catalog\Partial\_CategoryWidgetBlur.cshtml" />
+    <Content Include="Views\Shared\Widgets\_ExclusiveGood.cshtml" />
+    <Content Include="Views\Catalog\Partial\_Sale.cshtml" />
+    <Content Include="Views\Shared\Widgets\_PayCardPartial.cshtml" />
+    <Content Include="Views\Shared\Widgets\_RecentlyViewed.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Common\combo-box-select-item\" />
-    <Folder Include="Content\Site\" />
-    <Folder Include="Core\Bundles\" />
-    <Folder Include="Scripts\application\directives\" />
-    <Folder Include="Scripts\application\services\" />
-    <Folder Include="Scripts\application\view\layout\controller\" />
     <Folder Include="Scripts\framework\angular\ui-state\" />
   </ItemGroup>
   <ItemGroup>
@@ -385,14 +524,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_GlobalResources\Resource.en.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
+    <EmbeddedResource Include="App_GlobalResources\Resource.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.en1.designer.cs</LastGenOutput>
-    </Content>
-    <Content Include="App_GlobalResources\Resource.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_GlobalResources\Resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource1.designer.cs</LastGenOutput>
-    </Content>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -7,7 +7,7 @@ angular.module('spinnerApp',[]).
                 
 
             },
-            templateUrl: "/Scripts/Angular/Common/Spinner.html",
+            templateUrl: "/Scripts/core/angular/spinner/Spinner.html",
             rerestrict: 'E',
             scope: {
                 visible:'=showWhen'

@@ -1,0 +1,12 @@
+﻿@{
+    var height = string.Concat(ViewBag.height,"px");
+}
+<div class="widget-categ-rd-size text-uppercase @ViewBag.cls" style="position: relative">
+    <a href="@ViewBag.urlPath">
+        <img class="div-img-bg" src="@ViewBag.imgPath" style="height: @height;width: 100%" alt="woman footwear" />
+
+        <div class="widget-categ-rd-size-desc">
+            @ViewBag.text
+        </div>
+    </a>
+</div>

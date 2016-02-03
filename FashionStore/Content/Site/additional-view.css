@@ -1,0 +1,41 @@
+﻿.list-i {
+    font-size: 73px;
+    color: #dbb879;
+    height: 40px;
+    line-height: normal;
+    font-weight: 500;
+}
+
+.blockquote-image {
+    height: 120px;
+    width: 120px;
+    margin-right: 10px;
+}
+
+.scd-content-social {
+    padding: 20px 0;
+    color: #222222;
+    text-align: center;
+}
+  .scd-content-social li button span,
+    .scd-content-social li a span {
+        margin: 0 auto;
+        width: 41px;
+        height: 41px;
+        display: block;
+        background: url('/Image/icons-social.png') 0 0 no-repeat;
+        transition: .0s ease-in-out;
+    }
+  .scd-content-social li button span,
+    .scd-content-social li a:hover span {
+        -webkit-transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+        -moz-transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+        -o-transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+        -ms-transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+        transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+     transition: .6s ease-in-out;
+    }
+
+.list-social > li {
+    margin: 0 2em;
+}
