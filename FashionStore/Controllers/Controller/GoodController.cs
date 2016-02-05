@@ -27,7 +27,7 @@ namespace FashionStore.Controllers.Controller
             RecentlyViewed(id);
             var data = _goodService.GetGood<IGoodModel>(id, GetCurrentCurrency(), GetCurrentLanguage());
             
-            return View(data);
+            return View("Details",data);
         }
 
         #region Child action

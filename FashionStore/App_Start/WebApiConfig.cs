@@ -1,5 +1,4 @@
 ﻿using System.Web.Http;
-using FashionStore.Configuration;
 using FashionStore.Configuration.JSON;
 using FashionStore.Core.WebApiFormatters;
 using FashionStore.Models.MediaFormatter;

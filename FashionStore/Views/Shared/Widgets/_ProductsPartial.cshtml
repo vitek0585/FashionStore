@@ -1,23 +1,23 @@
 ﻿
-<div class="item-prod  anim-show" ng-cloak="true" ng-init="href='/Fashion/Good/'+item.goodId">
+<div class="item-prod anim-show" ng-init="href='/Fashion/Good/'+item.goodId" ng-cloak="true">
     <input type="hidden" ng-bind="::item.goodId" />
-    <div class="image-prod col-xs-12 col-sm-12" ng-cloak="true">
-        @*основная картинка*@
+    <div class="image-prod col-xs-12 col-sm-12">
+        @*основная картинка*@@*delete     data="item" чтобы не мерцала картинка лучше поставить init-on-load=true*@
         <slick class="slider-for{{::$index}}"
                as-nav-for='.slider-nav{{::$index}}'
                fade="true"
                data="item"
                arrows="false"
-               init-onload=true>
+               init-on-load=true>
             <div ng-repeat="photo in item.photos track by $index| limitTo:3">
                 <div ng-if="::item.discount>0" class="text-uppercase sale-shape">@Resource.Discount</div>
                 @*<zoom ng-src="{{::'/getPhoto/'+photo}}" alt="not img" class="primary-img"
-                    style="width: 100%;" mark-height="100" mark-width="100" zoom-lvl="3"  />*@
+                style="width: 100%;" mark-height="100" mark-width="100" zoom-lvl="3"  />*@
                 @*<a href="{{::'/Home/GetDetails/'+item.goodId}}">
-                        <img ng-src="{{::'/Image/Products/'+photo}}"
-                             style="width: 100%; height: 385px;"/>
+                    <img ng-src="{{::'/Image/Products/'+photo}}"
+                         style="width: 100%; height: 385px;"/>
 
-                    </a>*@
+                </a>*@
                 <a ng-href="{{::href}}">
                     <div ng-style="{'background':'url(/Image/Products/{{::photo}}) no-repeat center','background-size': 'cover'}" class="primary-img"></div>
                 </a>
@@ -33,7 +33,7 @@
             </div>
         </slick>
         @*картинки выбора*@
-        <div class="image-slider" ng-cloak="true">
+        <div class="image-slider">
             <div class="image-prod-all">
                 <slick class="slider-nav{{::$index}}"
                        as-nav-for='.slider-for{{::$index}}'

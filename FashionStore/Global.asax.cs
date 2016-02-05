@@ -2,7 +2,6 @@
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using AutoMapper;
 using FashionStore.Configuration.Mapper;
 
 namespace FashionStore

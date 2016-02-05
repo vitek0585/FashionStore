@@ -16,10 +16,16 @@ namespace FashionStore.Application.Bootstrapper.InversionOfControl
             get
             {
                 return NestedContainer.Scope ?? (NestedContainer.Scope = NestedContainer.Builder.Build());
-                
+
             }
         }
 
+        private static Func<Type, object> _resolver;
+
+        public static T Resolve<T>()
+        {
+            return (T)_resolver(typeof(T));
+        }
         private class NestedContainer
         {
             public static ContainerBuilder Builder { get; set; }
@@ -39,11 +45,15 @@ namespace FashionStore.Application.Bootstrapper.InversionOfControl
             NestedContainer.Builder.RegisterControllers(assembly).PropertiesAutowired();
             NestedContainer.Builder.RegisterApiControllers(assembly);
         }
-        
+
         public static void RegisterModule(IModule module)
         {
             NestedContainer.Builder.RegisterModule(module);
         }
-        
+
+        public static void SetResolver(Func<Type, object> resolver)
+        {
+            _resolver = resolver;
+        }
     }
 }

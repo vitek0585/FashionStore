@@ -8,18 +8,18 @@ namespace FashionStore.Application.Bootstrapper.InversionOfControl.Modules
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType(typeof(GoodsRepository)).As(typeof(IGoodsRepository)).InstancePerLifetimeScope();
-            builder.RegisterType(typeof(CategoryRepository)).As(typeof(ICategoryRepository)).InstancePerLifetimeScope();
-            builder.RegisterType(typeof(CategoryTypeRepository)).As(typeof(ICategoryTypeRepository)).InstancePerLifetimeScope();
-            builder.RegisterType(typeof(SaleRepository)).As(typeof(ISaleRepository)).InstancePerLifetimeScope();
-            builder.RegisterType(typeof(SalePosRepository)).As(typeof(ISalePosRepository)).InstancePerLifetimeScope();
+            builder.RegisterType(typeof(GoodsRepository)).As(typeof(IGoodsRepository)).InstancePerRequest();
+            builder.RegisterType(typeof(CategoryRepository)).As(typeof(ICategoryRepository)).InstancePerRequest();
+            builder.RegisterType(typeof(CategoryTypeRepository)).As(typeof(ICategoryTypeRepository)).InstancePerRequest();
+            builder.RegisterType(typeof(SaleRepository)).As(typeof(ISaleRepository)).InstancePerRequest();
+            builder.RegisterType(typeof(SalePosRepository)).As(typeof(ISalePosRepository)).InstancePerRequest();
             builder.RegisterType<ClassificationGoodRepository>().As<IClassificationGoodRepository>()
                 .InstancePerLifetimeScope();
-            builder.RegisterType<ColorRepository>().As<IColorRepository>().InstancePerLifetimeScope();
-            builder.RegisterType<SizeRepository>().As<ISizeRepository>().InstancePerLifetimeScope();
+            builder.RegisterType<ColorRepository>().As<IColorRepository>().InstancePerRequest();
+            builder.RegisterType<SizeRepository>().As<ISizeRepository>().InstancePerRequest();
 
 
-            builder.RegisterType<ExchangeRatesRepository>().As<IExchangeRatesRepository>().InstancePerLifetimeScope();
+            builder.RegisterType<ExchangeRatesRepository>().As<IExchangeRatesRepository>().InstancePerRequest();
 
         }
     }

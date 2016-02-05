@@ -18,7 +18,7 @@ namespace FashionStore.Controllers.WebApi
     [RoutePrefix("api/Good")]
     public class GoodController : ApiController
     {
-       
+
         private IGoodService _goodService;
 
         private ICookieConsumer _storage;
@@ -28,7 +28,7 @@ namespace FashionStore.Controllers.WebApi
         {
             _storage = storage;
             _goodService = goodService;
-           
+
 
         }
         [HttpGet]
@@ -87,9 +87,9 @@ namespace FashionStore.Controllers.WebApi
         [Route("GetByPage"), HttpGet]
         public IHttpActionResult GetByPage(short category, int page,
             [ModelBinder(typeof(HttpFilterBinder))]Expression<Func<Good, bool>> pr,
-            [ModelBinder(typeof(HttpOrderBinder))]string sort)
+            [ModelBinder(typeof(HttpOrderBinder))]string sort = null)
         {
-            Task.Delay(1500).GetAwaiter().GetResult();
+            Task.Delay(500).GetAwaiter().GetResult();
             try
             {
                 var data = _goodService.GetByPage<dynamic>(page, _totalPerPage, category,

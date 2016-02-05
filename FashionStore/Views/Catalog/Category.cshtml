@@ -5,20 +5,20 @@
 }
 <div id="notifyWin" class="success-notify notify"></div>
 <div class="container" ng-controller="prodCtrl">
-  
+
     <div class="row row-nomargin row-nopadding">
         <div class="col-xs-12">
-            @Html.GenerateBreadCrumbs(new BreadCrumbsCategory(Model.CategoryId, Url))
+            @Html.GenerateBreadCrumbs(new BreadCrumbsCompose(new CategoryBcBuilder(Url, Model.CategoryId,Resource.Main)))
         </div>
         @*left side*@
         <div class="col-xs-3">
-            @Html.Action("Filter", new {id = Model.CategoryId})
-            <hr/>
+            @Html.Action("Filter", new { id = Model.CategoryId })
+            <hr />
             <h4 class="text-center text-uppercase">@Resource.Exclusive</h4>
             @Html.Partial("Widgets/_ExclusiveGood")
         </div>
         @*right side*@
-        <div class="col-xs-9 all-product" ng-controller="pageCtrl" ng-init="category=@Model.CategoryId;clickPage(@ViewBag.Page)">
+        <div class="col-xs-9 all-product" ng-controller="pageCtrl">
             <div class="row row-nomargin">
                 <div class="text-center">
                     <p class="separator"></p>
@@ -74,20 +74,22 @@
                 </div>
             </div>
             <div paging-setup click-page="clickPage" info="info" class="paging"></div>
+            @*init controller*@
+            <div ng-init="category=@Model.CategoryId;init()"></div>
         </div>
         @*End Right side*@
     </div>
-    @Html.Action("RecentlyViewedUser","Good")
+    @Html.Action("RecentlyViewedUser", "Good")
     @*social*@
     @Html.Partial("Widgets/_SocialPartial")
     @*End social*@
     @Html.Partial("Widgets/_PayCardPartial")
-</div>
 
+</div>
 
 @section scripts
 {
     @Styles.Render("~/bundles/categoryCss")
     @Scripts.Render("~/bundles/categoryJs")
-    
+
 }

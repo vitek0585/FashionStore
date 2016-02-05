@@ -2,8 +2,6 @@
 using System.Web.Mvc;
 using Autofac;
 using FashionStore.Domain.Interfaces.Repository;
-using FashionStore.Infastructure.Data.Identity.Interfaces.Service;
-using FashionStore.Infastructure.Data.Service.Identity;
 using FashionStore.Infastructure.Data.Service.Store;
 using FashionStore.Infastructure.Data.Service.UoF;
 using FashionStore.Service.Interfaces.Services;
@@ -15,11 +13,11 @@ namespace FashionStore.Application.Bootstrapper.InversionOfControl.Modules
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<UnitOfWorkStore>().As<IUnitOfWorkStore>().InstancePerLifetimeScope();
+            builder.RegisterType<UnitOfWorkStore>().As<IUnitOfWorkStore>().InstancePerRequest();
 
-            builder.RegisterType(typeof(GoodService)).As(typeof(IGoodService)).InstancePerLifetimeScope();
-            builder.RegisterType(typeof(CategoryService)).As(typeof(ICategoryService)).InstancePerLifetimeScope();
-            builder.RegisterType<PurchaseService>().As<IPurchaseService>().InstancePerLifetimeScope();
+            builder.RegisterType(typeof(GoodService)).As(typeof(IGoodService)).InstancePerRequest();
+            builder.RegisterType(typeof(CategoryService)).As(typeof(ICategoryService)).InstancePerRequest();
+            builder.RegisterType<PurchaseService>().As<IPurchaseService>().InstancePerRequest();
 
             UriBuilder uriBuilder = new UriBuilder();
             uriBuilder.Scheme = "https";
@@ -29,9 +27,9 @@ namespace FashionStore.Application.Bootstrapper.InversionOfControl.Modules
 
             builder.Register(i => new ExchangeRatesService(DependencyResolver.Current.GetService<IUnitOfWorkStore>(),
                 DependencyResolver.Current.GetService<IExchangeRatesRepository>(), uriBuilder.ToString()))
-                .As<IExchangeRatesService>().InstancePerLifetimeScope();
+                .As<IExchangeRatesService>().InstancePerRequest();
 
-            builder.RegisterType<SaleService>().As<ISaleService>().InstancePerLifetimeScope();
+            builder.RegisterType<SaleService>().As<ISaleService>().InstancePerRequest();
         }
     }
 }

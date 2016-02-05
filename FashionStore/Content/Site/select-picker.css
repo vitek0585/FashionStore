@@ -1,0 +1,11 @@
+﻿.selectpicker .dropdown-menu > li > a {
+        width: auto;
+    line-height: 2;
+    padding: 3px 12px;
+}
+.selectpicker .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 100px;
+}
+.selectpicker .btn {
+    padding: 6px 12px;
+}

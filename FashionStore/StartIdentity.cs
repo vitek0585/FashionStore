@@ -7,7 +7,6 @@ using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
 using FashionStore;
 using FashionStore.Application.Bootstrapper.InversionOfControl;
-using FashionStore.Application.Bootstrapper.InversionOfControl.Modules;
 using FashionStore.Configuration.IoC.Module;
 using FashionStore.Infastructure.Data.Identity.StartUp;
 using Microsoft.Owin;
@@ -24,7 +23,7 @@ namespace FashionStore
         {
             var config = new StartUpApp();
             config.ConfigureAuth(app, _defaultLoginPage);
-            
+
             IoC.RegisterModule(new AnyModule());
             IoC.RegisterModule(new IdentityModule(app));
             IoC.RegisterControllers(Assembly.GetExecutingAssembly());
@@ -34,6 +33,8 @@ namespace FashionStore
 
             DependencyResolver.SetResolver(new AutofacDependencyResolver(IoC.Scope));
             GlobalConfiguration.Configuration.DependencyResolver = new AutofacWebApiDependencyResolver(IoC.Scope);
+            IoC.SetResolver(DependencyResolver.Current.GetService);
+
 
             AntiForgeryConfig.UniqueClaimTypeIdentifier = ClaimTypes.NameIdentifier;
         }

@@ -151,9 +151,9 @@ namespace FashionStore.Controllers.Controller
         [ValidateModelMvc]
         public async Task<JsonResult> ExternalLoginConfirmation(ExternalLoginConfirmationViewModel model, string returnUrl)
         {
-            if (User.Identity.IsAuthenticated)
+            if (!User.Identity.IsAuthenticated)
             {
-                return Json(Url.Action("Index", "Main"));
+                return Json(Url.Action("Login", "Account"));
             }
             var user = new User()
             {

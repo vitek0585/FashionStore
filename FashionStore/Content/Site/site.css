@@ -1490,3 +1490,6 @@ blockquote {
          -webkit-filter: grayscale(0);
         filter: grayscale(0);
     }
+    html {
+        padding: 0 !important;
+    }

@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = Resource.ConfEmailPage.ToUpper();
+}
+
+
+<div class="container confirm-email-cont">
+    <div class="row row-nomargin" ng-controller="modalCtrl">
+        @Html.GenerateBreadCrumbs(new BreadCrumbsCompose(new SimpleBcBuilder(Url, Resource.Main, Resource.ConfEmailPage)))
+        <div class="row row-nomargin">
+            <div class="text-center">
+                <p class="separator"></p>
+                <span class="separator-text">@Resource.ConfEmailPage</span>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div style="padding: 50px 0">
+                @Resource.ConfEmailSucces &rArr;
+                <a class="cursor-href" ng-click="openModal('loginTmpl','loginCtrl')">@Resource.LogIn</a>
+            </div>
+        </div>
+
+        @Html.Action("RecentlyViewedUser", "Good")
+        @Html.Partial("Widgets/_PayCardPartial")
+        @Html.Partial("Widgets/_SocialPartial")
+    </div>
+</div>

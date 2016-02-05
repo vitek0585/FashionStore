@@ -1,0 +1,108 @@
+﻿@model ExternalLoginConfirmationViewModel
+@{
+    ViewBag.Title = Resource.Register;
+}
+
+@{
+    var name = Html.GetName(m => m.UserName);
+    var email = Html.GetName(m => m.Email);
+    var teleph = Html.GetName<RegisterViewModel>(m => m.PhoneNumber);
+
+    var predicate = "{0}&&confirmForm.{0}.$invalid";
+
+    var telephPredicate = predicate.F(teleph);
+    var namePredicate = predicate.F(name);
+    var emailPredicate = predicate.F(email);
+
+}
+<div class="container" ng-controller="extConfCtrl">
+    @Html.GenerateBreadCrumbs(new BreadCrumbsCompose(new SimpleBcBuilder(Url, Resource.Main, Resource.Register)))
+    <div class="row row-nomargin">
+        <div class="col-xs-12 text-uppercase">
+            <span class="separator-text">@Resource.ExtLgConf</span>
+            <hr/>
+        </div>
+        <div class="col-xs-8 conf-lg-bg register-bg ">
+            <div class="col-xs-8">
+                <form method="POST" class="form-horizontal" role="form" novalidate name="confirmForm" id="registerForm">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" value="@ViewBag.ReturnUrl" name="returnUrl"/>
+                    @*Name user*@
+                    <div class="form-group" ng-init="blurs('@name')">
+                        @*<label class="col-sm-4 control-label" for="">@Resource.Name</label>*@
+                        <div class="col-sm-12">
+                            <input type="text"
+                                   class="form-control"
+                                   id="@name"
+                                   placeholder="@Resource.Name"
+                                   name="@name"
+                                   ng-model="user.@name"
+                                   ng-pattern="/^[A-Za-z]\w{2,20}$/"
+                                   ng-blur="@name=true"
+                                   ng-required="true"
+                                   ng-class="@namePredicate?'custom-invalid':'custom-valid'">
+                        </div>
+                        <div class="col-sm-12 errro-input"
+                             ng-class="@namePredicate?'custom-invalid':'custom-valid'"
+                             ng-cloak>
+                            <span ng-show="@namePredicate">@Resource.NameInValid</span>
+                        </div>
+                    </div>
+                    @*Telephone user*@
+                    <div class="form-group" ng-init="blurs('@teleph')">
+                        <div class="col-sm-12">
+                            <input type="text"
+                                   class="form-control"
+                                   id="@teleph"
+                                   placeholder="@Resource.PhoneNumber"
+                                   name="@teleph"
+                                   ng-model="user.@teleph"
+                                   ng-pattern="/^[0-9]{10,15}$/"
+                                   ng-blur="@teleph=true"
+                                   ng-required="true"
+                                   ng-class="@telephPredicate?'custom-invalid':'custom-valid'">
+                        </div>
+                        <div class="col-sm-12 errro-input"
+                             ng-class="@telephPredicate?'custom-invalid':'custom-valid'"
+                             ng-cloak>
+                            <span ng-show="@telephPredicate">@Resource.PhoneInValid</span>
+                        </div>
+                    </div>
+                    @*Email*@
+                    <div class="form-group" ng-init="blurs('@email')">
+                        <div class="col-sm-12">
+                            <input ng-pattern="/^\w+&#64[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/"
+                                   class="form-control"
+                                   id="@email"
+                                   placeholder="email"
+                                   name="@email"
+                                   ng-model="user.@email"
+                                   ng-required="true"
+                                   ng-class="@emailPredicate?'custom-invalid':''">
+                        </div>
+                        <div class="col-sm-12 errro-input"
+                             ng-class="@emailPredicate?'custom-invalid':'custom-valid'"
+                             ng-cloak>
+                            <span ng-show="@emailPredicate">@Resource.EmailInValid</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12 text-right">
+                            <button class="btn btn-primary btn-buy" ng-click="submit(confirmForm)">@Resource.Register</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <spin-wait show-when="responseHandler.isBusy"/>
+        </div>
+    </div>
+    @Html.Action("RecentlyViewedUser", "Good")
+    @Html.Partial("Widgets/_PayCardPartial")
+    @Html.Partial("Widgets/_SocialPartial")
+</div>
+
+@section Scripts {
+   @Scripts.Render("~/bundles/accountJs")
+}
+
+

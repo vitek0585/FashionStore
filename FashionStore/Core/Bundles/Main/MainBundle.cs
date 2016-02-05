@@ -1,5 +1,4 @@
-﻿using System.Web.Optimization;
-using FashionStore.Core.Common;
+﻿using FashionStore.Core.Common;
 
 namespace FashionStore.Core.Bundles.Main
 {

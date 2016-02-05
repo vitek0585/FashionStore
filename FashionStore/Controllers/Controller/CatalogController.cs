@@ -36,14 +36,14 @@ namespace FashionStore.Controllers.Controller
             return HttpNotFound();
 
         }
-        [Route("{type}/Category/{id:int:min(1):max(100000)}/{page:int:min(1):max(1000)=1}")]
-        public ActionResult Category(string type, int id, int page)
+        [Route("{type}/Category/{id:int:min(1):max(100000)}")] //{page:int:min(1):max(1000)=1}")]
+        public ActionResult Category(string type, int id)//, int page)
         {
             var data = _categoryService.GetCategoryByCulture<ICategoryDescModel>(type, id, GetCurrentLanguage());
 
             if (data != null)
             {
-                ViewBag.Page = page;
+                //ViewBag.Page = page;
                 return View(data);
             }
 
