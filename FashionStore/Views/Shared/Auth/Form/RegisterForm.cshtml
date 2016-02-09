@@ -2,7 +2,7 @@
     var name = Html.GetName<RegisterViewModel>(m => m.UserName);
     var email = Html.GetName<RegisterViewModel>(m => m.Email);
     var teleph = Html.GetName<RegisterViewModel>(m => m.PhoneNumber);
-    
+
     var password = Html.GetName<RegisterViewModel>(m => m.Password);
     var confirmPassw = Html.GetName<RegisterViewModel>(m => m.ConfirmPassword);
     var predicate = "{0}&&registerForm.{0}.$invalid";
@@ -117,15 +117,12 @@
             <span ng-show="@confPswdPredicate">@Resource.ConfirmPswdInValid</span>
         </div>
     </div>
-    @*<div ng-if="responseHandler.errorMessages.length>0" class="col-xs-12 form-group anim-show" ng-cloak>
-        <div class="label-error" ng-repeat="mess in responseHandler.errorMessages">
-            {{::mess}}
-        </div>
-    </div>*@
     <div class="form-group">
         <div class="col-sm-12 text-right">
-            <button class="btn btn-primary btn-buy" ng-click="submit(registerForm)">@Resource.Register</button>
+            <button class="btn btn-primary btn-buy" ng-click="submit(registerForm)"
+                    ng-disabled="!registerForm.$valid">
+                @Resource.Register
+            </button>
         </div>
     </div>
-    @*ng-disabled="!registerForm.$valid"*@
 </form>

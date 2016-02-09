@@ -4,6 +4,7 @@ using FashionStore.Infastructure.Data.Identity.Entities;
 using FashionStore.Infastructure.Data.Identity.Interfaces.Service;
 using FashionStore.Infastructure.Data.Identity.Manager;
 using FashionStore.Infastructure.Data.Service.Identity.Common;
+using FashionStore.Infastructure.Data.Service.Resource;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
@@ -70,7 +71,7 @@ namespace FashionStore.Infastructure.Data.Service.Identity
             var info = await _authentication.GetExternalLoginInfoAsync();
             if (info == null)
             {
-                return null;
+                return IdentityResult.Failed(Messages.ExternalError);
             }
 
             var result = await _userManager.CreateAsync(user);

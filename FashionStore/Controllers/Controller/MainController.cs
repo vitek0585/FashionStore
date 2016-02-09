@@ -11,16 +11,14 @@ namespace FashionStore.Controllers.Controller
     [RoutePrefix("Main")]
     public class MainController : ShopBaseController
     {
-        private IGoodService _goodService;
+   
         private ICategoryService _categoryService;
 
 
-        public MainController(IGoodService goodService, ICategoryService category, ICookieConsumer storage)
+        public MainController(ICategoryService category, ICookieConsumer storage)
             : base(storage)
         {
             _categoryService = category;
-            _goodService = goodService;
-
         }
         [Route("~/")]
         public ActionResult Index()

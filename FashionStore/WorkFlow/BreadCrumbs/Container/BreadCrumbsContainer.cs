@@ -2,16 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
+using FashionStore.Application.Bootstrapper.InversionOfControl;
 using FashionStore.Models.BreadCrumbs;
+using FashionStore.WorkFlow.BreadCrumbs.Tag.Interfaces;
+using WebLogger.Abstract.Interface;
+
 
 namespace FashionStore.WorkFlow.BreadCrumbs.Container
 {
     public class BreadCrumbsContainer
     {
         private ICollection<IBreadCrumbsModel> _elements;
-
+        private ILogWriter<string> _log;
+        private ITagCreator _creator;
         public BreadCrumbsContainer()
         {
+            _creator = IoC.Resolve<ITagCreator>();
+            _log = IoC.Resolve<ILogWriter<string>>();
             _elements = new List<IBreadCrumbsModel>();
         }
 
@@ -19,7 +26,7 @@ namespace FashionStore.WorkFlow.BreadCrumbs.Container
         {
             _elements.Add(element);
         }
-       
+
         public MvcHtmlString Generate()
         {
             TagBuilder ol = new TagBuilder("ol");
@@ -29,37 +36,23 @@ namespace FashionStore.WorkFlow.BreadCrumbs.Container
             {
                 for (var i = 0; i < _elements.Count; i++)
                 {
-                TagBuilder li = new TagBuilder("li");
-
-                    li = new TagBuilder("li");
                     if (i == _elements.Count - 1)
                     {
-                        li.AddCssClass("active");
-                        TagBuilder tb = new TagBuilder("span");
-                        tb.SetInnerText(_elements.ElementAt(i).NameLink);
-                        li.InnerHtml += tb.ToString();
+                        ol.InnerHtml += _creator.CreateEndTag(_elements.ElementAt(i).NameLink);
                     }
                     else
-                        li.InnerHtml += CreateTagLink(_elements.ElementAt(i).NameLink, _elements.ElementAt(i).Href);
-
-                    ol.InnerHtml += li.ToString();
+                        ol.InnerHtml += _creator.CreateTag(_elements.ElementAt(i).NameLink, _elements.ElementAt(i).Href);
                 }
             }
             catch (Exception e)
             {
-                return MvcHtmlString.Create(e.Message + String.Empty);
+                _log.LogWriteError("bread crumbs construct error", e);
+                return MvcHtmlString.Create(String.Empty);
             }
             return MvcHtmlString.Create(ol.ToString());
         }
 
-        private string CreateTagLink(string text, string href)
-        {
-            TagBuilder tb = new TagBuilder("a");
-            tb.MergeAttribute("href", href);
-            tb.SetInnerText(text.ToUpper());
-            return tb.ToString();
-        }
     }
 
-        
+
 }

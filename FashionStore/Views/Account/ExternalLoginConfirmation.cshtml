@@ -88,7 +88,10 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-12 text-right">
-                            <button class="btn btn-primary btn-buy" ng-click="submit(confirmForm)">@Resource.Register</button>
+                            <button class="btn btn-primary btn-buy" ng-click="submit(confirmForm)"
+                                    ng-disabled="confirmForm.$invalid">
+                                @Resource.Register
+                                </button>
                         </div>
                     </div>
                 </form>

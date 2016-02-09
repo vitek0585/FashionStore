@@ -845,7 +845,7 @@ i.glyphicon:first-child::before {
 
 .anim-show {
     animation-name: create;
-    animation-duration: 3s;
+    animation-duration: 1s;
 }
 
 @keyframes create {
@@ -1054,10 +1054,10 @@ blockquote {
 
 .loader-products {
     position: absolute;
-    top: 0;
-    bottom: 5px;
-    left: 10px;
-    right: 10px;
+        top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: rgba(233, 233, 233, 0.45);
 }
 

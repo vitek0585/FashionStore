@@ -61,6 +61,15 @@ namespace FashionStore.Infastructure.Data.Service.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to произошла ошибка во время внешней регистрации.
+        /// </summary>
+        public static string ExternalError {
+            get {
+                return ResourceManager.GetString("ExternalError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to не достаточно товара {0}, выберите количество не более {1}.
         /// </summary>
         public static string NoEnoughtGoods {

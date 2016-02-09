@@ -31,17 +31,7 @@ namespace FashionStore.Controllers.Base
             }
             return Url.Action("Index", "Main");
         }
-        [NonAction]
-        protected string CheckValidReturnUrlAjax(string returnUrl)
-        {
-            if (!string.IsNullOrEmpty(returnUrl))
-            {
-                Uri uri = new Uri(returnUrl);
-                if (Url.IsLocalUrl(uri.AbsolutePath))
-                    return returnUrl;
-            }
-            return Url.Action("Index", "Main", null, "http");
-        }
+      
         [NonAction]
         protected string GetCurrentCurrency()
         {

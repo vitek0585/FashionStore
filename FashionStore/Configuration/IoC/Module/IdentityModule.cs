@@ -30,6 +30,8 @@ namespace FashionStore.Configuration.IoC.Module
             builder.RegisterType<UserAppService>().As<IUserAppService>().InstancePerLifetimeScope();
 
             builder.RegisterType(typeof(AccountService)).As(typeof(IAccountService)).InstancePerLifetimeScope();
+      
+
             builder.RegisterType(typeof(DbContextIdentity)).AsSelf().InstancePerRequest();
             builder.RegisterType<DbContextIdentity>().As<DbContext>().InstancePerRequest();
 
@@ -38,7 +40,6 @@ namespace FashionStore.Configuration.IoC.Module
             builder.RegisterType<RoleStore<Role, int, UserRole>>().As<IRoleStore<Role, int>>().InstancePerRequest();
 
             builder.RegisterType<UserManager>().AsSelf().InstancePerRequest();
-
             builder.RegisterType<RoleManager>().AsSelf().InstancePerRequest();
             builder.RegisterType<SignInManager>().AsSelf().InstancePerRequest();
        

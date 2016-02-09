@@ -9,6 +9,7 @@ using FashionStore.App_GlobalResources;
 using FashionStore.Controllers.Base;
 using FashionStore.Core.Filter.ModelValidate;
 using FashionStore.Domain.Core.Entities.Store;
+using FashionStore.Infastructure.Data.Identity.Interfaces.Service;
 using FashionStore.Models.Order;
 using FashionStore.Service.Interfaces.Results;
 using FashionStore.Service.Interfaces.Services;
@@ -16,6 +17,7 @@ using FashionStore.ViewModels.Account;
 using FashionStore.WorkFlow.Cart.Interfaces;
 using FashionStore.WorkFlow.Cart.Interfaces.Provider;
 using Microsoft.AspNet.Identity;
+using Microsoft.Owin.Security;
 using WebCookie.Interfaces;
 using WebLogger.Abstract.Interface;
 
@@ -26,11 +28,13 @@ namespace FashionStore.Controllers.Controller
     {
         private IPurchaseService _purchaseService;
         private ICartProvider<UserOrderModel> _cartProvider;
-        private ILogWriter<string> _log; 
+        private ILogWriter<string> _log;
+        private IUserAppService _user;
         public CartController(ICookieConsumer storage, ICartProvider<UserOrderModel> cartProvider, IPurchaseService purchaseService,
-            ILogWriter<string> log)
+            IUserAppService user, ILogWriter<string> log)
             : base(storage)
         {
+            _user = user;
             _log = log;
             _cartProvider = cartProvider;
             _purchaseService = purchaseService;
@@ -95,6 +99,7 @@ namespace FashionStore.Controllers.Controller
         }
         [Route("DoOrderReg")]
         [HttpPost]
+        [Authorize]
         public JsonResult DoOrder()
         {
             PurchaseResult result;
@@ -174,7 +179,7 @@ namespace FashionStore.Controllers.Controller
         [NonAction]
         private int GetUserId()
         {
-            return Request.GetOwinContext().Authentication.User.Identity.GetUserId<int>(); 
+            return _user.GetUserId(); 
 
         }
         [NonAction]

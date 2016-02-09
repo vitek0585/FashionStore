@@ -485,7 +485,7 @@ namespace FashionStore.App_GlobalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to подтверждение внешней авторизации.
+        ///   Looks up a localized string similar to подтверждение внешней регистрации.
         /// </summary>
         public static string ExtLgConf {
             get {

@@ -11,6 +11,8 @@ using FashionStore.Infastructure.Data.Identity.Entities;
 using FashionStore.Infastructure.Data.Identity.Interfaces.Service;
 using FashionStore.Service.Interfaces.UoW;
 using FashionStore.ViewModels.Account;
+using FashionStore.WorkFlow.Cart.Interfaces.Provider;
+using FashionStore.WorkFlow.UserSession.Interfaces;
 using Microsoft.AspNet.Identity.Owin;
 using WebCookie.Interfaces;
 
@@ -23,11 +25,13 @@ namespace FashionStore.Controllers.Controller
 
         private IAccountService _account;
         private IUnitOfWorkIdentity _unit;
-        public AccountController(ICookieConsumer storage, IAccountService account, IUnitOfWorkIdentity unit)
+        private IClearUserSession _userSession;
+        public AccountController(ICookieConsumer storage, IAccountService account, IUnitOfWorkIdentity unit, IClearUserSession userSession)
             : base(storage)
         {
             _unit = unit;
             _account = account;
+            _userSession = userSession;
         }
         [Route("Login"), HttpGet]
         [AllowAnonymous]
@@ -103,6 +107,8 @@ namespace FashionStore.Controllers.Controller
 
         #endregion
 
+        #region External login
+
         //POST: /Account/ExternalLogin
         [Route("ExternalLogin")]
         [HttpPost]
@@ -111,8 +117,9 @@ namespace FashionStore.Controllers.Controller
         public ActionResult ExternalLogin(string provider, string returnUrl)
         {
             // Request a redirect to the external login provider
-            return new ChallengeResult(provider, Url.Action("ExternalLoginCallback", "Account", new { returnUrl }));
+            return new ChallengeResult(provider, Url.Action("ExternalLoginCallback", "Account", new {returnUrl}));
         }
+
         //
         // GET: /Account/ExternalLoginCallback
         [Route("ExternalLoginCallback")]
@@ -122,7 +129,7 @@ namespace FashionStore.Controllers.Controller
             var loginInfo = await _account.GetExternalLoginInfoAsync();
             if (loginInfo == null)
             {
-                return RedirectToAction("Login", new { returnUrl });
+                return RedirectToAction("Login", new {returnUrl});
             }
 
             var result = await _account.ExternalSignInAsync(loginInfo);
@@ -133,9 +140,11 @@ namespace FashionStore.Controllers.Controller
                 default:
                     ViewBag.ReturnUrl = returnUrl;
                     ViewBag.LoginProvider = loginInfo.Login.LoginProvider;
-                    return View("ExternalLoginConfirmation", new ExternalLoginConfirmationViewModel { Email = loginInfo.Email });
+                    return View("ExternalLoginConfirmation",
+                        new ExternalLoginConfirmationViewModel {Email = loginInfo.Email});
             }
         }
+
         [Route("ExternalLoginConfirmation")]
         [AllowAnonymous]
         public ActionResult ExternalLoginConfirmation()
@@ -149,7 +158,8 @@ namespace FashionStore.Controllers.Controller
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         [ValidateModelMvc]
-        public async Task<JsonResult> ExternalLoginConfirmation(ExternalLoginConfirmationViewModel model, string returnUrl)
+        public async Task<JsonResult> ExternalLoginConfirmation(ExternalLoginConfirmationViewModel model,
+            string returnUrl)
         {
             if (!User.Identity.IsAuthenticated)
             {
@@ -169,8 +179,12 @@ namespace FashionStore.Controllers.Controller
                 return Json(url);
             }
             AddErrors(result);
-            return JsonResultCustom(ModelState.Values.SelectMany(e => e.Errors, (m, e) => e.ErrorMessage), HttpStatusCode.BadRequest);
+            return JsonResultCustom(ModelState.Values.SelectMany(e => e.Errors, (m, e) => e.ErrorMessage),
+                HttpStatusCode.BadRequest);
         }
+
+        #endregion
+
         #region Log off
 
         [Route("LogOff")]
@@ -179,6 +193,7 @@ namespace FashionStore.Controllers.Controller
         public ActionResult LogOff()
         {
             _account.SingOut();
+            _userSession.ClearByKey(ValuesApp.Cart,ValuesApp.RecentlyViewed);
 
             return RedirectToAction("Index", "Main");
         }

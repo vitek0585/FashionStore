@@ -4,6 +4,7 @@ using FashionStore.Core.AppValue;
 using FashionStore.Models.Interfaces;
 using FashionStore.Service.Interfaces.Services;
 using FashionStore.WorkFlow.ViewedStorage;
+using FashionStore.WorkFlow.ViewedStorage.Provider.Interface;
 using WebCookie.Interfaces;
 
 namespace FashionStore.Controllers.Controller
@@ -13,11 +14,13 @@ namespace FashionStore.Controllers.Controller
     public class GoodController : ShopBaseController
     {
         private IGoodService _goodService;
+        private IRecentlyViewedProvider _viewedProvider;
         private short _sizeStorageViewed;
 
-        public GoodController(IGoodService goodService,ICookieConsumer storage)
+        public GoodController(IGoodService goodService, ICookieConsumer storage, IRecentlyViewedProvider viewedProvider)
             : base(storage)
         {
+            _viewedProvider = viewedProvider;
             _goodService = goodService;
             _sizeStorageViewed = 20;
         }
@@ -46,15 +49,9 @@ namespace FashionStore.Controllers.Controller
         [NonAction]
         protected RecentlyViewedStorage RecentlyViewed(int? id)
         {
-            var viewed = (RecentlyViewedStorage)Session[ValuesApp.RecentlyViewed];
-            if (viewed == null)
-            {
-                Session[ValuesApp.RecentlyViewed] = viewed = new RecentlyViewedStorage(_sizeStorageViewed);
-            }
-
+            var viewed = _viewedProvider.TryGet(ValuesApp.RecentlyViewed, _sizeStorageViewed);
             if (id.HasValue)
                 viewed.Add(id.Value);
-
             return viewed;
         }
 

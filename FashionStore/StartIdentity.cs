@@ -28,12 +28,15 @@ namespace FashionStore
             IoC.RegisterModule(new IdentityModule(app));
             IoC.RegisterControllers(Assembly.GetExecutingAssembly());
 
+            var container = IoC.BuildContainer();
+            
             app.UseAutofacMvc();
-            app.UseAutofacMiddleware(IoC.Scope);
+            app.UseAutofacMiddleware(container);
 
-            DependencyResolver.SetResolver(new AutofacDependencyResolver(IoC.Scope));
-            GlobalConfiguration.Configuration.DependencyResolver = new AutofacWebApiDependencyResolver(IoC.Scope);
-            IoC.SetResolver(DependencyResolver.Current.GetService);
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+            GlobalConfiguration.Configuration.DependencyResolver = new AutofacWebApiDependencyResolver(container);
+            
+            IoC.ActionResolverMvc(DependencyResolver.Current.GetService);
 
 
             AntiForgeryConfig.UniqueClaimTypeIdentifier = ClaimTypes.NameIdentifier;

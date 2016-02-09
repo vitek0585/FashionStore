@@ -326,7 +326,7 @@
     <value>до</value>
   </data>
   <data name="ExtLgConf" xml:space="preserve">
-    <value>подтверждение внешней авторизации</value>
+    <value>подтверждение внешней регистрации</value>
   </data>
   <data name="AddToCartError" xml:space="preserve">
     <value>товар не был добавлен в корзину</value>

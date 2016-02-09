@@ -99,7 +99,7 @@
     <Compile Include="Entities\UserRole.cs" />
     <Compile Include="Interfaces\Service\IAccountService.cs" />
     <Compile Include="Interfaces\Service\IUserAppService.cs" />
-    <Compile Include="Interfaces\Service\IUserIdentityService.cs" />
+    <Compile Include="Interfaces\Service\IUserInfo.cs" />
     <Compile Include="Resource\IdentityMessages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -14,7 +14,6 @@ namespace FashionStore.WorkFlow.BreadCrumbs.Builders
         {
             var links = CategoryWithChild(CategoryId);
             CurrentCatalog(links.First());
-            //skip the last element so he is our link
             CategoryTree(links);
         }
 

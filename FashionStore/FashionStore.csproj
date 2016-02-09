@@ -206,8 +206,14 @@
     <Compile Include="WorkFlow\BreadCrumbs\Builders\GoodsBCBuilder.cs" />
     <Compile Include="WorkFlow\BreadCrumbs\Builders\SimpleBcBuilder.cs" />
     <Compile Include="WorkFlow\BreadCrumbs\Container\BreadCrumbsContainer.cs" />
+    <Compile Include="WorkFlow\BreadCrumbs\Tag\Interfaces\ITagCreator.cs" />
+    <Compile Include="WorkFlow\BreadCrumbs\Tag\TagCreator.cs" />
     <Compile Include="WorkFlow\Cart\Interfaces\ICart.cs" />
     <Compile Include="WorkFlow\Cart\Interfaces\Provider\ICartProvider.cs" />
+    <Compile Include="WorkFlow\UserSession\Interfaces\IClearUserSession.cs" />
+    <Compile Include="WorkFlow\UserSession\UserSession.cs" />
+    <Compile Include="WorkFlow\ViewedStorage\Provider\Interface\IRecentlyViewedProvider.cs" />
+    <Compile Include="WorkFlow\ViewedStorage\Provider\RecentlyViewedProvider.cs" />
     <Compile Include="WorkFlow\ViewedStorage\RecentlyViewedStorage.cs" />
     <Compile Include="WorkFlow\Cart\CartProvider.cs" />
     <Compile Include="WorkFlow\Cart\UserCart.cs" />
@@ -501,6 +507,10 @@
     <ProjectReference Include="..\Logger\WebLogger.csproj">
       <Project>{6E494348-2538-4C22-A318-1E7B17739A31}</Project>
       <Name>WebLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebStorage\WebCache.csproj">
+      <Project>{A4D8F8E8-7FCA-4A61-98CB-F6247437800E}</Project>
+      <Name>WebCache</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

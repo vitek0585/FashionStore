@@ -11,15 +11,6 @@ namespace FashionStore.Application.Bootstrapper.InversionOfControl
 {
     public class IoC
     {
-        public static IContainer Scope
-        {
-            get
-            {
-                return NestedContainer.Scope ?? (NestedContainer.Scope = NestedContainer.Builder.Build());
-
-            }
-        }
-
         private static Func<Type, object> _resolver;
 
         public static T Resolve<T>()
@@ -28,8 +19,7 @@ namespace FashionStore.Application.Bootstrapper.InversionOfControl
         }
         private class NestedContainer
         {
-            public static ContainerBuilder Builder { get; set; }
-            public static IContainer Scope { get; set; }
+            public static ContainerBuilder Builder { get; private set; }
 
             static NestedContainer()
             {
@@ -51,9 +41,15 @@ namespace FashionStore.Application.Bootstrapper.InversionOfControl
             NestedContainer.Builder.RegisterModule(module);
         }
 
-        public static void SetResolver(Func<Type, object> resolver)
+        public static void ActionResolverMvc(Func<Type, object> resolver)
         {
             _resolver = resolver;
         }
+
+        public static IContainer BuildContainer()
+        {
+            return NestedContainer.Builder.Build();
+        }
+       
     }
 }
