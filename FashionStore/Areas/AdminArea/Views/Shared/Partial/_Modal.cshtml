@@ -1,0 +1,13 @@
+﻿@*<script type="text/ng-template" id="myModalContent.html">*@
+<div ng-cloak>
+    <div class="modal-header">
+        <h4 class="modal-title text-uppercase text-center">{{modalVm.title}}</h4>
+    </div>
+    <div class="modal-body">
+        {{modalVm.body}}
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="modalVm.ok()">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="modalVm.cancel()">Cancel</button>
+    </div></div>
+

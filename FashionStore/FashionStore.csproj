@@ -163,6 +163,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\AdminArea\Controllers\AdminController.cs" />
+    <Compile Include="Areas\AdminArea\Controllers\WebApi\AdminApiController.cs" />
     <Compile Include="Configuration\IoC\Module\AnyModule.cs" />
     <Compile Include="Configuration\IoC\Module\IdentityModule.cs" />
     <Compile Include="Controllers\Base\AccountBaseController.cs" />
@@ -177,6 +179,7 @@
     <Compile Include="Controllers\WebApi\PhotoController.cs" />
     <Compile Include="Core\AppValue\ValuesApp.cs" />
     <Compile Include="Core\Bundles\Account\AccountBundle.cs" />
+    <Compile Include="Core\Bundles\Admin\AdminBundle.cs" />
     <Compile Include="Core\Bundles\Cart\CartBundle.cs" />
     <Compile Include="Core\Bundles\FrameworkBundle.cs" />
     <Compile Include="Core\Bundles\Catalog\CatalogBundle.cs" />
@@ -230,12 +233,21 @@
     <Compile Include="Core\Binder\HttpOrderBinder.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Common\bootstrap-admin\bootstrap-admin.css" />
     <Content Include="Content\Common\bootstrap\bootstrap.css" />
     <Content Include="Content\Common\combo-box-bootstrap\bootstrap-select.css" />
     <Content Include="Content\Common\effect-button\hover.css" />
     <Content Include="Content\Common\modal\angular-fancy-modal.css" />
     <Content Include="Content\Common\notify\toaster.css" />
     <Content Include="Content\Common\range-slider\angular-range-slider.css" />
+    <Content Include="Content\Less\Admin\Admin.css">
+      <DependentUpon>admin.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Less\Admin\Admin.min.css">
+      <DependentUpon>Admin.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Site\admin.css" />
+    <Content Include="Content\Site\animation-ui-view.css" />
     <Content Include="Content\Site\combo-box-filter.css" />
     <Content Include="Content\Site\select-picker.css" />
     <Content Include="Content\Site\slick-carousel.css" />
@@ -254,6 +266,7 @@
     <Content Include="Content\Site\nav-bar.css" />
     <Content Include="Content\Site\site.css" />
     <Content Include="Content\Common\combo-box-select-item\suggest.box.css" />
+    <Content Include="Content\Site\spinner.css" />
     <Content Include="Content\Site\widget-random.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -349,12 +362,24 @@
     <Content Include="Image\title.png" />
     <Content Include="Image\twitter-icon.png" />
     <Content Include="Image\womanfootwear.jpg" />
+    <Content Include="Scripts\application\app-module\admin-app.js" />
+    <Content Include="Scripts\application\app-module\extension.js" />
     <Content Include="Scripts\application\app-module\global-app.js" />
     <Content Include="Scripts\application\directives\dialog-window.js" />
     <Content Include="Scripts\application\filters\filter-goods.js" />
     <Content Include="Scripts\application\services\cart-svc.js" />
     <Content Include="Scripts\application\services\http-svc.js" />
+    <Content Include="Scripts\application\services\loading-svc.js" />
     <Content Include="Scripts\application\view\account\controller\login-confirm-ctrl.js" />
+    <Content Include="Scripts\application\view\admin\controller\goods-ctrl.js" />
+    <Content Include="Scripts\application\view\admin\controller\log-ctrl.js" />
+    <Content Include="Scripts\application\view\admin\controller\upload-ctrl.js" />
+    <Content Include="Scripts\application\view\admin\filter\admin-filters.js" />
+    <Content Include="Scripts\application\view\admin\old\Controller.js" />
+    <Content Include="Scripts\application\view\admin\template\FileTable.html" />
+    <Content Include="Scripts\application\view\admin\directive\uploadDirective.js" />
+    <Content Include="Scripts\application\view\admin\route\admin-route.js" />
+    <Content Include="Scripts\application\view\admin\service\admin-crud-svc.js" />
     <Content Include="Scripts\application\view\cart\controller\cart-ctrl.js" />
     <Content Include="Scripts\application\view\cart\controller\fast-check-ctrl.js" />
     <Content Include="Scripts\application\view\cart\controller\goods-details-ctrl.js" />
@@ -362,6 +387,7 @@
     <Content Include="Scripts\application\view\catalog\controller\categories-ctrl.js" />
     <Content Include="Scripts\application\view\catalog\controller\category-ctrl.js" />
     <Content Include="Scripts\application\view\goods\controller\detail-ctrl.js" />
+    <Content Include="Scripts\application\view\admin\controller\edit-ctrl.js" />
     <Content Include="Scripts\application\view\layout\controller\cart-state-ctrl.js" />
     <Content Include="Scripts\application\view\layout\controller\modal-ctrl.js" />
     <Content Include="Scripts\application\view\main\index\controller\index-ctrl.js" />
@@ -397,6 +423,23 @@
     <Content Include="Scripts\framework\angular\angular.min.js.map">
       <DependentUpon>angular.min.js</DependentUpon>
     </Content>
+    <Content Include="Areas\AdminArea\Views\web.config" />
+    <Content Include="Areas\AdminArea\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\AdminArea\Views\Shared\Partial\_NavMenu.cshtml" />
+    <Content Include="Areas\AdminArea\Views\Admin\Index.cshtml" />
+    <Content Include="Areas\AdminArea\Views\_ViewStart.cshtml" />
+    <Content Include="Content\Less\Admin\admin.less" />
+    <Content Include="Content\Less\Admin\Admin.css.map">
+      <DependentUpon>Admin.css</DependentUpon>
+    </Content>
+    <Content Include="Areas\AdminArea\Views\Shared\Partial\_Header.cshtml" />
+    <Content Include="Areas\AdminArea\Views\Admin\Partial\_Goods.cshtml" />
+    <Content Include="Areas\AdminArea\Views\Admin\Partial\_GoodsTable.cshtml" />
+    <Content Include="Areas\AdminArea\Views\Admin\Partial\_GoodsEdit.cshtml" />
+    <Content Include="Areas\AdminArea\Views\Admin\Partial\_Log.cshtml" />
+    <Content Include="Areas\AdminArea\Views\Shared\Partial\_Modal.cshtml" />
+    <Content Include="Areas\AdminArea\Views\Admin\Partial\_FormGoodEdit.cshtml" />
+    <Content Include="Areas\AdminArea\Views\Admin\Partial\_GoodsImageEdit.cshtml" />
     <None Include="Scripts\framework\jquery\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\framework\cross-domain\desc.txt" />
     <Content Include="Scripts\framework\jquery\jquery-1.10.2.js" />
@@ -463,6 +506,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\AdminArea\Models\" />
     <Folder Include="Scripts\framework\angular\ui-state\" />
   </ItemGroup>
   <ItemGroup>
@@ -487,6 +531,10 @@
     <ProjectReference Include="..\FashionStore.Service\FashionStore.Service.Interfaces.csproj">
       <Project>{24DE4E20-6168-43F5-9425-77A35FE5F4CD}</Project>
       <Name>FashionStore.Service.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FashioStore.Application\FashionStore.Application.csproj">
+      <Project>{43A11738-2967-4FAB-A685-0C886AB79F98}</Project>
+      <Name>FashionStore.Application</Name>
     </ProjectReference>
     <ProjectReference Include="..\FasionStore.Domain.Core\FashionStore.Domain.Core.csproj">
       <Project>{8E74B5DA-5180-4953-9D5A-64861BA15D08}</Project>

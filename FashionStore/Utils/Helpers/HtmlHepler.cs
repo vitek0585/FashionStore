@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Dynamic;
 using System.Linq.Expressions;
 using System.Web.Mvc;
 using FashionStore.WorkFlow.BreadCrumbs;
@@ -29,8 +32,27 @@ namespace FashionStore.Utils.Helpers
         }
 
     }
-    public static class ExpressionToString
+    public static class DynamicExtensions
     {
+        public static dynamic ToDynamic(this object value)
+        {
+            IDictionary<string, object> expando = new ExpandoObject();
+
+            foreach (PropertyDescriptor property in TypeDescriptor.GetProperties(value.GetType()))
+                expando.Add(property.Name, property.GetValue(value));
+
+            return expando as ExpandoObject;
+        }
+    }
+    public static class ExtesionString
+    {
+        public static string ControllerAs(this string name,string ctrlAs)
+        {
+            if (string.IsNullOrEmpty(ctrlAs))
+                return name;
+
+            return string.Format("{0}.{1}", ctrlAs, name);
+        }
         public static string GetName<T>(this HtmlHelper<T> html, Expression<Func<T, object>> exp)
         {
             return ExpressionHelper.GetExpressionText(exp);

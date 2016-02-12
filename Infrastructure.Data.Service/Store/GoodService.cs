@@ -67,7 +67,7 @@ namespace FashionStore.Infastructure.Data.Service.Store
                 good.Discount,
                 good.CategoryId,
                 priceUsd =
-                    _exchangeRates.ConvertWithCeilingUsdTo(good.PriceUsd, rate,currentCurrency),
+                    _exchangeRates.ConvertWithCeilingUsdTo(good.PriceUsd, rate, currentCurrency),
                 PriceWithDiscount = _exchangeRates.ConvertWithCeilingUsdToWithDiscount(good.PriceUsd, good.Discount, rate, currentCurrency),
                 good.goodCount,
                 good.photos,
@@ -113,8 +113,8 @@ namespace FashionStore.Infastructure.Data.Service.Store
         {
             var actualRate = _exchangeRates.GetActualRateUsdWithUpdateIfNotExist();
             var tmp = (from row in _goods.GetAll()
-                orderby row.DateCreate descending 
-                select row.GoodId).Take(() => 30).OrderBy(c => Guid.NewGuid()).Take(() => count).ToList();
+                       orderby row.DateCreate descending
+                       select row.GoodId).Take(() => 30).OrderBy(c => Guid.NewGuid()).Take(() => count).ToList();
             var data = (from g in _goods.GetAll()
                         select
                         new
@@ -195,6 +195,7 @@ namespace FashionStore.Infastructure.Data.Service.Store
 
             return Mapper.DynamicMap<TResult>(data);
         }
+        
         public IEnumerable<TResult> GetOrdersById<TResult>(IEnumerable<int> id, string currentCurrency, string lang)
         {
             var propName = GetPropertyName<Good>(lang, (g) => g.GoodNameRu);

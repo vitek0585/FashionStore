@@ -28,6 +28,8 @@ namespace FashionStore.Application.Bootstrapper.InversionOfControl
                 RegisterModule(new ContextStoreModule());
                 RegisterModule(new RepositoryModule());
                 RegisterModule(new ServiceModule());
+                RegisterModule(new ServiceAppModule());
+
             }
         }
         public static void RegisterControllers(Assembly assembly)

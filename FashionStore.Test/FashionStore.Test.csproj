@@ -110,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\DataBuilder.cs" />
+    <Compile Include="ExtensionLayer\LogTest.cs" />
     <Compile Include="PresentationLayer\Controllers\CartCtrlTest.cs" />
     <Compile Include="PresentationLayer\Controllers\CatalogCtrlTest.cs" />
     <Compile Include="PresentationLayer\Controllers\GoodCtrlTest.cs" />

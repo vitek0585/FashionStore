@@ -1,0 +1,58 @@
+﻿@{
+    var name = "admin".ToUpper();
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    @Styles.Render("~/bundles/adminCss")
+    <link href="~/Content/Site/animation-ui-view.css" rel="stylesheet" />
+    <link href="~/Content/Site/spinner.css" rel="stylesheet" />
+
+    @Scripts.Render("~/bundles/base")
+    <script src="~/Scripts/framework/angular/ui-router/angular-ui-router.js"></script>
+    <script src="~/Scripts/core/ui-bootstrap/ui-bootstrap-tpls-1.0.0.js"></script>
+
+    <title>@name</title>
+</head>
+<body ng-app="adminApp">
+    <nav>
+        @Html.Partial("Partial/_NavMenu")
+    </nav>
+    <section>
+        <header>
+            @Html.Partial("Partial/_Header")
+        </header>
+        <article>
+            @RenderBody()
+            <div id="loader-content" class="loader-content">
+                <div class="flexbox-container">
+                    <div class="loader" style="height: 6em; width: 6em"></div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <toaster-container toaster-options="{'time-out': 3000, 'close-button':false, 'animation-class': 'toast-top-right'}"></toaster-container>
+    <script type="text/ng-template" id="modalContent.html">
+        @Html.Partial("Partial/_Modal")
+    </script>
+
+    @Scripts.Render("~/bundles/layoutJs")
+    @Scripts.Render("~/bundles/adminJs")
+    <script src="~/Scripts/application/app-module/extension.js"></script>
+    <script src="~/Scripts/application/view/admin/service/admin-crud-svc.js"></script>
+    <script src="~/Scripts/core/angular/pagging/pagging.js"></script>
+    <script src="~/Scripts/application/services/loading-svc.js"></script>
+
+    <script src="~/Scripts/application/app-module/admin-app.js"></script>
+    <script src="~/Scripts/application/view/admin/route/admin-route.js"></script>
+    <script src="~/Scripts/application/view/admin/controller/goods-ctrl.js"></script>
+    <script src="~/Scripts/application/view/admin/controller/edit-ctrl.js"></script>
+    <script src="~/Scripts/application/view/admin/controller/upload-ctrl.js"></script>
+    <script src="~/Scripts/application/view/admin/directive/uploadDirective.js"></script>
+
+    <script src="~/Scripts/application/view/admin/controller/log-ctrl.js"></script>
+    @RenderSection("Script", false)
+</body>
+</html>

@@ -21,7 +21,16 @@ namespace FashionStore.Configuration.IoC.Module
         {
             builder.RegisterType<CookieConsumer>().As<ICookieConsumer>().InstancePerRequest();
             builder.RegisterType<CartProvider>().As<ICartProvider<UserOrderModel>>().InstancePerLifetimeScope();
+
+            #region log
+
             builder.RegisterType<LogWebSql>().As<ILogWriter<string>>().InstancePerRequest();
+            builder.RegisterType<LogWebSql>().As<ILogReader>().InstancePerRequest();
+            builder.RegisterType<LogWebSql>().As<ILog>().InstancePerRequest();
+
+            #endregion
+
+
             builder.RegisterType<TagCreator>().As<ITagCreator>().InstancePerRequest();
             builder.RegisterType<RecentlyViewedProvider>().As<IRecentlyViewedProvider>().InstancePerRequest();
             builder.RegisterType<UserSession>().As<IClearUserSession>().InstancePerRequest();

@@ -1,0 +1,39 @@
+﻿@{
+    var href = "/Fashion/Good";
+    var path = "/Image/Products/";
+}
+<table class="table table-striped">
+    <col width="15%" />
+    <col width="15%" />
+    <col width="15%" />
+    <col width="10%" />
+    <col width="5%" />
+    <col width="15%" />
+    <tr>
+        <th>Photo</th>
+        <th>Name Ru</th>
+        <th>Name En</th>
+        <th>Price</th>
+        <th>Discount</th>
+        <th>Date create</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="item in gVm.goods.items track by $index">
+        <td>
+            <a ng-href="@href/{{item.goodId}}">
+                <div ng-style="{'background':'url(@path'+item.photos.imagePath+') no-repeat center','background-size': 'contain'}" class="table-img" ng-if="item.photos!=null">
+                </div>
+                <div class="table-none-img" ng-if="item.photos==null"></div>
+            </a>
+        </td>
+        <td>{{item.goodNameRu}}</td>
+        <td>{{item.goodNameEn}}</td>
+        <td>{{item.priceUsd}} USD</td>
+        <td>{{item.discount}} %</td>
+        <td>{{item.dateCreate}}</td>
+        <td>
+            <a class="btn btn-warning btn-sm margin-top" ng-href="#/Goods/Edit/{{item.goodId}}">Edit</a>
+            <button class="btn btn-danger btn-sm margin-top" ng-click="">Remove</button>
+        </td>
+    </tr>
+</table>

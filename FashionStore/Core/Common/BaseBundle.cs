@@ -18,7 +18,12 @@ namespace FashionStore.Core.Common
             
         }
 
+        private string _less = "~/Content/Less/";
+        protected string CssLess
+        {
+            get { return _less; }
 
+        }
         protected BaseBundleCss(string path):base(path,new CssMinify())
         {
             

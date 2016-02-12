@@ -61,6 +61,7 @@
     <Compile Include="IoC.cs" />
     <Compile Include="Modules\ContextStoreModule.cs" />
     <Compile Include="Modules\RepositoryModule.cs" />
+    <Compile Include="Modules\ServiceAppModule.cs" />
     <Compile Include="Modules\ServiceModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -76,6 +77,10 @@
     <ProjectReference Include="..\FashionStore.Service\FashionStore.Service.Interfaces.csproj">
       <Project>{24DE4E20-6168-43F5-9425-77A35FE5F4CD}</Project>
       <Name>FashionStore.Service.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FashioStore.Application\FashionStore.Application.csproj">
+      <Project>{43a11738-2967-4fab-a685-0c886ab79f98}</Project>
+      <Name>FashionStore.Application</Name>
     </ProjectReference>
     <ProjectReference Include="..\Infrastructure.Data.Context\FashionStore.Infrastructure.Data.Context.Store.csproj">
       <Project>{2E1BCA01-DB6F-48F7-8FC7-D64BC10DFCFC}</Project>

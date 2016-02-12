@@ -13,6 +13,7 @@ namespace FashionStore.Configuration.JSON
             {
                 PreserveReferencesHandling = PreserveReferencesHandling.Objects,
                 ContractResolver = new CamelCasePropertyNamesContractResolver(),
+                //DateFormatString = "dd.MM.yyyy",
                 
 #if DEBUG
                 Formatting = Formatting.Indented

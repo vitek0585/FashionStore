@@ -1,6 +1,7 @@
 ﻿using System.Web.Optimization;
 using FashionStore.Core.Bundles;
 using FashionStore.Core.Bundles.Account;
+using FashionStore.Core.Bundles.Admin;
 using FashionStore.Core.Bundles.Cart;
 using FashionStore.Core.Bundles.Catalog;
 using FashionStore.Core.Bundles.Goods;
@@ -66,6 +67,11 @@ namespace FashionStore
 
             #endregion
 
+            #region admin
+
+            bundles.Add(new AdminBundleCss("~/bundles/adminCss"));
+            bundles.Add(new AdminBundleJs("~/bundles/adminJs"));
+            #endregion
 
         }
     }

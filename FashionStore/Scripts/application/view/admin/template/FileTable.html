@@ -1,0 +1,29 @@
+﻿<div ng-if="files[0]" class ="tadle-img-upload">
+    <div>
+        <b>Uploaded files:</b> {{(files|filter:{upload:true}).length}}
+    </div>
+    <div ng-repeat="file in files track by $index" ng-init="progress={width:{'width':'0%'},active:false};" class="elem-img-upload">
+        <div>
+            <img ng-src={{file.result}} alt='error image' style="height: 50px" />
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btn-sm btn-primary button-upload" ng-disabled="file.upload||progress.active" ng-click="upload($index,progress)">Save</button>
+                <button type="button" class="btn btn-sm  btn-danger margin-top" ng-disabled="file.upload||progress.active" ng-click="remove($index)">Remove</button>
+            </div>
+        </div>
+        <div ng-init="coll=true;">
+            <button type="button" class="btn btn-default color-text logs-btn streth button-info-upload" ng-click="coll = !coll">Info</button>
+
+            <div uib-collapse="coll">
+                <div class="well well-lg">
+                    <div>{{file.name}}</div>
+                    <div>{{file.size|sizeFilter}}</div>
+                    <div>{{file.type}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="progress progress-striped active" ng-show="progress.active">
+            <div class="progress-bar" ng-style="progress.width"></div>
+        </div>
+        <hr ng-if="!$last"/>
+    </div>
+</div>

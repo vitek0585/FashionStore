@@ -1,0 +1,59 @@
+﻿@model IEnumerable<dynamic>
+@{
+    Layout = null;
+    var types = Html.SerializeToJson(Model);
+}
+<div ng-init="gVm.init(@types)"></div>
+
+<div class="combo-boxes content-container">
+    <div az-suggest-box
+         sb-list="gVm.types"
+         sb-model-selected="gVm.select.type"
+         sb-selected-list-item-class="sb-list-item-checked"
+         sb-close-list-on-select="true"
+         sb-select-first-list-item="true"
+         sb-not-remove-current="true"
+         sb-max-selection="1"
+         class="suggest-box sort-by text-left" ng-cloak>
+        <div sb-trigger-area class="select">
+            <div class="input">
+                <div sb-selection-item>{{s.name}}</div>
+            </div>
+            <button><i class="fa fa-chevron-down"></i></button>
+        </div>
+        <ul class="dropdown">
+            <li sb-dropdown-item class="item">{{i.name}}</li>
+        </ul>
+    </div>
+    <div az-suggest-box ng-if="gVm.select.type[0]"
+         sb-list="gVm.select.type[0].category"
+         sb-model-selected="gVm.select.category"
+         sb-selected-list-item-class="sb-list-item-checked"
+         sb-close-list-on-select="true"
+         sb-select-first-list-item="true"
+         sb-not-remove-current="true"
+         sb-max-selection="1"
+         observer="gVm.select.type[0].id"
+         class="suggest-box sort-by text-left" ng-cloak>
+        <div sb-trigger-area class="select">
+            <div class="input">
+                <div sb-selection-item>{{s.categoryNameEn}}</div>
+            </div>
+            <button><i class="fa fa-chevron-down"></i></button>
+        </div>
+        <ul class="dropdown">
+            <li sb-dropdown-item class="item">{{i.categoryNameEn}}</li>
+        </ul>
+    </div>
+</div>
+<div class="row my-row goods">
+    <div class="goods">
+        <div class="col-no-padding trans-width" ng-class="gVm.stretch()">
+            @Html.Partial("Partial/_GoodsTable")
+            <div paging-setup click-page="gVm.clickPage" info="gVm.info" class="paging"></div>
+        </div>
+        <div ui-view="goods-edit" class="col-xs-4 anim-view-edit" id="goods-edit">
+        </div>
+    </div>
+</div>
+

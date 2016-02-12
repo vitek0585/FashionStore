@@ -5,7 +5,7 @@ using WebLogger.Enum;
 
 namespace WebLogger.Abstract
 {
-    public abstract class LogWebBase<T> : ILog<T>
+    public abstract class LogWebBase<T> : ILog, ILog<T>
     {
         protected string HttpMethod
         {
@@ -58,6 +58,9 @@ namespace WebLogger.Abstract
         {
             Execute(TypeLog.Error, message, exception);
         }
+
+        public abstract bool Remove(int id);
+
 
         public abstract void Dispose();
     }
