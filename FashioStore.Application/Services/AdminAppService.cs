@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using FashionStore.Application.Services.Interfaces;
 using FashionStore.Domain.Interfaces.Repository;
+using FashionStore.Infastructure.Data.Identity.Entities;
 
 namespace FashionStore.Application.Services
 {
@@ -13,11 +15,16 @@ namespace FashionStore.Application.Services
     {
         private ICategoryRepository _categoryRepository;
         private IGoodsRepository _goodsRepository;
+        private IColorRepository _colorRepository;
+        private ISizeRepository _sizeRepository;
 
-        public AdminAppService(ICategoryRepository categoryRepository, IGoodsRepository goodsRepository)
+        public AdminAppService(ICategoryRepository categoryRepository, 
+            IGoodsRepository goodsRepository, IColorRepository colorRepository, ISizeRepository sizeRepository)
         {
             _categoryRepository = categoryRepository;
             _goodsRepository = goodsRepository;
+            _colorRepository = colorRepository;
+            _sizeRepository = sizeRepository;
         }
 
         #region goods
@@ -95,8 +102,7 @@ namespace FashionStore.Application.Services
 
         public async Task<IEnumerable<TResult>> AllCategoryByTypeAsync<TResult>()
         {
-            var data = await Task.Run(
-                () => _categoryRepository.DisabledProxy<ICategoryRepository>().GetAll()
+            var data = await _categoryRepository.DisabledProxy<ICategoryRepository>().GetAll()
                 .GroupBy(c => new { c.TypeId, c.Type.TypeNameEn })
                 .Select(g => new
                 {
@@ -106,15 +112,43 @@ namespace FashionStore.Application.Services
                     {
                         c.CategoryId,
                         c.Name.CategoryNameEn
-                    }).OrderBy(c=>c.CategoryNameEn)
-                }).OrderBy(i=>i.name));
+                    }).OrderBy(c=>c.CategoryNameEn),
+                    
+                }).OrderBy(i=>i.name).ToListAsync();
+
+            return DynamicMap<TResult>(data);
+        }
+        public async Task<IEnumerable<TResult>> AllColorsAsync<TResult>()
+        {
+            var data = await _colorRepository.DisabledProxy<IColorRepository>().GetAll()
+                .Select(c => new
+                {
+                    c.ColorId,
+                    c.ColorNameEn
+
+                }).ToListAsync();
+
+            return DynamicMap<TResult>(data);
+        }
+        public async Task<IEnumerable<TResult>> AllSizesAsync<TResult>()
+        {
+            var data = await  _sizeRepository.DisabledProxy<ISizeRepository>().GetAll()
+                .Select(c => new
+                {
+                    c.SizeId,
+                    c.SizeName
+
+                }).ToListAsync();
 
             return DynamicMap<TResult>(data);
         }
 
+       
+       
+
         #region Helper methods
 
-        private IEnumerable<TResult> DynamicMap<TResult>(IQueryable data)
+        private IEnumerable<TResult> DynamicMap<TResult>(IEnumerable data)
         {
             return Mapper.DynamicMap<IEnumerable<TResult>>(data);
         }

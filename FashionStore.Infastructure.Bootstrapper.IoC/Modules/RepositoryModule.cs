@@ -17,7 +17,7 @@ namespace FashionStore.Application.Bootstrapper.InversionOfControl.Modules
                 .InstancePerLifetimeScope();
             builder.RegisterType<ColorRepository>().As<IColorRepository>().InstancePerRequest();
             builder.RegisterType<SizeRepository>().As<ISizeRepository>().InstancePerRequest();
-
+            builder.RegisterType<ImageRepository>().As<IImageRepository>().InstancePerRequest();
 
             builder.RegisterType<ExchangeRatesRepository>().As<IExchangeRatesRepository>().InstancePerRequest();
 

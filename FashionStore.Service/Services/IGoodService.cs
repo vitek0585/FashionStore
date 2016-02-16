@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 using FashionStore.Domain.Core.Entities.Store;
 using FashionStore.Service.Interfaces.Services.Common;
 
@@ -13,7 +14,9 @@ namespace FashionStore.Service.Interfaces.Services
         IEnumerable<TResult> GetNewGoods<TResult>(int count, string currentCurrency, string lang);
         TResult GetByPage<TResult>(int page, int totalPerPage, int category, string currentCurrency, string lang, 
             Expression<Func<Good, bool>> predicat, string ordering);
-        IEnumerable<TResult> GetOrdersById<TResult>(IEnumerable<int> id, string currentCurrency, string lang);
+        IEnumerable<TResult> GetGoodsById<TResult>(IEnumerable<int> id, string currentCurrency, string lang);
         IEnumerable<TResult> GetGoods<TResult>(IEnumerable<int> ids, string lang);
+        Task UpdateOnlyFieldAsync(Good product, params Expression<Func<Good, object>>[] expressions);
+        Task Delete(int id);
     }
 }

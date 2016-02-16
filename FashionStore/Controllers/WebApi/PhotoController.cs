@@ -2,9 +2,15 @@
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Web;
 using System.Web.Http;
+using FashionStore.Application.Bootstrapper.InversionOfControl;
+using FashionStore.Core.AppValue;
 using FashionStore.Core.WebApiFormatters.Interfaces;
+using FashionStore.Domain.Core.Entities.Store;
+using FashionStore.Service.Interfaces.Services;
 using FashionStore.Service.Interfaces.UoW;
+using WebLogger.Abstract.Interface;
 
 namespace FashionStore.Controllers.WebApi
 {
@@ -12,28 +18,40 @@ namespace FashionStore.Controllers.WebApi
     public class PhotoController : ApiController
     {
         private IUnitOfWork _unit;
+        private IImageService _image;
+        private ILogWriter<string> _log;
 
-        public PhotoController(IUnitOfWork unit)
+        public PhotoController(IUnitOfWorkStore unit, IImageService image, ILogWriter<string> log)
         {
-            
+            _image = image;
+            _log = log;
             _unit = unit;
         }
         [HttpPost]
         [Route("AddPhoto")]
         public async Task<HttpResponseMessage> AddPhoto(int id, FileData file)
         {
+
             try
             {
-               // await _photo.Add(id, new MemoryStream(file.Data), file.FileName, file.MimeType);
-                _unit.Save();
+             
+                //var path = HttpContext.Current.Server.MapPath(ValuesApp.ConvertImageNameToAbsolutePath(file.FileName));
+                //var img = await _image.AddImage(id, file.Data, path);
+                return Request.CreateResponse(HttpStatusCode.Created, "20151101_164217.jpg"); //img.ImagePath);
+
+            }
+            catch (ArgumentException e)
+            {
+                var msg = string.Format("photo by id - {0} has been failed save, name is incorrect", id);
+                _log.LogWriteInfo(msg);
+                return Request.CreateResponse(HttpStatusCode.BadRequest, msg);
             }
             catch (Exception e)
             {
-                return Request.CreateResponse(HttpStatusCode.BadRequest, e.Message);
+                _log.LogWriteError(string.Format("photo by id - {0} has been failed", id), e);
+                return Request.CreateResponse(HttpStatusCode.BadRequest);
             }
 
-            return Request.CreateResponse(HttpStatusCode.Accepted,
-                string.Format("The photo was added to good - {0} id successfuly", id));
         }
 
         [HttpPost]

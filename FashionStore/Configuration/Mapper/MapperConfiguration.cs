@@ -1,4 +1,5 @@
-﻿using FashionStore.Domain.Core.Entities.Store;
+﻿using FashionStore.Areas.AdminArea.Models;
+using FashionStore.Domain.Core.Entities.Store;
 using FashionStore.Models.Order;
 
 namespace FashionStore.Configuration.Mapper
@@ -17,7 +18,7 @@ namespace FashionStore.Configuration.Mapper
             //Mapper.CreateMap<Good, GoodHome>().ForMember(d => d.PhotoPath, opt => opt.MapFrom(g => GetPhoto(g))).
             //    ForMember(g=>g.GoodCount,opt=>opt.MapFrom(o=>o.ClassificationGoods.Sum(c=>c.CountGood)));
             AutoMapper.Mapper.CreateMap<UserOrderModel, ClassificationGood>();
-
+            AutoMapper.Mapper.CreateMap<GoodsViewModel, Good>();
         }
 
     }

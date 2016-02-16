@@ -33,11 +33,11 @@ namespace FashionStore.Infastructure.Data.Service.Store
                         p.Price,
                         Discount = p.Discount ?? 0,
                         PriceWithDiscount = p.Price - (p.Discount ?? 0)/100*p.Price,
-                        ClassificationId = p.ClassificationGood.ClassificationId,
-                        GoodId = p.ClassificationGood.Good.GoodId,
-                        GoodNameEn = p.ClassificationGood.Good.GoodNameEn,
-                        GoodNameRu = p.ClassificationGood.Good.GoodNameRu,
-                        photo = p.ClassificationGood.Good.Image.FirstOrDefault().ImagePath,
+                      
+                        GoodId = p.GoodId,
+                        GoodNameEn = p.Good.GoodNameEn,
+                        GoodNameRu = p.Good.GoodNameRu,
+                        photo = p.Good.Image.FirstOrDefault().ImagePath,
 
                     })
                 }).OrderByDescending(s => s.DateSale).Skip(totalPerPage*(page - 1)).Take(totalPerPage)
@@ -52,7 +52,7 @@ namespace FashionStore.Infastructure.Data.Service.Store
                         p.CountGood,
                         p.Price,
                         p.Discount,
-                        p.ClassificationId,
+              
                         p.GoodId,
                         GoodName = GetNameByCurrentLangForDynamicType<Good>(p, lang, g => g.GoodNameEn),
                         p.photo,

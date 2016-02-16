@@ -10,7 +10,7 @@ namespace FashionStore.Domain.Core.Entities.Store
         public Good()
         {
             ClassificationGoods = new HashSet<ClassificationGood>();
-
+            SalePoses = new HashSet<SalePos>();
             Image = new HashSet<Image>();
         }
 
@@ -30,5 +30,7 @@ namespace FashionStore.Domain.Core.Entities.Store
 
         public virtual ICollection<ClassificationGood> ClassificationGoods { get; set; }
         public virtual ICollection<Image> Image { get; set; }
+
+        public virtual ICollection<SalePos> SalePoses { get; set; }
     }
 }

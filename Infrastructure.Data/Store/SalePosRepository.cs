@@ -17,20 +17,20 @@ namespace FashionStore.Infastructure.Data.Repository.Store
         }
 
 
-        public void Add(IEnumerable<SalePos> sales, Sale sale,string error)
+        public void Add(IEnumerable<SalePos> sales, IEnumerable<int> ids, Sale sale, string error)
         {
             _context.Configuration.AutoDetectChangesEnabled = true;
             _context.Configuration.ProxyCreationEnabled = true;
-            var ids = sales.Select(s => s.ClassificationId);
+
             var infoGoods = _context.Set<ClassificationGood>().Where(c => ids.Contains(c.ClassificationId)).AsEnumerable();
 
             foreach (var spos in sales)
             {
-                var typeGood = infoGoods.First(i => i.ClassificationId == spos.ClassificationId);
+                var typeGood = infoGoods.First(i => i.ColorId == spos.ColorId && i.SizeId == spos.SizeId);
                 if (typeGood.CountGood - spos.CountGood < 0)
                 {
                     throw new ArgumentException(
-                         String.Format(error, GetLanguage() == "ru" ? 
+                         String.Format(error, GetLanguage() == "ru" ?
                          typeGood.Good.GoodNameRu : typeGood.Good.GoodNameEn, typeGood.CountGood.ToString()));
                 }
                 typeGood.CountGood -= spos.CountGood;

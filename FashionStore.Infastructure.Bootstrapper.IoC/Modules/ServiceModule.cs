@@ -18,6 +18,8 @@ namespace FashionStore.Application.Bootstrapper.InversionOfControl.Modules
             builder.RegisterType(typeof(GoodService)).As(typeof(IGoodService)).InstancePerRequest();
             builder.RegisterType(typeof(CategoryService)).As(typeof(ICategoryService)).InstancePerRequest();
             builder.RegisterType<PurchaseService>().As<IPurchaseService>().InstancePerRequest();
+            builder.RegisterType(typeof(ImageService)).As(typeof(IImageService)).InstancePerRequest();
+
 
             UriBuilder uriBuilder = new UriBuilder();
             uriBuilder.Scheme = "https";

@@ -26,54 +26,53 @@
         </div>
     </div>
 
-   
+
     @*show image*@
     <div class="col-xs-12 margin-top-element" ng-cloak>
         <hr />
         <div class="main-slide">
-            @*основная картинка*@
-
-            <slick class="slider-for{{$index}}"
-                   as-nav-for='.slider-nav{{$index}}'
-                   fade="true"
-                   data="@NAME.&nbsp;photos"
-                   arrows="false"
-                   init-onload=true lazy-load="true">
-                <div ng-repeat="photo in @NAME.&nbsp;photos" ng-if="@NAME.&nbsp;photos[0]">
-                    <div ng-style="{'background':'url(@path'+photo+') no-repeat center','background-size': 'cover'}" class="edit-main-img">
-                    </div>
-                </div>
-                <div ng-if="!@NAME.&nbsp;photos[0]">
-                    <img ng-src="{{::'/Image/not-image.png'}}" alt="not img" class="primary-img"
-                         style="width: 100%;" />
-                </div>
-            </slick>
-        </div>
-
-        <div>
-            @*картинки выбора*@
-            <div class="image-slider">
-                <div class="image-prod-all">
-                    <slick class="slider-nav{{$index}}"
-                           as-nav-for='.slider-for{{$index}}'
-                           infinite="true" dots=false
-                           slides-to-show=3
-                           slides-to-scroll=1
-                           swipe="true"
-                           focus-on-select="true"
-                           data="@NAME.&nbsp;photos" init-onload=true
-                           arrows="false">
-                        <div ng-repeat="photo in @NAME&nbsp;.photos" ng-if="@NAME.&nbsp;photos[0]">
-                            <div ng-style="{'background':'url(@path'+photo+') no-repeat center','background-size': 'contain'}" class="edit-mini-img pointer">
-                            </div>
+            <div ng-if="!eVm.refresh">
+                @*основная картинка*@
+                <slick class="slider-for{{$index}}"
+                       as-nav-for='.slider-nav{{$index}}'
+                       fade="true"
+                       data="@NAME.&nbsp;photos"
+                       arrows="false"
+                       init-onload=true lazy-load="true">
+                    <div ng-repeat="photo in @NAME.&nbsp;photos track by $index" ng-if="@NAME.&nbsp;photos[0]">
+                        <div ng-style="{'background':'url(@path'+photo+') no-repeat center','background-size': 'cover'}" class="edit-main-img">
                         </div>
-                    </slick>
-                </div>
+                    </div>
+                    <div ng-if="!@NAME.&nbsp;photos[0]">
+                        <img ng-src="{{::'/Image/not-image.png'}}" alt="not img" class="primary-img"
+                             style="width: 100%;" />
+                    </div>
+                </slick>
+
+                @*</div>
+
+            <div>*@
+
+                @*картинки выбора*@
+                <slick class="slider-nav{{$index}}"
+                       as-nav-for='.slider-for{{$index}}'
+                       infinite="true" dots=false
+                       slides-to-show=3
+                       slides-to-scroll=1
+                       swipe="true"
+                       focus-on-select="true"
+                       data="@NAME.&nbsp;photos" init-onload=true
+                       arrows="false">
+                    <div ng-repeat="photo in @NAME&nbsp;.photos " ng-if="@NAME.&nbsp;photos[0]">
+                        <div ng-style="{'background':'url(@path'+photo+') no-repeat center','background-size': 'contain'}" class="edit-mini-img pointer">
+                        </div>
+                    </div>
+                </slick>
             </div>
         </div>
 
     </div>
-    <a ui-sref="goods-state" ><i uib-tooltip="Close edit" tooltip-placement="left" class="close-wnd glyphicon glyphicon-remove"></i></a>
+    <a ui-sref="goods-state"><i uib-tooltip="Close edit" tooltip-placement="left" class="close-wnd glyphicon glyphicon-remove"></i></a>
 
 </div>
 

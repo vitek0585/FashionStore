@@ -8,10 +8,7 @@ namespace FashionStore.Infrastructure.Data.Context.Store.Configuration
         public ClassificationGoodConfiguration()
         {
             
-            HasMany(e => e.SalePoses)
-             .WithOptional(s => s.ClassificationGood)
-             .HasForeignKey(s => s.ClassificationId)
-             .WillCascadeOnDelete(false);
+            
         }
  
     }

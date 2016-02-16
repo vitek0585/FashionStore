@@ -1,6 +1,14 @@
 ﻿@{
     var name = "admin".ToUpper();
 }
+@functions{
+    public string TokenHeaderValue()
+    {
+        string cookieToken, formToken;
+        AntiForgery.GetTokens(null, out cookieToken, out formToken);
+        return cookieToken + ":" + formToken;
+    }
+}
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,6 +42,7 @@
         </article>
     </section>
     <toaster-container toaster-options="{'time-out': 3000, 'close-button':false, 'animation-class': 'toast-top-right'}"></toaster-container>
+    <input type="hidden" value="@TokenHeaderValue()" id="csrf-token" />
     <script type="text/ng-template" id="modalContent.html">
         @Html.Partial("Partial/_Modal")
     </script>
@@ -51,8 +60,11 @@
     <script src="~/Scripts/application/view/admin/controller/edit-ctrl.js"></script>
     <script src="~/Scripts/application/view/admin/controller/upload-ctrl.js"></script>
     <script src="~/Scripts/application/view/admin/directive/uploadDirective.js"></script>
+    <script src="~/Scripts/application/view/admin/controller/users-ctrl.js"></script>
 
     <script src="~/Scripts/application/view/admin/controller/log-ctrl.js"></script>
     @RenderSection("Script", false)
+
+
 </body>
 </html>

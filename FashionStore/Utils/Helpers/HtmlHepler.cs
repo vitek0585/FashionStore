@@ -26,7 +26,8 @@ namespace FashionStore.Utils.Helpers
         {
             var settings = new JsonSerializerSettings()
             {
-                ContractResolver = new CamelCasePropertyNamesContractResolver()
+                ContractResolver = new CamelCasePropertyNamesContractResolver(),
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
             };
             return JsonConvert.SerializeObject(item, settings);
         }

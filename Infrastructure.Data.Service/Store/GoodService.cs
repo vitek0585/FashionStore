@@ -5,6 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using AutoMapper;
 using System.Linq.Dynamic;
+using System.Threading.Tasks;
 using FashionStore.Domain.Core.Entities.Store;
 using FashionStore.Domain.Interfaces.Repository;
 using FashionStore.Infastructure.Data.Service.Store.Common;
@@ -19,14 +20,15 @@ namespace FashionStore.Infastructure.Data.Service.Store
         private IGoodsRepository _goods;
         private ICategoryRepository _category;
         private IExchangeRatesService _exchangeRates;
-
+        private IClassificationGoodRepository _classification;
         public GoodService(IUnitOfWorkStore unitOfWork, IGoodsRepository repository, ICategoryRepository category,
-            IExchangeRatesService exchangeRates)
+            IExchangeRatesService exchangeRates, IClassificationGoodRepository classification)
             : base(unitOfWork, repository)
         {
             _category = category;
             _goods = repository;
             _exchangeRates = exchangeRates;
+            _classification = classification;
         }
 
         public TResult GetGood<TResult>(int id, string currentCurrency, string lang)
@@ -195,8 +197,78 @@ namespace FashionStore.Infastructure.Data.Service.Store
 
             return Mapper.DynamicMap<TResult>(data);
         }
-        
-        public IEnumerable<TResult> GetOrdersById<TResult>(IEnumerable<int> id, string currentCurrency, string lang)
+
+        #region Update field
+        public async Task UpdateOnlyFieldAsync(Good product, params Expression<Func<Good, object>>[] expressions)
+        {
+            try
+            {
+                _unitOfWork.StartTransaction();
+                var collCls = product.ClassificationGoods;
+                product.ClassificationGoods = null;
+                //update field goods
+                _goods.UpdateOnlyField(product, expressions);
+
+                var originCol = await _classification.GetAll()
+                    .Where(c => c.GoodId == product.GoodId).ToListAsync();//_goods.GetById(product.GoodId, g => g, g => g.ClassificationGoods, g => g.Category);
+                //update classsification goods
+                var length = Math.Max(collCls.Count, originCol.Count);
+                for (int i = 0; i < length; i++)
+                {
+                    var cls = collCls.ElementAtOrDefault(i);
+                    var originCls = originCol.ElementAtOrDefault(i);
+                    Add(originCls, cls);
+                }
+
+                await _unitOfWork.SaveAsync();
+                _unitOfWork.Commit();
+            }
+            catch (Exception e)
+            {
+                _unitOfWork.Rollback();
+                throw;
+            }
+
+
+        }
+
+
+
+        private void Update(ClassificationGood origin, ClassificationGood source)
+        {
+            if (origin != null && source != null)
+            {
+                origin.ColorId = source.ColorId;
+                origin.SizeId = source.SizeId;
+                origin.CountGood = source.CountGood;
+            }
+        }
+        private void Add(ClassificationGood origin, ClassificationGood source)
+        {
+            if (origin == null && source != null)
+            {
+                _classification.Add(source);
+            }
+            else
+                Remove(origin, source);
+        }
+        private void Remove(ClassificationGood origin, ClassificationGood source)
+        {
+            if (origin != null && source == null)
+            {
+                _classification.Delete(origin);
+            }
+            else
+                Update(origin, source);
+        }
+
+        #endregion
+        public async Task Delete(int id)
+        {
+            _goods.Delete(_goods.GetById(id));
+            await _unitOfWork.SaveAsync();
+        }
+        public IEnumerable<TResult> GetGoodsById<TResult>(IEnumerable<int> id, string currentCurrency, string lang)
         {
             var propName = GetPropertyName<Good>(lang, (g) => g.GoodNameRu);
             var actualRate = _exchangeRates.GetActualRateUsdWithUpdateIfNotExist();

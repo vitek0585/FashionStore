@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Threading.Tasks;
 
 namespace FashionStore.Service.Interfaces.UoW
 {
@@ -9,5 +10,6 @@ namespace FashionStore.Service.Interfaces.UoW
         void Commit();
         void Rollback();
         void Save();
+        Task<int> SaveAsync();
     }
 }

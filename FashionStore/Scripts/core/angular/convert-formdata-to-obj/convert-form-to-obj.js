@@ -4,7 +4,7 @@
         this.serializeObject = function (form) {
             var o = {};
             var a = $(form).serializeArray();
-            console.log(a);
+       
             $.each(a, function () {
                 if (o[this.name] !== undefined) {
                     if (!o[this.name].push) {

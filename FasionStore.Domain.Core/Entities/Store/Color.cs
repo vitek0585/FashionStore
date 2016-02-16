@@ -21,5 +21,7 @@ namespace FashionStore.Domain.Core.Entities.Store
         [StringLength(100)]
         public string ColorNameEn { get; set; }
         public virtual ICollection<ClassificationGood> ClassificationGoods { get; set; }
+
+        public virtual ICollection<SalePos> SalePoses { get; set; }
     }
 }

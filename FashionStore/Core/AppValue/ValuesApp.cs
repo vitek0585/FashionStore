@@ -7,7 +7,7 @@ namespace FashionStore.Core.AppValue
 
     public static class ValuesApp
     {
-        private const string _productsImagePath = "/Image/Products";
+        private const string _productsImagePath = "~/Image/Products";
 
         public const string Cart = "userCart";
         public const string RecentlyViewed = "recentlyViewed";

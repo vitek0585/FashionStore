@@ -5,6 +5,8 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.ModelBinding;
+using AutoMapper;
+using FashionStore.Areas.AdminArea.Models;
 using FashionStore.Core.AppValue;
 using FashionStore.Core.Binder;
 using FashionStore.Core.Filter.ModelValidate;
@@ -12,6 +14,7 @@ using FashionStore.Domain.Core.Entities.Store;
 using FashionStore.Models.MediaFormatter;
 using FashionStore.Service.Interfaces.Services;
 using WebCookie.Interfaces;
+using WebLogger.Abstract.Interface;
 
 namespace FashionStore.Controllers.WebApi
 {
@@ -20,22 +23,20 @@ namespace FashionStore.Controllers.WebApi
     {
 
         private IGoodService _goodService;
-
+        private ILogWriter<string> _log;
         private ICookieConsumer _storage;
         private byte _totalPerPage = 9;
 
-        public GoodController(ICookieConsumer storage, IGoodService goodService)
+        public GoodController(ICookieConsumer storage, IGoodService goodService, ILogWriter<string> log)
         {
             _storage = storage;
             _goodService = goodService;
-
-
+            _log = log;
         }
         [HttpGet]
         [Route("GetGood")]
         public IHttpActionResult GetGood([FromUri]int id)
         {
-            Task.Delay(1500).GetAwaiter().GetResult();
 
             try
             {
@@ -54,7 +55,7 @@ namespace FashionStore.Controllers.WebApi
         [Route("RandomGood")]
         public IHttpActionResult RandomGood(int count = 4)
         {
-            Task.Delay(1500).GetAwaiter().GetResult();
+
 
             try
             {
@@ -89,7 +90,7 @@ namespace FashionStore.Controllers.WebApi
             [ModelBinder(typeof(HttpFilterBinder))]Expression<Func<Good, bool>> pr,
             [ModelBinder(typeof(HttpOrderBinder))]string sort = null)
         {
-            Task.Delay(500).GetAwaiter().GetResult();
+
             try
             {
                 var data = _goodService.GetByPage<dynamic>(page, _totalPerPage, category,
@@ -104,19 +105,20 @@ namespace FashionStore.Controllers.WebApi
 
         }
 
-        [HttpPost]
+        [HttpDelete]
         [Route("RemoveGood")]
-        public HttpResponseMessage RemoveGood([FromBody]int id)
+     
+        public async Task<HttpResponseMessage> RemoveGood(int id)
         {
             try
             {
-                //_goods.Delete(_goods.FindBy(p => p.GoodId == id).First());
-                //_unit.Save();
-                return Request.CreateResponse(HttpStatusCode.Accepted,
-                    string.Format("The good by id {0} was deleted successfuly", id));
+                await _goodService.Delete(id);
+
+                return Request.CreateResponse(HttpStatusCode.NoContent);
             }
             catch (Exception e)
             {
+                _log.LogWriteError("delete goods handler", e);
                 return Request.CreateResponse(HttpStatusCode.BadRequest,
                     string.Format("The good by id {0} was not deleted", id));
             }
@@ -145,19 +147,23 @@ namespace FashionStore.Controllers.WebApi
             return Request.CreateResponse(HttpStatusCode.Accepted,
                 string.Format("The good by id {0} was added successfuly", good.GoodId));
         }
-        [HttpPost]
+
+        [HttpPut]
         [ValidateModelHttp]
         [Route("Update")]
-        public HttpResponseMessage Update(Good good)
+        public async Task<HttpResponseMessage> Update(GoodsViewModel good)
         {
             try
             {
-                //_goods.UpdateOnlyField(good, g => g.GoodCount, g => g.GoodNameRu, g => g.PriceUsd);
-                //_unit.Save();
-                return Request.CreateResponse(HttpStatusCode.Accepted, good);
+                await _goodService.UpdateOnlyFieldAsync(Mapper.Map<Good>(good),
+                    g => g.GoodNameEn, g => g.GoodNameRu, g => g.PriceUsd, g => g.Discount, g => g.CategoryId);
+
+                return Request.CreateResponse(HttpStatusCode.Accepted);
             }
             catch (Exception e)
             {
+
+                _log.LogWriteError("Update goods exception", e);
                 return Request.CreateResponse(HttpStatusCode.BadRequest, string.Format("The good by id {0} not update", good.GoodId));
             }
         }

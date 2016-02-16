@@ -20,10 +20,16 @@ namespace FashionStore.Infrastructure.Data.Context.Store.Configuration
             Property(g => g.DateCreate)
                 .HasColumnType("date");
 
-            HasMany(g => g.ClassificationGoods)
-                .WithRequired(c => c.Good)
-                .HasForeignKey(c => c.GoodId)
-                .WillCascadeOnDelete(true);
+            //HasMany(g => g.ClassificationGoods)
+            //    .WithRequired(c => c.Good)
+            //    .HasForeignKey(c => c.GoodId)
+            //    .WillCascadeOnDelete(true);
+
+
+            HasMany(g => g.SalePoses)
+              .WithOptional(c => c.Good)
+              .HasForeignKey(c => c.GoodId)
+              .WillCascadeOnDelete(false);
             
             HasMany(g => g.Image)
                .WithRequired(c => c.Good)

@@ -20,11 +20,11 @@ namespace FashionStore.Infastructure.Data.Repository.Store
 
         }
 
-      
+
         public void UpdateOnlyField(Good good, params Expression<Func<Good, object>>[] expressions)
         {
-
             _dbSet.Attach(good);
+            //_context.Entry(good).State = EntityState.Modified;
             Array.ForEach(expressions, e => _context.Entry(good).Property(e).IsModified = true);
         }
 
@@ -33,6 +33,15 @@ namespace FashionStore.Infastructure.Data.Repository.Store
             var good = _dbSet.Find(id);
             return good;
         }
+
+        public Good GetById(int id, params Expression<Func<Good, object>>[] include)
+        {
+            IQueryable<Good> query = _dbSet;
+            var good = include.Aggregate(query, (a, i) => a.Include(i));
+
+            return good.FirstOrDefault();
+        }
+
         public TResult GetById<TResult>(int id, Expression<Func<Good, TResult>> select, params Expression<Func<Good, object>>[] include)
         {
             IQueryable<Good> query = _dbSet;
@@ -42,14 +51,14 @@ namespace FashionStore.Infastructure.Data.Repository.Store
             return good.FirstOrDefault();
         }
 
-        public IEnumerable<TResult> SqlQuery<TResult>(string query,params object[] param)
+        public IEnumerable<TResult> SqlQuery<TResult>(string query, params object[] param)
         {
             var result = _context.Database.SqlQuery<TResult>(query, param);
             return result.AsEnumerable();
         }
-        
-        
 
-      
+
+
+
     }
 }

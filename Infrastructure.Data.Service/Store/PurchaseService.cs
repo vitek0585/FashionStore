@@ -40,16 +40,19 @@ namespace FashionStore.Infastructure.Data.Service.Store
 
         }
 
-        public PurchaseResult MakeAnOrder(IEnumerable<ClassificationGood> list,int? userId,string userName, string phone, string email)
+        public PurchaseResult MakeAnOrder(IEnumerable<ClassificationGood> list, int? userId, string userName, string phone, string email)
         {
             try
             {
                 _unit.StartTransaction();
+
                 var sale = GetSale(userId, userName, phone, email);
                 _sale.EnableProxy<ISaleRepository>().Add(sale);
                 var poses = GetSalePoses(list);
+                var idsCls = list.Select(i => i.ClassificationId);
+         
+                _salePos.Add(poses, idsCls, sale, Messages.NoEnoughtGoods);
 
-                _salePos.Add(poses, sale, Messages.NoEnoughtGoods);
                 _unit.Save();
                 _unit.Commit();
             }
@@ -142,7 +145,9 @@ namespace FashionStore.Infastructure.Data.Service.Store
 
             var poses = list.Select(p => new SalePos()
             {
-                ClassificationId = p.ClassificationId,
+                GoodId = p.GoodId,
+                SizeId = p.SizeId,
+                ColorId = p.ColorId,
                 CountGood = p.CountGood,
                 Price = goods.First(g => g.GoodId == p.GoodId).PriceUsd,
                 Discount = goods.First(g => g.GoodId == p.GoodId).Discount
@@ -150,7 +155,7 @@ namespace FashionStore.Infastructure.Data.Service.Store
             return poses;
         }
 
-        private Sale GetSale(int? userId,string userName, string phone, string email)
+        private Sale GetSale(int? userId, string userName, string phone, string email)
         {
             var sale = new Sale()
             {

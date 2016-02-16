@@ -37,6 +37,11 @@ namespace FashionStore.Infastructure.Data.Service.Store.Common
             _repository.Update(item);
         }
 
+        public IEnumerable<T> All()
+        {
+            return _repository.GetAll();
+        }
+
         protected IEnumerable<TResult> MapCollection<TResult>(dynamic data)
         {
             return Mapper.DynamicMap<IEnumerable<TResult>>(data);

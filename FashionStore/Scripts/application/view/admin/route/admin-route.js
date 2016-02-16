@@ -40,6 +40,12 @@
             controllerAs: 'lVm',
             templateUrl: "/Admin/Log"
 
+        }).state('users-state', {
+            url: '/Users',
+            controller: 'usersCtrl',
+            controllerAs: 'uVm',
+            templateUrl: "/Admin/Users"
+
         });
     }
 })();

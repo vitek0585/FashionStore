@@ -19,9 +19,9 @@
 
         @if (Request.IsAuthenticated && User.IsInRole("Admin"))
         {
-            @*<li>
-                @Html.ActionLink(Resource.Admin, "Index", new { action = "Index", controller = "Admin", area = "Administration" })
-            </li>*@
+            <li>
+                @Html.ActionLink(Resource.Admin, "Index", new { action = "Index", controller = "Admin", area = "AdminArea" })
+            </li>
         }
     </ul>
 
@@ -29,9 +29,6 @@
         @if (Request.IsAuthenticated)
         {
 
-            <li>
-                @Html.ActionLink("Hello " + User.Identity.GetUserName(), "", "")
-            </li>
             <li>
                 @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
                 {

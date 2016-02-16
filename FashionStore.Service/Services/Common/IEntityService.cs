@@ -1,10 +1,13 @@
-﻿namespace FashionStore.Service.Interfaces.Services.Common
+﻿using System.Collections.Generic;
+
+namespace FashionStore.Service.Interfaces.Services.Common
 {
     public interface IEntityService<T>
     {
         T Add(T item);
         void Delete(T item);
         void Save();
-        void Update(T item); 
+        void Update(T item);
+        IEnumerable<T> All();
     }
 }

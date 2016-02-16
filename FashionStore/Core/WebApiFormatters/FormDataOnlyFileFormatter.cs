@@ -36,7 +36,7 @@ namespace FashionStore.Core.WebApiFormatters
                 if (!string.IsNullOrEmpty(contents.Headers.ContentDisposition.FileName))
                 {
                     var data = await contents.ReadAsByteArrayAsync();
-                    var fileName = contents.Headers.ContentDisposition.FileName;
+                    var fileName = contents.Headers.ContentDisposition.FileName.Trim('\"');
                     var fileType = contents.Headers.ContentType.MediaType;
 
                     file = new FileData(fileName, fileType, data);

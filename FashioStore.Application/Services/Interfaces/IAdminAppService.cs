@@ -9,6 +9,8 @@ namespace FashionStore.Application.Services.Interfaces
         Task<TResult> GetGoodsByPageAsync<TResult>(int categoryId, int page, int perPage);
         Task<IEnumerable<TResult>> AllCategoryByTypeAsync<TResult>();
         Task<TResult> FullInfoGoodsAsync<TResult>(int id);
-       
+        Task<IEnumerable<TResult>> AllColorsAsync<TResult>();
+        Task<IEnumerable<TResult>> AllSizesAsync<TResult>();
+
     }
 }

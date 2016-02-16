@@ -19,12 +19,14 @@ body {
 .streth {
     width: 100%;
 }
+
 .trans-width {
     -moz-transition: width @nav-anim-time;
     -o-transition: width @nav-anim-time;
     -webkit-transition: width @nav-anim-time;
     transition: width @nav-anim-time;
 }
+
 .navbar-default .navbar-nav > li > a,
 .btn-primary, .btn-warning, .btn-default, .btn-danger {
     -moz-transition: all @nav-anim-time;
@@ -132,9 +134,14 @@ section {
             padding: 0;
         }
 
+        .select .input {
+            min-height: 36px;
+        }
+
         .dropdown {
             height: auto;
             max-height: 170px;
+            padding: 0;
         }
     }
 
@@ -189,10 +196,14 @@ section {
         background-size: contain;
     }
 
+    .main-slide {
+        min-width: 286px;
+    }
+
     .edit-mini-img {
         height: @edit-mini-img;
         width: 100%;
-        max-height:125px;
+        max-height: 125px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
@@ -209,7 +220,7 @@ section {
     .edit {
         max-width: @goods-edit-min;
         position: relative;
-           float: right;
+        float: right;
     }
 
     #editForm {
@@ -241,11 +252,12 @@ section {
     margin-top: @distance-beetwen-elem;
     clear: both;
 }
-.col-no-padding{
+
+.col-no-padding {
     padding-left: 0;
     padding-right: 0;
-
 }
+
 form {
     .control-label {
         text-transform: uppercase;
@@ -279,7 +291,7 @@ form {
 .edit-main-img {
     width: 100%;
     height: 90vh;
-    max-height:350px;
+    max-height: 350px;
 }
 
 .close-wnd {

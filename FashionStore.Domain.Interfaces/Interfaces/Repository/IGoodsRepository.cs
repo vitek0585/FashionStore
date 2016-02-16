@@ -11,6 +11,7 @@ namespace FashionStore.Domain.Interfaces.Repository
        
         void UpdateOnlyField(Good good, params Expression<Func<Good, object>>[] expressions);
         Good GetById(int id);
+        Good GetById(int id, params Expression<Func<Good, object>>[] include);
         TResult GetById<TResult>(int id, Expression<Func<Good, TResult>> select, params Expression<Func<Good, object>>[] include);
         int GetCount();
 

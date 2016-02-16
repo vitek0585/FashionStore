@@ -9,12 +9,16 @@ namespace FashionStore.Domain.Core.Entities.Store
         public decimal Price { get; set; }
         public int CountGood { get; set; }
 
-        public int? ClassificationId { get; set; }
-
-        public virtual ClassificationGood ClassificationGood { get; set; }
         public int SaleId { get; set; }
 
         public virtual Sale Sale { get; set; }
         public int? Discount { get; set; }
+
+        public int? GoodId { get; set; }
+        public virtual Good Good { get; set; }
+        public int? SizeId { get; set; }
+        public virtual Size Size { get; set; }
+        public int? ColorId { get; set; }
+        public virtual Good Color { get; set; }
     }
 }

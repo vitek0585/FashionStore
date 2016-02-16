@@ -163,10 +163,31 @@
                             }
                         }
                     };
-
+                    //select first element
                     if (scope.sbSelectFirstListItem)
                         scope.indexes.push(0);
+                    //select zero or more element by id
+                    if (scope.sbSelectItemsByList) {
+                        var elem = [];
+                        scope.list.forEach(function (e, i) {
+                            if (!e[scope.sbKeyId]) {
+                                throw "sb-key-id is not correct";
+                            }
+                            var isContains = scope.sbSelectItemsByList.some(function(elem, i) {
+                                return elem[scope.sbKeyId] == e[scope.sbKeyId];
+                            });
+                            if (isContains)
+                                elem.push(i);
+                        });
+                        if (elem.length>0) {
 
+                            elem.forEach(function (e) {
+                                scope.indexes.push(e);
+
+                            });
+                        }
+                    }
+                    //select one element by key
                     if (scope.sbSelectItemById) {
 
                         var elem = undefined;
@@ -180,7 +201,7 @@
                         if (angular.isDefined(elem)) {
                             scope.indexes.push(elem);
 
-                        } else if (scope.sbSelectFirstListItem)
+                        } else
                             scope.indexes.push(0);
 
                     }
@@ -428,9 +449,12 @@
                     sbModelSelected: '=',
                     //for change model
                     observer: '=observer',
-                    //togeather
+                    //select one elements by key
                     sbSelectItemById: '=',
+                    //key comparer
                     sbKeyId: '@',
+                    //select several elements by key
+                    sbSelectItemsByList: "="
 
                 },
                 link: function (scope) {
@@ -599,7 +623,7 @@
                                 $scope.closeDropDown();
                             }
                             $scope.weSentBroadcast = false;
-                           
+
                             //$scope.$apply();
                         });
                         $scope.selectListItem(0);
@@ -623,7 +647,7 @@
             return {
                 restrict: 'AE',
                 link: function (scope, element, attrs) {
-                    element.on('click', function () {
+                    element.on('click', function (e) {
                         scope.sendBroadcast();
 
                         if (scope.dropDownState()) {
@@ -633,6 +657,8 @@
                             scope.openDropDown();
                         }
                         scope.$apply();
+                        e.stopPropagation();
+                        e.preventDefault();
                     });
                 },
                 controller: ['$rootScope', '$scope', function ($rootScope, $scope) {

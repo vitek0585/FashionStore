@@ -104,9 +104,13 @@ section .suggest-box {
 section .suggest-box .select button {
   padding: 0;
 }
+section .suggest-box .select .input {
+  min-height: 36px;
+}
 section .suggest-box .dropdown {
   height: auto;
   max-height: 170px;
+  padding: 0;
 }
 section .combo-boxes {
   display: table;
@@ -143,6 +147,9 @@ section .content-container {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+.goods .main-slide {
+  min-width: 286px;
 }
 .goods .edit-mini-img {
   height: 39vh;

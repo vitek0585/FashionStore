@@ -44,6 +44,7 @@
     <Compile Include="Services\Common\IEntityService.cs" />
     <Compile Include="Services\IExchangeRatesService.cs" />
     <Compile Include="Services\IGoodService.cs" />
+    <Compile Include="Services\IImageService.cs" />
     <Compile Include="Services\IPurchaseService.cs" />
     <Compile Include="Services\ISaleService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

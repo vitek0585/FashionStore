@@ -1,9 +1,12 @@
-﻿@model IEnumerable<dynamic>
+﻿@model FashionStore.Areas.AdminArea.Models.ContainerGoodsViewModel
 @{
     Layout = null;
-    var types = Html.SerializeToJson(Model);
+    var types = Html.SerializeToJson(Model.Category);
+    var colors = Html.SerializeToJson(Model.Colors);
+    var sizes = Html.SerializeToJson(Model.Sizes);
+    
 }
-<div ng-init="gVm.init(@types)"></div>
+<div ng-init="gVm.init(@types,@colors,@sizes)"></div>
 
 <div class="combo-boxes content-container">
     <div az-suggest-box

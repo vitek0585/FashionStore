@@ -10,11 +10,13 @@
     var price = Html.GetName<Good>(m => m.PriceUsd);
     var discount = Html.GetName<Good>(m => m.Discount);
 
-    var typeId = Html.GetName<Category>(m => m.TypeId);
-    var categoryId = Html.GetName<Good>(m => m.CategoryId);
-
-    //var typeCategory = Html.GetName<CategoryType>(m => m.TypeNameEn);
-    //var nameCategory = Html.GetName<CategoryName>(m => m.CategoryNameEn);
+    //CLASSIF goods
+    var clsId = Html.GetName<ClassificationGood>(m => m.ClassificationId);
+    var colId = Html.GetName<ClassificationGood>(m => m.ColorId);
+    var sizId = Html.GetName<ClassificationGood>(m => m.SizeId);
+    var countGood = Html.GetName<ClassificationGood>(m => m.CountGood);
+    var sizName = Html.GetName<Size>(m => m.SizeName);
+    var colName = Html.GetName<Color>(m => m.ColorNameEn);
 
     var predicate = "{0}&&editForm.{0}.$invalid";
 
@@ -22,22 +24,28 @@
     var nameEnPredicate = predicate.F(nameEn);
     var pricePredicate = predicate.F(price);
     var discountPredicate = predicate.F(discount);
+    var countGoodPredicate = predicate.F(countGood);
     //for az-suggest-box
-    //type
-    var types = "types".ControllerAs("gVm");
+
+    //calssification
+    var colors = "colors".ControllerAs("gVm");
+    var sizes = "sizes".ControllerAs("gVm");
+
     var selectType = "select.type".ControllerAs(ctrlAs);
     //category
     var ifExists = "select.type[0]".ControllerAs(ctrlAs);
     var categories = "select.type[0].category".ControllerAs(ctrlAs);
     var selectCategory = "select.category".ControllerAs(ctrlAs);
-    var observer = "select.type[0].id".ControllerAs(ctrlAs);
+    var observer = "t.type[0].id";
 }
-<form method="POST" class="form-horizontal" role="form" novalidate name="@nameForm" id="@nameForm" ng-submit="submit()"
+<form method="POST" class="form-horizontal" role="form" novalidate name="@nameForm" id="@nameForm"
+      ng-submit="@ctrlAs.&nbsp;submit(@nameForm)"
       ng-if="@NAME">
     @Html.AntiForgeryToken()
     @*Good Id*@
     <div class="form-group">
         <div class="col-sm-12">
+            <input type="hidden" ng-model="@NAME.@goodId" name="@goodId"/>
             <label class="control-label"><b>ID:</b>&nbsp;{{@NAME.@goodId}}</label>
         </div>
     </div>
@@ -123,67 +131,173 @@
         </div>
     </div>
     @*Type*@
+    @{
+        //sb-list="@types" - источник данных
+        //sb-model-selected="t.type" - при выборе в комбо боксе куда будет сохраняться значение
+        //sb-select-item-by-id="@NAME.@typeId" - какое должно быть изначально выбрано значение, где @NAME.@typeId продукт редактирования
+        //sb-key-id="id" - ключ по какому должно быть изначально выбрано значение (проводится сравнение)
+        //observer="@types" - при изменении и изменяется состав элементов
+        var scope = "t={type:[],cat:[]}";
+        //type
+        var types = "types".ControllerAs("gVm");
+        //TYPE goods
+        var typeId = Html.GetName<Category>(m => m.TypeId);
+        var categoryId = Html.GetName<Good>(m => m.CategoryId);
 
-    <div class="form-group">
-        <div class="col-sm-12">
-            <label class="control-label">Type</label>
-        </div>
-        <div class="col-sm-12">
-            <div az-suggest-box
-                 sb-list="@types"
-                 sb-model-selected="@selectType"
-                 sb-select-item-by-id="@NAME.@typeId"
-                 sb-key-id="id"
-                 observer="@types"
-                 sb-selected-list-item-class="sb-list-item-checked"
-                 sb-close-list-on-select="true"
-                 sb-select-first-list-item="false"
-                 sb-not-remove-current="true"
-                 sb-max-selection="1"
-                 class="suggest-box sort-by text-left" ng-cloak>
-                <div sb-trigger-area class="select">
-                    <div class="input">
-                        <div sb-selection-item>{{s.name}}</div>
+    }
+    <div ng-init="@scope">
+        <div class="form-group">
+            <div class="col-sm-12">
+                <label class="control-label">Type</label>
+            </div>
+            <div class="col-sm-12">
+                <input type="hidden" ng-model="t.type" name="selectType" />
+                <div az-suggest-box
+                     sb-list="@types"
+                     sb-model-selected="t.type"
+                     sb-select-item-by-id="@NAME.@typeId"
+                     sb-key-id="id"
+                     sb-selected-list-item-class="sb-list-item-checked"
+                     sb-close-list-on-select="true"
+                     sb-select-first-list-item="false"
+                     sb-not-remove-current="true"
+                     sb-max-selection="1"
+                     class="suggest-box sort-by text-left" ng-cloak>
+                    <div sb-trigger-area class="select">
+                        <div class="input">
+                            <div sb-selection-item>{{s.name}}</div>
+                        </div>
+                        <button><i class="fa fa-chevron-down"></i></button>
                     </div>
-                    <button><i class="fa fa-chevron-down"></i></button>
+                    <ul class="dropdown">
+                        <li sb-dropdown-item class="item">{{i.name}}</li>
+                    </ul>
                 </div>
-                <ul class="dropdown">
-                    <li sb-dropdown-item class="item">{{i.name}}</li>
-                </ul>
+            </div>
+        </div>
+
+        @*Category*@
+        <div class="form-group">
+            <div class="col-sm-12">
+                <label class="control-label">Category</label>
+            </div>
+            <div class="col-sm-12">
+                <input type="hidden" ng-model="t.cat" name="selectCat" />
+                <div az-suggest-box ng-if="t.type[0]"
+                     sb-list="t.type[0].category"
+                     sb-model-selected="t.cat"
+                     sb-select-item-by-id="@NAME.@categoryId"
+                     sb-key-id="categoryId"
+                     observer="t.type[0].id"
+                     sb-selected-list-item-class="sb-list-item-checked"
+                     sb-close-list-on-select="true"
+                     sb-select-first-list-item="false"
+                     sb-not-remove-current="true"
+                     sb-max-selection="1"
+                     class="suggest-box sort-by text-left" ng-cloak>
+                    <div sb-trigger-area class="select">
+                        <div class="input">
+                            <div sb-selection-item>{{s.categoryNameEn}}</div>
+                        </div>
+                        <button><i class="fa fa-chevron-down"></i></button>
+                    </div>
+                    <ul class="dropdown">
+                        <li sb-dropdown-item class="item">{{i.categoryNameEn}}</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+    @*Classification*@
+    <span ng-init="coll=true;">
+        <button type="button" class="btn btn-default color-text logs-btn streth" ng-click="coll = !coll">Classification</button>
 
-    @*Category*@
-    <div class="form-group">
-        <div class="col-sm-12">
-            <label class="control-label">Category</label>
-        </div>
-        <div class="col-sm-12">
-            <div az-suggest-box ng-if="@ifExists"
-                 sb-list="@categories"
-                 sb-model-selected="@selectCategory"
-                 sb-select-item-by-id="@NAME.@categoryId"
-                 sb-key-id="categoryId"
-                 observer="@observer"
-                 sb-selected-list-item-class="sb-list-item-checked"
-                 sb-close-list-on-select="true"
-                 sb-select-first-list-item="false"
-                 sb-not-remove-current="true"
-                 sb-max-selection="1"
-                 class="suggest-box sort-by text-left" ng-cloak>
-                <div sb-trigger-area class="select">
-                    <div class="input">
-                        <div sb-selection-item>{{s.categoryNameEn}}</div>
+        <div uib-collapse="coll">
+
+            <div class="well well-lg col-xs-12">
+                <div ng-repeat="clsG in @NAME.&nbsp;clsn track by $index" 
+                     ng-init="t={colors:[],sizes:[],@clsId:clsG.@clsId,@countGood:clsG.@countGood}">
+                    <input type="hidden" ng-model="t" name="classification{{$index}}" />
+                    @*col*@
+                    <div class="col-sm-12">
+                        <div class="col-sm-12">
+                            <label class="control-label">Colors</label>
+                        </div>
+                        <div az-suggest-box
+                             sb-list="@colors"
+                             sb-select-item-by-id="clsG.@colId"
+                             sb-key-id="colorId"
+                             sb-model-selected="t.colors"
+                             sb-selected-list-item-class="sb-list-item-checked"
+                             sb-close-list-on-select="false"
+                             sb-select-first-list-item="false"
+                             sb-not-remove-current="true"
+                             sb-max-selection="1"
+                             class="suggest-box sort-by text-left" ng-cloak>
+                            <div sb-trigger-area class="select">
+                                <div class="input">
+                                    <div sb-selection-item>{{s.@colName}}</div>
+                                </div>
+                                <button><i class="fa fa-chevron-down"></i></button>
+                            </div>
+                            <ul class="dropdown">
+                                <li sb-dropdown-item class="item">{{i.@colName}}</li>
+                            </ul>
+                        </div>
                     </div>
-                    <button><i class="fa fa-chevron-down"></i></button>
+                    @*siz*@
+                    <div class="col-sm-12">
+                        <div class="col-sm-12">
+                            <label class="control-label">Sizes</label>
+                        </div>
+                        <div az-suggest-box
+                             sb-list="@sizes"
+                             sb-select-item-by-id="clsG.@sizId"
+                             sb-key-id="sizeId"
+                             sb-model-selected="t.sizes"
+                             sb-selected-list-item-class="sb-list-item-checked"
+                             sb-close-list-on-select="true"
+                             sb-select-first-list-item="false"
+                             sb-not-remove-current="true"
+                             sb-max-selection="1"
+                             class="suggest-box sort-by text-left" ng-cloak>
+                            <div sb-trigger-area class="select">
+                                <div class="input">
+                                    <div sb-selection-item>{{s.@sizName}}</div>
+                                </div>
+                                <button><i class="fa fa-chevron-down"></i></button>
+                            </div>
+                            <ul class="dropdown">
+                                <li sb-dropdown-item class="item">{{i.@sizName}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="col-sm-12">
+                            <label class="control-label">Count</label>
+                        </div>
+                        <input type="number"
+                               class="form-control"
+                               id="@countGood"
+                               ng-model="t.@countGood"
+                               ng-blur="@countGood=true"
+                               min="0"
+                               ng-required="true"
+                               ng-class="@countGoodPredicate?'custom-invalid':'custom-valid'">
+
+                    </div>
+                    <div class="col-xs-12">
+                        <button type="button" class="btn btn-danger streth margin-top" ng-click="@ctrlAs.&nbsp;removeCls(t)">Remove</button>
+                        <hr />
+                    </div>
                 </div>
-                <ul class="dropdown">
-                    <li sb-dropdown-item class="item">{{i.categoryNameEn}}</li>
-                </ul>
+                <div class="col-xs-12">
+                    <button type="button" class="btn btn-info color-text streth form-control" ng-click="@ctrlAs.&nbsp;newCls()">Add new</button>
+                </div>
             </div>
         </div>
-    </div>
+
+    </span>
     <div class="form-group">
         <div class="col-sm-12 text-right">
             <button class="btn btn-primary streth" type="submit" ng-disabled="!@nameForm.$valid">Ok</button>

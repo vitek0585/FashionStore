@@ -10,9 +10,15 @@
     }
 
 };
+Array.prototype.removeRef = function (item) {
 
-$(document).scroll(function (e) {
-    $('nav').css({
-        'left': -$(document).scrollLeft()
-    });
-});
+    var array = this;
+    for (var i = 0; i < array.length; i++) {
+
+        if (array[i] === item) {
+            array.splice(i, 1);
+            break;
+        }
+    }
+
+};

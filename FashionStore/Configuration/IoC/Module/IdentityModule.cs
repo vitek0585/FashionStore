@@ -28,7 +28,7 @@ namespace FashionStore.Configuration.IoC.Module
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<UserAppService>().As<IUserAppService>().InstancePerLifetimeScope();
-
+            builder.RegisterType<RoleService>().As<IRoleService>().InstancePerLifetimeScope();
             builder.RegisterType(typeof(AccountService)).As(typeof(IAccountService)).InstancePerLifetimeScope();
       
 

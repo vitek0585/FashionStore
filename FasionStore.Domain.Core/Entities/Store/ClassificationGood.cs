@@ -7,10 +7,7 @@ namespace FashionStore.Domain.Core.Entities.Store
     [Table("ClassificationGood")]
     public partial class ClassificationGood
     {
-        public ClassificationGood()
-        {
-            SalePoses = new HashSet<SalePos>();
-        }
+       
         [Key]
         public int ClassificationId { get; set; }
 
@@ -27,6 +24,6 @@ namespace FashionStore.Domain.Core.Entities.Store
         public virtual Good Good { get; set; }
 
         public virtual Size Size { get; set; }
-        public virtual ICollection<SalePos> SalePoses { get; set; }
+
     }
 }

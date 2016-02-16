@@ -8,7 +8,11 @@
     function goodsCtrl($scope, adminHttp, $state, spinner) {
         var vm = this;
         vm.goods = [];
+        //for edit goods
         vm.types = [];
+        vm.colors = [];
+        vm.sizes = [];
+
         vm.select = {
             type: [],
             category: []
@@ -25,12 +29,16 @@
         };
         //functions
         vm.init = init;
+        vm.remove = remove;
         vm.clickPage = clickPage;
         vm.stretch = stretch;
         //implement functions--------------------------------
         //at the start page
-        function init(model) {
-            vm.types = model;
+        function init(cat,col,siz) {
+            vm.types = cat;
+            vm.colors = col;
+            vm.sizes = siz;
+
             refreshTableGoods();
         }
         //at the push pagging
@@ -41,6 +49,13 @@
                 vm.goods = d;
                 vm.info.totalPages = parseInt(vm.goods.totalPagesCount);
             }).finally(function () {
+                spinner.comleted();
+            });
+        }
+        //remove
+        function remove(id) {
+            spinner.begin();
+            adminHttp.deleteGoods({ id: id }).finally(function () {
                 spinner.comleted();
             });
         }

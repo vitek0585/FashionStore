@@ -2,7 +2,8 @@
     'use strict';
     var m = angular.module("adminApp");
     m.directive("uploadImage", [
-        "$q", "httpService", "$timeout", "$interval", function (q, http, timeout, interval) {
+        "$q", "httpService", "$timeout", "$interval", "adminHttpSvc", "$rootScope",
+        function (q, http, timeout, interval, adminHttp, $rootScope) {
 
             var uploadAnim = function (pr) {
                 pr.active = true;
@@ -29,16 +30,18 @@
                             return;
 
                         var inval = uploadAnim(progress);
-                        var headers = { 'Content-Type': undefined };
-                        http.fileRequest('/api/Photo/AddPhoto', scope.files[index],{ id: scope.currentItem.goodId }, headers)
-                            .then(function () {
+                        //var headers = { 'Content-Type': undefined };
+                        adminHttp.uploadFile(scope.files[index], { id: scope.currentItem.goodId })
+                            .then(function (d) {
                                 interval.cancel(inval);
                                 progress.width = { 'width': '100%' };
-                                scope.files[index].upload = true;
 
                                 //обновление элемента
-                                angular.element($("#controll-view-goods")).scope().refreshElement(scope.currentItem.goodId);
-                            
+                                scope.currentItem.photos.push(d);
+                                $rootScope.$broadcast('refresh');
+                               
+                                //scope.files.slice(index, 1);
+                                scope.files[index].upload = true;
                             }, function () {
                                 interval.cancel(inval);
                                 progress.width = { 'width': '0%' };

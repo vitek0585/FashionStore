@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using System.Data.Entity;
+using System.Threading.Tasks;
 using FashionStore.Infastructure.Data.Identity.Context;
 using FashionStore.Service.Interfaces.UoW;
 
@@ -32,6 +33,11 @@ namespace FashionStore.Infastructure.Data.Service.UoF
         public void Save()
         {
             _context.SaveChanges();
+        }
+
+        public Task<int> SaveAsync()
+        {
+            return _context.SaveChangesAsync();
         }
 
         public void Dispose()
