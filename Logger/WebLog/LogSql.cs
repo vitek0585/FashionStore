@@ -7,21 +7,26 @@ using System.Dynamic;
 using System.Linq;
 using WebLogger.Abstract;
 using WebLogger.Abstract.Interface;
-using WebLogger.Enum;
+using WebLogger.Abstract.Interface.Sql;
+using WebLogger.Type;
 
-namespace WebLogger.Concreate
+namespace WebLogger.WebLog
 {
 
-    public sealed class LogWebSql : LogWebBase<String>, ILogReader
+    public sealed class LogSql : LogBase<string, ExpandoObject>, ILogWriterSql, ILogReaderSql
     {
         private Lazy<SqlConnection> _conection;
-        private string _query;
+        private IRequestContext _request;
+        private string _connectionString;
+        private string _queryWrite;
         private string _queryRead;
         private string _queryDelete;
 
-        public LogWebSql()
+        public LogSql(IRequestContext request, string connectionString)
         {
-            _query = "insert into Log (message,exceptionType,stackTrace,exceptionMsg,httpMethod,path,urlReferrer,userAgent,isAuthenticated,type) " +
+            _request = request;
+            _connectionString = connectionString;
+            _queryWrite = "insert into Log (message,exceptionType,stackTrace,exceptionMsg,httpMethod,path,urlReferrer,userAgent,isAuthenticated,type) " +
                                   "values (@message,@exceptionType,@stackTrace,@exceptionMsg,@httpMethod,@path,@urlReferrer,@userAgent,@isAuthenticated,@type)";
             _queryRead = "SELECT * " +
                          "FROM (SELECT *, ROW_NUMBER() OVER (ORDER BY [date] desc) AS [ROW_NUMBER] " +
@@ -32,14 +37,10 @@ namespace WebLogger.Concreate
 
             _conection = new Lazy<SqlConnection>(GetConnection);
         }
-        public LogWebSql(string sqlInsert)
-        {
-            _query = sqlInsert;
-            _conection = new Lazy<SqlConnection>(GetConnection);
-        }
+        
         private SqlConnection GetConnection()
         {
-            var str = ConfigurationManager.ConnectionStrings["ShopContext"].ConnectionString;
+            var str = ConfigurationManager.ConnectionStrings[_connectionString].ConnectionString;
             var sql = new SqlConnection(str);
             sql.Open();
             return sql;
@@ -49,7 +50,7 @@ namespace WebLogger.Concreate
 
         protected override void Execute(TypeLog typeLog, string messageLog, Exception exception)
         {
-            using (var command = new SqlCommand(_query, _conection.Value))
+            using (var command = new SqlCommand(_queryWrite, _conection.Value))
             {
                 var message = new SqlParameter("@message", SqlDbType.NVarChar)
                 {
@@ -58,18 +59,18 @@ namespace WebLogger.Concreate
                 IncludeException(command, exception);
                 var httpMethod = new SqlParameter("@httpMethod", SqlDbType.NVarChar)
                 {
-                    Value = (object)HttpMethod ?? DBNull.Value
+                    Value = (object)_request.HttpMethod ?? DBNull.Value
                 };
-                var path = new SqlParameter("@path", SqlDbType.NVarChar) { Value = (object)Path ?? DBNull.Value };
+                var path = new SqlParameter("@path", SqlDbType.NVarChar) { Value = (object)_request.Path ?? DBNull.Value };
                 var urlReferrer = new SqlParameter("@urlReferrer", SqlDbType.NVarChar)
                 {
-                    Value = (object)UrlReferrer ?? DBNull.Value
+                    Value = (object)_request.UrlReferrer ?? DBNull.Value
                 };
                 var userAgent = new SqlParameter("@userAgent", SqlDbType.NVarChar)
                 {
-                    Value = (object)UserAgent ?? DBNull.Value
+                    Value = (object)_request.UserAgent ?? DBNull.Value
                 };
-                var isAuthenticated = new SqlParameter("@isAuthenticated", SqlDbType.Bit) { Value = IsAuthenticated };
+                var isAuthenticated = new SqlParameter("@isAuthenticated", SqlDbType.Bit) { Value = _request.IsAuthenticated };
 
                 var type = new SqlParameter("@type", SqlDbType.TinyInt) { Value = (int)typeLog };
 
@@ -107,15 +108,15 @@ namespace WebLogger.Concreate
 
         #region read log
 
-        public IEnumerable<object> LogRead()
+        public override ExpandoObject AllLogs()
         {
-            yield break;
+            return default(ExpandoObject);
         }
 
-        public dynamic LogReadPage(int page, int perPage)
+        public override ExpandoObject ReadRange(int begin, int range)
         {
-            var skip = (page - 1) * perPage;
-            var take = skip + perPage;
+            var skip = (begin - 1) * range;
+            var take = skip + range;
             var start = new SqlParameter("@start", SqlDbType.Int) { Value = skip };
             var end = new SqlParameter("@end", SqlDbType.Int) { Value = take };
 
@@ -134,25 +135,12 @@ namespace WebLogger.Concreate
                     var group = list.GroupBy(s => new { s.total }).FirstOrDefault();
 
                     dynamic d = new ExpandoObject();
-                    d.totalPagesCount = Math.Ceiling(Convert.ToDouble(group.Key.total) / perPage);
+                    d.totalPagesCount = Math.Ceiling(Convert.ToDouble(group.Key.total) / range);
                     d.items = group.Select(c => c).ToList();
 
                     return d;
                 }
             }
-        }
-
-        private dynamic ToExpando(dynamic item)
-        {
-            var expandoObject = new ExpandoObject() as IDictionary<string, object>;
-
-            foreach (var prop in item.GetType().GetProperties())
-            {
-                if (prop.Name == "total") continue;
-                expandoObject.Add(prop.Name, prop.GetValue(item));
-            }
-
-            return expandoObject;
         }
 
         private dynamic SqlDataReaderToExpando(SqlDataReader reader)
@@ -198,9 +186,7 @@ namespace WebLogger.Concreate
             }
 
         }
-
-
-        ~LogWebSql()
+        ~LogSql()
         {
             if (!_disposed)
             {

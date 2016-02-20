@@ -2,9 +2,9 @@
 
 namespace WebLogger.Abstract.Interface
 {
-    public interface ILogReader
+    public interface ILogReader<out T>
     {
-        IEnumerable<dynamic> LogRead();
-        dynamic LogReadPage(int page, int perPage);
+        T AllLogs();
+        T ReadRange(int startPos, int range);
     }
 }

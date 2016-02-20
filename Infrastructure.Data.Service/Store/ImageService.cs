@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.IO;
 using System.Threading.Tasks;
 using FashionStore.Domain.Core.Entities.Store;
@@ -26,17 +27,17 @@ namespace FashionStore.Infastructure.Data.Service.Store
                 throw new ArgumentException("The file name already exists");
             try
             {
-                _unitOfWork.StartTransaction();
+                _unitOfWork.StartTransaction(IsolationLevel.ReadUncommitted);
                 var img = _repository.Add(new Image()
                 {
                     GoodId = id,
                     ImagePath = Path.GetFileName(path)
                 });
+                await _unitOfWork.SaveAsync();
                 using (var fs = File.Create(path))
                 {
                     await fs.WriteAsync(image, 0, image.Length);
                 }
-                await _unitOfWork.SaveAsync();
                 _unitOfWork.Commit();
                 return img;
             }

@@ -15,6 +15,7 @@ using Newtonsoft.Json;
 using NUnit.Framework;
 using WebCookie.Interfaces;
 using WebLogger.Abstract.Interface;
+using WebLogger.Abstract.Interface.Sql;
 
 
 namespace FashionStore.Test.PresentationLayer.Controllers.Common
@@ -22,7 +23,7 @@ namespace FashionStore.Test.PresentationLayer.Controllers.Common
     public abstract class BaseCtrlTest
     {
         protected Mock<ICookieConsumer> _cookie = new Mock<ICookieConsumer>();
-        protected Mock<ILogWriter<string>> _log = new Mock<ILogWriter<string>>();
+        protected Mock<ILogWriterSql> _log = new Mock<ILogWriterSql>();
 
         protected void InitMock()
         {

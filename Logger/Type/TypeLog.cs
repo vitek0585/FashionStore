@@ -1,4 +1,4 @@
-﻿namespace WebLogger.Enum
+﻿namespace WebLogger.Type
 {
     public enum TypeLog : byte
     {

@@ -11,6 +11,7 @@ using FashionStore.Domain.Core.Entities.Store;
 using FashionStore.Service.Interfaces.Services;
 using FashionStore.Service.Interfaces.UoW;
 using WebLogger.Abstract.Interface;
+using WebLogger.Abstract.Interface.Sql;
 
 namespace FashionStore.Controllers.WebApi
 {
@@ -19,9 +20,9 @@ namespace FashionStore.Controllers.WebApi
     {
         private IUnitOfWork _unit;
         private IImageService _image;
-        private ILogWriter<string> _log;
+        private ILogWriterSql _log;
 
-        public PhotoController(IUnitOfWorkStore unit, IImageService image, ILogWriter<string> log)
+        public PhotoController(IUnitOfWorkStore unit, IImageService image, ILogWriterSql log)
         {
             _image = image;
             _log = log;
@@ -34,15 +35,15 @@ namespace FashionStore.Controllers.WebApi
 
             try
             {
-             
-                //var path = HttpContext.Current.Server.MapPath(ValuesApp.ConvertImageNameToAbsolutePath(file.FileName));
-                //var img = await _image.AddImage(id, file.Data, path);
-                return Request.CreateResponse(HttpStatusCode.Created, "20151101_164217.jpg"); //img.ImagePath);
+
+                var path = HttpContext.Current.Server.MapPath(ValuesApp.ConvertImageNameToAbsolutePath(file.FileName));
+                var img = await _image.AddImage(id, file.Data, path);
+                return Request.CreateResponse(HttpStatusCode.Created, img.ImagePath);
 
             }
             catch (ArgumentException e)
             {
-                var msg = string.Format("photo by id - {0} has been failed save, name is incorrect", id);
+                var msg = string.Format("Photo by id - {0} has been failed save, name is incorrect", id);
                 _log.LogWriteInfo(msg);
                 return Request.CreateResponse(HttpStatusCode.BadRequest, msg);
             }

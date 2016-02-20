@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Web;
 using System.Web.Mvc;
+using FashionStore.Application.Bootstrapper.InversionOfControl;
 using WebLogger.Abstract.Interface;
+using WebLogger.Abstract.Interface.Sql;
 
 namespace FashionStore.Core.HttpModule
 {
     public class ErrorHandlerHttpModule : IHttpModule
     {
-        Lazy<ILogWriter<string>> _log =
-            new Lazy<ILogWriter<string>>(() => DependencyResolver.Current.GetService<ILogWriter<string>>());
+        Lazy<ILogWriterSql> _log =
+            new Lazy<ILogWriterSql>(IoC.Resolve<ILogWriterSql>);
         public void Init(HttpApplication context)
         {
             context.Error += ErrorHandler;

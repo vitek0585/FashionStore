@@ -52,11 +52,14 @@
     <Compile Include="Abstract\Interface\ILog.cs" />
     <Compile Include="Abstract\Interface\ILogReader.cs" />
     <Compile Include="Abstract\Interface\ILogWriter.cs" />
-    <Compile Include="Abstract\LogWebBase.cs" />
-    <Compile Include="Enum\TypeLog.cs" />
-    <Compile Include="Concreate\LogWebSql.cs" />
+    <Compile Include="Abstract\Interface\IRequestContext.cs" />
+    <Compile Include="Abstract\LogBase.cs" />
+    <Compile Include="Abstract\Interface\Sql\ILogReaderSql.cs" />
+    <Compile Include="Abstract\Interface\Sql\ILogWriterSql.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestLog.cs" />
+    <Compile Include="Type\TypeLog.cs" />
+    <Compile Include="WebLog\LogSql.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

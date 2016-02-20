@@ -219,6 +219,7 @@
     <Compile Include="WorkFlow\BreadCrumbs\Tag\TagCreator.cs" />
     <Compile Include="WorkFlow\Cart\Interfaces\ICart.cs" />
     <Compile Include="WorkFlow\Cart\Interfaces\Provider\ICartProvider.cs" />
+    <Compile Include="WorkFlow\Log\RequestContextLog.cs" />
     <Compile Include="WorkFlow\UserSession\Interfaces\IClearUserSession.cs" />
     <Compile Include="WorkFlow\UserSession\UserSession.cs" />
     <Compile Include="WorkFlow\ViewedStorage\Provider\Interface\IRecentlyViewedProvider.cs" />

@@ -2,12 +2,9 @@
 
 namespace WebLogger.Abstract.Interface
 {
-    public interface ILog
+    public interface ILog: IDisposable
     {
         bool Remove(int id);
     }
-    public interface ILog<T>:ILogWriter<T>,IDisposable
-    {
-       
-    }
+    
 }

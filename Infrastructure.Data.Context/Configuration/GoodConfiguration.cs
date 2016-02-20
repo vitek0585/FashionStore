@@ -7,7 +7,7 @@ namespace FashionStore.Infrastructure.Data.Context.Store.Configuration
     {
         public GoodConfiguration()
         {
-            ToTable("Good");
+            ToTable("Goods");
             
             HasKey(g => g.GoodId);
             

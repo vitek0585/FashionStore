@@ -20,6 +20,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using WebCookie.Interfaces;
 using WebLogger.Abstract.Interface;
+using WebLogger.Abstract.Interface.Sql;
 
 namespace FashionStore.Controllers.Controller
 {
@@ -28,10 +29,10 @@ namespace FashionStore.Controllers.Controller
     {
         private IPurchaseService _purchaseService;
         private ICartProvider<UserOrderModel> _cartProvider;
-        private ILogWriter<string> _log;
+        private ILogWriterSql  _log;
         private IUserAppService _user;
         public CartController(ICookieConsumer storage, ICartProvider<UserOrderModel> cartProvider, IPurchaseService purchaseService,
-            IUserAppService user, ILogWriter<string> log)
+            IUserAppService user, ILogWriterSql log)
             : base(storage)
         {
             _user = user;

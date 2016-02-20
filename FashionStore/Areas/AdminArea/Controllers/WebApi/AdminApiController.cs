@@ -10,6 +10,7 @@ using FashionStore.Application.Services.Interfaces;
 using FashionStore.Core.Filter.CSRF;
 using FashionStore.Infastructure.Data.Identity.Interfaces.Service;
 using WebLogger.Abstract.Interface;
+using WebLogger.Abstract.Interface.Sql;
 
 namespace FashionStore.Areas.AdminArea.Controllers.WebApi
 {
@@ -21,13 +22,18 @@ namespace FashionStore.Areas.AdminArea.Controllers.WebApi
     {
         IAdminAppService _admin;
         private IUserAppService _userSvc;
-        private ILogWriter<string> _logWriter;
+        private ILogWriterSql _logWriter;
+        private ILogReaderSql _logReader;
+        private ILog _log;
+
         private int _perPage = 10;
-        public AdminApiController(IAdminAppService admin, IUserAppService userSvc, ILogWriter<string> logWriter)
+        public AdminApiController(IAdminAppService admin, IUserAppService userSvc, ILogReaderSql logReader, ILogWriterSql logWriter, ILog log)
         {
             _admin = admin;
             _userSvc = userSvc;
+            _logReader = logReader;
             _logWriter = logWriter;
+            _log = log;
         }
 
         #region goods view
@@ -51,13 +57,13 @@ namespace FashionStore.Areas.AdminArea.Controllers.WebApi
         [Route("Log"), HttpGet]
         public IHttpActionResult Log(int page)
         {
-            var data = IoC.Resolve<ILogReader>().LogReadPage(page, _perPage);
+            var data = _logReader.ReadRange(page, _perPage);
             return OkOrNoContent<dynamic>(data);
         }
         [Route("LogDelete"), HttpDelete]
         public IHttpActionResult LogDelete(int id)
         {
-            var isSuccess = IoC.Resolve<ILog>().Remove(id);
+            var isSuccess = _log.Remove(id);
             return SuccessOrNot(isSuccess);
         }
         #endregion

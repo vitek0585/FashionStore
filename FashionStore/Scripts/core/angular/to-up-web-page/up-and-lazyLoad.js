@@ -42,7 +42,7 @@ angular.module("lazyLoadApp", ["httpApp"]).
             loadEmployee();
 
             upButton.fadeOut("slow").click(function () {
-                $("body").animate({ scrollTop: 0 }, "slow");
+                $("body,html").animate({ scrollTop: 0 }, "slow");
             });
             
         };

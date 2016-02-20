@@ -19,8 +19,8 @@ using WebLogger.Abstract.Interface.Sql;
 
 namespace FashionStore.Controllers.WebApi
 {
-    [RoutePrefix("api/Good")]
-    public class GoodController : ApiController
+    [RoutePrefix("api/Goods")]
+    public class GoodsController : ApiController
     {
 
         private IGoodService _goodService;
@@ -28,7 +28,7 @@ namespace FashionStore.Controllers.WebApi
         private ICookieConsumer _storage;
         private byte _totalPerPage = 9;
 
-        public GoodController(ICookieConsumer storage, IGoodService goodService, ILogWriterSql log)
+        public GoodsController(ICookieConsumer storage, IGoodService goodService, ILogWriterSql log)
         {
             _storage = storage;
             _goodService = goodService;
@@ -88,7 +88,7 @@ namespace FashionStore.Controllers.WebApi
         }
         [Route("GetByPage"), HttpGet]
         public IHttpActionResult GetByPage(short category, int page,
-            [ModelBinder(typeof(HttpFilterBinder))]Expression<Func<Good, bool>> pr,
+            [ModelBinder(typeof(HttpFilterBinder))]Expression<Func<Goods, bool>> pr,
             [ModelBinder(typeof(HttpOrderBinder))]string sort = null)
         {
 
@@ -113,15 +113,15 @@ namespace FashionStore.Controllers.WebApi
         {
             try
             {
-                await _goodService.Delete(id);
+                //await _goodService.Delete(id);
 
                 return Request.CreateResponse(HttpStatusCode.NoContent);
             }
             catch (Exception e)
             {
-                _log.LogWriteError("delete goods handler", e);
+                _log.LogWriteError("delete Goods handler", e);
                 return Request.CreateResponse(HttpStatusCode.BadRequest,
-                    string.Format("The good by id {0} was not deleted", id));
+                    string.Format("The Goods by id {0} have not deleted", id));
             }
         }
         [HttpPost]
@@ -129,13 +129,13 @@ namespace FashionStore.Controllers.WebApi
         [Route("Create")]
         public HttpResponseMessage Create(GoodsFileModel goodsApi)
         {
-            Good good = null;
+            Goods goods = null;
             try
             {
-                //good = _goods.Add(goodApi.GetGood());
+                //Goods = _goods.Add(goodApi.GetGood());
                 Parallel.ForEach(goodsApi.Files, async f =>
                 {
-                    //await _photo.Add(good.GoodId, new MemoryStream(f.Data), f.FileName, f.MimeType);
+                    //await _photo.Add(Goods.GoodsId, new MemoryStream(f.Data), f.FileName, f.MimeType);
                 });
 
                 //_unit.Save();
@@ -146,7 +146,7 @@ namespace FashionStore.Controllers.WebApi
             }
 
             return Request.CreateResponse(HttpStatusCode.Accepted,
-                string.Format("The good by id {0} was added successfuly", good.GoodId));
+                string.Format("The Goods by id {0} was added successfuly", goods.GoodsId));
         }
 
         [HttpPut]
@@ -156,7 +156,7 @@ namespace FashionStore.Controllers.WebApi
         {
             try
             {
-                await _goodService.UpdateOnlyFieldAsync(Mapper.Map<Good>(good),
+                await _goodService.UpdateOnlyFieldAsync(Mapper.Map<Goods>(good),
                     g => g.GoodNameEn, g => g.GoodNameRu, g => g.PriceUsd, g => g.Discount, g => g.CategoryId);
 
                 return Request.CreateResponse(HttpStatusCode.Accepted);
@@ -164,8 +164,8 @@ namespace FashionStore.Controllers.WebApi
             catch (Exception e)
             {
 
-                _log.LogWriteError("Update goods exception", e);
-                return Request.CreateResponse(HttpStatusCode.BadRequest, string.Format("The good by id {0} not update", good.GoodId));
+                _log.LogWriteError("Update Goods exception", e);
+                return Request.CreateResponse(HttpStatusCode.BadRequest, string.Format("The Goods by id {0} not update", good.goodsId));
             }
         }
 
