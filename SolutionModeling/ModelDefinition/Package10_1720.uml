@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="8776093e-5412-4958-a46f-9c9711560515"
+  name="Tag"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="852f2170-ab13-43bf-b630-69cb4b2592da"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Tag"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="f9406024-7299-43bf-81f0-025232860e44"
+        LastKnownName="Interfaces"
+        LastKnownLocation="Package11_1720.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="01366282-c289-49cc-a598-71a29517a2fb"
+        name="TagCreator"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="7fd989f8-f04a-487c-843d-3262911f7c52"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Tag Type%3DTagCreator"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="cde93315-bbae-4b87-8f95-717b17baf28c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="527140b2-1c68-459a-9dbd-3b057e39224b">
+                <propertyInstance
+                  Id="3d09af11-dd2b-4824-919c-aa018bf10b83"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5fa01442-8e31-4133-a48b-43bdcb19959a">
+                <propertyInstance
+                  Id="bbe9283a-9461-42b1-a078-8b3fe9ea456b"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="208d094e-e79c-404b-a4b0-5fde9244ae95">
+                <propertyInstance
+                  Id="7d6d9cea-9fe5-49e0-a534-4219038688b3"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3028f298-ba25-436c-9af0-3d36c860e352">
+                <propertyInstance
+                  Id="8b5f28d6-3254-4ea8-a06c-492597bec158"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d055d4f2-6abf-4973-989d-db32b5fce1c7">
+                <propertyInstance
+                  Id="f99a233f-2cf3-4944-816b-b9c6193b8288"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="d5a183d9-905e-45fe-baa4-05da0395a4a5">
+            <interfaceMoniker
+              Id="e65b36c0-fc75-45e1-b538-041be3dba326"
+              LastKnownName="ITagCreator"
+              LastKnownLocation="Package11_1720.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="3925240b-e30f-44f4-96c2-4ab8381f2683"
+            name="CreateEndTag"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="081b4732-0922-42a7-8ce0-0c461d76c7f7"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Tag Type%3DTagCreator Member%3D(Name%3DCreateEndTag OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9715dcb3-b33d-45b7-8347-0ba60d335dd9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="952cb0da-a12f-4dea-8504-cf2b8f3e3f86">
+                    <propertyInstance
+                      Id="9c86cadc-4d99-444d-b4ab-0c6e480d2037"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="72a7564d-731d-4b7e-954f-f8f6444f4348">
+                    <propertyInstance
+                      Id="40f3a56a-f469-4fc9-b022-4103c76cc5f7"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e73f8c01-cbef-4287-a234-1ed387826a3b">
+                    <propertyInstance
+                      Id="ae9fc80d-4db7-4185-baef-c6965fac5063"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="92f4b6c3-8428-441e-931b-d0b7c5793ac0">
+                    <propertyInstance
+                      Id="3e50e00f-5ee7-4b38-b7c4-29afaca3b074"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba840e1b-0727-45d5-9f90-c505c671b62d">
+                    <propertyInstance
+                      Id="7e0e31c5-d718-4767-be1d-b37e9104c57d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="19145a6f-9d48-4e0c-8909-993fb7d65a18">
+                    <propertyInstance
+                      Id="f5e507b4-4b76-4f89-9353-201d8573eae5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2c7dd92a-6419-4eb0-b201-d910da4323a0"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="SolutionModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="51be9f1e-6588-49ef-a4a0-077b96afa64b"
+                  name="textHtml"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="777fa3fb-564d-4ecb-a2dd-0ae642decc0d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Tag Type%3DTagCreator Member%3D(Name%3DCreateEndTag OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DtextHtml"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="SolutionModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cdd7f832-53a9-471b-86ff-df15edd81ea2"
+            name="CreateTag"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8bacbb4a-a137-423a-a087-ab4c0293dbe3"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Tag Type%3DTagCreator Member%3D(Name%3DCreateTag OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f21daf63-7f7c-43fd-ab51-274ebd242dde"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0b475e74-3129-47c7-aedb-143c81ac6564">
+                    <propertyInstance
+                      Id="f096a7d4-7e93-44c0-b6d9-b845c208b4ed"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="710c516d-7081-457a-a3be-5064948afb1a">
+                    <propertyInstance
+                      Id="2339f9fe-3dea-492f-95cb-51e9a7f580fc"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2ba9c1b-d1d4-4758-b580-88fe01b3364a">
+                    <propertyInstance
+                      Id="29016fd4-47b0-4bc2-bc0a-49ff9c993414"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4919f33a-d079-472e-9b92-332b4649244b">
+                    <propertyInstance
+                      Id="afaa2032-2b24-4141-8710-1679d1f06825"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be4eb571-ae5c-4d4d-a832-3b1aad256691">
+                    <propertyInstance
+                      Id="e00f5dbe-94e5-4129-a8b2-0e8d1d7fb024"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bef6e007-2416-4fa5-96d1-13db12babb9c">
+                    <propertyInstance
+                      Id="2e4e45fd-3549-4b02-b01b-40e346c3b01c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3d3fa50b-9285-40db-9606-3fe3f7845e7c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="SolutionModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="199c1990-329d-4f65-947a-702283ee86aa"
+                  name="textHtml"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="3346b710-afae-4097-9485-47ba0c6fd4ae"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Tag Type%3DTagCreator Member%3D(Name%3DCreateTag OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DtextHtml"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="SolutionModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="26fd3c00-c7d9-4f13-a8fb-69f7ea2d7f88"
+                  name="href"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0164ce07-00da-4542-8721-38b095a625e6"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Tag Type%3DTagCreator Member%3D(Name%3DCreateTag OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dhref"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="SolutionModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="31de6f35-270a-458c-a002-ac41f0ae5dc8"
+            name="TagCreator"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e804ff3b-87ab-439a-a1bc-64bcd33ad33e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Tag Type%3DTagCreator Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1fb6a8fd-41a3-4059-89e4-50c32b9f3763"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="476ad320-03ac-451e-b1c5-9020716d34f4">
+                    <propertyInstance
+                      Id="057778ec-d651-41b9-95d0-476e10949b16"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3dd48623-13fc-44da-80ae-f5c21ffaf26b">
+                    <propertyInstance
+                      Id="e579855d-b97f-4e3b-b24c-a8d69b016fe0"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4eb2beb5-02a3-4d9a-a471-647ac305f59e">
+                    <propertyInstance
+                      Id="85b6488b-eef2-44e3-be3e-c9449af83d94"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="241b08ba-3ac6-4d1a-b666-1849b7752842">
+                    <propertyInstance
+                      Id="89c66385-65ed-464a-b576-5dce70c8fc47"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f4fbbcd4-1680-4ea8-8b0d-8cbb03a4587a">
+                    <propertyInstance
+                      Id="b162c0e0-5198-4192-8fe0-7687386d0625"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="250064b7-959c-4d1b-a473-7a3cb3ac1bf6">
+                    <propertyInstance
+                      Id="45f96f13-e281-4558-9b30-81f62e2a46d1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

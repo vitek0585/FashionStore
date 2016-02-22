@@ -4,10 +4,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
-
-using FashionStore.Infastructure.Data.Identity.Entities;
-using FashionStore.Infastructure.Data.Identity.Interfaces.Service;
-using FashionStore.Infastructure.Data.Identity.Manager;
+using FashionStore.Infrastructure.Data.Identity.Interfaces.Service;
 
 namespace FashionStore.Controllers.WebApi
 {

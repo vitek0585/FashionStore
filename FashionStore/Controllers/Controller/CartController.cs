@@ -9,7 +9,7 @@ using FashionStore.App_GlobalResources;
 using FashionStore.Controllers.Base;
 using FashionStore.Core.Filter.ModelValidate;
 using FashionStore.Domain.Core.Entities.Store;
-using FashionStore.Infastructure.Data.Identity.Interfaces.Service;
+using FashionStore.Infrastructure.Data.Identity.Interfaces.Service;
 using FashionStore.Models.Order;
 using FashionStore.Service.Interfaces.Results;
 using FashionStore.Service.Interfaces.Services;

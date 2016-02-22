@@ -1,7 +1,7 @@
-﻿using FashionStore.Infastructure.Data.Identity.Manager;
+﻿using FashionStore.Infrastructure.Data.Identity.Manager;
 using Microsoft.Owin.Security;
 
-namespace FashionStore.Infastructure.Data.Service.Identity.Common
+namespace FashionStore.Infrastructure.Data.Service.Identity.Common
 {
     public abstract class AccountGlobalService
     {

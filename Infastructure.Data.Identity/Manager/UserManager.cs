@@ -1,13 +1,12 @@
 ﻿using System;
-using FashionStore.Infastructure.Data.Identity.Entities;
-using FashionStore.Infastructure.Data.Identity.Results;
-using FashionStore.Infastructure.Data.Identity.Utils;
-using FashionStore.Infastructure.Data.Identity.Validation;
+using FashionStore.Infrastructure.Data.Identity.Entities;
+using FashionStore.Infrastructure.Data.Identity.Utils;
+using FashionStore.Infrastructure.Data.Identity.Validation;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security.DataProtection;
 
-namespace FashionStore.Infastructure.Data.Identity.Manager
+namespace FashionStore.Infrastructure.Data.Identity.Manager
 {
     
     public class UserManager : UserManager<User, int>

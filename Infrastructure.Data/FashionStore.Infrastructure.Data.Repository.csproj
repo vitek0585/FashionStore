@@ -7,8 +7,8 @@
     <ProjectGuid>{E21098F4-0741-433F-AD18-92DE2EA9903B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FashionStore.Infastructure.Data.Repository</RootNamespace>
-    <AssemblyName>FashionStore.Infastructure.Data.Repository</AssemblyName>
+    <RootNamespace>FashionStore.Infrastructure.Data.Repository</RootNamespace>
+    <AssemblyName>FashionStore.Infrastructure.Data.Repository</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -84,9 +84,9 @@
       <Project>{8E74B5DA-5180-4953-9D5A-64861BA15D08}</Project>
       <Name>FashionStore.Domain.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Infastructure.Data.Identity\FashionStore.Infastructure.Data.Identity.csproj">
+    <ProjectReference Include="..\Infastructure.Data.Identity\FashionStore.Infrastructure.Data.Identity.csproj">
       <Project>{05333C8C-8A0C-4053-BCAE-884D6FD81FF3}</Project>
-      <Name>FashionStore.Infastructure.Data.Identity</Name>
+      <Name>FashionStore.Infrastructure.Data.Identity</Name>
     </ProjectReference>
     <ProjectReference Include="..\Infrastructure.Data.Context\FashionStore.Infrastructure.Data.Context.Store.csproj">
       <Project>{2E1BCA01-DB6F-48F7-8FC7-D64BC10DFCFC}</Project>

@@ -63,7 +63,7 @@
                        focus-on-select="true"
                        data="@NAME.&nbsp;photos" init-onload=true
                        arrows="false">
-                    <div ng-repeat="photo in @NAME&nbsp;.photos " ng-if="@NAME.&nbsp;photos[0]">
+                    <div ng-repeat="photo in @NAME&nbsp;.photos track by $index" ng-if="@NAME.&nbsp;photos[0]">
                         <div ng-style="{'background':'url(@path'+photo+') no-repeat center','background-size': 'contain'}" class="edit-mini-img pointer">
                         </div>
                     </div>

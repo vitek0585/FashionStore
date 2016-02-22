@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using FashionStore.Infastructure.Data.Identity.Entities;
-using FashionStore.Service.Interfaces.Services.Common;
+using FashionStore.Infrastructure.Data.Identity.Entities;
 
-namespace FashionStore.Infastructure.Data.Identity.Interfaces.Service
+namespace FashionStore.Infrastructure.Data.Identity.Interfaces.Service
 {
     public interface IRoleService
     {

@@ -4,17 +4,18 @@ using System.Linq;
 using System.Web.Mvc;
 using FashionStore.Application.Bootstrapper.InversionOfControl;
 using FashionStore.Models.BreadCrumbs;
+using FashionStore.WorkFlow.BreadCrumbs.Container.Base;
 using FashionStore.WorkFlow.BreadCrumbs.Tag.Interfaces;
 using WebLogger.Abstract.Interface;
 
 
 namespace FashionStore.WorkFlow.BreadCrumbs.Container
 {
-    public class BreadCrumbsContainer
+   
+
+    public class BreadCrumbsContainer : BreadCrumbsContainerBase
     {
-        private ICollection<IBreadCrumbsModel> _elements;
-        private ILogWriter<string> _log;
-        private ITagCreator _creator;
+        protected ILogWriter<string> _log;
         public BreadCrumbsContainer()
         {
             _creator = IoC.Resolve<ITagCreator>();
@@ -22,12 +23,7 @@ namespace FashionStore.WorkFlow.BreadCrumbs.Container
             _elements = new List<IBreadCrumbsModel>();
         }
 
-        public void AddElement(IBreadCrumbsModel element)
-        {
-            _elements.Add(element);
-        }
-
-        public MvcHtmlString Generate()
+        public override MvcHtmlString Generate()
         {
             TagBuilder ol = new TagBuilder("ol");
             ol.AddCssClass("breadcrumb");

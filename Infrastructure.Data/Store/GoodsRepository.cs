@@ -5,11 +5,11 @@ using System.Linq;
 using System.Linq.Expressions;
 using FashionStore.Domain.Core.Entities.Store;
 using FashionStore.Domain.Interfaces.Repository;
-using FashionStore.Infastructure.Data.Repository.Common;
 using FashionStore.Infrastructure.Data.Context.Store.Context;
+using FashionStore.Infrastructure.Data.Repository.Common;
 using LinqKit;
 
-namespace FashionStore.Infastructure.Data.Repository.Store
+namespace FashionStore.Infrastructure.Data.Repository.Store
 {
     public class GoodsRepository : GlobalRepository<Good>, IGoodsRepository
     {

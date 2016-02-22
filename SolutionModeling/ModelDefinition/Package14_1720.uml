@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="03826be1-cff3-4cb5-9e06-34a1699103a5"
+  name="Interface"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="3d91cab4-1c0d-4ab5-8c8c-9f190ec3da7c"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DWebLogger.Abstract.Interface"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="7db44d1a-cdd3-4d19-acaa-3e98d1f9f70d"
+        name="ILogWriter&lt;String‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="62f85e50-638b-4518-b242-3dcd2f574934"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c65c0549-8c4c-4415-b211-510a98e00bfd">
+                <propertyInstance
+                  Id="af5748ee-81dc-4a99-be59-e4d9a78a35da"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="403627ca-41f6-40e4-bb5d-9b2c3352e4b1">
+                <propertyInstance
+                  Id="84030b86-b4eb-42b5-93ba-9933112edb5e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="735bb2ac-ab45-454b-afc3-7ab3392c39e8">
+                <propertyInstance
+                  Id="309d2097-e863-4fcd-8fb7-85516b00c372"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="83b33828-b6f5-4298-8ed7-71712afe93f6">
+                <propertyInstance
+                  Id="1a8d3a31-c618-4ea0-a7c5-21874c02bc7c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="fa060d63-0537-4cf7-82da-361154c9523a">
+            <redefinableTemplateSignatureMoniker
+              Id="559c6e13-e676-4c3a-81e9-8ab108d09795"
+              LastKnownLocation="Package14_1720.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="7583f4c1-ed0b-4639-b233-4cb76a80e19a">
+                  <actuals>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="SolutionModeling.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="549b7a3c-9eb7-4904-a048-f805bd4bab48"
+                      LastKnownLocation="Package14_1720.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="b9390ed8-126c-4dae-b3c1-bd8be3c26e91"
+        name="ILogWriter"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="f659be46-de16-4fa1-90f7-8468e29b47de"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FWebLogger.dll Namespace%3DWebLogger.Abstract.Interface Type%3D(Name%3DILogWriter GenericParameterCount%3D1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a084d25f-176d-4709-8350-4f01dfec9327"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="718a94e4-8128-4104-bfad-dc6f3c5f8d80">
+                <propertyInstance
+                  Id="847eb050-2d5c-49f6-8a53-f6e1cc64f6b2"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cc63b91d-9f82-4ce6-9f6e-ab13e00b8156">
+                <propertyInstance
+                  Id="995cc99c-1d4d-4833-8ff5-20633d9402c2"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="49296403-ab7e-4a54-a6ed-8d7b96c9af76">
+                <propertyInstance
+                  Id="52b0a1e5-cbe7-44ad-9c23-91eba313debd"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7fdfd6e3-a228-4a58-a37e-b2e8a1c119d9">
+                <propertyInstance
+                  Id="b88f85c7-ddff-4d2e-9acd-bd98d64272bd"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="559c6e13-e676-4c3a-81e9-8ab108d09795"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="549b7a3c-9eb7-4904-a048-f805bd4bab48">
+                <referencesInternal>
+                  <reference
+                    Id="91bdc5da-359a-4c9e-bb5b-86aba7a78959"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FWebLogger.dll Namespace%3DWebLogger.Abstract.Interface Type%3D(Name%3DILogWriter GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="a8a02168-7207-4bad-86b8-69a20ca12b90"
+                    name="T"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

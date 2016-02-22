@@ -1,0 +1,1474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="0ce6a5b5-3458-40d1-8817-cb462833470e"
+  name="Builders"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="2018c71d-82d2-40ae-baec-085e810e6439"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="8617c8a8-ea34-4fc9-ad44-9de94cca16e1"
+        LastKnownName="Base"
+        LastKnownLocation="Package3_1720.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7947a9df-fd7d-4342-b8d4-2b071e6f64da"
+        name="CategoryBcBuilder"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="d43e135d-5bdf-457e-b746-ba871e37d99e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DCategoryBcBuilder"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="73eba949-880b-4ad6-b493-7ab78d1f1641"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d0e80cfb-d92b-4573-93d5-2663a419cd21">
+                <propertyInstance
+                  Id="3c632a83-af2d-45a1-897e-f59e9951922a"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="64bf9b11-8dc9-443e-8cf0-2b281920e955">
+                <propertyInstance
+                  Id="9a59f933-4dc8-421a-908b-d96992d64aa7"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="30af487e-2295-42f9-b4fb-673b8b3d9ca6">
+                <propertyInstance
+                  Id="7713ad6e-e6d2-46cc-84e7-15acc4cfa2e9"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="88d9564c-dc45-4d76-9d3f-8230ef624a5b">
+                <propertyInstance
+                  Id="765fb5fb-dcca-4d5d-85ca-f0ed1a5b0327"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dde18806-5509-4807-bfa4-f75d1fca39f5">
+                <propertyInstance
+                  Id="1df7ce0b-e825-4a73-bdc5-a9924ebd1dca"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="2e641133-942f-425b-9590-6f292dad965e"
+            isSubstitutable="false">
+            <classMoniker
+              Id="122c55a7-dd83-4090-bae9-dc65cc470df3"
+              LastKnownName="BreadCrumbsBuilder"
+              LastKnownLocation="Package3_1720.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="6ae09266-71df-4315-942c-d210c8969ea9"
+            name="CategoryId"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="54b6e080-c0f7-4578-976e-c77d2cdf42c6"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DCategoryBcBuilder Member%3DCategoryId"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="01637117-de20-46bf-8e8e-24b575e2acbd"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd08ff96-a607-4ddb-ab01-dcdb49f14c6a">
+                    <propertyInstance
+                      Id="8429dedf-e158-47b1-a259-cf2f4199a784"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7a4b714e-3f91-43ef-8e9b-9faf0471115e">
+                    <propertyInstance
+                      Id="47491558-1ca6-4072-89ab-4d9dc97d2ac3"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="09a3d46d-2975-4043-aec4-97e09aa613dd">
+                    <propertyInstance
+                      Id="b38e67f8-150a-43c1-869a-e84cb0a8a834"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="58d737b7-1acc-4df9-b058-a66fc2beaea9">
+                    <propertyInstance
+                      Id="4ddac86e-1c24-4ff6-a238-bd7f5523a45b"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba5f9545-1a4f-4393-b229-a3d2f148c5ac">
+                    <propertyInstance
+                      Id="cf7671dc-e4fd-4921-9ddc-b84feec4653b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="SolutionModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ffa4ab2a-5f40-4b2e-84ae-9189d33380fb"
+            name="_links"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="dd05b12f-d46b-477d-b944-18fabb48983a"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DCategoryBcBuilder Member%3D_links"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b62670f3-cf79-49a6-9234-f6cfabded978"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5931cc2e-1e9f-4a74-8eb0-e9992c3d9909">
+                    <propertyInstance
+                      Id="3529a6bb-8c9b-4fe6-9fd5-05494ad05e96"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c2ba81df-0c58-4e60-b1ef-8dfb7426ac5b">
+                    <propertyInstance
+                      Id="6817047c-85aa-4956-83ba-5b03f6571a5c"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5a30dd3d-ff6b-46a8-ac54-610bf60e12f4">
+                    <propertyInstance
+                      Id="4516328e-4794-4bb6-8736-f41ef277cb82"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4c9d7999-2f46-46ac-996f-d0fa83d5b020">
+                    <propertyInstance
+                      Id="6153762f-a2a3-42c5-ae04-1beb8de30b38"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2df927e6-76ba-4429-a7e8-34ada7fe80a2">
+                    <propertyInstance
+                      Id="049c9cba-25e0-472a-b61c-ba0a64af8737"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="05794ee1-a65f-4cb5-874c-eaeb83fb7e26"
+                LastKnownName="IEnumerable&lt;IBreadCrumbsCategoryModel‎&gt;"
+                LastKnownLocation="Package7_2141.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="d588075e-a58e-4c6e-82b1-bb006f9b2bc7"
+            name="CategoryBcBuilder"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="43e33e41-4028-4506-b4eb-4362dc87c503"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DCategoryBcBuilder Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2Fpackages%2FMicrosoft.AspNet.Mvc.5.2.3%2Flib%2Fnet45%2FSystem.Web.Mvc.dll Namespace%3DSystem.Web.Mvc Type%3DUrlHelper)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bea0c96e-d054-4dc5-91c5-585c19b1c482"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="facdc6ad-08c1-47e0-b8f9-4a471c34a75a">
+                    <propertyInstance
+                      Id="386383d1-2339-42f2-a12d-007b4b7974c1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9fc227d2-8a85-4fd3-a964-53fcd25de4a3">
+                    <propertyInstance
+                      Id="242b1188-6a64-4032-8936-76f392ca32b3"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ee3251a3-f5d4-436c-87b0-eba1544bdb97">
+                    <propertyInstance
+                      Id="8cc1b804-f182-4e35-8d71-27513ffc9660"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a6a7ab60-b111-49c7-a58e-4fdc17b2dcd1">
+                    <propertyInstance
+                      Id="5fb3039f-e6d5-47f9-b24f-a1a342a40355"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="18019106-6b4d-4c25-a7f9-ab75162e7b2c">
+                    <propertyInstance
+                      Id="91265f5d-4b8b-4976-b922-0605efd5d94b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="907bd498-d696-410d-bf61-ac0124656fbb">
+                    <propertyInstance
+                      Id="4852dde2-60ca-48d2-90c4-7ddea6c7a8e2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6fe1725c-9817-4ea2-b782-eccb199b9120"
+                  name="urlHelper"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="034138a6-128e-4066-83da-623075bb3db5"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DCategoryBcBuilder Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2Fpackages%2FMicrosoft.AspNet.Mvc.5.2.3%2Flib%2Fnet45%2FSystem.Web.Mvc.dll Namespace%3DSystem.Web.Mvc Type%3DUrlHelper)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DurlHelper"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="8ac18c59-543c-4d03-a621-940a42f2df10"
+                      LastKnownName="UrlHelper"
+                      LastKnownLocation="Package4_0852.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="eafdf5c3-7851-4dd3-b6b1-fad838bc6e4e"
+                  name="categoryId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="eb563f8c-34af-4a32-9bcb-353ed555a8d4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DCategoryBcBuilder Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2Fpackages%2FMicrosoft.AspNet.Mvc.5.2.3%2Flib%2Fnet45%2FSystem.Web.Mvc.dll Namespace%3DSystem.Web.Mvc Type%3DUrlHelper)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DcategoryId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="SolutionModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="87043a81-2900-4880-adf7-a1dcf59d23bd"
+                  name="mainName"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="eb25a98e-63d5-4a82-be38-55307d9690b1"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DCategoryBcBuilder Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2Fpackages%2FMicrosoft.AspNet.Mvc.5.2.3%2Flib%2Fnet45%2FSystem.Web.Mvc.dll Namespace%3DSystem.Web.Mvc Type%3DUrlHelper)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DmainName"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="SolutionModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ab3371a1-6f75-43ca-9fb2-70d7ad3a18b3"
+                  name="currentSelectionName"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c0718d65-59ed-4de3-9aa3-5bc35300839a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DCategoryBcBuilder Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2Fpackages%2FMicrosoft.AspNet.Mvc.5.2.3%2Flib%2Fnet45%2FSystem.Web.Mvc.dll Namespace%3DSystem.Web.Mvc Type%3DUrlHelper)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DcurrentSelectionName"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="SolutionModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0321cdb8-41db-4c77-980e-03c98d7be5b5"
+            name="CategoryAndChild"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="65087cb6-1da3-4ba4-bc43-6e18be4e4244"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DCategoryBcBuilder Member%3D(Name%3DCategoryAndChild OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFasionStore.Domain.Core%2Fbin%2FDebug%2FFashionStore.Domain.Core.dll Namespace%3DFashionStore.Domain.Core.Entities.Store Type%3DCategory)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ede3f9e5-14ce-4e02-b946-e7c46dfcd298"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="28c845ca-a65e-4521-9682-0ccae104adb7">
+                    <propertyInstance
+                      Id="7ce59e8f-2f15-4a39-864c-e0f5647fb065"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8c2ea2c1-d6f7-48d5-bca2-79d606de7707">
+                    <propertyInstance
+                      Id="f953399f-2db0-4a39-8ea4-1472858482f1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e6ee070e-79de-4e1a-97e8-ad6fe140a0a5">
+                    <propertyInstance
+                      Id="3cb2163a-281f-42e2-8fbd-61ad338a5a75"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="efd66c13-550b-453f-b871-6672fc06736f">
+                    <propertyInstance
+                      Id="3efa9121-e815-4ace-a6a8-825d9c4f2971"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5157b88d-0370-4d21-ad9c-d39167b96f98">
+                    <propertyInstance
+                      Id="554966f8-72ca-47f3-9bd5-96c1ae5175f3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d4767bc1-626d-4629-b300-b05b0f39acb4">
+                    <propertyInstance
+                      Id="74a430ff-0eab-45d4-b5e4-1390ba312124"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f21b19e9-caba-48de-a487-0401d04944f1"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="242f8e25-e896-4090-abb1-ff5e0c9fe0b2"
+                      LastKnownName="IEnumerable&lt;Category‎&gt;"
+                      LastKnownLocation="Package7_2141.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="61dfd1ee-6c2d-48c9-a15d-ff68d4f21c5e"
+                  name="data"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8ae16196-488b-4837-a6a8-eaef89de29d7"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DCategoryBcBuilder Member%3D(Name%3DCategoryAndChild OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFasionStore.Domain.Core%2Fbin%2FDebug%2FFashionStore.Domain.Core.dll Namespace%3DFashionStore.Domain.Core.Entities.Store Type%3DCategory)]) ParameterIdentifier%3Ddata"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="24a98805-b6ae-402b-b732-ec1c77e89311"
+                      LastKnownName="Category"
+                      LastKnownLocation="Package4_2141.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1148207a-c18c-4954-9292-ab1c0c5d7512"
+            name="CategoryTree"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="01451434-cb71-40b9-aec8-c32c24a712a9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DCategoryBcBuilder Member%3D(Name%3DCategoryTree OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.Models.BreadCrumbs Type%3DIBreadCrumbsCategoryModel)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6f84bc54-1bc6-4c58-a5f2-59315c425c20"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22b2b118-faf4-49d3-93cd-3f37edc992ca">
+                    <propertyInstance
+                      Id="ae20291a-bab6-4138-ae21-dad4f0cfc5eb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85a6b7b8-f1be-4b01-a498-763db84e4b8b">
+                    <propertyInstance
+                      Id="0d5f88a9-1178-4a46-8347-64a51589ca95"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="65896405-a2cb-4fdd-845f-97150a1dea64">
+                    <propertyInstance
+                      Id="5380c519-ab73-4367-ac07-87804b331459"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="89875cb8-a98e-42e6-8b93-5a1424b0391f">
+                    <propertyInstance
+                      Id="11f75d0c-a5f2-455d-9591-9d5d258d2683"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c58cad3c-b26b-41ae-9c57-3baca4054039">
+                    <propertyInstance
+                      Id="a47811cc-37c1-4817-83aa-945ed03fa30e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2e9ea00-364e-4595-8eb6-a71ae78583a3">
+                    <propertyInstance
+                      Id="79deca2d-d6d5-47fe-bcc9-e7ad07437899"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5810c2d9-5d04-4e9e-8fb6-2112feac5e60"
+                  name="links"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7a2a7579-218f-4698-929e-1550884b2dc4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DCategoryBcBuilder Member%3D(Name%3DCategoryTree OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.Models.BreadCrumbs Type%3DIBreadCrumbsCategoryModel)]))]) ParameterIdentifier%3Dlinks"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="05794ee1-a65f-4cb5-874c-eaeb83fb7e26"
+                      LastKnownName="IEnumerable&lt;IBreadCrumbsCategoryModel‎&gt;"
+                      LastKnownLocation="Package7_2141.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d3111f4d-8b82-44fe-b5fa-2aa488796770"
+            name="CategoryWithChild"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="03d8110e-5543-4956-b797-ef32a8a645d6"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DCategoryBcBuilder Member%3D(Name%3DCategoryWithChild OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4f551a6d-87b2-4809-b084-2a2ab4a144c8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73b1b66c-4572-4cf0-9425-4769b3435e28">
+                    <propertyInstance
+                      Id="9bbcbf11-9f7e-4221-893f-6acb4ba07faf"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bb68b74f-f4a4-4de3-ba01-39aa62ec5865">
+                    <propertyInstance
+                      Id="09f8a2a3-6af5-48b3-92f8-8d73711ab103"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6a79d060-2315-4d81-a4be-79ce87dd133e">
+                    <propertyInstance
+                      Id="032ddbad-0b17-4677-b236-e3ed5dbad8a7"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cab607a1-4317-4e60-a8f5-e7a58b8e1c75">
+                    <propertyInstance
+                      Id="4c5d2d15-587f-4931-aeee-ac47194b58fa"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="625ad05b-441f-40e6-ad91-bb814054fe3c">
+                    <propertyInstance
+                      Id="cd601e5f-bf42-48d4-80f2-ad9d73271aa8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aea238b1-a1ee-437c-8863-74b0aa30fe67">
+                    <propertyInstance
+                      Id="3e5cd8d2-9570-4507-8b32-1eb3e19acafa"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="75e4bf1c-6775-4683-8378-5530f4d60ae3"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="05794ee1-a65f-4cb5-874c-eaeb83fb7e26"
+                      LastKnownName="IEnumerable&lt;IBreadCrumbsCategoryModel‎&gt;"
+                      LastKnownLocation="Package7_2141.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a8064afc-564b-498e-8d3f-f60c36cfe75c"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d365ee99-2742-47a1-ba37-b89bf0e60487"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DCategoryBcBuilder Member%3D(Name%3DCategoryWithChild OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="SolutionModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ab8fa914-6822-476c-b82c-ed239089f05f"
+            name="CurrentCatalog"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a808b06c-1738-48c1-beea-95f310ea3d50"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DCategoryBcBuilder Member%3D(Name%3DCurrentCatalog OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.Models.BreadCrumbs Type%3DIBreadCrumbsCategoryModel)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8e25b858-e9a6-4b8d-a86e-823c73e891e0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0b6ed77f-04e6-43a7-bfde-5ed715288a57">
+                    <propertyInstance
+                      Id="4b490616-359d-498f-99ed-6f2c6bdd291a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dba47a39-c9ba-4290-b08c-8df8f8b441e5">
+                    <propertyInstance
+                      Id="b0e4e7dc-ddd3-47d7-98b5-cc50dc25b53a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f99052f4-db9e-4e6b-931a-efdcf9d461ca">
+                    <propertyInstance
+                      Id="387049e6-65b8-4dbf-8d48-9d5d3518e5ed"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f0dfed89-754b-4f6b-a6ca-12dc8f6f278c">
+                    <propertyInstance
+                      Id="02e6d332-582e-4ab7-a618-55ba2c958d36"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="780b7bb2-8b53-464a-aec4-aaf810c4995b">
+                    <propertyInstance
+                      Id="ab96d35b-83b6-47d6-a616-e3006db4b9e8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="65e310ec-22e8-484d-ac15-66f797f4efac">
+                    <propertyInstance
+                      Id="b7f13530-51fb-4e39-8b93-b2957a0d037f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="535d806d-4154-4c61-959f-f69ed571d5ae"
+                  name="category"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="78452695-2071-4793-930a-5ac2021eeb6f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DCategoryBcBuilder Member%3D(Name%3DCurrentCatalog OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.Models.BreadCrumbs Type%3DIBreadCrumbsCategoryModel)]) ParameterIdentifier%3Dcategory"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="2194e1ed-0739-4d8d-8979-22ed9cb65ac7"
+                      LastKnownName="IBreadCrumbsCategoryModel"
+                      LastKnownLocation="Package9_1720.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1e2964bf-5584-44ad-9679-d4195d4a6082"
+            name="CurrentSelectionBuild"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="15c699bc-c3cc-4444-ada5-521b83f12698"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DCategoryBcBuilder Member%3DCurrentSelectionBuild"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1f02acad-4720-4561-bc92-4188c8706be2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c352f7f6-5c21-4b06-9478-69c25bdf2d15">
+                    <propertyInstance
+                      Id="f71457ed-9a16-44f0-8133-548a6e5c8dd8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b7d5d10-254e-4b0b-bde4-c66210f7772a">
+                    <propertyInstance
+                      Id="9c94726e-36ae-4a06-9309-238044515787"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ff54d123-f661-4cea-ab33-2767137648a2">
+                    <propertyInstance
+                      Id="1ae882ac-62fb-492f-8060-5f80d046c4c9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71c76f42-33bc-45da-8e8a-b0873926fcdc">
+                    <propertyInstance
+                      Id="259b8d21-d644-427e-b666-6a015042511a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="314566d8-fbf6-435e-9ecb-e080e8e8295c">
+                    <propertyInstance
+                      Id="fabf25c3-b6dd-4d4b-9444-037977c2dd70"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba5c6744-2449-431a-b9dd-1ea00a9781ac">
+                    <propertyInstance
+                      Id="8cf667e6-f554-46a2-b522-20f4b4b626b6"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="8b30f714-c1b2-45d3-873b-d7413d4f6df2"
+            name="PathBuild"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4398f5b9-09a4-4452-81b3-182488eac3a5"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DCategoryBcBuilder Member%3DPathBuild"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7985d4bd-7e2e-4af6-acf0-2ae0611d5385"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e7a31dd1-056b-461a-8467-136e5bc0bfe3">
+                    <propertyInstance
+                      Id="9e90f8ce-1d7d-4dea-aa40-95d69d37596a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="59d5433a-797d-41ec-877d-2d3cc65c5a86">
+                    <propertyInstance
+                      Id="e6494356-dc41-4382-852a-87e6f376dd58"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="27e6b918-7934-4f1c-9b22-d974513451ca">
+                    <propertyInstance
+                      Id="4178e47e-b499-487e-a6e2-101256d822b3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="64314810-d295-43a4-a7e4-dc090c3ab35c">
+                    <propertyInstance
+                      Id="852b7fe6-5b68-409f-8699-5de79c06d32d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bd6f6ce7-675d-4e69-b012-c616ebad69f9">
+                    <propertyInstance
+                      Id="3b9124e9-043b-434e-ab48-649944c4d325"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85170507-e810-41ba-8dca-f7d5b2c9894e">
+                    <propertyInstance
+                      Id="be77f473-1c5d-4867-bc4f-e94bace83a82"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d865971b-42e8-4d31-9d24-f3944c6c0555"
+        name="GoodsBcBuilder"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="3757dc84-8f40-4fab-9fb2-53f2969ab87f"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DGoodsBcBuilder"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b5320379-e2f9-4f9b-b454-3f44f20ee01d"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="31051df4-b30e-42b9-9972-dc0aea02c324">
+                <propertyInstance
+                  Id="8df0cd0c-ad55-4d47-aaa2-3a2821565b37"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6f6948d6-8492-43b6-8efb-72344cdad6bb">
+                <propertyInstance
+                  Id="eb17f442-94d9-48fe-8b12-38909814adb6"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e0a0deb1-220f-4177-b9a2-2c096adf305b">
+                <propertyInstance
+                  Id="3ac26eb4-f3c5-4c88-8370-965bc4640917"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a665d0ad-41e6-47d2-aab7-4c53db3f2cd2">
+                <propertyInstance
+                  Id="4fdcb11d-a2d1-4cbf-adba-806c8be9b307"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3269c6e1-f330-4eec-beae-6f96d48de75e">
+                <propertyInstance
+                  Id="bf1c6675-ead4-4371-8191-d504943670f6"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="f94d0a1f-cf48-462a-ab12-987c16bf2e09"
+            isSubstitutable="false">
+            <classMoniker
+              Id="7947a9df-fd7d-4342-b8d4-2b071e6f64da"
+              LastKnownName="CategoryBcBuilder"
+              LastKnownLocation="Package2_1720.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="6d1f0b93-c4db-4992-8ed7-545b6ec34cb6"
+            name="GoodsBcBuilder"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="64c23a6c-734e-4043-b944-95b7d8d86d14"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DGoodsBcBuilder Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2Fpackages%2FMicrosoft.AspNet.Mvc.5.2.3%2Flib%2Fnet45%2FSystem.Web.Mvc.dll Namespace%3DSystem.Web.Mvc Type%3DUrlHelper)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6f03789e-9ae1-4e92-a2bf-9e7ee0cbb340"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b79aa9ea-5427-4c1d-8052-c28ad6980e03">
+                    <propertyInstance
+                      Id="d474a1b2-49b9-4213-809e-ca14a260ee9b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="524e2290-7e27-45c4-8ace-bf95d140b142">
+                    <propertyInstance
+                      Id="222ad61a-dff2-4b45-b2d1-e3209afa3a46"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fc1b77b0-230f-4fc5-92ce-ffe4bd128f5e">
+                    <propertyInstance
+                      Id="465a6be1-bbe9-4fb6-9e7c-8451f2dda482"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="12ec4e1d-6a89-4b3e-8651-a1862a1dbcb8">
+                    <propertyInstance
+                      Id="b37dadba-3cf4-402d-8c9b-a61cbe863745"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="38adce11-ccf1-4de4-a74d-7c8ba68aec0c">
+                    <propertyInstance
+                      Id="984d1c4d-81f9-4030-a4da-e6b8fb3b9b99"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d8e2f249-8ad9-4f7d-b449-91639cd8f431">
+                    <propertyInstance
+                      Id="375487e8-ce6d-445b-8d15-91227760eaf6"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b7224057-c4ca-4073-b145-8a92b2a6fc31"
+                  name="urlHelper"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1fc22873-9ea5-4da0-b83a-52440ce5229d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DGoodsBcBuilder Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2Fpackages%2FMicrosoft.AspNet.Mvc.5.2.3%2Flib%2Fnet45%2FSystem.Web.Mvc.dll Namespace%3DSystem.Web.Mvc Type%3DUrlHelper)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DurlHelper"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="8ac18c59-543c-4d03-a621-940a42f2df10"
+                      LastKnownName="UrlHelper"
+                      LastKnownLocation="Package4_0852.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="da885520-cd93-4249-98ca-ae81f05f2ba6"
+                  name="categoryId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9b4b39a5-3e06-46c8-9671-0bd49b91bce9"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DGoodsBcBuilder Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2Fpackages%2FMicrosoft.AspNet.Mvc.5.2.3%2Flib%2Fnet45%2FSystem.Web.Mvc.dll Namespace%3DSystem.Web.Mvc Type%3DUrlHelper)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DcategoryId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="SolutionModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e71b1045-7ebb-4df2-995c-4a3774fefce5"
+                  name="mainName"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="157aa96e-4402-4247-8792-728638ff66e3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DGoodsBcBuilder Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2Fpackages%2FMicrosoft.AspNet.Mvc.5.2.3%2Flib%2Fnet45%2FSystem.Web.Mvc.dll Namespace%3DSystem.Web.Mvc Type%3DUrlHelper)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DmainName"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="SolutionModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1e1a10a2-d228-48a9-bcc2-0a3731d9b5ba"
+                  name="currentSelectionName"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c3055a82-3453-4512-b6f7-8c6332fdb5f5"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DGoodsBcBuilder Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2Fpackages%2FMicrosoft.AspNet.Mvc.5.2.3%2Flib%2Fnet45%2FSystem.Web.Mvc.dll Namespace%3DSystem.Web.Mvc Type%3DUrlHelper)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DcurrentSelectionName"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="SolutionModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6c530a7c-4cc0-4d96-87d1-36100242f371"
+            name="CurrentSelectionBuild"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="932a6d00-6ba5-4f08-a2ef-f4cd59318763"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DGoodsBcBuilder Member%3DCurrentSelectionBuild"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f125f544-6d18-4916-8264-12d12bfb5dbd"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8760af4f-6a74-40b2-8e89-5ac0d0caee6f">
+                    <propertyInstance
+                      Id="f9da6f35-2b96-41ac-bfa6-c6b3fb7b6574"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="403bf82a-c001-4125-828f-bc4495dda3cc">
+                    <propertyInstance
+                      Id="bf979e73-3e93-4535-bc0e-2c1a3fc383d1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8f88910e-37ae-460c-8421-f5bacae0c0c6">
+                    <propertyInstance
+                      Id="87f40f11-b0c6-46e7-809a-5a7fb4a65557"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="befcd44a-0190-4896-a7fc-3fc3ff0bc1d9">
+                    <propertyInstance
+                      Id="8c578593-d2ec-4c7e-9e5e-c1a8f9e438cb"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="15c1edd6-8cde-4308-8832-1efd088acbf1">
+                    <propertyInstance
+                      Id="3f3528a7-c5e2-4996-a795-2ab9d55baa0d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80a86fd8-7805-4dd2-a3e5-d8b335906f66">
+                    <propertyInstance
+                      Id="1bffcec8-bca8-4289-9976-76482f7f4e4b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="d00cf36d-d62c-4c7d-aeac-0cec14957256"
+            name="PathBuild"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8f033457-fd4c-4348-8f89-13b33a2dfa38"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DGoodsBcBuilder Member%3DPathBuild"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f340225a-607b-431c-b454-a51d79d963a1"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1d171f5e-ae43-47f5-83ce-d6f5dec2dc26">
+                    <propertyInstance
+                      Id="9a4d30c8-8e91-4ed1-9cec-e1b77229e40a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="84a2b7a0-750c-4469-8c7c-1d7b4dd6d8f8">
+                    <propertyInstance
+                      Id="a61f1b3d-2d37-4e13-8c4f-3e42cb744fa4"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="64396317-282e-4149-a451-cc8f5fc17d0a">
+                    <propertyInstance
+                      Id="ec89e26a-13b6-4aba-9f16-ad0e20500e83"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="99ab00d6-0fae-4e02-b3a4-51c59de1a489">
+                    <propertyInstance
+                      Id="2fdc5396-9ff9-4e40-a5fe-c94d8e437806"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="57b5f2d4-9e4c-4abf-b663-df5f748177e0">
+                    <propertyInstance
+                      Id="8cdbb70f-8d5d-4c52-b934-8fee80b7d65b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7b7a947a-0c7d-4a25-88d4-c4e133bdae91">
+                    <propertyInstance
+                      Id="4a7de90d-cc66-4637-bed1-3772373eb47d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9693cdb8-58e3-4e90-828d-afb22b887ae1"
+        name="SimpleBcBuilder"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="d2bfdf54-2af7-4d84-83fa-a397b832e68b"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DSimpleBcBuilder"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d949867b-7d5d-45b8-8577-7e05f57ca6f2"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="abab38f3-54f7-4455-bb37-b3819ca9ce55">
+                <propertyInstance
+                  Id="ea13f46d-c505-4980-b15f-ae13fda665a4"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="79d36d32-3783-4236-91de-d71548947dc1">
+                <propertyInstance
+                  Id="de2080df-c32b-4c42-ba03-c65a48634d1b"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="99add0b0-ea7a-444e-a369-f0e15f387c66">
+                <propertyInstance
+                  Id="e0921b8d-9f02-4368-8ce1-2b862902fe04"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="568eca6d-4b19-4ce6-8e10-cc128a7b6e13">
+                <propertyInstance
+                  Id="ead1b75f-1ab0-4243-ba03-1b43e05ea534"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="110f5148-836f-4992-9588-1838b2ae061a">
+                <propertyInstance
+                  Id="60aff2c5-1986-4881-8280-f8705e22822c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="deefc7d3-984a-43f1-b1cf-066300dc5f90"
+            isSubstitutable="false">
+            <classMoniker
+              Id="122c55a7-dd83-4090-bae9-dc65cc470df3"
+              LastKnownName="BreadCrumbsBuilder"
+              LastKnownLocation="Package3_1720.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="60adfa7d-1e45-4c8f-b40c-250749b74147"
+            name="SimpleBcBuilder"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="55186c9b-8553-4374-bb8c-eb95763088f6"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DSimpleBcBuilder Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2Fpackages%2FMicrosoft.AspNet.Mvc.5.2.3%2Flib%2Fnet45%2FSystem.Web.Mvc.dll Namespace%3DSystem.Web.Mvc Type%3DUrlHelper)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9cf3403f-345a-44ba-8e73-4b7c48e31f48"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d1de2ca1-0561-418c-b1b3-bb62f3b07964">
+                    <propertyInstance
+                      Id="880b21d2-29b1-4e57-97dc-5e7ca31472e0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="984838f4-8ec1-4077-9acc-f2ff2f401a99">
+                    <propertyInstance
+                      Id="5bb49f05-0705-4886-8604-5873aa7d54b0"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3782d95f-152c-482a-a162-06db3fd0e562">
+                    <propertyInstance
+                      Id="974970fa-4a46-488f-9998-51b05c2ab7e5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c6a757b0-5d14-46f7-b20e-6ae5c8a792de">
+                    <propertyInstance
+                      Id="f3fefedf-5f88-4e85-b915-fb6c547b67be"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4ab89d3f-cd34-4b16-8f5c-8292eef154a0">
+                    <propertyInstance
+                      Id="7f49c9ce-1e5b-44a3-b8a6-8d78af8abd22"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7dba2cfe-4155-40df-b608-069d2862e0c0">
+                    <propertyInstance
+                      Id="89bd834c-3565-4f25-b42a-9054908a1825"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f351381f-b674-491f-ad5f-362d1f0b6a8b"
+                  name="urlHelper"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="cc72322a-0812-4407-999a-f1b0556651f4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DSimpleBcBuilder Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2Fpackages%2FMicrosoft.AspNet.Mvc.5.2.3%2Flib%2Fnet45%2FSystem.Web.Mvc.dll Namespace%3DSystem.Web.Mvc Type%3DUrlHelper)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DurlHelper"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="8ac18c59-543c-4d03-a621-940a42f2df10"
+                      LastKnownName="UrlHelper"
+                      LastKnownLocation="Package4_0852.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="02fa11b4-141c-4058-8b27-47f3a762c9e8"
+                  name="mainName"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d1149f37-8664-415a-8561-f542c006befb"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DSimpleBcBuilder Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2Fpackages%2FMicrosoft.AspNet.Mvc.5.2.3%2Flib%2Fnet45%2FSystem.Web.Mvc.dll Namespace%3DSystem.Web.Mvc Type%3DUrlHelper)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DmainName"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="SolutionModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="14e894a7-2fcc-447b-9e18-73b1f6c6b22e"
+                  name="currentSelectionName"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="729b95ee-8eaf-4edf-943a-50bab9f0dd32"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DSimpleBcBuilder Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2Fpackages%2FMicrosoft.AspNet.Mvc.5.2.3%2Flib%2Fnet45%2FSystem.Web.Mvc.dll Namespace%3DSystem.Web.Mvc Type%3DUrlHelper)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DcurrentSelectionName"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="SolutionModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3c3398f1-f0ea-4224-b9c4-8f968a463c4b"
+            name="PathBuild"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e280eb72-63f5-4c6c-895b-da35e5e498a0"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders Type%3DSimpleBcBuilder Member%3DPathBuild"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5de59a83-f131-4147-910a-293d174fa6a4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="704573a5-7329-4744-9abb-a2e396e9681f">
+                    <propertyInstance
+                      Id="340cc416-45e2-4ba0-a270-2074d6ffcf35"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5d4663a-20ec-4e30-bed2-c2fbbe22287c">
+                    <propertyInstance
+                      Id="b54eba7c-19b2-40d0-845a-9f9633db1e86"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa4be61e-2001-4369-a8f7-bc35d7aeaeba">
+                    <propertyInstance
+                      Id="087504b4-d9a5-4733-b2f8-a69a3c8b18bd"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1a09f502-2d73-4927-af89-006e8b0dbd88">
+                    <propertyInstance
+                      Id="b8b9113d-2393-4686-8758-1d181f90d6e5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eb8f85d2-83eb-4468-88bd-990587e83b9e">
+                    <propertyInstance
+                      Id="8ca09470-7328-499b-ad3f-bef6609c50ba"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fc0cca04-d149-44e7-82bd-d906e0513c33">
+                    <propertyInstance
+                      Id="f662ca0b-3a70-4d58-8c20-a5304370e4ea"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

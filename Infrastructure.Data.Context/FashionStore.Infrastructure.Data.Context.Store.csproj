@@ -50,9 +50,12 @@
   <ItemGroup>
     <Compile Include="Configuration\CategoryConfiguration.cs" />
     <Compile Include="Configuration\ClassificationGoodConfiguration.cs" />
+    <Compile Include="Configuration\ColorConfiguration.cs" />
     <Compile Include="Configuration\GoodConfiguration.cs" />
+    <Compile Include="Configuration\ImageConfiguration.cs" />
     <Compile Include="Configuration\SaleConfiguration.cs" />
     <Compile Include="Configuration\SalePosConfiguration.cs" />
+    <Compile Include="Configuration\SizeConfiguration.cs" />
     <Compile Include="Context\ShopContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

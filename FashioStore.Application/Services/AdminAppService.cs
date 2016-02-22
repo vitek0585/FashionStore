@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using AutoMapper;
 using FashionStore.Application.Services.Interfaces;
 using FashionStore.Domain.Interfaces.Repository;
-using FashionStore.Infastructure.Data.Identity.Entities;
 
 namespace FashionStore.Application.Services
 {

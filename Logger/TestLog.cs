@@ -4,6 +4,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Web;
 using NUnit.Framework;
+using WebLogger.WebLog;
 
 
 namespace WebLogger
@@ -12,9 +13,10 @@ namespace WebLogger
     public class TestLog
     {
         [Test]
-        public async void WriteLog()
+        public void WriteLog()
         {
             
+           
         }
 
        

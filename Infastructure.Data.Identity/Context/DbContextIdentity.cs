@@ -1,8 +1,8 @@
 ﻿using System.Data.Entity;
-using FashionStore.Infastructure.Data.Identity.Entities;
+using FashionStore.Infrastructure.Data.Identity.Entities;
 using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace FashionStore.Infastructure.Data.Identity.Context
+namespace FashionStore.Infrastructure.Data.Identity.Context
 {
     public class DbContextIdentity : IdentityDbContext<User, Role, int, UserExternLogin, UserRole, Claim>
     {

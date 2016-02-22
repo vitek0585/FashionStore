@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Threading.Tasks;
-using FashionStore.Infastructure.Data.Identity.Entities;
-using FashionStore.Infastructure.Data.Identity.Interfaces.Service;
-using FashionStore.Infastructure.Data.Identity.Manager;
-using FashionStore.Infastructure.Data.Service.Identity.Common;
-using FashionStore.Infastructure.Data.Service.Resource;
+using FashionStore.Infrastructure.Data.Identity.Entities;
+using FashionStore.Infrastructure.Data.Identity.Interfaces.Service;
+using FashionStore.Infrastructure.Data.Identity.Manager;
+using FashionStore.Infrastructure.Data.Service.Identity.Common;
+using FashionStore.Infrastructure.Data.Service.Resource;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 
-namespace FashionStore.Infastructure.Data.Service.Identity
+namespace FashionStore.Infrastructure.Data.Service.Identity
 {
     public class AccountService : AccountGlobalService, IAccountService
     {

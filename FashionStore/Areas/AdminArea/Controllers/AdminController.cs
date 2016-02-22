@@ -5,7 +5,7 @@ using System.Web.Mvc;
 using FashionStore.Application.Services.Interfaces;
 using FashionStore.Areas.AdminArea.Models;
 using FashionStore.Controllers.Base;
-using FashionStore.Infastructure.Data.Identity.Interfaces.Service;
+using FashionStore.Infrastructure.Data.Identity.Interfaces.Service;
 using WebCookie.Interfaces;
 
 namespace FashionStore.Areas.AdminArea.Controllers

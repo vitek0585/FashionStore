@@ -1,10 +1,10 @@
 ﻿using System.Security.Claims;
 using System.Threading.Tasks;
-using FashionStore.Infastructure.Data.Identity.Entities;
+using FashionStore.Infrastructure.Data.Identity.Entities;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 
-namespace FashionStore.Infastructure.Data.Identity.Manager
+namespace FashionStore.Infrastructure.Data.Identity.Manager
 {
     public class SignInManager:SignInManager<User,int>
     {

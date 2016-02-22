@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="aa1a7a72-0714-4f65-bc4c-18a8c4d60fdb"
+  name="FashionStore"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="2ead5207-a48e-4e91-a4cf-b385684fcb3e"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DFashionStore"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="61e12126-9609-4709-b5fe-d8e34e943231"
+        LastKnownName="Domain"
+        LastKnownLocation="Package1_2141.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="e77a63c8-bd6c-4b89-b4a9-8da44fab4dd0"
+        LastKnownName="Core"
+        LastKnownLocation="Package_0841.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="bfb780f0-3a7f-4bed-a20a-7e9565da22af"
+        LastKnownName="Controllers"
+        LastKnownLocation="Package_0852.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="e8651bd1-9731-4d05-9484-36e369c15cf6"
+        LastKnownName="WorkFlow"
+        LastKnownLocation="Package_1720.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="7974cd11-d7ae-4fae-a1c2-d0a46c4b14ca"
+        LastKnownName="Models"
+        LastKnownLocation="Package8_1720.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="e0bc5e28-dbb0-4eec-be47-e89562a72558"
+  name="FilterBinder"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="18725a54-80a2-4fc6-9f36-fc5149ab2de9"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DFilterWeb.FilterBinder"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="55cbe610-42a6-4842-9468-0795d0bb6111"
+        name="ConditionalGeneratorSimple&lt;Good‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="53013ce9-999e-433d-b032-aabfc4e04f45"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a7737859-9dd5-4a2a-85b7-48080e86fff9">
+                <propertyInstance
+                  Id="2afeaad8-673a-4794-8c56-ab976f7f18be"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c1eb2b94-bf3a-4b2a-97d8-6cf24bccce22">
+                <propertyInstance
+                  Id="931135c2-0a2a-4aea-9c39-a3c5b9fa6a53"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="57fd924c-9c1c-4abd-a2e0-1a763bc63edd">
+                <propertyInstance
+                  Id="d78f9a74-7e3d-4bc8-897f-44bdc75e328f"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c0e1232b-bbd7-4277-8624-9111fc887009">
+                <propertyInstance
+                  Id="3646e591-5fe8-4258-83f9-45f2b2aebf9a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="417becfa-0314-40df-8e52-551975a83043">
+                <propertyInstance
+                  Id="f0a31d70-3191-4f1d-9345-1471275d4fd5"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="5f1f5197-bf40-4200-8b43-6d4100eb7c7f">
+            <redefinableTemplateSignatureMoniker
+              Id="2599b9ff-28ba-4f43-8e41-eaa04fbe4bf4"
+              LastKnownLocation="Package3_0952.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="13fdc1e4-3daf-4db3-a3a6-356051ad67d6">
+                  <actuals>
+                    <classMoniker
+                      Id="9eeceeb2-a13b-4f9f-bb80-8c655e291cde"
+                      LastKnownName="Good"
+                      LastKnownLocation="Package4_2141.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="3cff50e3-03e6-4aca-b519-b6941158e463"
+                      LastKnownLocation="Package3_0952.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4a976e62-cd52-4e87-8eec-2f7383fb866c"
+        name="ConditionalGeneratorSimple"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="6cabca03-8e48-4fb8-98aa-72bc61ac2ae3"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalGeneratorSimple GenericParameterCount%3D1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f2706fcc-0e1e-46b8-9c69-e35c095515de"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="971ec960-0adc-41c0-806e-411c153a85f3">
+                <propertyInstance
+                  Id="f7ace6f1-e719-4e12-ab87-ccb210a6dfd7"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="978b512c-837d-4e6e-853b-ac15d59ebc11">
+                <propertyInstance
+                  Id="5b1c6a58-4a98-478c-b97d-a501e784533d"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ea4925ad-b58a-4ca2-ac03-d6061a7deda1">
+                <propertyInstance
+                  Id="9883894a-d1e8-4fde-ba99-7a9e9361cbab"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ab748772-7541-47f0-941a-03b47a68f859">
+                <propertyInstance
+                  Id="2ff089ae-6761-45b0-a313-0444eb5ee887"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="08281996-c479-453e-bf2a-40fa4514d471">
+                <propertyInstance
+                  Id="4281842e-8b31-442b-82ff-9ac913dc0857"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="2599b9ff-28ba-4f43-8e41-eaa04fbe4bf4"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="3cff50e3-03e6-4aca-b519-b6941158e463">
+                <referencesInternal>
+                  <reference
+                    Id="8143c092-ab57-4244-b17d-aaad72de3195"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalGeneratorSimple GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="0046e1f6-b795-4e40-9f01-5a6e7fe0e3ba"
+                    name="TItem"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

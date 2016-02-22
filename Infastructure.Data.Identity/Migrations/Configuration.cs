@@ -1,7 +1,7 @@
 using System.Data.Entity.Migrations;
-using FashionStore.Infastructure.Data.Identity.Context;
+using FashionStore.Infrastructure.Data.Identity.Context;
 
-namespace FashionStore.Infastructure.Data.Identity.Migrations
+namespace FashionStore.Infrastructure.Data.Identity.Migrations
 {
     internal sealed class Configuration : DbMigrationsConfiguration<DbContextIdentity>
     {

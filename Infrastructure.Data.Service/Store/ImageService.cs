@@ -4,20 +4,19 @@ using System.IO;
 using System.Threading.Tasks;
 using FashionStore.Domain.Core.Entities.Store;
 using FashionStore.Domain.Interfaces.Repository;
-using FashionStore.Domain.Interfaces.Repository.Common;
-using FashionStore.Infastructure.Data.Service.Store.Common;
+using FashionStore.Infrastructure.Data.Service.Store.Common;
 using FashionStore.Service.Interfaces.Services;
 using FashionStore.Service.Interfaces.UoW;
 
-namespace FashionStore.Infastructure.Data.Service.Store
+namespace FashionStore.Infrastructure.Data.Service.Store
 {
     public class ImageService : EntityService<Image>, IImageService
     {
-
+        private IImageRepository _repository;
         public ImageService(IUnitOfWorkStore unitOfWork, IImageRepository repository)
             : base(unitOfWork, repository)
         {
-
+            _repository = repository;
 
         }
 
@@ -27,12 +26,15 @@ namespace FashionStore.Infastructure.Data.Service.Store
                 throw new ArgumentException("The file name already exists");
             try
             {
-                _unitOfWork.StartTransaction(IsolationLevel.ReadUncommitted);
-                var img = _repository.Add(new Image()
+                _unitOfWork.StartTransaction(IsolationLevel.ReadCommitted);
+                var img = new Image()
                 {
                     GoodId = id,
                     ImagePath = Path.GetFileName(path)
-                });
+                };
+                var isAdded = _repository.AddWithoutId(img);
+                if (!isAdded)
+                    throw new ArgumentException("The image have not added");
                 await _unitOfWork.SaveAsync();
                 using (var fs = File.Create(path))
                 {

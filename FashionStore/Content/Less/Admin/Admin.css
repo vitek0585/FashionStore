@@ -171,6 +171,10 @@ section .content-container {
   position: relative;
   float: right;
 }
+.goods .edit .well {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
 .goods #editForm {
   min-width: 40%;
 }

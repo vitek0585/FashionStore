@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace FashionStore.Infastructure.Data.Identity.Entities
+namespace FashionStore.Infrastructure.Data.Identity.Entities
 {
     public class Claim:IdentityUserClaim<int>
     {

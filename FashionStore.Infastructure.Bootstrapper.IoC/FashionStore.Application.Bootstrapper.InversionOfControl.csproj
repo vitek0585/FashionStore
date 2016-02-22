@@ -86,13 +86,13 @@
       <Project>{2E1BCA01-DB6F-48F7-8FC7-D64BC10DFCFC}</Project>
       <Name>FashionStore.Infrastructure.Data.Context.Store</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Infrastructure.Data.Service\FashionStore.Infastructure.Data.Service.csproj">
+    <ProjectReference Include="..\Infrastructure.Data.Service\FashionStore.Infrastructure.Data.Service.csproj">
       <Project>{62FA6DCD-7DF0-4457-AC16-3E5D25A15CF2}</Project>
-      <Name>FashionStore.Infastructure.Data.Service</Name>
+      <Name>FashionStore.Infrastructure.Data.Service</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Infrastructure.Data\FashionStore.Infastructure.Data.Repository.csproj">
+    <ProjectReference Include="..\Infrastructure.Data\FashionStore.Infrastructure.Data.Repository.csproj">
       <Project>{E21098F4-0741-433F-AD18-92DE2EA9903B}</Project>
-      <Name>FashionStore.Infastructure.Data.Repository</Name>
+      <Name>FashionStore.Infrastructure.Data.Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

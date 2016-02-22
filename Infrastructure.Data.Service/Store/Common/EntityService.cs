@@ -4,7 +4,7 @@ using FashionStore.Domain.Interfaces.Repository.Common;
 using FashionStore.Service.Interfaces.Services.Common;
 using FashionStore.Service.Interfaces.UoW;
 
-namespace FashionStore.Infastructure.Data.Service.Store.Common
+namespace FashionStore.Infrastructure.Data.Service.Store.Common
 {
     public abstract class EntityService<T> : EntityServiceBase, IEntityService<T> where T : class
     {

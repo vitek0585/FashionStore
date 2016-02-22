@@ -4,13 +4,13 @@ using System.Linq;
 using AutoMapper;
 using FashionStore.Domain.Core.Entities.Store;
 using FashionStore.Domain.Interfaces.Repository;
-using FashionStore.Infastructure.Data.Service.Resource;
-using FashionStore.Infastructure.Data.Service.Store.Common;
+using FashionStore.Infrastructure.Data.Service.Resource;
+using FashionStore.Infrastructure.Data.Service.Store.Common;
 using FashionStore.Service.Interfaces.Results;
 using FashionStore.Service.Interfaces.Services;
 using FashionStore.Service.Interfaces.UoW;
 
-namespace FashionStore.Infastructure.Data.Service.Store
+namespace FashionStore.Infrastructure.Data.Service.Store
 {
     public class PurchaseService : EntityServiceBase, IPurchaseService
     {

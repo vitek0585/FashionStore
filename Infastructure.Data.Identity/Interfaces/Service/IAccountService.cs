@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
-using FashionStore.Infastructure.Data.Identity.Entities;
+using FashionStore.Infrastructure.Data.Identity.Entities;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 
-namespace FashionStore.Infastructure.Data.Identity.Interfaces.Service
+namespace FashionStore.Infrastructure.Data.Identity.Interfaces.Service
 {
     public interface IAccountService
     {

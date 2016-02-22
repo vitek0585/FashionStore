@@ -114,9 +114,9 @@
       <Project>{8E74B5DA-5180-4953-9D5A-64861BA15D08}</Project>
       <Name>FashionStore.Domain.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Infastructure.Data.Identity\FashionStore.Infastructure.Data.Identity.csproj">
+    <ProjectReference Include="..\Infastructure.Data.Identity\FashionStore.Infrastructure.Data.Identity.csproj">
       <Project>{05333C8C-8A0C-4053-BCAE-884D6FD81FF3}</Project>
-      <Name>FashionStore.Infastructure.Data.Identity</Name>
+      <Name>FashionStore.Infrastructure.Data.Identity</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

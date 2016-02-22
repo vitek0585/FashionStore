@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FashionStore.Infastructure.Data.Identity.Entities;
-using FashionStore.Infastructure.Data.Identity.Resource;
+using FashionStore.Infrastructure.Data.Identity.Entities;
+using FashionStore.Infrastructure.Data.Identity.Resource;
 using Microsoft.AspNet.Identity;
 
-namespace FashionStore.Infastructure.Data.Identity.Validation
+namespace FashionStore.Infrastructure.Data.Identity.Validation
 {
     
     public class CustomUserValidation : UserValidator<User, int>

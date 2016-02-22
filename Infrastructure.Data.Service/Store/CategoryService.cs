@@ -6,12 +6,12 @@ using System.Linq.Expressions;
 using AutoMapper;
 using FashionStore.Domain.Core.Entities.Store;
 using FashionStore.Domain.Interfaces.Repository;
-using FashionStore.Infastructure.Data.Service.Store.Common;
+using FashionStore.Infrastructure.Data.Service.Store.Common;
 using FashionStore.Service.Interfaces.Services;
 using FashionStore.Service.Interfaces.UoW;
 using LinqKit;
 
-namespace FashionStore.Infastructure.Data.Service.Store
+namespace FashionStore.Infrastructure.Data.Service.Store
 {
     public class CategoryService : EntityService<Category>, ICategoryService
     {

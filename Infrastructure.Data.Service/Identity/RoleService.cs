@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using FashionStore.Infastructure.Data.Identity.Entities;
-using FashionStore.Infastructure.Data.Identity.Interfaces.Service;
-using FashionStore.Infastructure.Data.Identity.Manager;
+using FashionStore.Infrastructure.Data.Identity.Entities;
+using FashionStore.Infrastructure.Data.Identity.Interfaces.Service;
+using FashionStore.Infrastructure.Data.Identity.Manager;
 
-namespace FashionStore.Infastructure.Data.Service.Identity
+namespace FashionStore.Infrastructure.Data.Service.Identity
 {
     public class RoleService:IRoleService
     {

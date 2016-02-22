@@ -2,8 +2,8 @@
 using System.Web.Mvc;
 using Autofac;
 using FashionStore.Domain.Interfaces.Repository;
-using FashionStore.Infastructure.Data.Service.Store;
-using FashionStore.Infastructure.Data.Service.UoF;
+using FashionStore.Infrastructure.Data.Service.Store;
+using FashionStore.Infrastructure.Data.Service.UoF;
 using FashionStore.Service.Interfaces.Services;
 using FashionStore.Service.Interfaces.UoW;
 

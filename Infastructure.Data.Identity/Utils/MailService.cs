@@ -6,7 +6,7 @@ using System.Net.Mail;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 
-namespace FashionStore.Infastructure.Data.Identity.Utils
+namespace FashionStore.Infrastructure.Data.Identity.Utils
 {
     public class MailService : IIdentityMessageService
     {

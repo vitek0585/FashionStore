@@ -78,6 +78,7 @@
                                    name="@email"
                                    ng-model="user.@email"
                                    ng-required="true"
+                                   ng-blur="@email=true"
                                    ng-class="@emailPredicate?'custom-invalid':''">
                         </div>
                         <div class="col-sm-12 errro-input"

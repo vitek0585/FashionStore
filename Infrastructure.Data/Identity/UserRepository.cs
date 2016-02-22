@@ -1,8 +1,8 @@
-﻿using FashionStore.Infastructure.Data.Identity.Context;
-using FashionStore.Infastructure.Data.Identity.Entities;
-using FashionStore.Infastructure.Data.Repository.Common;
+﻿using FashionStore.Infrastructure.Data.Identity.Context;
+using FashionStore.Infrastructure.Data.Identity.Entities;
+using FashionStore.Infrastructure.Data.Repository.Common;
 
-namespace FashionStore.Infastructure.Data.Repository.Identity
+namespace FashionStore.Infrastructure.Data.Repository.Identity
 {
     public class UserRepository : GlobalRepository<User>
     {

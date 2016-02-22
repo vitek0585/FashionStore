@@ -7,8 +7,8 @@ using FashionStore.App_GlobalResources;
 using FashionStore.Controllers.Base;
 using FashionStore.Core.AppValue;
 using FashionStore.Core.Filter.ModelValidate;
-using FashionStore.Infastructure.Data.Identity.Entities;
-using FashionStore.Infastructure.Data.Identity.Interfaces.Service;
+using FashionStore.Infrastructure.Data.Identity.Entities;
+using FashionStore.Infrastructure.Data.Identity.Interfaces.Service;
 using FashionStore.Service.Interfaces.UoW;
 using FashionStore.ViewModels.Account;
 using FashionStore.WorkFlow.Cart.Interfaces.Provider;
@@ -161,9 +161,9 @@ namespace FashionStore.Controllers.Controller
         public async Task<JsonResult> ExternalLoginConfirmation(ExternalLoginConfirmationViewModel model,
             string returnUrl)
         {
-            if (!User.Identity.IsAuthenticated)
+            if (User.Identity.IsAuthenticated)
             {
-                return Json(Url.Action("Login", "Account"));
+                return Json(Url.Action("Index", "Main"));
             }
             var user = new User()
             {

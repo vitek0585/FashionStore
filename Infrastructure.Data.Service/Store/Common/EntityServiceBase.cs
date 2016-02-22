@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace FashionStore.Infastructure.Data.Service.Store.Common
+namespace FashionStore.Infrastructure.Data.Service.Store.Common
 {
     public abstract class EntityServiceBase
     {

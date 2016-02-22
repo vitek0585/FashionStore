@@ -5,17 +5,16 @@ using System.Linq;
 using System.Security.Authentication;
 using System.Threading.Tasks;
 using AutoMapper;
-using FashionStore.Infastructure.Data.Identity.Entities;
-using FashionStore.Infastructure.Data.Identity.Interfaces.Service;
-using FashionStore.Infastructure.Data.Identity.Manager;
-using FashionStore.Infastructure.Data.Identity.Results;
-using FashionStore.Infastructure.Data.Service.Identity.Common;
+using FashionStore.Infrastructure.Data.Identity.Interfaces.Service;
+using FashionStore.Infrastructure.Data.Identity.Manager;
+using FashionStore.Infrastructure.Data.Identity.Results;
+using FashionStore.Infrastructure.Data.Service.Identity.Common;
 using FashionStore.Service.Interfaces.Services;
 using FashionStore.Service.Interfaces.UoW;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
-namespace FashionStore.Infastructure.Data.Service.Identity
+namespace FashionStore.Infrastructure.Data.Service.Identity
 {
     public class UserAppService : AccountGlobalService, IUserAppService
     {

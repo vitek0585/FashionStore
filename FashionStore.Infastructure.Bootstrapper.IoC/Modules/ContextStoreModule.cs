@@ -7,7 +7,7 @@ namespace FashionStore.Application.Bootstrapper.InversionOfControl.Modules
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType(typeof(ShopContext)).AsSelf().InstancePerRequest();
+            builder.RegisterType(typeof(ShopContext)).AsSelf().InstancePerLifetimeScope();
         }
 
     }

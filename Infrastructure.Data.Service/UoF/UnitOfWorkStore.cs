@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using FashionStore.Infrastructure.Data.Context.Store.Context;
 using FashionStore.Service.Interfaces.UoW;
 
-namespace FashionStore.Infastructure.Data.Service.UoF
+namespace FashionStore.Infrastructure.Data.Service.UoF
 {
     public class UnitOfWorkStore : IUnitOfWorkStore
     {

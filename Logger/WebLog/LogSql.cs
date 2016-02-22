@@ -104,8 +104,6 @@ namespace WebLogger.WebLog
         }
 
         #endregion
-
-
         #region read log
 
         public override ExpandoObject AllLogs()

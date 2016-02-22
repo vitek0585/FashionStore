@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Data.Entity.Migrations.Infrastructure;
 using System.Resources;
 
-namespace FashionStore.Infastructure.Data.Identity.Migrations
+namespace FashionStore.Infrastructure.Data.Identity.Migrations
 {
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
     public sealed partial class InitIdentity : IMigrationMetadata

@@ -20,7 +20,14 @@ namespace FilterWeb.FilterBinder
         }
 
         #region Set up conditional
-
+        /// <summary>
+        /// Generate container and is adding to list that contains all the expressions
+        /// </summary>
+        /// <typeparam name="TConst">value filter that goes comparison</typeparam>
+        /// <param name="expr">expression</param>
+        /// <param name="require">if exists the expression with the same key (false - the expression will not be use)
+        /// (true - the expression will be use). The order plays role</param>
+        /// <param name="key">key from query string</param>
         public void SetKeyValueExpression<TConst>(Expression<Func<TItem, TConst, bool>> expr, bool require,
             params string[] key)
         {
@@ -50,6 +57,7 @@ namespace FilterWeb.FilterBinder
         {
             try
             {
+                
                 var items = from item in _expressions.Value
                             where item.Keys.All(k => _values[k] != null && _values[k].Any())
 

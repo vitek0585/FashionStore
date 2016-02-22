@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="03462ddd-c006-493a-b300-c209dafa4fcb"
+  name="Interfaces"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="af7dd8b9-f84f-45a9-8a4d-bbc55614b4f1"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DWebCookie.Interfaces"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="11526d29-9186-4f66-a2ed-8365bbda9057"
+        name="ICookieConsumer"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="bcfa7859-2d62-4e84-8d4f-3d7dfe8f45f4"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FCookie%2Fbin%2FDebug%2FWebCookie.dll Namespace%3DWebCookie.Interfaces Type%3DICookieConsumer"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="689fdd21-1163-4b99-8a4a-89f0b5c0a217"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="290139b6-f177-45fb-afa2-7cc4309065e8">
+                <propertyInstance
+                  Id="5019fb15-d548-4298-9358-c0b931f97b6d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2d8bd4d7-c590-4f93-8724-47086029f04d">
+                <propertyInstance
+                  Id="7c8a85a5-ca1a-4c14-a87c-4ceafb52487e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="92b72ddc-f322-4dcb-8f47-eb361ab88e51">
+                <propertyInstance
+                  Id="9789d6ed-7a64-4e62-9153-d82492181d44"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a2356127-a9b3-4c8b-899c-d59d6685605b">
+                <propertyInstance
+                  Id="1375c7f3-0f31-4fb4-a30c-e55ba4abc8fd"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

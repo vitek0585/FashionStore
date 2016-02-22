@@ -5,12 +5,13 @@ using System.Threading;
 using System.Web.Mvc;
 using FashionStore.Models.BreadCrumbs;
 using FashionStore.WorkFlow.BreadCrumbs.Container;
+using FashionStore.WorkFlow.BreadCrumbs.Container.Base;
 
 namespace FashionStore.WorkFlow.BreadCrumbs.Builders.Base
 {
     public abstract class BreadCrumbsBuilder
     {
-        protected BreadCrumbsContainer Container { get; set; }
+        protected BreadCrumbsContainerBase Container { get; set; }
 
         protected string MainName { get; set; }
 

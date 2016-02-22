@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2016-02-22T18:49:49" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '4cbb7c9a-7ffb-48a6-9b81-5b630ab41036' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '549b7a3c-9eb7-4904-a048-f805bd4bab48' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore' -  (Package)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Models' -  (Package)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Models::BreadCrumbs' -  (Package)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Models::BreadCrumbs::IBreadCrumbsModel' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::WorkFlow' -  (Package)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::WorkFlow::BreadCrumbs' -  (Package)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::WorkFlow::BreadCrumbs::Container' -  (Package)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::WorkFlow::BreadCrumbs::Container::Base' -  (Package)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Medium" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::WorkFlow::BreadCrumbs::Container::Base::BreadCrumbsContainerBase' -  (Class)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::WorkFlow::BreadCrumbs::Container::Base::BreadCrumbsContainerBase::_creator' -  (Property)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::WorkFlow::BreadCrumbs::Container::Base::BreadCrumbsContainerBase::_elements' -  (Property)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::WorkFlow::BreadCrumbs::Container::Base::BreadCrumbsContainerBase::AddElement' -  (Operation)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::WorkFlow::BreadCrumbs::Container::Base::BreadCrumbsContainerBase::AddElement::element' -  (Parameter)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::WorkFlow::BreadCrumbs::Container::Base::BreadCrumbsContainerBase::BreadCrumbsContainerBase' -  (Operation)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::WorkFlow::BreadCrumbs::Container::Base::BreadCrumbsContainerBase::Generate' -  (Operation)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Medium" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::WorkFlow::BreadCrumbs::Container::BreadCrumbsContainer' -  (Class)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::WorkFlow::BreadCrumbs::Container::BreadCrumbsContainer::_log' -  (Property)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::WorkFlow::BreadCrumbs::Container::BreadCrumbsContainer::BreadCrumbsContainer' -  (Operation)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::WorkFlow::BreadCrumbs::Container::BreadCrumbsContainer::Generate' -  (Operation)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::WorkFlow::BreadCrumbs::Tag' -  (Package)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::WorkFlow::BreadCrumbs::Tag::Interfaces' -  (Package)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::WorkFlow::BreadCrumbs::Tag::Interfaces::ITagCreator' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System' -  (Package)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Collections' -  (Package)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Collections::Generic::ICollection' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Collections::Generic::ICollection&lt;IBreadCrumbsModel‎&gt;' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Web' -  (Package)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Web::Mvc' -  (Package)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Web::Mvc::MvcHtmlString' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::WebLogger' -  (Package)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::WebLogger::Abstract' -  (Package)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::WebLogger::Abstract::Interface' -  (Package)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::WebLogger::Abstract::Interface::ILogWriter' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::WebLogger::Abstract::Interface::ILogWriter&lt;String‎&gt;' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: SolutionModeling::FashionStore::WorkFlow::BreadCrumbs::Container::BreadCrumbsContainer to SolutionModeling::FashionStore::WorkFlow::BreadCrumbs::Container::Base::BreadCrumbsContainerBase (Generalization)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: SolutionModeling::FashionStore::Models::BreadCrumbs::IBreadCrumbsCategoryModel to SolutionModeling::FashionStore::Models::BreadCrumbs::IBreadCrumbsModel (Generalization)" />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="High" Text="(2) type(s) fully reverse engineered." />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="High" Text="(7) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2016-02-22T18:50:29" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

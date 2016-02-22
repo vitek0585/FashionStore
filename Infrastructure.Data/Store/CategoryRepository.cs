@@ -5,10 +5,10 @@ using System.Globalization;
 using System.Linq;
 using FashionStore.Domain.Core.Entities.Store;
 using FashionStore.Domain.Interfaces.Repository;
-using FashionStore.Infastructure.Data.Repository.Common;
 using FashionStore.Infrastructure.Data.Context.Store.Context;
+using FashionStore.Infrastructure.Data.Repository.Common;
 
-namespace FashionStore.Infastructure.Data.Repository.Store
+namespace FashionStore.Infrastructure.Data.Repository.Store
 {
     public class CategoryRepository : GlobalRepository<Category>, ICategoryRepository
     {

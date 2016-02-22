@@ -1,10 +1,10 @@
 ﻿using System.Data;
 using System.Data.Entity;
 using System.Threading.Tasks;
-using FashionStore.Infastructure.Data.Identity.Context;
+using FashionStore.Infrastructure.Data.Identity.Context;
 using FashionStore.Service.Interfaces.UoW;
 
-namespace FashionStore.Infastructure.Data.Service.UoF
+namespace FashionStore.Infrastructure.Data.Service.UoF
 {
     public class UnitOfWorkIdentity : IUnitOfWorkIdentity
     {

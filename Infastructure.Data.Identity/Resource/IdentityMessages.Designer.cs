@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FashionStore.Infastructure.Data.Identity.Resource {
+namespace FashionStore.Infrastructure.Data.Identity.Resource {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace FashionStore.Infastructure.Data.Identity.Resource {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FashionStore.Infastructure.Data.Identity.Resource.IdentityMessages", typeof(IdentityMessages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FashionStore.Infrastructure.Data.Identity.Resource.IdentityMessages", typeof(IdentityMessages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

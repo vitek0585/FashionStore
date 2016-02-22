@@ -1,6 +1,6 @@
 using System.Data.Entity.Migrations;
 
-namespace FashionStore.Infastructure.Data.Identity.Migrations
+namespace FashionStore.Infrastructure.Data.Identity.Migrations
 {
     public partial class InitIdentity : DbMigration
     {

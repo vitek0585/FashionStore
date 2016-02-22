@@ -33,6 +33,11 @@ namespace FashionStore.Infrastructure.Data.Context.Store.Context
             modelBuilder.Configurations.Add(new SaleConfiguration());
             modelBuilder.Configurations.Add(new SalePosConfiguration());
             modelBuilder.Configurations.Add(new CategoryConfiguration());
+            modelBuilder.Configurations.Add(new SizeConfiguration());
+            modelBuilder.Configurations.Add(new ColorConfiguration());
+            modelBuilder.Configurations.Add(new ImageConfiguration());
+
+
 
         }
     }

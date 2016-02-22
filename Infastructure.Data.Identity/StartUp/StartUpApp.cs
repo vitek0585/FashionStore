@@ -1,15 +1,16 @@
 ﻿using System;
-using FashionStore.Infastructure.Data.Identity.Entities;
-using FashionStore.Infastructure.Data.Identity.Manager;
+using FashionStore.Infrastructure.Data.Identity.Entities;
+using FashionStore.Infrastructure.Data.Identity.Manager;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
+using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.Twitter;
 using Owin;
 
-namespace FashionStore.Infastructure.Data.Identity.StartUp
+namespace FashionStore.Infrastructure.Data.Identity.StartUp
 {
     public class StartUpApp
     {
@@ -40,7 +41,11 @@ namespace FashionStore.Infastructure.Data.Identity.StartUp
                     "5168ff90af0207753cccd9656462a212b859723b"
                 })
             });
-
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "812981170849-8fitj2cft62pc80thv4tu6b133nq0alg.apps.googleusercontent.com",
+                ClientSecret = "BS2TvigoLB3byrn8-Q_o8n96"
+            });
 
         }
     }

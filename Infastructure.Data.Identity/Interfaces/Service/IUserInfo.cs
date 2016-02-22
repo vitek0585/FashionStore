@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using FashionStore.Infastructure.Data.Identity.Results;
+using FashionStore.Infrastructure.Data.Identity.Results;
 
-namespace FashionStore.Infastructure.Data.Identity.Interfaces.Service
+namespace FashionStore.Infrastructure.Data.Identity.Interfaces.Service
 {
     public interface IUserIdentityService
     {

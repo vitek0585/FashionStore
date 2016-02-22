@@ -5,6 +5,6 @@ namespace FashionStore.Domain.Interfaces.Repository
 {
     public interface IImageRepository :IGlobalRepository<Image>
     {
-         
+        bool AddWithoutId(Image img);
     }
 }

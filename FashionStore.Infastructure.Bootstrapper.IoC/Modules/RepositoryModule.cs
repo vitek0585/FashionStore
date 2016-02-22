@@ -1,6 +1,6 @@
 ﻿using Autofac;
 using FashionStore.Domain.Interfaces.Repository;
-using FashionStore.Infastructure.Data.Repository.Store;
+using FashionStore.Infrastructure.Data.Repository.Store;
 
 namespace FashionStore.Application.Bootstrapper.InversionOfControl.Modules
 {
@@ -14,7 +14,7 @@ namespace FashionStore.Application.Bootstrapper.InversionOfControl.Modules
             builder.RegisterType(typeof(SaleRepository)).As(typeof(ISaleRepository)).InstancePerRequest();
             builder.RegisterType(typeof(SalePosRepository)).As(typeof(ISalePosRepository)).InstancePerRequest();
             builder.RegisterType<ClassificationGoodRepository>().As<IClassificationGoodRepository>()
-                .InstancePerLifetimeScope();
+                .InstancePerRequest();
             builder.RegisterType<ColorRepository>().As<IColorRepository>().InstancePerRequest();
             builder.RegisterType<SizeRepository>().As<ISizeRepository>().InstancePerRequest();
             builder.RegisterType<ImageRepository>().As<IImageRepository>().InstancePerRequest();

@@ -1,11 +1,11 @@
-﻿using FashionStore.Infastructure.Data.Identity.Context;
-using FashionStore.Infastructure.Data.Identity.Entities;
+﻿using FashionStore.Infrastructure.Data.Identity.Context;
+using FashionStore.Infrastructure.Data.Identity.Entities;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 
-namespace FashionStore.Infastructure.Data.Identity.Manager
+namespace FashionStore.Infrastructure.Data.Identity.Manager
 {
     public class RoleManager:RoleManager<Role,int>
     {

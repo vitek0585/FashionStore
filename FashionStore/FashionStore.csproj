@@ -176,6 +176,7 @@
     <Compile Include="Controllers\Controller\CatalogController.cs" />
     <Compile Include="Controllers\Controller\GoodController.cs" />
     <Compile Include="Controllers\Controller\MainController.cs" />
+    <Compile Include="Controllers\Controller\TestController.cs" />
     <Compile Include="Controllers\Controller\UserController.cs" />
     <Compile Include="Controllers\WebApi\GoodController.cs" />
     <Compile Include="Controllers\WebApi\PhotoController.cs" />
@@ -214,6 +215,7 @@
     <Compile Include="WorkFlow\BreadCrumbs\Builders\CategoryBCBuilder.cs" />
     <Compile Include="WorkFlow\BreadCrumbs\Builders\GoodsBCBuilder.cs" />
     <Compile Include="WorkFlow\BreadCrumbs\Builders\SimpleBcBuilder.cs" />
+    <Compile Include="WorkFlow\BreadCrumbs\Container\Base\BreadCrumbsContainerBase.cs" />
     <Compile Include="WorkFlow\BreadCrumbs\Container\BreadCrumbsContainer.cs" />
     <Compile Include="WorkFlow\BreadCrumbs\Tag\Interfaces\ITagCreator.cs" />
     <Compile Include="WorkFlow\BreadCrumbs\Tag\TagCreator.cs" />
@@ -515,6 +517,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Image\TestProducts\" />
     <Folder Include="Scripts\framework\angular\ui-state\" />
   </ItemGroup>
   <ItemGroup>
@@ -552,13 +555,17 @@
       <Project>{DC72227B-B46E-4158-97A3-DD67FBFAFB57}</Project>
       <Name>FilterWeb</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Infastructure.Data.Identity\FashionStore.Infastructure.Data.Identity.csproj">
+    <ProjectReference Include="..\Infastructure.Data.Identity\FashionStore.Infrastructure.Data.Identity.csproj">
       <Project>{05333C8C-8A0C-4053-BCAE-884D6FD81FF3}</Project>
-      <Name>FashionStore.Infastructure.Data.Identity</Name>
+      <Name>FashionStore.Infrastructure.Data.Identity</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Infrastructure.Data.Service\FashionStore.Infastructure.Data.Service.csproj">
+    <ProjectReference Include="..\Infrastructure.Data.Context\FashionStore.Infrastructure.Data.Context.Store.csproj">
+      <Project>{2E1BCA01-DB6F-48F7-8FC7-D64BC10DFCFC}</Project>
+      <Name>FashionStore.Infrastructure.Data.Context.Store</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.Data.Service\FashionStore.Infrastructure.Data.Service.csproj">
       <Project>{62fa6dcd-7df0-4457-ac16-3e5d25a15cf2}</Project>
-      <Name>FashionStore.Infastructure.Data.Service</Name>
+      <Name>FashionStore.Infrastructure.Data.Service</Name>
     </ProjectReference>
     <ProjectReference Include="..\Logger\WebLogger.csproj">
       <Project>{6E494348-2538-4C22-A318-1E7B17739A31}</Project>

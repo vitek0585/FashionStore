@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2016-02-22T08:52:18" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '93573b2e-0072-489e-8e72-aa8495e7c34a' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore' -  (Package)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Controllers' -  (Package)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Controllers::Base' -  (Package)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Medium" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Controllers::Base::ShopBaseController' -  (Class)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Controllers::Base::ShopBaseController::_storage' -  (Property)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Controllers::Base::ShopBaseController::CheckValidReturnUrl' -  (Operation)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Controllers::Base::ShopBaseController::CheckValidReturnUrl::returnUrl' -  (Parameter)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Controllers::Base::ShopBaseController::GetCurrentCurrency' -  (Operation)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Controllers::Base::ShopBaseController::GetCurrentLanguage' -  (Operation)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Controllers::Base::ShopBaseController::JsonResultCustom' -  (Operation)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Controllers::Base::ShopBaseController::JsonResultCustom::data' -  (Parameter)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Controllers::Base::ShopBaseController::JsonResultCustom::statusCode' -  (Parameter)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Controllers::Base::ShopBaseController::ReturnErrorModelState' -  (Operation)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Controllers::Base::ShopBaseController::ShopBaseController' -  (Operation)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Controllers::Base::ShopBaseController::ShopBaseController::storage' -  (Parameter)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System' -  (Package)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Collections' -  (Package)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Collections::Generic::IEnumerable' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Collections::Generic::IEnumerable&lt;String‎&gt;' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Net' -  (Package)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Net::HttpStatusCode' -  (Enumeration)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Object' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Web' -  (Package)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Web::Mvc' -  (Package)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Web::Mvc::Controller' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Web::Mvc::JsonResult' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::WebCookie' -  (Package)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::WebCookie::Interfaces' -  (Package)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::WebCookie::Interfaces::ICookieConsumer' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: SolutionModeling::FashionStore::Controllers::Base::ShopBaseController to SolutionModeling::System::Web::Mvc::Controller (Generalization)" />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="High" Text="(1) type(s) fully reverse engineered." />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="High" Text="(7) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2016-02-22T08:52:23" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

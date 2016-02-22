@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1954b878-b9d3-43a0-a639-3d1ff5029da0"
+  name="Http"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="48861fcd-f844-4125-8648-567e44fef068"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Web.Http"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="f480067b-4af0-4397-b496-fbc7dd317d57"
+        LastKnownName="Controllers"
+        LastKnownLocation="Package3_0907.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="0e3006f0-6a9c-4b09-af0a-c05fd3056d90"
+        LastKnownName="Filters"
+        LastKnownLocation="Package4_0907.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c3bd22ee-5ad9-40c8-b947-5c92bc4fa740"
+        LastKnownName="ModelBinding"
+        LastKnownLocation="Package1_0952.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

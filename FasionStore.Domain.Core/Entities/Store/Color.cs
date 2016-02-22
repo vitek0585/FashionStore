@@ -14,11 +14,9 @@ namespace FashionStore.Domain.Core.Entities.Store
 
         public int ColorId { get; set; }
 
-        [Required]
-        [StringLength(100)]
+        
         public string ColorNameRu { get; set; }
-        [Required]
-        [StringLength(100)]
+      
         public string ColorNameEn { get; set; }
         public virtual ICollection<ClassificationGood> ClassificationGoods { get; set; }
 

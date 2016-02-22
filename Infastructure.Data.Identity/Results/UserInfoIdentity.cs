@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using FashionStore.Infastructure.Data.Identity.Entities;
+using FashionStore.Infrastructure.Data.Identity.Entities;
 
-namespace FashionStore.Infastructure.Data.Identity.Results
+namespace FashionStore.Infrastructure.Data.Identity.Results
 {
     public class UserInfoIdentity
     {

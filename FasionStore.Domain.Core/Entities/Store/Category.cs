@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FashionStore.Domain.Core.Entities.Store
 {
-    [Table("Category")]
+
     public partial class Category
     {
         public Category()
@@ -13,7 +13,7 @@ namespace FashionStore.Domain.Core.Entities.Store
         }
     
         public int CategoryId { get; set; }
-        [StringLength(300)]
+       
         public string ImagePath { get; set; }
         public int? ParentId { get; set; }
         public virtual Category Parent { get; set; }

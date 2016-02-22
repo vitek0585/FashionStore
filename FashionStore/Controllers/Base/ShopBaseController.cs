@@ -10,11 +10,11 @@ using WebCookie.Interfaces;
 
 namespace FashionStore.Controllers.Base
 {
-    public class ShopBaseController : System.Web.Mvc.Controller
+    public abstract class ShopBaseController : System.Web.Mvc.Controller
     {
         protected ICookieConsumer _storage;
 
-        public ShopBaseController(ICookieConsumer storage)
+        protected ShopBaseController(ICookieConsumer storage)
         {
             _storage = storage;
         }

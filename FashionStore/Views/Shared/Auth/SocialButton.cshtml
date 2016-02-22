@@ -1,7 +1,7 @@
 ﻿<div class="col-xs-12 scd-content-social">
     <ul class="list-inline list-social">
         <li class="fb">
-            @using (Html.BeginForm("ExternalLogin", "Account", new { returnUrl = Request.Url.AbsoluteUri }, FormMethod.Post, new { id = "account-submit" }))
+            @using (Html.BeginForm("ExternalLogin", "Account", new {returnUrl = Request.Url.AbsoluteUri}, FormMethod.Post, new {id = "account-submit"}))
             {
                 @Html.AntiForgeryToken()
                 <a href="javascript:document.getElementById('sub-twitter').click()" target="_blank">
@@ -10,6 +10,20 @@
                     </strong>
                 </a>
                 <button ng-hide="true" id="sub-twitter" class="btn rtn-primary" type="submit" name="provider" value="Twitter"></button>
+            }
+
+        </li>
+        <li class="fb">
+            @using (Html.BeginForm("ExternalLogin", "Account", new { returnUrl = Request.Url.AbsoluteUri }, FormMethod.Post, new { id = "account-submit-google" }))
+            {
+                @Html.AntiForgeryToken()
+               
+                <a href="javascript:document.getElementById('sub-google').click()" target="_blank">
+                    <span style="background-position: 0 -82px;"></span><strong>
+                        Google
+                    </strong>
+                </a>
+                <button ng-hide="true" id="sub-google" class="btn rtn-primary" type="submit" name="provider" value="Google"></button>
             }
 
         </li>

@@ -8,7 +8,7 @@ using System.Web.Http.Results;
 using FashionStore.Application.Bootstrapper.InversionOfControl;
 using FashionStore.Application.Services.Interfaces;
 using FashionStore.Core.Filter.CSRF;
-using FashionStore.Infastructure.Data.Identity.Interfaces.Service;
+using FashionStore.Infrastructure.Data.Identity.Interfaces.Service;
 using WebLogger.Abstract.Interface;
 using WebLogger.Abstract.Interface.Sql;
 

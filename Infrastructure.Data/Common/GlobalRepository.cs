@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using FashionStore.Domain.Interfaces.Repository.Common;
 using LinqKit;
 
-namespace FashionStore.Infastructure.Data.Repository.Common
+namespace FashionStore.Infrastructure.Data.Repository.Common
 {
     public class GlobalRepository<T> : IGlobalRepository<T> where T : class
     {
@@ -56,6 +56,7 @@ namespace FashionStore.Infastructure.Data.Repository.Common
 
         public T Add(T item)
         {
+            
             return _dbSet.Add(item);
         }
 
@@ -77,6 +78,7 @@ namespace FashionStore.Infastructure.Data.Repository.Common
         public TResult DisabledProxy<TResult>() where TResult : IGlobalRepository<T>
         {
             _context.Configuration.ProxyCreationEnabled = false;
+            _context.Configuration.AutoDetectChangesEnabled = false;
             return (TResult)(this as IGlobalRepository<T>);
         }
         public TResult EnableProxy<TResult>() where TResult : IGlobalRepository<T>

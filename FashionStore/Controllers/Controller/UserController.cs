@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using System.Web.Mvc;
 using FashionStore.Controllers.Base;
-using FashionStore.Infastructure.Data.Identity.Interfaces.Service;
+using FashionStore.Infrastructure.Data.Identity.Interfaces.Service;
 using WebCookie.Interfaces;
 
 namespace FashionStore.Controllers.Controller
