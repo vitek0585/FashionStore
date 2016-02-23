@@ -14,8 +14,10 @@ namespace FashionStore.Areas.AdminArea.Models
         }
         public int GoodId { get; set; }
         [Required(ErrorMessage = "Good Name Ru is required")]
+        [ValidateAntiXss]
         public string GoodNameRu { get; set; }
         [Required(ErrorMessage = "Good Name En is required")]
+        [ValidateAntiXss]
         public string GoodNameEn { get; set; }
         [Range(0, int.MaxValue, ErrorMessage = "Price does not must be less 0")]
         public decimal PriceUsd { get; set; }

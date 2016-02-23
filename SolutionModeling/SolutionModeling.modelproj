@@ -22,6 +22,20 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="External Libary\ConditionalDiagram.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="External Libary\ConditionalDiagram.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>External Libary\ConditionalDiagram.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="External Libary\LoggerDiagram.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="External Libary\LoggerDiagram.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>External Libary\LoggerDiagram.classdiagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\Package10_1720.uml">
       <SubType>Content</SubType>
     </Content>
@@ -40,6 +54,9 @@
     <Content Include="ModelDefinition\Package1_0841.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package1_0845.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package1_0852.uml">
       <SubType>Content</SubType>
     </Content>
@@ -55,6 +72,9 @@
     <Content Include="ModelDefinition\Package2_0841.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package2_0845.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package2_0852.uml">
       <SubType>Content</SubType>
     </Content>
@@ -65,6 +85,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package2_1720.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_0845.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package3_0852.uml">
@@ -109,6 +132,9 @@
     <Content Include="ModelDefinition\Package_0841.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package_0845.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package_0852.uml">
       <SubType>Content</SubType>
     </Content>
@@ -122,6 +148,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package_1850.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_2006.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Presentation\Controller\ControllerDiagram.classdiagram">
@@ -138,12 +167,12 @@
       <SubType>Content</SubType>
       <DependentUpon>Presentation\Core\CoreDiagram.classdiagram</DependentUpon>
     </Content>
-    <Content Include="Presentation\WorkFlow\BreadCrumbsDiagram1.classdiagram">
+    <Content Include="Presentation\WorkFlow\BreadCrumbsDiagram.classdiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Presentation\WorkFlow\BreadCrumbsDiagram1.classdiagram.layout">
+    <Content Include="Presentation\WorkFlow\BreadCrumbsDiagram.classdiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>Presentation\WorkFlow\BreadCrumbsDiagram1.classdiagram</DependentUpon>
+      <DependentUpon>Presentation\WorkFlow\BreadCrumbsDiagram.classdiagram</DependentUpon>
     </Content>
     <Folder Include="Domain\Entities" />
     <Folder Include="ModelDefinition\" />
@@ -182,6 +211,7 @@
       <SubType>Content</SubType>
     </Content>
     <Folder Include="Domain" />
+    <Folder Include="External Libary" />
     <Folder Include="Presentation" />
     <Folder Include="Presentation\Core\" />
     <Folder Include="Presentation\Controller" />

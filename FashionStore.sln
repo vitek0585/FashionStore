@@ -43,7 +43,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00-External Libary", "00-Ex
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logger", "Logger", "{AC4DF015-8840-446A-9567-C5EB49FAA367}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebLogger", "Logger\WebLogger.csproj", "{6E494348-2538-4C22-A318-1E7B17739A31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{6E494348-2538-4C22-A318-1E7B17739A31}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FashionStore.Application", "FashioStore.Application\FashionStore.Application.csproj", "{43A11738-2967-4FAB-A685-0C886AB79F98}"
 EndProject
@@ -70,6 +70,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UML", "UML", "{DAA91AAB-9FF6-4233-9943-16754807169F}"
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "SolutionModeling", "SolutionModeling\SolutionModeling.modelproj", "{F1CBFA75-7BE0-4D85-A20F-89B8F7C6E9EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1E4A187A-5B82-4447-8B12-4A6B67258A14}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

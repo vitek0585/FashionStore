@@ -11,14 +11,14 @@ namespace FilterWeb.FilterBinder
         Asc = 1,
         Desc = 2
     }
-    public class ConditionalOrder<TItem>
+    public class ConditionalOrderGenerator<TItem>
     {
         protected NameValueCollection _values;
         protected Lazy<List<ContainerExpression>> _expressions =
             new Lazy<List<ContainerExpression>>(() => new List<ContainerExpression>());
 
         protected string _key;
-        public ConditionalOrder(NameValueCollection dic, string key)
+        public ConditionalOrderGenerator(NameValueCollection dic, string key)
         {
             _key = key;
             _values = dic;

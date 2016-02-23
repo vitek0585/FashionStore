@@ -14,7 +14,7 @@ namespace FashionStore.Core.Binder
             try
             {
               
-                var conditional = new ConditionalOrder<Good>(actionContext.Request.RequestUri.ParseQueryString(), "sort");
+                var conditional = new ConditionalOrderGenerator<Good>(actionContext.Request.RequestUri.ParseQueryString(), "sort");
                 conditional.SetKeyValueExpression(g => g.GoodId, "none");
                 conditional.SetKeyValueExpression(g => g.DateCreate, "date", Order.Desc);
                 conditional.SetKeyValueExpression("PriceWithDiscount", "priceAsc");

@@ -7,13 +7,13 @@ using System.Linq.Expressions;
 namespace FilterWeb.FilterBinder
 {
 
-    public class ConditionalGeneratorSimple<TItem>
+    public class ConditionalFilterGenerator<TItem>
     {
 
         protected NameValueCollection _values;
         protected Lazy<List<ContainerExpression>> _expressions =
             new Lazy<List<ContainerExpression>>(() => new List<ContainerExpression>());
-        public ConditionalGeneratorSimple(NameValueCollection dic)
+        public ConditionalFilterGenerator(NameValueCollection dic)
         {
             _values = dic;
 
@@ -57,33 +57,43 @@ namespace FilterWeb.FilterBinder
         {
             try
             {
-                
+
                 var items = from item in _expressions.Value
+                            //check on exists keys that has been defined in collection keys ContainerExpression
+                            //if exists then select this keys
                             where item.Keys.All(k => _values[k] != null && _values[k].Any())
 
                             let values = (from key in item.Keys
                                           select new
                                           {
                                               key,
-                                              type = item.Zip[key],
+                                              type = item.KeyType[key],
                                               value = _values[key]
                                           })
                             select new
                             {
+                                //all keys
                                 keys = values.Select(v => v.key),
                                 expr = item.Expression,
                                 values = values.ToList(),
                                 require = item.IsRequire
                             };
-
+                //select only expression where is require and select their keys
                 var keys = items.Where(i => i.require).SelectMany(i => i.keys);
+                //filter expression where is require or no contains keys in previos query
                 var query = items.Where(i => i.require || !i.keys.Any(k => keys.Contains(k)));
-
+                //for concat expression
                 Expression<Func<TItem, bool>> predicate = t => true;
 
                 predicate = query.Aggregate(predicate, (pr, item) =>
-                    And(pr, Expression.Invoke(item.expr,
-                    Enumerable.Concat(new[] { predicate.Parameters[0] }, item.values.Select(v => SetupValue(v.value, v.type))))));
+                    //pr - predicate that will have included to self the other expressions
+                    And(pr,
+                        //Expression.Invoke takes actual expression and his parameters (one or more)
+                    Expression.Invoke(item.expr,
+                        //Enumerable.Concat create array with parameters. Always first parameter is generic type TItem
+                    Enumerable.Concat(new[] { predicate.Parameters[0] },
+                        //convert the value of current type to Expression.Constantor or Expression.NewArrayInit
+                    item.values.Select(v => SetupValue(v.value, v.type))))));
 
                 return predicate;
             }
@@ -102,17 +112,17 @@ namespace FilterWeb.FilterBinder
             var result = Convert.ChangeType(val, type);
             return Expression.Constant(result);
         }
-        protected Expression<Func<T, bool>> And<T>(Expression<Func<T, bool>> expr1, InvocationExpression invokedExpr)
+        protected Expression<Func<T, bool>> And<T>(Expression<Func<T, bool>> expr, InvocationExpression invokedExpr)
         {
             return Expression.Lambda<Func<T, bool>>
-                  (Expression.AndAlso(expr1.Body, invokedExpr), expr1.Parameters);
+                  (Expression.AndAlso(expr.Body, invokedExpr), expr.Parameters);
         }
         #region Container for expression
         protected struct ContainerExpression
         {
             public Expression Expression { get; set; }
             public IEnumerable<string> Keys { get; set; }
-            public Dictionary<string, Type> Zip { get; set; }
+            public Dictionary<string, Type> KeyType { get; set; }
             public bool IsRequire { get; set; }
             public ContainerExpression(Expression expression, ICollection<ParameterExpression> type,
                 IEnumerable<string> keys, bool require = true)
@@ -122,7 +132,7 @@ namespace FilterWeb.FilterBinder
                 Expression = expression;
                 Keys = keys;
                 var types = type.Select(t => t.Type).Skip(1);
-                Zip = types.Zip(keys, (t, k) => new { t, k }).ToDictionary(a => a.k, a => a.t);
+                KeyType = types.Zip(keys, (t, k) => new { t, k }).ToDictionary(a => a.k, a => a.t);
             }
         }
         #endregion

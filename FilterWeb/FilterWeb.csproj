@@ -39,8 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FilterBinder\ConditionalGeneratorSimple.cs" />
-    <Compile Include="FilterBinder\ConditionalOrder.cs" />
+    <Compile Include="FilterBinder\ConditionalFilterGenerator.cs" />
+    <Compile Include="FilterBinder\ConditionalOrderGenerator.cs" />
     <Compile Include="Implements\Container.cs" />
     <Compile Include="Intarfaces\IContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

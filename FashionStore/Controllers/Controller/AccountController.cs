@@ -201,12 +201,5 @@ namespace FashionStore.Controllers.Controller
         #endregion
 
 
-        //[HttpPost]
-        //public async Task<JsonResult> UserInfo(string name)
-        //{
-        //    var user = await _userManager.FindByNameAsync(User.Identity.Name);
-        //    var roles = await _userManager.GetRolesAsync(user.Id);
-        //    return Json(new { user.UserName, user.Email, roles = roles });
-        //}
     }
 }

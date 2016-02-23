@@ -148,9 +148,9 @@
       <Project>{2E1BCA01-DB6F-48F7-8FC7-D64BC10DFCFC}</Project>
       <Name>FashionStore.Infrastructure.Data.Context.Store</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Logger\WebLogger.csproj">
+    <ProjectReference Include="..\Logger\Logger.csproj">
       <Project>{6E494348-2538-4C22-A318-1E7B17739A31}</Project>
-      <Name>WebLogger</Name>
+      <Name>Logger</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

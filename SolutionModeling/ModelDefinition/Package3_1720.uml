@@ -1151,17 +1151,5 @@
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
-    <packageHasNamedElement>
-      <undefinedType
-        Id="43ef8eed-e7b8-40fc-bf05-034fc58333d0"
-        name="TItem">
-        <referencesInternal>
-          <reference
-            Id="a2223574-7615-4d08-8002-69585c344c66"
-            handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Builders.Base Type%3DBreadCrumbsBuilder Member%3D(Name%3DGetPropertyName GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(ParameterIdentifier%3D0)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))]))]) ParameterIdentifier%3D0"
-            tag="ViewCode" />
-        </referencesInternal>
-      </undefinedType>
-    </packageHasNamedElement>
   </packagedElements>
 </package>
