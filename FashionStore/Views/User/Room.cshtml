@@ -1,0 +1,41 @@
+﻿@model FashionStore.Infrastructure.Data.Identity.Results.UserInfoIdentity
+@{
+    ViewBag.Title = Resource.UserRoom.ToUpper();
+}
+
+<div class="container ">
+    @Html.GenerateBreadCrumbs(new BreadCrumbsCompose(new SimpleBcBuilder(Url, Resource.Main, Resource.UserRoom)))
+    <div class="row row-nomargin">
+        <div class="text-center">
+            <p class="separator"></p>
+            <span class="separator-text">@Resource.UserRoom</span>
+        </div>
+    </div>
+    <div class="col-xs-12 cabinet" ng-controller="contentUserCtrl as cuVm">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#info" data-toggle="tab" ng-click="cuVm.conditional.isTrust=false">@Resource.UserInfo</a>
+            </li>
+            <li>
+                <a href="#history" data-toggle="tab" ng-click="cuVm.conditional.isTrust=true">@Resource.History</a>
+            </li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade active in" id="info">
+                @Html.Partial("Partial/_UserInfo")
+            </div>
+            <div class="tab-pane fade image-edit" id="history">
+                @Html.Partial("Partial/_HistoryView")
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12">
+        @Html.Action("RecentlyViewedUser", "Good")
+    </div>
+</div>
+
+@section scripts
+{
+    @Styles.Render("~/bundles/roomCss")
+    @Scripts.Render("~/bundles/roomJs")
+}

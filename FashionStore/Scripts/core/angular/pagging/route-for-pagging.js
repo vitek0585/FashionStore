@@ -19,9 +19,11 @@ httpRoute.provider("routeService", function () {
             return {
                 route: function (url, isReplace) {
                    
-                        if (isReplace) {
+                    if (isReplace) {
+                            console.log(url);
                             history.replaceState({ 'previous_url': url }, '', url);
-                        } else {
+                    } else {
+                      
                             history.pushState({ 'previous_url': url }, '', url);
                         }
   

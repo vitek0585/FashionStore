@@ -1,0 +1,21 @@
+﻿
+<div class="col-xs-push-1 col-xs-5">
+    <div class="fast-info-big">
+        <div class="text-center">
+            <h2 class="speed-info-title">
+                @Resource.DressFor<br /><span style="color: #DBB879">@ViewData["gender"]</span>
+                <div style="background: rgba(241, 241, 239, 0.65);"></div>
+            </h2>
+            <a href="@Url.Action("Categories", "Catalog", new { type = ViewData["href"] })" class="btn btn-primary btn-buy ">@Resource.GoView</a>
+        </div>
+    </div>
+    <div class="fast-info-big-base">
+        <div class="text-center">
+            <h2 class="speed-info-title">
+                @Resource.DressFor<br /><span style="color: #DBB879">@ViewData["gender"]</span>
+            </h2>
+            <a class="btn btn-primary btn-buy ">@Resource.GoView</a>
+        </div>
+    </div>
+    <img src="@ViewData["src"]" alt="" style="width: 100%;height:374px" />
+</div>

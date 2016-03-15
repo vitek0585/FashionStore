@@ -1,0 +1,19 @@
+﻿.image-edit img {
+    height: 120px;
+    width: 120px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.current-img .btn {
+    position: absolute;
+    top: 0;
+    opacity: .1;
+    z-index: 1;
+}
+
+.current-img div:hover .btn {
+    position: absolute;
+    top: 0;
+    opacity: 1;
+}

@@ -1,0 +1,78 @@
+﻿@{
+    Layout = null;
+    var path = "/Image/Products/";
+    var ctrlAs = "eVm";
+    var NAME = "product".ControllerAs(ctrlAs);
+}
+
+<div class="edit row">
+
+    <div class="col-xs-12">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a data-target="#info" data-toggle="tab" class="pointer">Edit</a>
+            </li>
+            <li>
+                <a data-target="#history" data-toggle="tab" class="pointer">Photos</a>
+            </li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade active in" id="info">
+                @Html.Partial("Partial/_FormGoodEdit")
+            </div>
+            <div class="tab-pane fade image-edit" id="history">
+                @Html.Partial("Partial/_GoodsImageEdit")
+            </div>
+        </div>
+    </div>
+
+
+    @*show image*@
+    <div class="col-xs-12 margin-top-element" ng-cloak>
+        <hr />
+        <div class="main-slide">
+            <div ng-if="!eVm.refresh">
+                @*основная картинка*@
+                <slick class="slider-for{{$index}}"
+                       as-nav-for='.slider-nav{{$index}}'
+                       fade="true"
+                       data="@NAME.&nbsp;photos"
+                       arrows="false"
+                       init-onload=true lazy-load="true">
+                    <div ng-repeat="photo in @NAME.&nbsp;photos track by $index" ng-if="@NAME.&nbsp;photos[0]">
+                        <div ng-style="{'background':'url(@path'+photo+') no-repeat center','background-size': 'cover'}" class="edit-main-img">
+                        </div>
+                    </div>
+                    <div ng-if="!@NAME.&nbsp;photos[0]">
+                        <img ng-src="{{::'/Image/not-image.png'}}" alt="not img" class="primary-img"
+                             style="width: 100%;" />
+                    </div>
+                </slick>
+
+                @*</div>
+
+            <div>*@
+
+                @*картинки выбора*@
+                <slick class="slider-nav{{$index}}"
+                       as-nav-for='.slider-for{{$index}}'
+                       infinite="true" dots=false
+                       slides-to-show=3
+                       slides-to-scroll=1
+                       swipe="true"
+                       focus-on-select="true"
+                       data="@NAME.&nbsp;photos" init-onload=true
+                       arrows="false">
+                    <div ng-repeat="photo in @NAME&nbsp;.photos track by $index" ng-if="@NAME.&nbsp;photos[0]">
+                        <div ng-style="{'background':'url(@path'+photo+') no-repeat center','background-size': 'contain'}" class="edit-mini-img pointer">
+                        </div>
+                    </div>
+                </slick>
+            </div>
+        </div>
+
+    </div>
+    <a ui-sref="goods-state"><i uib-tooltip="Close edit" tooltip-placement="left" class="close-wnd glyphicon glyphicon-remove"></i></a>
+
+</div>
+

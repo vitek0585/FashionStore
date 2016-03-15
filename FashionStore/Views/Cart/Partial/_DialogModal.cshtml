@@ -1,0 +1,14 @@
+﻿<div class="row row-nomargin dialog-modal">
+    <div class="col-xs-12" ng-cloak>
+        <div class="text-uppercase message-info">{{dialogVm.msg}}</div>
+    </div>
+    <div>
+        <div class="btn btn-cart-table">
+            <button class="btn btn-primary btn-buy" ng-click="dialogVm.ok()">
+                @Resource.Save
+            </button>
+            <a class="btn btn-primary btn-buy" ng-click="dialogVm.cancel()">@Resource.Cancel</a>
+        </div>
+    </div>
+    <spin-wait show-when="dialogVm.isBusy" />
+</div>

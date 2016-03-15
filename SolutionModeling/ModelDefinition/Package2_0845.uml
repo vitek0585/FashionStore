@@ -1,0 +1,1124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="65e2021b-1a9a-40a7-86a8-581fa6d35de1"
+  name="WebLog"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="d0360aef-653e-49ec-ab94-b4d1fea83124"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DWebLogger.WebLog"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="1bc79a04-6b56-4600-9af0-4881ae2dc665"
+        name="LogSql"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="fb05975a-56fc-4c61-8e6f-b5e23411912d"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.WebLog Type%3DLogSql"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a4f37fce-7a41-4bd5-a1b3-f5e8fff68dd6"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dc1c4cb2-ae09-4c88-9421-4c30d37167fb">
+                <propertyInstance
+                  Id="5e1e9b28-6a98-4ed8-a56d-69f52a101dbb"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fa48a7f5-20c1-4b38-b978-43bc4ff740b2">
+                <propertyInstance
+                  Id="e9937867-42a9-4391-9674-6ca2df9fae40"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f5f4af13-e53c-499d-afa9-d7c8dadfeb15">
+                <propertyInstance
+                  Id="8d24d096-c5fd-4349-a110-441163492075"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0181ce92-80e9-445c-a735-e2a4792501a9">
+                <propertyInstance
+                  Id="537c8c36-3451-4aa4-b2b5-fa638f5b3f97"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b0217a3a-7013-40e5-82c1-9eb26d3f7656">
+                <propertyInstance
+                  Id="d3c3fd3a-17a0-4149-98ff-6ebeb50f9283"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="1c5c3fc4-0d8f-43cf-9599-38ca73ef2ca2">
+            <interfaceMoniker
+              Id="00cbbb2c-48e8-4b29-b02f-ed4d9a33465f"
+              LastKnownName="ILogReaderSql"
+              LastKnownLocation="Package_0845.uml" />
+          </interfaceRealization>
+          <interfaceRealization
+            Id="bbba9c80-461c-4394-990d-5039531d3095">
+            <interfaceMoniker
+              Id="75894d09-74de-43ad-b702-e7f52286fe38"
+              LastKnownName="ILogWriterSql"
+              LastKnownLocation="Package_0845.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="b558e2fd-6383-4ecb-a8c1-7f0fe3726be7"
+            isSubstitutable="false">
+            <classMoniker
+              Id="307e9e7d-0821-42ad-bda4-b7cc501de475"
+              LastKnownName="LogBase&lt;String‎, ExpandoObject‎&gt;"
+              LastKnownLocation="Package13_1720.uml" />
+          </generalization>
+          <generalization
+            Id="6a1b042f-81b5-4366-b99b-80befe8263ca"
+            isSubstitutable="false">
+            <classMoniker
+              Id="226162c5-51b4-4470-9577-ac18e7f16313"
+              LastKnownName="LogBase"
+              LastKnownLocation="Package13_1720.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="e6dc8631-c9ef-415e-9cdf-602011eb4103"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="09816cb0-a8d6-44fb-8042-4d45df77a7e5"
+              LastKnownName="IRequestContext"
+              LastKnownLocation="Package14_1720.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="928ca027-3402-42ac-8de0-f664194cce5b"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b5a08450-bded-41dd-acfc-2861380056e8"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="05ceb29c-25d5-40ca-8f3c-27e888d65514"
+            name="_conection"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="046edbcb-f71a-4e5e-8248-6170d4716651"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.WebLog Type%3DLogSql Member%3D_conection"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="daf2fc2f-2660-4eb1-8c25-8ac6f0316d8a"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8e27c149-cac3-46a2-abd4-2b540084a28e">
+                    <propertyInstance
+                      Id="1ef57d42-f3f2-4791-916d-99e69fc4873f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce49f0ac-6ff7-4184-b386-03ebdf70861f">
+                    <propertyInstance
+                      Id="8712e944-e760-4576-ab69-1235753664d7"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ba22b27-e3e4-4f93-99b2-3a7d5950f2fd">
+                    <propertyInstance
+                      Id="a681300a-94d7-4be9-bd57-a6245b9512a7"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="148f895b-c1a8-4eb3-b3cc-8d6d6c963704">
+                    <propertyInstance
+                      Id="eda5f162-3050-4f41-88a9-0f4af2b3783c"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b63d3098-fd41-457c-9f8a-aa57f599ee16">
+                    <propertyInstance
+                      Id="a81fabcf-f90e-4878-9ecb-5fbb0f313a7c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+          <property
+            Id="936f0b7c-9935-4b93-9711-296f4f3615f8"
+            name="_connectionString"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="7d56c3fc-fdcb-4b3a-903f-cd9919071465"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.WebLog Type%3DLogSql Member%3D_connectionString"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c574a635-c4e4-4918-a80d-473236d81e69"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f16263e8-5b42-4c0f-b3fc-192ebdecb8c3">
+                    <propertyInstance
+                      Id="57984cc2-4db2-4e47-8149-8858295ebe88"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b5ee9148-fa93-4cf3-a73a-09f8819571fa">
+                    <propertyInstance
+                      Id="04ea6c01-aa71-4319-8433-7eec14dda315"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e2d7892-9015-4eb1-827a-61d05c001833">
+                    <propertyInstance
+                      Id="8c1d1350-2d4c-4338-867a-93ba7b78c71f"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="51c2f9bb-febf-4dd8-a93d-77e9ff381162">
+                    <propertyInstance
+                      Id="cad5ca51-89e8-45f3-bbe4-f767a2ba8414"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e54e1c58-5f8b-4748-8fea-69f648bc3aeb">
+                    <propertyInstance
+                      Id="201e2299-a7a9-4569-b5fb-4e055ab9f1fc"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+          <property
+            Id="0221bdf9-e023-43a2-90ce-d53cfe1d1a6c"
+            name="_disposed"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="07a4baa9-ff9a-41be-91f6-4799cf02dca5"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.WebLog Type%3DLogSql Member%3D_disposed"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d3dbb13d-b9d7-4344-ae6b-db482ec29754"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5e5569a8-7624-4c1b-8e65-29a88e6110da">
+                    <propertyInstance
+                      Id="dffa733c-cf05-4f45-b284-1eea652d820f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a1c77f61-d996-46bd-a303-2ed2c91eb55d">
+                    <propertyInstance
+                      Id="05b5290d-60b7-4e5a-ad57-e0fa6ac7fb9d"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c979c8c5-9306-4293-9b6a-90d81ec9a0e0">
+                    <propertyInstance
+                      Id="c17c456b-75b4-47eb-a6f8-9a038906f7dc"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b5262286-71a9-4eb7-951d-87d3d50b812f">
+                    <propertyInstance
+                      Id="7526b973-ccf2-4247-9514-4349a5d0d92b"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2fd95fa9-c630-4ed8-9155-502e530be0ae">
+                    <propertyInstance
+                      Id="c8cb9d8b-5714-4199-8172-6d409d9d4dd5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+          <property
+            Id="bb930fde-2bc1-40f0-a016-2a2e430dbabf"
+            name="_queryDelete"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="fdbff458-a80c-4342-811e-a69be2e404d7"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.WebLog Type%3DLogSql Member%3D_queryDelete"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2bc3226f-c2f4-48aa-881a-d72c9cc7ce89"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="06163a77-8dba-4c0f-9020-2dbf6eef6051">
+                    <propertyInstance
+                      Id="809a4d22-0a67-46b1-8b76-6a9b29afa5bd"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="49f23205-9f43-475b-8800-68adcb8fbc3c">
+                    <propertyInstance
+                      Id="b97956c2-0dd7-47a5-8b7d-cf13165e11ab"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1d782052-c965-4670-b56e-99ecc6063abe">
+                    <propertyInstance
+                      Id="45d0ecc1-1eae-48a2-ab16-7480b616e07c"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a159c546-85e9-4dac-a92e-0907a3034d8c">
+                    <propertyInstance
+                      Id="a4458b43-a04e-4e91-8f41-bb3899165728"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e160ae8-5135-49cf-b9b3-9ad4cf1cfdb3">
+                    <propertyInstance
+                      Id="e64f99ca-04a3-4e2a-b1a5-9d50a82cce35"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+          <property
+            Id="e9c5236b-d9f5-4818-ab19-291f232c6b31"
+            name="_queryRead"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="8044bba1-da00-4aa9-bcd1-2560293c37c6"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.WebLog Type%3DLogSql Member%3D_queryRead"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a000f834-7231-4d75-9808-fb020050ba30"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ebd1c906-edf1-4d78-9106-13ee626d0850">
+                    <propertyInstance
+                      Id="5a3cf7dd-2199-4b25-a4a9-0c46fd43fd0c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e09bd7e3-5472-46e3-867f-e5b68f04b587">
+                    <propertyInstance
+                      Id="f7d9da95-19b2-46f0-a732-3ac0bd1223cc"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a72b73d6-7e4c-4953-930c-e21b1319bd77">
+                    <propertyInstance
+                      Id="0db84616-acc5-462b-887b-88cd809065dd"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5491f775-723d-49c7-8d47-b486b60710fb">
+                    <propertyInstance
+                      Id="ef6e3bc8-ace4-488f-9c66-f11b3f67625f"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="78b84c74-040e-4adf-9a78-6ba898609607">
+                    <propertyInstance
+                      Id="d78b8d25-4581-4ad7-9723-1f6af43a5a53"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+          <property
+            Id="fbdd4c63-ba65-4e1f-b7b8-5c35676d53ab"
+            name="_queryWrite"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="4128efbd-1f69-4d36-a362-ec4a30fafad4"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.WebLog Type%3DLogSql Member%3D_queryWrite"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="98f0eb6a-6dac-41cf-9022-36736c21a839"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d082789a-ef69-44a7-81ec-2657cbd1cfd6">
+                    <propertyInstance
+                      Id="7b2e2eb7-d02b-474d-a833-aab30d6d946f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c70ace6c-8604-4a82-bef9-fa3d15ded4f2">
+                    <propertyInstance
+                      Id="a8a8015d-c03f-4f89-807c-ea7a2f77a380"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba1b4a5b-f639-4c93-9b92-3f30320ef539">
+                    <propertyInstance
+                      Id="1928ec1c-4ea7-4a26-be0d-6953fdb34239"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ece507a5-5b54-4470-94e2-50e29f186a7c">
+                    <propertyInstance
+                      Id="598817fe-e05c-4a7b-9c1c-684ca70564b3"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e392f1aa-eb33-45a7-bf56-ca20b108e0b0">
+                    <propertyInstance
+                      Id="54f4c5b4-7807-4c66-8184-135a5401814d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+          <property
+            Id="109d2b44-8c28-468f-ab0e-433197ecccd3"
+            name="_request"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="3bfb3ca4-1b29-41a7-b21d-e7a32eaf8f0b"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.WebLog Type%3DLogSql Member%3D_request"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e97fb4d0-7671-4129-86b5-78c0ad7dbdbb"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="16e844da-1a9d-4d6c-a1ef-a8074c35ac4a">
+                    <propertyInstance
+                      Id="0875b06d-e76c-4939-a27c-140da23b50e9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e22b3d54-ce91-4ad9-9de4-3113a985fbd4">
+                    <propertyInstance
+                      Id="a4123f1f-fdf9-4f13-87c7-d2d052c71c90"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a4819806-52f5-4294-8baa-4f0a09923951">
+                    <propertyInstance
+                      Id="85718d51-8b8d-4fbe-a2ac-c483b81ab1b0"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="278cd550-2a1b-4dc5-88af-44e7df5e7db6">
+                    <propertyInstance
+                      Id="2631683a-a91e-4af3-932a-785d8829b2a6"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="57d27397-7d66-4905-9d18-85805e16a2d2">
+                    <propertyInstance
+                      Id="a78d47e4-3f2e-4e15-b5c7-9c0a65fd9319"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="cd779f57-8604-45b6-95e0-cd3e29b7b402"
+            name="LogSql"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d29a89d6-19b5-4d69-9a75-91dd16e68263"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.WebLog Type%3DLogSql Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.Abstract.Interface Type%3DIRequestContext)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="67d51de8-03b5-4132-9cd3-5bf4960d852f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="17e371d1-59c9-4940-8fc6-3c32fb120de8">
+                    <propertyInstance
+                      Id="8c7bd856-09c6-4472-aae9-5678793ca81d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62631c4a-e090-4738-adda-79952c5da039">
+                    <propertyInstance
+                      Id="459e0aaf-2b76-446d-ac7d-2ee30f27f704"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b3941d2-c261-4c2f-94d8-2abb3aa47db1">
+                    <propertyInstance
+                      Id="e56d3a4d-3c15-4adf-8ab5-c9140a925f3c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45720e71-968d-4759-b853-c6d40b00fe72">
+                    <propertyInstance
+                      Id="93718a2e-bceb-4d0f-a383-2556ff622b32"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2c5efc4-5ae2-42c3-be16-e2efca41e01f">
+                    <propertyInstance
+                      Id="939d44d7-485b-41c6-aaa5-12454cacffbc"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f06da0df-63d0-421d-8fd5-11c3ea65c4b3">
+                    <propertyInstance
+                      Id="00384c46-32d9-46e0-9100-636ddaeb8539"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="d102a2e9-8cae-469e-938b-fa7fd07fd7b2"
+            name="Execute"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a767b26b-02ac-45b0-8095-23f0c547cc96"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.WebLog Type%3DLogSql Member%3D(Name%3DExecute OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.Type Type%3DTypeLog)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DException)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="01c4b86e-d58f-4cf1-9378-a7ca382735bb"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22bfe2dd-a8a5-42a8-938b-816f8e414b1b">
+                    <propertyInstance
+                      Id="95cdd555-27d1-4c02-88fa-a94ad96e6c35"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7523f96e-8197-4917-bf3d-0dfeca26a065">
+                    <propertyInstance
+                      Id="8a3e36db-a7bb-49ac-90f6-160ae43d6974"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8dcde254-b7dc-43a5-b25e-82a4a6890d47">
+                    <propertyInstance
+                      Id="8dcf9858-5df4-48dc-84cd-b8dcc9ca3826"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf6fe79a-78d6-4a70-ae18-19a22eee4dcf">
+                    <propertyInstance
+                      Id="4a01b89b-6160-4484-a947-843d9a65ecc1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3cf1320d-a06b-4a4a-b86b-f1eab577a1b6">
+                    <propertyInstance
+                      Id="1bae03c1-da52-40d2-b931-cac63f813917"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a0c92d56-2c02-4dff-b981-0d12eb4e80f1">
+                    <propertyInstance
+                      Id="055e83f6-96e1-4a4c-995b-5f080c35bd65"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="6a883363-d385-471d-849e-d33c9f050243"
+            name="IncludeException"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="558fa8a3-422c-4b55-abcf-25cc512be10a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.WebLog Type%3DLogSql Member%3D(Name%3DIncludeException OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Data.dll&quot; Namespace%3DSystem.Data.SqlClient Type%3DSqlCommand)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DException)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="61516715-acc3-40b0-9b05-134aa3514ae4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2555fe4f-5ec5-4a76-94a7-70ed4ee017a0">
+                    <propertyInstance
+                      Id="1095bd05-2b53-47ee-96db-17a512a7ee2e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="28410303-522e-4730-89d9-62909eadb9fc">
+                    <propertyInstance
+                      Id="f0a6715c-5614-4f1e-b16e-d2002400987f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="32a017ac-8032-48d9-9b75-01ce24cb8f4d">
+                    <propertyInstance
+                      Id="76c56891-89ae-4e6b-8ecc-78b1372e1fae"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="810f1ea2-1244-4db0-9ac9-d34fea3906e9">
+                    <propertyInstance
+                      Id="55db7dea-4413-4060-900b-098dad4ea343"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="57496dc4-3ed7-4ab9-b86a-54bde3ffbb10">
+                    <propertyInstance
+                      Id="84327569-1a9d-47df-989f-6ff3bc7cd90b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a80f0a7-d9b8-43d1-b8e2-a971af081ce6">
+                    <propertyInstance
+                      Id="d4da2135-edef-4732-86e9-15bc46aee539"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="2a2f613d-704a-4932-b590-5933f5607cc5"
+            name="ReadRange"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9cc4f0d0-4e63-4566-bf17-acd0305ad22c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.WebLog Type%3DLogSql Member%3D(Name%3DReadRange OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e8dc58cc-e4ac-4f06-9e8f-ffd943e20673"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ebc8b59-3f40-48b0-a061-5a78eee36c04">
+                    <propertyInstance
+                      Id="204f32eb-4ea5-4e6e-9f89-d1e0f035f0bb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5fd09a30-497b-4ab9-ba0a-340bca89eb60">
+                    <propertyInstance
+                      Id="01185453-e5fb-49e4-8b8b-b41520e7d9e9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3fa8c7dc-6e88-4be2-bdf0-d17e761924bf">
+                    <propertyInstance
+                      Id="fef311f0-18de-4b01-bd4f-5351f54d0ee5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5643230f-999b-4856-a4c3-31b6b2dcb525">
+                    <propertyInstance
+                      Id="fb9b1d50-83a7-44e2-a325-6784368370b8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="401a1787-b024-4449-924f-6599bcadfc46">
+                    <propertyInstance
+                      Id="eda076b0-769b-4de5-9dd1-9d78692475e0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="19eb45c1-9226-476f-9563-c06a09969d14">
+                    <propertyInstance
+                      Id="edd7d2c4-a4de-46d8-ba09-45215101e43b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="d3488e34-b844-43db-b3ea-b97fc1024250"
+            name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="10e9a56d-901a-4f16-b543-8b2598560d88"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.WebLog Type%3DLogSql Member%3D(Name%3DRemove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f1905590-7567-4ab6-81fa-6b46436ceded"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd37a906-0ff9-489c-8a97-779767dc050a">
+                    <propertyInstance
+                      Id="48da530b-b544-47f5-8e0a-a15fc131d7b7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="63bea510-8abc-4154-8385-66929378f201">
+                    <propertyInstance
+                      Id="c875f216-c58a-4b60-8e25-a2fc4826504d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4b65cac4-e2cf-4824-adba-7e9ac372414f">
+                    <propertyInstance
+                      Id="1e600387-e732-47d9-b601-fdb4c07c7d5f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="38f945b9-5a28-4b79-81aa-60190e00812a">
+                    <propertyInstance
+                      Id="1b2001ac-2520-40b8-97f3-0d2a028ce5e0"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d6104e76-7867-4dc3-b876-d855f28ce1b9">
+                    <propertyInstance
+                      Id="7cbe3b64-1c9c-4bec-ac7a-57d5024ba0c8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a097924-3b45-4004-a578-35f10c5f75bf">
+                    <propertyInstance
+                      Id="f3f298ea-94a5-416f-ab5c-27d419d97c27"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="4999f746-d968-4eea-99a5-253526bc7d59"
+            name="AllLogs"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="de6accf1-dfa6-4e93-9fdf-03f044e0599f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.WebLog Type%3DLogSql Member%3DAllLogs"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="653bff24-b36f-46d1-97b8-cf4a73b7c68c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4da93642-f313-4c79-a423-ac6e4bc34ed3">
+                    <propertyInstance
+                      Id="37b92dc7-8260-41d8-b2f8-1e2ee3868560"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c0342651-1827-48cd-8e5e-58fc84eca53a">
+                    <propertyInstance
+                      Id="058bcd0f-d763-4130-b1c6-9f1b127f5029"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="93bb5832-5daf-4c27-bcfc-d11e2b875c50">
+                    <propertyInstance
+                      Id="e5bab2b9-b7b2-4046-975d-9c425e92fdb6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1881725b-eb44-4ec0-9214-f4e3eada23ba">
+                    <propertyInstance
+                      Id="f1283d1b-0150-4749-b54d-9c69b6eccc2c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7dfc2b68-5ff5-450e-b273-df3fe402cec6">
+                    <propertyInstance
+                      Id="1367a060-5031-4854-b87b-46ae0212116a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bec30f97-da9a-4123-8358-ce96b49788d0">
+                    <propertyInstance
+                      Id="a1fe825e-5837-487e-a857-0f1904973faa"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="48230ecd-e32f-45ac-8e07-03c8331b6c36"
+            name="Dispose"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="87a2f098-37c8-47dd-af33-ae7db507281d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.WebLog Type%3DLogSql Member%3DDispose"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d7ce7f72-1e8b-42e4-8d4b-5c9c33d3bb3f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7bba165d-7020-4ff1-a760-763334e71182">
+                    <propertyInstance
+                      Id="489dc063-a86e-4620-88dd-02c9899a38c7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="165151c9-fe90-4f46-a74a-fe91a040309f">
+                    <propertyInstance
+                      Id="7a37fc06-0c4e-4584-bf8a-6a8f32f0c240"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="55e82855-cdf1-4f3d-a318-a280f8c9fc2c">
+                    <propertyInstance
+                      Id="1df0f9a7-7dc0-40f1-8d83-64913adb2ff2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9ab635a5-e5c6-458b-816c-fc165edf53d7">
+                    <propertyInstance
+                      Id="4d2da1f1-4283-497a-b586-97f741f12ef6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="215145e0-c30d-454d-a987-70190b91edc2">
+                    <propertyInstance
+                      Id="6c47063a-bbff-42ee-8f22-18ee546e25b6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a0070607-8609-439d-abe7-ae600caabaf2">
+                    <propertyInstance
+                      Id="2efafed3-9b67-4869-8333-8dc23a70ba58"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="6ebcef97-8023-4a26-bf5b-42873c9e1088"
+            name="GetConnection"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="bbb1c6ca-f67c-4b7b-a839-732c255418e9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.WebLog Type%3DLogSql Member%3DGetConnection"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3428afab-efee-45df-8d42-c53e4d7981e5"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f46c3a82-61d3-4722-bc5e-b6378b8535a0">
+                    <propertyInstance
+                      Id="e96a3959-599b-4238-9f8c-6b83bb831958"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b368ba56-3191-45a7-a910-340f1a3d9025">
+                    <propertyInstance
+                      Id="4691e051-4c81-4030-b13a-18aec0294cbe"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="02e68a80-cb2f-4032-b675-0b1460e6f17e">
+                    <propertyInstance
+                      Id="50c5482a-6310-43b2-8106-087ecac38fb6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="27c8fea1-009d-4b1b-831c-6aabcd28652c">
+                    <propertyInstance
+                      Id="439536f8-fab8-4b1f-80b0-b43e553f6708"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9d6f13b8-4bad-4d16-94df-8b74d83cc323">
+                    <propertyInstance
+                      Id="17afc5a9-5734-4e22-9c12-9956006cc4be"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c41bd12b-752f-4d93-85d2-107060f2b86c">
+                    <propertyInstance
+                      Id="fc5c2e0f-8703-4e87-9fd5-057e8afc77c3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="bf2c6c24-a182-4998-b963-569689c7e5c5"
+            name="LogWriteError"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ef61c00b-e216-49a6-9cdb-71774cfb9406"
+            name="LogWriteInfo"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="467db010-2cef-4c96-87a9-8cb8148fa2f3"
+            name="LogWriteWrong"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

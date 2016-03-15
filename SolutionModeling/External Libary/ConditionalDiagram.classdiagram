@@ -1,0 +1,1584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="162d0c28-0018-4791-b133-508642861726" name="ConditionalDiagram" linkedPackageId="e8fc2a91-b1b0-4ccb-8111-6cb23f8c65dd" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="747a61a7-acbc-4593-a8f9-4ff1912f399d">
+      <profileInstance Id="46e769f2-c454-41c5-b6b7-bb2d13c9caea" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="dd0653e0-58aa-4a84-9681-e592b5d9f590">
+      <profileInstance Id="f227bc87-1e53-4854-89fc-dd6e27d128e4" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="ac74d146-ade9-4038-a72e-feb22cd861f1">
+      <profileInstance Id="35b78c2d-8981-4afb-9836-aea468df9ad1" name="CSharpProfile">
+        <elementDefinition Id="d718c32f-b378-4960-8b90-f55f72342bab" />
+      </profileInstance>
+      <elementDefinition Id="1745da3d-cdf7-423c-b64a-97530cafef7c" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="10c66dcf-d5c4-429b-ab31-ea563dcb028c" name="ConditionalOrderGenerator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="e1fd5cfb-f6fb-4ebe-a9ee-3b3e4b439254" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1)" tag="ViewCode">
+            <elementDefinition Id="616ac7bb-5501-40f5-bf1a-6474e5d8b67d" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="8f89c769-cd1c-4a2b-8970-c2c03317abb7" name="class" profile="CSharpProfile">
+            <elementDefinition Id="71c450f6-db87-4ed6-b452-37720fb73b43" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="2cc1b716-4cf4-4eb0-8afc-e34ce003fd0f">
+                <propertyInstance Id="7bb430f8-ded0-499a-877c-7165efa79726" name="ClrAttributes">
+                  <elementDefinition Id="768cc747-c3bb-4a1e-b605-adc332858007" />
+                </propertyInstance>
+                <elementDefinition Id="905f56f4-8c58-4511-ace5-28ef872a6a1c" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="2f08a64b-da14-489a-a386-6d57448f1ade">
+                <propertyInstance Id="c96f79e1-d189-47fc-8b4f-f570dbe1b053" name="IsPartial" value="false">
+                  <elementDefinition Id="f7f2e6af-f478-46aa-b5b3-71033bd6dd6d" />
+                </propertyInstance>
+                <elementDefinition Id="bb85c6ac-98b5-452f-b187-899c0ba22c48" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="7efd1a71-3711-419d-8b92-acd9df220512">
+                <propertyInstance Id="89170af6-87c3-4573-9bf8-7a93b9fd382e" name="IsStatic" value="False">
+                  <elementDefinition Id="22c481f0-7d98-49bf-b3d6-2d3e1a367491" />
+                </propertyInstance>
+                <elementDefinition Id="ead7cbd1-4db0-4004-8828-25f1da9a6b07" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="25439ffb-c999-4069-88fc-d7aaa990ef75">
+                <propertyInstance Id="c62f7aee-2fcd-4645-9663-bb1a7f3221df" name="IsUnsafe" value="false">
+                  <elementDefinition Id="efae80c5-1a3d-4fde-b6a1-2e19e18ba811" />
+                </propertyInstance>
+                <elementDefinition Id="d0de8e5e-2219-45f5-9d1a-5862e08a8014" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="4aa76e5c-7298-4339-a7d1-fabe4c6a145e">
+                <propertyInstance Id="eada3af5-41f8-4d13-a641-640addf48393" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="3ab60e8c-0776-4105-8329-c2febce7bfff" />
+                </propertyInstance>
+                <elementDefinition Id="50449052-f45b-4416-901c-3dc4ed109069" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="abf6c4fa-bb77-422a-a8e0-c4fe66450540" />
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature Id="a5f46736-487d-4e19-b36a-15334f372e8f" parameters="" name="RedefinableTemplateSignature1" isLeaf="false">
+            <elementDefinition Id="d04cebb3-4cbe-4f7d-aae7-bdb3bde965f6" />
+            <ownedParameters>
+              <classifierTemplateParameter Id="4d819da0-56c0-43d8-9113-747c214b00a9">
+                <referencesInternal>
+                  <reference Id="f7deff1c-1012-42c4-a6ec-63155acd5536" handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0" tag="ViewCode">
+                    <elementDefinition Id="8901ffc1-6bff-4018-a936-5657d5254f4e" />
+                  </reference>
+                </referencesInternal>
+                <elementDefinition Id="3e2c517e-9c2d-4d02-8b22-c1232e76cb13" />
+                <ownedParameterableElement>
+                  <class Id="ac4938b4-cdb1-4829-828e-f8a24b2e6892" name="TItem" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="7e4c3c96-fa57-4be4-aab2-7e97b22d1cd9" />
+                  </class>
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedAttributesInternal>
+          <property Id="7ff461d8-d1a9-4855-b344-e732ea9aca90" name="_expressions" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="cfc13e90-c60f-4692-bf9a-7d1e8f0109a8" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) Member%3D_expressions" tag="ViewCode">
+                <elementDefinition Id="c1dbe411-fdda-4f7e-a613-8c25b00fbe2a" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="8010c486-a648-4e4c-9d43-dc550a7ff810" name="field" profile="CSharpProfile">
+                <elementDefinition Id="f06f7a53-aa0d-41cc-8d3f-192fc93e524e" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3a3b35ab-2301-4fab-85a4-ec2aecaa1e76">
+                    <propertyInstance Id="2a4e0d79-251a-4e1e-a4bd-187082b7e31b" name="ClrAttributes">
+                      <elementDefinition Id="800de95a-60ba-441d-afa2-3f876c8d5dd0" />
+                    </propertyInstance>
+                    <elementDefinition Id="f43095ec-11d7-4975-b398-5b13f740b199" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c9cc0cf0-cdbb-4bc0-9c83-311f9f0c2992">
+                    <propertyInstance Id="60c24a2a-5579-40dd-8379-2c0c10226fdc" name="IsConst" value="false">
+                      <elementDefinition Id="c7f40d24-30d3-435c-8510-3d03f385f15e" />
+                    </propertyInstance>
+                    <elementDefinition Id="f6f0524a-675b-423e-8272-a3c6a39fd446" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="cf54cabc-9290-4428-8e02-ccf77455db98">
+                    <propertyInstance Id="6d60684f-f201-4ea7-aa95-0bbf2d6d029c" name="IsNullable" value="false">
+                      <elementDefinition Id="504965ee-df69-4092-bf65-c09757a3d397" />
+                    </propertyInstance>
+                    <elementDefinition Id="15f3e398-f3e3-4c26-8bbf-2dd2cdd8302a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b0ae7d1e-5db9-49eb-befa-4f844f4ba66c">
+                    <propertyInstance Id="47b6fea3-a528-4572-bb37-a4472cdcd224" name="IsVolatile" value="false">
+                      <elementDefinition Id="e14e3e3e-2f3d-457a-93be-c8dd8a812e9e" />
+                    </propertyInstance>
+                    <elementDefinition Id="031b3f30-054c-4d10-8549-987eedc33f04" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6cfab4c1-6388-4ac7-b117-806d6ae76b7c">
+                    <propertyInstance Id="920e8c20-24ed-4108-9cdb-1df32094f35a" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="922b847f-3793-4b71-96db-3ab6e2e79264" />
+                    </propertyInstance>
+                    <elementDefinition Id="dad56328-bc0c-4ef1-bb8c-98f0fc1c34dd" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="88fd291a-0ab5-4e09-bdfe-ffe7fe94de78" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="5d221094-c983-4b35-9806-937f8f5241d6" LastKnownName="Lazy&lt;List‎&lt;ConditionalOrderGenerator‎&lt;TItem‎&gt;‎‎‎.ContainerExpression‎&gt;‎&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="2325a0e4-c045-4eda-83da-dd617a4bf6b9" name="_key" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="a756e6f3-83dc-494c-bbb1-b46b7f361981" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) Member%3D_key" tag="ViewCode">
+                <elementDefinition Id="7c2a485d-84af-4e98-8124-e2496af7cdc2" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="4b9d07cc-f8db-416e-836c-ee8c32ee00f0" name="field" profile="CSharpProfile">
+                <elementDefinition Id="d5691813-f691-43f0-a423-6b7c857dbae6" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a8210297-e5a4-4912-98cb-31975bbc2702">
+                    <propertyInstance Id="fcc030ad-ec6e-49c1-9078-4016e87dc2b2" name="ClrAttributes">
+                      <elementDefinition Id="5cfb4765-32fb-4dda-9e54-f61e6b26e997" />
+                    </propertyInstance>
+                    <elementDefinition Id="20eade91-3eef-4da2-adee-731bd5ed6e4c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c3fcb579-8712-4c7c-a4d9-045cd6f133ea">
+                    <propertyInstance Id="4f109609-706c-4f0c-a451-a1aea97802fe" name="IsConst" value="false">
+                      <elementDefinition Id="9aef5d11-a7ca-4128-9009-757ecb5e355d" />
+                    </propertyInstance>
+                    <elementDefinition Id="d97cffb7-9316-4aa8-bbb5-9dcb21fee222" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d6c6e11e-0df4-4d53-a2fd-31310cceb0f8">
+                    <propertyInstance Id="b67b1893-585c-4910-9286-b8f542372bd1" name="IsNullable" value="false">
+                      <elementDefinition Id="dc6fbec4-1649-444c-895e-2f0974ea8f4a" />
+                    </propertyInstance>
+                    <elementDefinition Id="439b3565-5ed6-430d-b02a-bd2df9c3b033" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1a733a27-03d0-49a2-baf5-68cf9bdd3e24">
+                    <propertyInstance Id="4b299aaa-6098-464b-b0ab-0763e7813493" name="IsVolatile" value="false">
+                      <elementDefinition Id="5aa31e7c-9744-4f56-a8d1-16a7eca10413" />
+                    </propertyInstance>
+                    <elementDefinition Id="46403846-4d98-49fd-9878-39e83dcb82b9" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="63311d62-1b07-4759-aa28-13b8c6916afb">
+                    <propertyInstance Id="194302e8-e066-4276-b750-03dfd837963f" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="617fc66c-ad7a-436d-b07e-eaeb1c006ebd" />
+                    </propertyInstance>
+                    <elementDefinition Id="fd85f4e9-dd3d-419d-a89c-e47600aea2f5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="9c5766bf-24df-46e6-a12a-d16355ee63aa" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b8369dc8-fb53-496f-9107-ca0f85389b02" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="8bb33501-f840-44a1-825b-32397a5b1217" name="_values" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="3c3c3a7c-1859-467a-aadd-8feea8cdfa91" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) Member%3D_values" tag="ViewCode">
+                <elementDefinition Id="ab09194c-560c-4dce-ba26-216733df22ac" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="a221df1f-44fa-4f3c-99dd-7d70e2c8f3d1" name="field" profile="CSharpProfile">
+                <elementDefinition Id="2bf42cdc-0fc2-4cc9-b868-b2692462d9a1" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="80f25ab1-336a-491a-b008-6d9d782ba585">
+                    <propertyInstance Id="b6c0d6e7-6e40-43de-b9c8-32080a4cadf2" name="ClrAttributes">
+                      <elementDefinition Id="47223f2b-39b1-4cdf-b449-135e00152036" />
+                    </propertyInstance>
+                    <elementDefinition Id="a7777671-25fc-4f33-870b-1bdf4476cd8c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c9bda175-4768-4596-8fb1-b4336162b1b6">
+                    <propertyInstance Id="a7b142bf-770f-4a99-bdfb-691da9d67a44" name="IsConst" value="false">
+                      <elementDefinition Id="0953bdae-1a97-4b72-8839-7fcacf04a80c" />
+                    </propertyInstance>
+                    <elementDefinition Id="1996cb06-353c-401c-900f-c7586382a790" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="85d1ddbf-16af-4777-a348-1526b2df6a25">
+                    <propertyInstance Id="2cc6d511-b3e8-4432-861c-0a748bfb2535" name="IsNullable" value="false">
+                      <elementDefinition Id="4d9de7fe-b6d8-4f05-9bda-064f855a7359" />
+                    </propertyInstance>
+                    <elementDefinition Id="fc6fa9b6-1031-406f-a83f-a5b6f385b11f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a705113e-4f2e-44d5-92dd-1e969141e9c9">
+                    <propertyInstance Id="35dfb356-abf1-4d6d-b3ee-8914c794e31b" name="IsVolatile" value="false">
+                      <elementDefinition Id="4918efcf-b98e-41d8-838e-07caeab1b53c" />
+                    </propertyInstance>
+                    <elementDefinition Id="2766b7a3-6379-4c7f-ae48-4d7ec844ebb5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d825c151-945c-475e-9905-2ea98091da7f">
+                    <propertyInstance Id="ff23d855-53fa-414d-8549-9a9cba550d17" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="d3cd76f6-8db0-4aa4-996c-f24a5b708f05" />
+                    </propertyInstance>
+                    <elementDefinition Id="87b03606-172e-47a3-97e5-36a775d8fba6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="d8a703df-8368-4bd8-8888-29c36827db64" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="4f1337fc-e926-4bb7-83e9-12c4baacb38d" LastKnownName="NameValueCollection" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="e0c826f7-707d-42b3-b7e0-abf2af8b6b4c" name="SetKeyValueExpression" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="61918c1e-1041-4ea5-82e8-776745dbf246" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3DOrder)])" tag="ViewCode">
+                <elementDefinition Id="b06a320f-0098-4833-bcb1-4d439bdbbf8c" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="ef090913-030b-44c3-b593-0da8c5eef343" name="method" profile="CSharpProfile">
+                <elementDefinition Id="bc226133-711a-42df-8fa2-5cf04ec0d27a" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3c08663b-472e-4ae3-b90b-43a542dd49b1">
+                    <propertyInstance Id="97287575-d868-444b-85f4-a6a3fe38e689" name="ClrAttributes">
+                      <elementDefinition Id="ab096365-f53d-41ce-929a-39b3cdbeb7d4" />
+                    </propertyInstance>
+                    <elementDefinition Id="64b7ed79-00d1-45e2-8412-641e8b8febdb" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c428622f-fdd1-4650-8839-fbd82083bf85">
+                    <propertyInstance Id="2f40d5bc-a3e3-4a75-a0a6-d472b8d9e844" name="IsPartial" value="false">
+                      <elementDefinition Id="aea2f6c5-e5b4-4383-9bee-b817b6433125" />
+                    </propertyInstance>
+                    <elementDefinition Id="c63f3e1a-6276-4929-bbe8-ddc6ac7aee17" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f387aaec-709d-4b41-bbbd-68c82a568cbf">
+                    <propertyInstance Id="74b8937b-989e-4c04-ad53-19598164a3a5" name="IsUnsafe" value="false">
+                      <elementDefinition Id="6d8d1062-0f88-4aab-86b6-2d90b5a6ba28" />
+                    </propertyInstance>
+                    <elementDefinition Id="c23026dc-0b1d-4e9a-87ad-2b6ff74ab596" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bff35afa-93de-48cf-945b-11a563d07e11">
+                    <propertyInstance Id="3b634564-c94f-4383-b0fc-d04d05359eba" name="Inheritance" value="none">
+                      <elementDefinition Id="14cb52f1-95f1-4dd9-87c1-71b4fba3852e" />
+                    </propertyInstance>
+                    <elementDefinition Id="5b6f88ab-2136-4237-82e1-77d2abfdc492" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7ce9b991-5201-49e5-bd50-b6a5188a18ae">
+                    <propertyInstance Id="3e011aba-db99-47dd-b34c-14f1dfcb176c" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="1d4f4938-3d18-45a2-b951-8f6be06905d6" />
+                    </propertyInstance>
+                    <elementDefinition Id="b96f96de-38fe-4952-8c08-f2c8a3f88d47" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7f0854d8-1556-47fd-adf0-b24bb5e9c64e">
+                    <propertyInstance Id="6a61c222-629f-4ac3-bbb3-03e6dfb4b5fa" name="params" value="false">
+                      <elementDefinition Id="8a4c4cd1-f378-4276-b7bf-10a8aed21e34" />
+                    </propertyInstance>
+                    <elementDefinition Id="6037776c-2a44-4c72-8fb0-5bb4d6c3d7cb" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="f10878f7-a525-42ec-a291-945a862c0d10" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="90ed7ef9-df5c-459f-9461-635e6707645c" name="expr" direction="In">
+                  <referencesInternal>
+                    <reference Id="dfc0a3d6-51dd-4975-85b2-5c19c791da98" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3DOrder)]) ParameterIdentifier%3Dexpr" tag="ViewCode">
+                      <elementDefinition Id="b3681658-d264-4d9a-a1cf-f602bf07fde3" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="97e6d1f4-3d50-4f7f-8577-0c0432d6eba8" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="71b4ffdc-6825-4f8c-981e-43f0078eebf4" LastKnownName="Expression&lt;Func‎&lt;TItem‎, Object‎&gt;‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="016fcefe-55e5-4321-aa69-aaf477604c5c" name="key" direction="In">
+                  <referencesInternal>
+                    <reference Id="33c9083b-7b72-4da1-bee4-df114a79e7b0" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3DOrder)]) ParameterIdentifier%3Dkey" tag="ViewCode">
+                      <elementDefinition Id="54b8dfd6-aa59-4faf-bc25-c7d842310e0c" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="d9394173-f895-489d-b2d4-73e34245388a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b8369dc8-fb53-496f-9107-ca0f85389b02" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bb52e5dd-7e23-413a-83d8-9ec32b12af94" name="order" direction="In">
+                  <referencesInternal>
+                    <reference Id="e07893e8-7d84-4696-809e-598ccdffb120" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3DOrder)]) ParameterIdentifier%3Dorder" tag="ViewCode">
+                      <elementDefinition Id="93f986c8-1603-414e-ac9f-d90b77cceff8" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="400a38d2-4a50-4ee8-8a8b-0a4344afe88b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3dae0c27-e344-4d83-90a2-bfef1cd61a4c" LastKnownName="Order" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="bb216a2f-8d20-4f7a-869b-f2d4610cb830" name="SetKeyValueExpression" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="f461e969-2a29-4a9d-b745-27e050d70937" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3DOrder)])" tag="ViewCode">
+                <elementDefinition Id="382bfaf4-040c-41de-b37c-b314df51fd4b" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="8a5cef86-f574-4715-a7b1-1c9727b60f61" name="method" profile="CSharpProfile">
+                <elementDefinition Id="f8a94f83-70b1-42be-8738-fe35bdb9e25c" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1e7ccb5d-efc7-4fef-9f52-484e63bd8a2e">
+                    <propertyInstance Id="c8dc830b-6f15-401f-828f-25a196e13561" name="ClrAttributes">
+                      <elementDefinition Id="0b3f3b9f-7a31-4116-be7e-51b643790047" />
+                    </propertyInstance>
+                    <elementDefinition Id="c739f367-1ce2-41ac-a117-cc570f50a8ee" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="af706cb9-d92f-473d-9b42-bdc58631a533">
+                    <propertyInstance Id="ecf859ac-3cf0-405b-9d2e-06c3db86a317" name="IsPartial" value="false">
+                      <elementDefinition Id="ea7d0040-ce79-43f8-84b8-4a3eb7029a35" />
+                    </propertyInstance>
+                    <elementDefinition Id="9135ce68-c121-449f-a15c-68e6eacca1eb" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="37f60031-3ea2-456b-9ffc-ebbb08493b65">
+                    <propertyInstance Id="204c795e-e15b-4c80-be9d-6e8b620b53b4" name="IsUnsafe" value="false">
+                      <elementDefinition Id="ebb67701-be4e-43b0-9356-bc8d184bd5b2" />
+                    </propertyInstance>
+                    <elementDefinition Id="15a5a462-ff85-4b6c-a90b-2c3a140725bd" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2c37cbe7-c998-4569-bdc2-a1c89d6d0819">
+                    <propertyInstance Id="3248d5cf-18b3-4ed0-b7ff-3461ceb1d1bd" name="Inheritance" value="none">
+                      <elementDefinition Id="bc77a381-0fab-4bd1-b0f0-d8c7a6743e21" />
+                    </propertyInstance>
+                    <elementDefinition Id="5b149753-49a9-45b6-a959-acc2ef78afdb" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="0fa2fc62-7b5b-41ac-99f0-006c52ec5e66">
+                    <propertyInstance Id="b9187f83-d68a-4144-a62b-0cf8cfd0ef3a" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="5e1a1e68-0224-4cee-ae4c-ac4d81ffa79b" />
+                    </propertyInstance>
+                    <elementDefinition Id="b96ac0ad-17c1-4251-9f37-5880eb1b1959" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="beb2498b-5c24-4606-ab67-9660f28a3471">
+                    <propertyInstance Id="cf66dabf-2fd1-4dad-a7dd-3d35c57aee25" name="params" value="false">
+                      <elementDefinition Id="fff0dd7d-9c77-4d27-89f0-0f382800d05d" />
+                    </propertyInstance>
+                    <elementDefinition Id="848e269c-b6cf-4850-8e2a-fe61196b8b89" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="372949fc-7240-4f83-9ef0-b08d6a01b15e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7a234c9c-9734-4507-bafe-8023e5ca1af9" name="expr" direction="In">
+                  <referencesInternal>
+                    <reference Id="54007e28-ff9c-493f-ae9e-8b523410b39c" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3DOrder)]) ParameterIdentifier%3Dexpr" tag="ViewCode">
+                      <elementDefinition Id="79739fdc-5b42-4a28-a894-c362da2ace9b" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="4f733194-9c6f-432a-9277-20409d8f044b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b8369dc8-fb53-496f-9107-ca0f85389b02" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f8e50dce-6c13-44f9-8733-e0ee73efa6dc" name="key" direction="In">
+                  <referencesInternal>
+                    <reference Id="f8daae5a-5a0c-4822-a4f3-81305e77500e" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3DOrder)]) ParameterIdentifier%3Dkey" tag="ViewCode">
+                      <elementDefinition Id="b584c54a-a7a7-426c-a06b-31082836c492" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="16142cb0-9d63-4f11-98e1-baec59be50b7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b8369dc8-fb53-496f-9107-ca0f85389b02" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e3be5f91-4f2e-4887-a170-3063fb12cd68" name="order" direction="In">
+                  <referencesInternal>
+                    <reference Id="26a65a16-7650-4fe3-b422-1f8a14bdf980" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3DOrder)]) ParameterIdentifier%3Dorder" tag="ViewCode">
+                      <elementDefinition Id="3139d0d1-6030-4c80-8870-51105f56a4d9" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="c304cd84-d758-4b4b-b83d-cea82b08f6e7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3dae0c27-e344-4d83-90a2-bfef1cd61a4c" LastKnownName="Order" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="92c97017-6109-49bd-9c00-60e13a68eee6" name="ConditionalOrderGenerator" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="2b5371a9-8088-42ee-b06f-6f224d91f268" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.dll&quot; Namespace%3DSystem.Collections.Specialized Type%3DNameValueCollection)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])" tag="ViewCode">
+                <elementDefinition Id="de9f32e2-47ca-40e6-ad31-c03171d3cee0" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="6ad9cdf8-21cc-4938-aa63-6e88ffe4c43d" name="method" profile="CSharpProfile">
+                <elementDefinition Id="945f498a-4a89-4575-8493-33a9feaf1bad" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="22b7d559-5f1b-42c7-86a1-fb3eaa696c40">
+                    <propertyInstance Id="e307da24-7cb8-4b50-af4b-b1b6fee9c187" name="ClrAttributes">
+                      <elementDefinition Id="f83704a0-f577-4de9-be00-96a05fd66a76" />
+                    </propertyInstance>
+                    <elementDefinition Id="44e90e70-0c67-410f-ac21-aff3610d19b4" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2912c074-bf59-46c1-bea7-a2499cc3fbc5">
+                    <propertyInstance Id="12dc7c74-53c5-4b18-ab5f-5fa405d9b919" name="IsPartial" value="false">
+                      <elementDefinition Id="f6a4eaee-a828-498a-9e80-e2d97f803cf2" />
+                    </propertyInstance>
+                    <elementDefinition Id="7c3904ec-a715-4acb-be91-7a12d3351e8b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="96c98b41-3572-450b-a88e-7e7e5795afec">
+                    <propertyInstance Id="305e8e0b-b170-42aa-aa26-2fc4a210ba1d" name="IsUnsafe" value="false">
+                      <elementDefinition Id="36902ff7-a077-4231-8a71-9e635536607a" />
+                    </propertyInstance>
+                    <elementDefinition Id="77a7d64c-7ae3-463b-bebb-23977e3b3b1d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="19ed71b6-01e1-4dfa-91c7-d2b42bd42e72">
+                    <propertyInstance Id="5e9ddf90-16d8-4314-95cd-953ca42ad84c" name="Inheritance" value="none">
+                      <elementDefinition Id="19d4e795-c067-4f24-b66e-e748efaed843" />
+                    </propertyInstance>
+                    <elementDefinition Id="262818f3-516c-4922-8dec-efaa309c6795" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="75072135-c600-4a6b-ad65-6af407ebccd5">
+                    <propertyInstance Id="139a4c88-34e3-4f43-ae04-bcc9fea7b0b3" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="f9d26f38-c116-4410-ab0f-63b27f19d5c3" />
+                    </propertyInstance>
+                    <elementDefinition Id="f6ec66d4-576b-4029-bdb9-84b7cae770b5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="092ab0d1-e0cc-471e-aad6-92a47a17827c">
+                    <propertyInstance Id="499d06f9-ac2c-42e9-a57e-f358a41c78d8" name="params" value="false">
+                      <elementDefinition Id="0323acf3-eed0-41fd-bff1-11fde2c5b858" />
+                    </propertyInstance>
+                    <elementDefinition Id="c7404547-d96b-413b-a453-fceafcdaaebd" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="f9ae34ad-f59b-4e56-b2bb-3932bbbeb9be" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6409c37f-cd08-4c65-888f-fda74ac87082" name="dic" direction="In">
+                  <referencesInternal>
+                    <reference Id="1bdd92f7-3039-4fca-b879-677cccf7e604" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.dll&quot; Namespace%3DSystem.Collections.Specialized Type%3DNameValueCollection)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Ddic" tag="ViewCode">
+                      <elementDefinition Id="68d6712b-2522-412b-8167-e27e3e334c31" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="306af711-d0ab-49f2-9386-2d6a931a4473" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4f1337fc-e926-4bb7-83e9-12c4baacb38d" LastKnownName="NameValueCollection" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0bd7affc-ea05-4e17-8737-4962bb139271" name="key" direction="In">
+                  <referencesInternal>
+                    <reference Id="55a0df82-1526-45ae-abbb-192c0220760b" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.dll&quot; Namespace%3DSystem.Collections.Specialized Type%3DNameValueCollection)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dkey" tag="ViewCode">
+                      <elementDefinition Id="7b217d54-37e5-4be4-a0cc-5469c39b85e7" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="57e21a48-123a-4eb4-8f66-fb7dfb069c41" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b8369dc8-fb53-496f-9107-ca0f85389b02" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="203b56be-94b1-4820-9d2b-92c0dcd523f3" name="ParseLamda" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="4390c225-fe49-476c-b955-6d7e42553b10" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) Member%3D(Name%3DParseLamda OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])" tag="ViewCode">
+                <elementDefinition Id="32692765-0823-4e03-8d12-3488ba0786da" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="d71bf295-8276-46f9-95a2-8b8695791821" name="method" profile="CSharpProfile">
+                <elementDefinition Id="eeaab99f-6c02-4e0b-9a11-0609e92b0b45" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="10a63c85-2bf9-41da-b544-ea47fe5b7c07">
+                    <propertyInstance Id="1197e4ef-a499-4394-a3fa-c63c31486cb2" name="ClrAttributes">
+                      <elementDefinition Id="3ffbebc4-9fee-42d3-83f9-da11a25e3627" />
+                    </propertyInstance>
+                    <elementDefinition Id="8e51cfd4-88b0-4584-85da-c962a0b782fa" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1660651d-7129-4fd5-a1cc-53c28735e7b5">
+                    <propertyInstance Id="37b53bba-ba3e-4e73-b97a-480345dc1744" name="IsPartial" value="false">
+                      <elementDefinition Id="087ee59a-177a-4be7-9c58-92d03145f87d" />
+                    </propertyInstance>
+                    <elementDefinition Id="792b6ce9-8da8-400a-8b21-ea96a634263a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="55e59942-61ec-40f8-b8b6-ae7797a42045">
+                    <propertyInstance Id="52cf336d-a4f1-408a-9a7c-1bed62c04874" name="IsUnsafe" value="false">
+                      <elementDefinition Id="f5a3c96c-93fc-4155-bb4a-7a33660d01fc" />
+                    </propertyInstance>
+                    <elementDefinition Id="55a2f2c6-4e91-4eb8-9da1-6b2fea275120" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="83e08e99-0de5-4ab7-92b5-383f73663b6a">
+                    <propertyInstance Id="6c8f5e43-804b-44de-9932-20ee1105442c" name="Inheritance" value="none">
+                      <elementDefinition Id="956151d2-d94d-4794-931e-546b3ffb3e4b" />
+                    </propertyInstance>
+                    <elementDefinition Id="0d639d8b-e134-4e69-8e9f-100e3c3a063e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="97f27e12-6346-4f5a-adda-cfca19ddddf5">
+                    <propertyInstance Id="026c3c27-9afa-4517-8bf5-f391f9caa47e" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="3060bb28-b128-430c-b285-046fe856b9bf" />
+                    </propertyInstance>
+                    <elementDefinition Id="f1a1c88e-1c6f-470f-b9f4-1d41d4faa328" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="afb3b3db-d73f-4936-85ac-c34c287025b6">
+                    <propertyInstance Id="c99fa195-2136-4681-823e-d3d313b1a159" name="params" value="false">
+                      <elementDefinition Id="5b9b474d-53ee-4ff6-8f92-2a375a938c7f" />
+                    </propertyInstance>
+                    <elementDefinition Id="b4517980-5d33-4311-a459-95fba45c1242" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="7b502a47-24c2-497c-9659-74c07bf1b245" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="59b0b727-0630-49db-aadd-beb585d5b9ca" direction="Return">
+                  <elementDefinition Id="dce3aaed-7367-44d5-bf08-f6f9bc4e3302" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b8369dc8-fb53-496f-9107-ca0f85389b02" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d5db6d4c-995d-4ccd-be67-82d8d2a8fed2" name="expr" direction="In">
+                  <referencesInternal>
+                    <reference Id="fd602c09-e1dc-4058-810f-7a3d89bd2fe8" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) Member%3D(Name%3DParseLamda OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dexpr" tag="ViewCode">
+                      <elementDefinition Id="bca593fd-948d-42ac-aec4-3f77b1fa6e26" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="bc12356e-7254-4b50-a280-a8677b89382c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="71b4ffdc-6825-4f8c-981e-43f0078eebf4" LastKnownName="Expression&lt;Func‎&lt;TItem‎, Object‎&gt;‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ab82b859-ee2d-4a50-b38f-9db91e34bee6" name="order" direction="In">
+                  <referencesInternal>
+                    <reference Id="58430206-3876-4a95-95ea-96731d62762c" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) Member%3D(Name%3DParseLamda OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dorder" tag="ViewCode">
+                      <elementDefinition Id="620b4e67-b9f3-4320-a77a-dae660ffe2c3" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="dfd89988-7b0b-49e1-822a-3b64c38a497a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b8369dc8-fb53-496f-9107-ca0f85389b02" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="8033c9e3-2ee7-4a85-9a7d-94fff34e660a" name="GetConditional" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="92f5f7b6-13f4-4275-96c8-2f0c31c35098" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalOrderGenerator GenericParameterCount%3D1) Member%3DGetConditional" tag="ViewCode">
+                <elementDefinition Id="fd83ec13-fb13-4f3f-a1ba-cfe696c25f6f" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="8b526161-a5e4-4837-a4f4-9b7b30eca18f" name="method" profile="CSharpProfile">
+                <elementDefinition Id="f5957e22-4119-4bd8-92a7-5f3c50159f07" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="59bd6b51-e73d-483b-a023-096011443aba">
+                    <propertyInstance Id="614ad248-33be-4daa-8d12-6e0d9aab0c91" name="ClrAttributes">
+                      <elementDefinition Id="3c61d875-1c51-4518-856d-771480e4963c" />
+                    </propertyInstance>
+                    <elementDefinition Id="490cef61-51ee-4725-a676-c0d05a98b432" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5b3cd467-4959-4918-b317-61dd41376ebf">
+                    <propertyInstance Id="f96b3f2b-b7ff-4be6-9c3e-4d8e39eb9c31" name="IsPartial" value="false">
+                      <elementDefinition Id="b28b97aa-35c6-4e24-9a92-41bb23932fb4" />
+                    </propertyInstance>
+                    <elementDefinition Id="cc42990d-0215-465f-bcca-212e60f7522d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="998d66f8-df8e-4831-b59f-e5a222c861b6">
+                    <propertyInstance Id="635bff6a-2174-4eb0-b626-1360b619408b" name="IsUnsafe" value="false">
+                      <elementDefinition Id="2389981f-d172-43d6-aaa8-6773575d6d0a" />
+                    </propertyInstance>
+                    <elementDefinition Id="325da3fc-c694-4937-aff0-f84da731033c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7f8ae685-c182-46d9-a36d-93714d162270">
+                    <propertyInstance Id="a4aaab8a-8ae0-4387-957e-1285a9af44f9" name="Inheritance" value="none">
+                      <elementDefinition Id="43563470-a4b1-47f8-8905-426cb975abab" />
+                    </propertyInstance>
+                    <elementDefinition Id="efe7d232-c45c-477a-8cc7-cb9d508e35e0" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a0a1e04e-4d4e-44f9-9e0c-483b536b8ed0">
+                    <propertyInstance Id="46692a79-a991-4b30-8827-94ec29164888" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="ea9964c3-6145-4d8d-8abd-1cedae952091" />
+                    </propertyInstance>
+                    <elementDefinition Id="cc6741f7-2b84-4369-b038-1692fe5e37b0" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b83d01b4-f988-434c-839f-c6d4308b02c9">
+                    <propertyInstance Id="d5c85ea5-0187-40cb-8393-aa019a903280" name="params" value="false">
+                      <elementDefinition Id="11006685-0fa9-4204-a2ec-7e3d1d27c1e2" />
+                    </propertyInstance>
+                    <elementDefinition Id="601b23f6-cbc8-47dc-8ab3-6f813bcdcdde" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="299ff47b-1d1e-4dbd-94cb-8722fdc62ee2" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f4271ee1-58a6-414f-a1b0-9eee9af4babc" direction="Return">
+                  <elementDefinition Id="ca5b5f7a-b48b-4085-b5db-c60d3e17aa69" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b8369dc8-fb53-496f-9107-ca0f85389b02" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="5d221094-c983-4b35-9806-937f8f5241d6" name="Lazy&lt;List‎&lt;ConditionalOrderGenerator‎&lt;TItem‎&gt;‎‎‎.ContainerExpression‎&gt;‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="SolutionModeling::System::Lazy&lt;List‎&lt;ConditionalOrderGenerator‎&lt;TItem‎&gt;‎‎‎.ContainerExpression‎&gt;‎&gt;">
+        <elementDefinition Id="67753ea0-965c-48e0-89c3-cc44f2ecc0d6" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b8369dc8-fb53-496f-9107-ca0f85389b02" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4f1337fc-e926-4bb7-83e9-12c4baacb38d" name="NameValueCollection" isAbstract="false" isLeaf="false" cachedFullName="SolutionModeling::System::Collections::Specialized::NameValueCollection">
+        <elementDefinition Id="60ba31e5-2613-4a10-a330-c1477f4d10d3" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="71b4ffdc-6825-4f8c-981e-43f0078eebf4" name="Expression&lt;Func‎&lt;TItem‎, Object‎&gt;‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="SolutionModeling::System::Linq::Expressions::Expression&lt;Func‎&lt;TItem‎, Object‎&gt;‎&gt;">
+        <elementDefinition Id="33f21d40-c4bf-400f-bdac-8f9dd5f8aedd" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3dae0c27-e344-4d83-90a2-bfef1cd61a4c" name="Order" isAbstract="false" isLeaf="false" cachedFullName="SolutionModeling::FilterWeb::FilterBinder::Order">
+        <elementDefinition Id="2f4484de-062a-436e-a5c3-d6a36f14bb1b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d5e7dcbd-3bc0-4c49-95f5-1ee17858df05" name="ConditionalFilterGenerator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="dcee5bd7-9e58-460c-8349-0aa88267befc" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1)" tag="ViewCode">
+            <elementDefinition Id="957ffdaf-6d33-430d-8c0a-d22c3d68bfd8" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="d53c36c6-aa75-429b-8e14-f6e1fb5b4e70" name="class" profile="CSharpProfile">
+            <elementDefinition Id="ec6ac2ba-08cb-4cb1-936c-a9368881d587" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="266c9750-17d9-44ff-b5f0-8e95f52c205a">
+                <propertyInstance Id="790863d2-eadc-411d-9d68-7d39226b272a" name="ClrAttributes">
+                  <elementDefinition Id="2f9dcf5f-fcdf-4fd5-b816-4f74bb8225b2" />
+                </propertyInstance>
+                <elementDefinition Id="ff5271d5-3cfc-4812-a780-51161338041e" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="b7f5341c-4f68-440b-ae41-2fa0e6e72032">
+                <propertyInstance Id="742f1ea4-b7ec-44d3-b65e-b03054795353" name="IsPartial" value="false">
+                  <elementDefinition Id="21cb529b-feb4-4ead-aed3-f1b9e5069834" />
+                </propertyInstance>
+                <elementDefinition Id="77db7ef4-e3ef-4580-b9dc-5417905ae59e" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="0994b943-32a1-4840-a83c-8f811350c96c">
+                <propertyInstance Id="691ebacb-14f4-46cf-b1b8-e5a06e3e648f" name="IsStatic" value="False">
+                  <elementDefinition Id="ca2fafc5-628c-4187-977f-b06a05b47c6f" />
+                </propertyInstance>
+                <elementDefinition Id="f4eac50a-f1dc-4179-b904-8421ade20262" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="31f6eb07-4bf9-45f4-8b11-a5a7b0443c47">
+                <propertyInstance Id="96f63532-6334-44a6-a948-f7627a9a720f" name="IsUnsafe" value="false">
+                  <elementDefinition Id="8ef59673-78ca-4616-af11-25e0f7644e97" />
+                </propertyInstance>
+                <elementDefinition Id="a3af2327-3188-4bec-9c0e-7085898cc439" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="ea14ba32-2eee-422b-a7b1-4f0786ee6112">
+                <propertyInstance Id="c0c61c52-acbb-408e-b6d1-6ab40d86a917" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="1b535324-4d81-4624-a84f-990545c99a61" />
+                </propertyInstance>
+                <elementDefinition Id="4831b9ac-1491-4bd6-9de8-08b527077838" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="8da0242a-86b3-4d22-bf01-dc5e13029b6f" />
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature Id="3abd232a-0388-436d-aef7-7434d5498fd3" parameters="" name="RedefinableTemplateSignature1" isLeaf="false">
+            <elementDefinition Id="991c2aa3-53ba-49c8-ae74-a0ec805385b0" />
+            <ownedParameters>
+              <classifierTemplateParameter Id="c930523f-198f-414f-b009-a814faa21c78">
+                <referencesInternal>
+                  <reference Id="6d0977d6-5a93-4488-a4a1-2313846a53c3" handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0" tag="ViewCode">
+                    <elementDefinition Id="83aa2638-26de-4620-a9cc-29c2c9432393" />
+                  </reference>
+                </referencesInternal>
+                <elementDefinition Id="c1e71510-1818-4f39-89b4-33d10c8db09c" />
+                <ownedParameterableElement>
+                  <class Id="87b1a345-d5e3-4720-9ed9-33d7839fd3f2" name="TItem" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="5b273864-2562-4c4a-b76d-bead103cb063" />
+                  </class>
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedAttributesInternal>
+          <property Id="156b57b5-502f-45ec-a112-f6e2237503ed" name="_expressions" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="26fb3233-684b-4d00-bc04-fba466f5cbfe" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D_expressions" tag="ViewCode">
+                <elementDefinition Id="4dc9e861-a83a-4983-b050-5e6299e0b708" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="b117e8e2-becf-42a5-b6ef-e69f205d7f10" name="field" profile="CSharpProfile">
+                <elementDefinition Id="6c2a5c80-7a13-4946-a106-0815c7c7c59a" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9e46902a-bf6b-4a15-8c69-c86630757aa9">
+                    <propertyInstance Id="0282afa9-102e-4bb3-80d1-d3447ec018e8" name="ClrAttributes">
+                      <elementDefinition Id="ca890828-d64b-4d15-ac2b-d68d43fa595e" />
+                    </propertyInstance>
+                    <elementDefinition Id="6beca4d1-9636-461e-973b-a13e52c86c25" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a57d42fd-2d7e-4d68-9684-e087985632b0">
+                    <propertyInstance Id="018262d9-acdd-4fa2-a037-792952c8adc3" name="IsConst" value="false">
+                      <elementDefinition Id="51faa6f4-26c2-4677-905f-1e536e4a3887" />
+                    </propertyInstance>
+                    <elementDefinition Id="f744dd9a-1310-4350-b1dd-5f72d2342e8b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="72831092-a170-445a-ad25-7dc49b708e8f">
+                    <propertyInstance Id="e76d56f7-8839-48ab-99c7-ba2ae7302e70" name="IsNullable" value="false">
+                      <elementDefinition Id="18551cf4-5653-4fdd-b018-5fefe34ddafe" />
+                    </propertyInstance>
+                    <elementDefinition Id="901cb4c8-aa0f-49f0-a435-3936aeb7afd5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8b1010c6-2c82-4206-bf4a-c48c1bb7e844">
+                    <propertyInstance Id="65e6b595-b0e0-4b2e-8d8a-2456885b222a" name="IsVolatile" value="false">
+                      <elementDefinition Id="b41c8bca-0d25-4794-9fdd-3625dd2e68b1" />
+                    </propertyInstance>
+                    <elementDefinition Id="c3a98594-75a6-43fe-b190-03687687e5f4" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7308e3a2-b47c-41cc-ad3f-00c670ff9a99">
+                    <propertyInstance Id="441748af-6c92-460e-83bc-d0422dd34b0b" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="ef393250-9866-452d-a2b3-8e404e6e1d09" />
+                    </propertyInstance>
+                    <elementDefinition Id="301c19b7-53b7-4766-921d-74b2dcce4e0f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="99199152-5d22-4a1d-9654-3dfe7a33a187" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="f30a9169-a798-44c6-9d54-b7ae7deeb7c4" LastKnownName="Lazy&lt;List‎&lt;ConditionalFilterGenerator‎&lt;TItem‎&gt;‎‎‎.ContainerExpression‎&gt;‎&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="8b20c3a9-ae7b-4804-965d-1bb6884e20f1" name="_values" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="4e458820-fa0f-4771-894b-ac77c023c8dd" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D_values" tag="ViewCode">
+                <elementDefinition Id="9b621b1c-9720-4429-bc61-5f1c9d2f384f" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="26cb4dab-0b20-4f26-b88a-83a2750225d0" name="field" profile="CSharpProfile">
+                <elementDefinition Id="764074eb-5639-458d-9abc-5ac1575b30b7" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="fc2fb67d-1300-440a-af4c-dad23ef57fb5">
+                    <propertyInstance Id="89d6d070-1698-4a4f-98de-414c65a08cc9" name="ClrAttributes">
+                      <elementDefinition Id="7869eb9f-ffec-4c0e-b019-ca78698c64f5" />
+                    </propertyInstance>
+                    <elementDefinition Id="e3e457a1-e4e6-43fc-9563-2126e1ae682b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6dbbc478-6d3d-46ba-9cee-969687b44874">
+                    <propertyInstance Id="fb0dc5b0-2182-44bb-9c19-4f40bfa0e9c5" name="IsConst" value="false">
+                      <elementDefinition Id="fd40248e-f4d3-4ea3-b26b-eea13ff39a6a" />
+                    </propertyInstance>
+                    <elementDefinition Id="d2b5aa48-ef85-4142-b1c1-9d6a37b9bebd" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="07f51530-f7dc-4e56-bda2-e3c430bb03c8">
+                    <propertyInstance Id="90bb9715-f086-4e37-b930-5b0541dcf098" name="IsNullable" value="false">
+                      <elementDefinition Id="5389abf1-b84c-41f7-9a61-23ce617dabbd" />
+                    </propertyInstance>
+                    <elementDefinition Id="728c7bdb-f019-4896-8c09-3c973aec9afe" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="557b6827-e8c8-4343-8a80-2a9cbf2994db">
+                    <propertyInstance Id="b859f9a5-43c3-4b38-a8f7-75c19f06dc4f" name="IsVolatile" value="false">
+                      <elementDefinition Id="e4a2fd3f-7abb-4959-bb80-737bee5fe613" />
+                    </propertyInstance>
+                    <elementDefinition Id="d4749af5-faf4-491d-bdc6-27b68d72db67" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e5df4d02-ec13-4e96-8f48-d3c49fd3f5db">
+                    <propertyInstance Id="b1792918-0d61-4ea1-9363-dde96deca9ac" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="7bfe78c9-0bc6-4155-99e3-2a883ce5cd51" />
+                    </propertyInstance>
+                    <elementDefinition Id="13a9acf6-f590-4975-8dec-2456dc377e7b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="0de39bb2-fc69-499e-bbdd-ae3f0eb8471b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="4f1337fc-e926-4bb7-83e9-12c4baacb38d" LastKnownName="NameValueCollection" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="fc00b07e-db66-4609-8d7a-280e13b71f20" name="SetKeyValueExpression‎&lt;TConst‎, TConst1‎&gt;" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="77c7cec3-8586-4554-afef-ff051f70bec3" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression GenericParameterCount%3D2 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D4 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D1)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))])" tag="ViewCode">
+                <elementDefinition Id="2576ddfa-67cc-4a44-80ac-0d8116cace84" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="5f2ddf08-6ace-488d-811d-ed03da0031e4" name="method" profile="CSharpProfile">
+                <elementDefinition Id="809ea5a9-adef-4b17-8ed4-0d9588ba52c6" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e72da0de-4fed-4a95-96a2-170f84d2cab1">
+                    <propertyInstance Id="c6e2eda8-45bb-4491-affc-3d2bdb968a6b" name="ClrAttributes">
+                      <elementDefinition Id="2c4fb34b-5357-4995-a8e8-f80bd7000d9a" />
+                    </propertyInstance>
+                    <elementDefinition Id="e3a33c5a-e343-416d-9ea6-b936adb1f1f6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="113c0436-3891-4ec8-bcf8-0b4753c6bb75">
+                    <propertyInstance Id="1d58f5bb-1a5c-4cf2-a19a-aab269e8310f" name="IsPartial" value="false">
+                      <elementDefinition Id="4d678726-f692-498f-95e3-d147deb47ebc" />
+                    </propertyInstance>
+                    <elementDefinition Id="2c5ed6e7-8342-43e6-a620-e1a4acc425ee" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4d74babb-5285-48f2-a028-de53a96f0fa8">
+                    <propertyInstance Id="39e729f8-31dc-4f78-a53f-fc426973676b" name="IsUnsafe" value="false">
+                      <elementDefinition Id="0f218009-4fe5-4c9e-81fe-50940c1b51e4" />
+                    </propertyInstance>
+                    <elementDefinition Id="3a168344-6763-4b0f-95a8-927ca5354e9c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e444ebee-11e0-4ee5-be87-a6deaff39312">
+                    <propertyInstance Id="2cd60083-19a7-408f-97f3-b40320b6a2ed" name="Inheritance" value="none">
+                      <elementDefinition Id="bf22c381-ecc8-4821-acb1-63b64b5a60c8" />
+                    </propertyInstance>
+                    <elementDefinition Id="a0e2d90f-1a12-4168-9639-766fe0448e1a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bc9e2a67-7c8b-49ee-a32d-8959eb5f005e">
+                    <propertyInstance Id="d2d180e7-20a9-4ed8-92d5-8ead743de29e" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="85a79bed-392f-4eeb-91f4-5f0d6e2e01b6" />
+                    </propertyInstance>
+                    <elementDefinition Id="cd624f38-75d6-4e63-a5a3-4ccc981939dc" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="29721cb8-ef4a-46e6-a7c9-cb7300f995e7">
+                    <propertyInstance Id="99936c52-4dcc-4966-8464-026696c28f0a" name="params" value="True">
+                      <elementDefinition Id="edfb9a8a-3c50-4b99-87c1-6ee3df11d78e" />
+                    </propertyInstance>
+                    <elementDefinition Id="8d9b56e5-237d-4dae-af6e-f7e242259af7" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="8461366b-fa3e-4029-9de8-647faa297a00" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="dc36cc26-5e1a-4e88-aa2c-3ef86f9a3fd8" name="expr" direction="In">
+                  <referencesInternal>
+                    <reference Id="f39df48c-bb22-4726-8252-48dd8fecf943" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression GenericParameterCount%3D2 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D4 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D1)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))]) ParameterIdentifier%3Dexpr" tag="ViewCode">
+                      <elementDefinition Id="2ad9dbc6-ba44-458a-8301-e7c12ac84ff9" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="f2c51522-a171-4aa7-bfd6-21297c75fdbf" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="842f19a9-e822-4a7c-bd2e-c4689a3cb634" LastKnownName="Expression&lt;Func‎&lt;TItem‎, TConst‎, TConst1‎, Boolean‎&gt;‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1b49fb2d-9b66-4445-a30a-db8163cf63bf" name="require" direction="In">
+                  <referencesInternal>
+                    <reference Id="db9d9af1-1443-47b3-9148-d354256c1b11" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression GenericParameterCount%3D2 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D4 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D1)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))]) ParameterIdentifier%3Drequire" tag="ViewCode">
+                      <elementDefinition Id="931544e9-f626-414d-8e58-d8d536c011e0" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="e75818fa-9c73-4ccd-9b8a-9d7383a38f6c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="748dbe3f-507b-4068-93ae-75f7d683df72" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0ec5f4b6-a7a2-4815-abde-be3f89347a46" name="key" direction="In" isOrdered="true">
+                  <referencesInternal>
+                    <reference Id="c1cc24e0-1a6b-419c-b4d9-c2d3218f55d8" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression GenericParameterCount%3D2 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D4 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D1)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))]) ParameterIdentifier%3Dkey" tag="ViewCode">
+                      <elementDefinition Id="b91882f4-3f5e-4487-9fd2-86e73b64b3e8" />
+                    </reference>
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString Id="cc5e45ea-8d2a-4593-ac8d-3a48610b2382" name="Lower" value="*">
+                      <elementDefinition Id="59538d35-91bb-40b6-90ac-1b88b2f6a669" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="dea6c8fa-5094-4ca2-bae1-894017d3ea99" name="Upper" value="*">
+                      <elementDefinition Id="726a4388-5f67-453f-b2bd-841671eeed2a" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="98b7a8db-b28d-4150-8562-59fbb8bccb4a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b8369dc8-fb53-496f-9107-ca0f85389b02" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="0824333e-605f-4273-a2be-8f80b7233f39" name="SetKeyValueExpression‎&lt;TConst‎, TConst1‎&gt;" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="bece1f4f-d6e6-4775-8c57-0cc06efda758" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression GenericParameterCount%3D2 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D4 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D1)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))])" tag="ViewCode">
+                <elementDefinition Id="f9df27f9-f98a-4a7e-bf2b-5ebf393c281a" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="dd0c6347-0711-496a-8098-59a90f48da05" name="method" profile="CSharpProfile">
+                <elementDefinition Id="0c6e0c86-5699-434c-9c5a-ecb7969d1a97" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="0d021c82-da25-4cf4-afdc-cdaed70885ef">
+                    <propertyInstance Id="1c196a9e-b3fc-4245-85d4-5dc62a7a6d9c" name="ClrAttributes">
+                      <elementDefinition Id="386817af-7ad2-4c4c-be62-1895a1044cc4" />
+                    </propertyInstance>
+                    <elementDefinition Id="bd8a0a55-2142-4b21-9e5d-049e47d47a33" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="07d586b9-64b7-48c7-81b8-17cc4b91549b">
+                    <propertyInstance Id="76d8b833-5bca-49ee-83be-af46de9d2841" name="IsPartial" value="false">
+                      <elementDefinition Id="7bb31bc3-1edc-462d-975c-a9c4a167d915" />
+                    </propertyInstance>
+                    <elementDefinition Id="c3cf4721-ec24-484a-8b08-939f3a8a44b5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1fb0dbdc-bf0f-4caa-b022-5c4359f2baf9">
+                    <propertyInstance Id="ec2e4073-6f01-4885-b687-5787ca2e3199" name="IsUnsafe" value="false">
+                      <elementDefinition Id="fd4b049b-b518-47dd-86aa-bbd4a928afac" />
+                    </propertyInstance>
+                    <elementDefinition Id="298f61ee-8bcc-4a0d-a900-b5a87661ec34" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8ede9c27-eef2-4e58-9ea7-9d5da492635c">
+                    <propertyInstance Id="a9e31450-c586-4c4c-9254-ed31f0076b4f" name="Inheritance" value="none">
+                      <elementDefinition Id="d07e820c-5e41-42da-8a7e-98f7ae125af9" />
+                    </propertyInstance>
+                    <elementDefinition Id="9e529f4e-7378-4b13-b260-ee3247f7ebf1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6040696a-5d66-41dd-8acc-8d5b349be14e">
+                    <propertyInstance Id="31dd7dc5-2fc3-472b-a08e-d6119505c2d8" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="f61a0e52-ac3f-405d-9c3c-8b047eeff122" />
+                    </propertyInstance>
+                    <elementDefinition Id="6ae146ec-4293-4c49-a49f-a0276ef43016" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="07a7345c-eaf5-4d0c-a328-73b4ebf990ab">
+                    <propertyInstance Id="0a218d1f-184c-4d8a-98af-902145501445" name="params" value="True">
+                      <elementDefinition Id="5fb47a32-a11d-4829-ba08-7249ddb0cc06" />
+                    </propertyInstance>
+                    <elementDefinition Id="913b46c6-f3d3-498b-af65-b825e95d1e4b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="1a1eea24-f2a4-43d8-8189-a36176b04adf" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7b34e201-c6b1-4582-8f18-e24fb102b9fe" name="expr" direction="In">
+                  <referencesInternal>
+                    <reference Id="c5acf247-74a8-49ba-a423-fbee4b5c4995" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression GenericParameterCount%3D2 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D4 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D1)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))]) ParameterIdentifier%3Dexpr" tag="ViewCode">
+                      <elementDefinition Id="ee490b27-ccd5-4b23-b515-9536374572fa" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="5909919c-054b-4e0a-aefc-ffd7576502e1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f78f5a90-40d7-4cae-81e1-946f6893adba" LastKnownName="Expression&lt;Func‎&lt;TItem‎, TConst‎, TConst1‎, Boolean‎&gt;‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d6ac6236-8fa1-48bc-8c5a-c309a70c86e0" name="key" direction="In" isOrdered="true">
+                  <referencesInternal>
+                    <reference Id="0b6ed77f-c912-4b8f-baca-0ae278dc0ed0" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression GenericParameterCount%3D2 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D4 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D1)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))]) ParameterIdentifier%3Dkey" tag="ViewCode">
+                      <elementDefinition Id="d42039b1-4c9f-49be-b9b6-7893de6b66c8" />
+                    </reference>
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString Id="f280378a-dc25-41f6-a194-258ff9ae1c7b" name="Lower" value="*">
+                      <elementDefinition Id="3e2ce605-9a27-457e-b82d-a657252ce1df" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="e7862952-6dd2-4f21-a6f0-9f896de2d9f8" name="Upper" value="*">
+                      <elementDefinition Id="f9a609dd-d2ae-4cce-93a7-598a7b26c62b" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="f8f99f93-2f46-4844-babf-8b3c3018f4cc" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b8369dc8-fb53-496f-9107-ca0f85389b02" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="2cd89078-c8c1-4454-a721-b1fe2c9b78df" name="SetKeyValueExpression‎&lt;TConst‎&gt;" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="a08f1423-803d-4a83-84be-b77ff3a91f13" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D3 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D0)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))])" tag="ViewCode">
+                <elementDefinition Id="7a213cb3-37de-4e4b-8cb2-3dc0730dbbe3" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="95d84e06-e2b0-4867-9225-698db35ac7a2" name="method" profile="CSharpProfile">
+                <elementDefinition Id="bd550d4b-29c5-4546-85fa-42476994c8f2" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f8287d6e-0452-4cf0-8619-21b1a07b171a">
+                    <propertyInstance Id="85fbe101-ccb4-4d77-8bfd-3c51fdad8c72" name="ClrAttributes">
+                      <elementDefinition Id="760e72a9-c33d-4c85-b9e6-9927fda04932" />
+                    </propertyInstance>
+                    <elementDefinition Id="42cef6d9-9896-4bbd-9bb7-6c1fbb4e87df" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9a98b228-7b33-4119-98ca-bc47a1dd6ee6">
+                    <propertyInstance Id="10e32cdd-e481-4870-ae36-a3d766329e81" name="IsPartial" value="false">
+                      <elementDefinition Id="8c1ab8d0-dddd-402d-bb8d-acd686e5151e" />
+                    </propertyInstance>
+                    <elementDefinition Id="11ea634a-17a8-4a8d-9b88-ed1c8197c015" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5bb0f51b-e8e5-4e55-a787-d07a4c0753a6">
+                    <propertyInstance Id="81dfe166-a988-4771-bfb4-35e512b48608" name="IsUnsafe" value="false">
+                      <elementDefinition Id="a33815e8-6bbb-4350-be7f-8e91e38998f4" />
+                    </propertyInstance>
+                    <elementDefinition Id="d0438b0d-f26c-4a70-8fee-abd4fe8095e3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a01a813b-5946-4a7f-a779-191ad8ac73d3">
+                    <propertyInstance Id="d5a6d106-148f-403f-94ab-0ee20f6fdeaf" name="Inheritance" value="none">
+                      <elementDefinition Id="69c9d3dc-07dd-4040-a25b-b8cb76b80037" />
+                    </propertyInstance>
+                    <elementDefinition Id="5232f38c-1d13-406c-a24b-2899a174289b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="0d855c24-df3f-4081-95fe-5773a43c78d5">
+                    <propertyInstance Id="fabc3c81-6803-44a5-9d2c-8a9bbaf3469e" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="baffe11f-5b31-45b8-af05-74465234c0d6" />
+                    </propertyInstance>
+                    <elementDefinition Id="9029b06b-d012-4edd-a4a8-db4ab146f8d5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b216e42a-45f4-4cce-868a-e1effb2f3f5c">
+                    <propertyInstance Id="208a38a1-42d4-4c93-856f-fdf8b24d834c" name="params" value="True">
+                      <elementDefinition Id="dec237f3-1671-4200-b112-8d1c2fc22758" />
+                    </propertyInstance>
+                    <elementDefinition Id="36aba96f-61e6-4994-932c-734757f851b5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="2c7680bc-3fb1-4d5b-b7cc-5e3d6f7385ce" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="03d55ce0-c236-415f-9ac6-1268471f4ce7" name="expr" direction="In">
+                  <referencesInternal>
+                    <reference Id="56fed37a-5e23-4b7d-857d-5c6044c18392" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D3 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D0)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))]) ParameterIdentifier%3Dexpr" tag="ViewCode">
+                      <elementDefinition Id="c369c296-669a-41b2-af6f-3da891046712" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="1e7d3fb8-62c9-42f3-86e6-df85f48c4549" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="cc92d844-3635-433f-8813-85ff4721f4ad" LastKnownName="Expression&lt;Func‎&lt;TItem‎, TConst‎, Boolean‎&gt;‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fd971ad8-9a9b-4fca-b8cd-b5397e75bbda" name="require" direction="In">
+                  <referencesInternal>
+                    <reference Id="d2ffa35d-fda7-4dbe-8e61-84d6fe45143d" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D3 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D0)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))]) ParameterIdentifier%3Drequire" tag="ViewCode">
+                      <elementDefinition Id="2cd5b31b-3c80-478a-8f83-9583b8dc93c9" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="80354aac-5055-436b-ba0f-691bf5ae0ed7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="748dbe3f-507b-4068-93ae-75f7d683df72" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="935222f7-ed1d-4b03-b749-b0002a03eefc" name="key" direction="In" isOrdered="true">
+                  <referencesInternal>
+                    <reference Id="c5cd3ea6-9677-47e2-aa6e-8964f1a2e7cb" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D3 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D0)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))]) ParameterIdentifier%3Dkey" tag="ViewCode">
+                      <elementDefinition Id="80d893d9-b091-42eb-b700-5d042dc55872" />
+                    </reference>
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString Id="609e2239-6791-487e-b223-64bc102e3398" name="Lower" value="*">
+                      <elementDefinition Id="8b00c7dc-5804-4eb9-9c65-980eb31b6cc7" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="91f3b11a-42a4-4f40-b7d0-5879e23fdce5" name="Upper" value="*">
+                      <elementDefinition Id="b36e34f8-2939-4d59-8640-3a39118bb3f5" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="61682f39-e6a0-4e86-9e16-9fe5e0c36359" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b8369dc8-fb53-496f-9107-ca0f85389b02" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="9cd82ebd-89bb-4739-a06d-0c6e8d0e7965" name="SetKeyValueExpression‎&lt;TConst‎&gt;" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="25aaea19-9485-4838-a7d4-e011e185efe2" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D3 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D0)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))])" tag="ViewCode">
+                <elementDefinition Id="3a92fa09-d7e5-470c-bda7-33951dabd967" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="1268c706-1942-40ed-bb56-ab01454a2015" name="method" profile="CSharpProfile">
+                <elementDefinition Id="c833ff43-eef6-410e-bf9d-a495262e1974" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a46b5bb0-1a4f-4f77-a339-482cfabc2bdd">
+                    <propertyInstance Id="b76b3863-4db2-43be-a75b-ba9edb805dac" name="ClrAttributes">
+                      <elementDefinition Id="1dd86733-e92b-435b-83ac-5a19a904ea20" />
+                    </propertyInstance>
+                    <elementDefinition Id="89330e1b-c8c4-4a9d-9724-e48ebea9436d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="61dbec0a-c340-4f1f-af8e-9ad58aac0dc9">
+                    <propertyInstance Id="6036280c-a4e3-4217-afcb-86ec869f5561" name="IsPartial" value="false">
+                      <elementDefinition Id="cb4379f2-af79-4413-b0c1-012058303271" />
+                    </propertyInstance>
+                    <elementDefinition Id="eeb2315c-3957-44a2-8330-89df8e80bf9b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="aa68dd95-b9ca-4df0-b447-fc4f055a7aee">
+                    <propertyInstance Id="3a5abc92-11b8-4ace-bc4d-65de36a528ed" name="IsUnsafe" value="false">
+                      <elementDefinition Id="1b168863-ea3e-4188-86bf-93dd989ed1df" />
+                    </propertyInstance>
+                    <elementDefinition Id="74d0b10f-9b6d-495e-b2b4-b44a0c7b7b29" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3683e9d4-e488-427d-8a35-8e8bff07e6d7">
+                    <propertyInstance Id="796cdf81-6af0-41ad-882e-a173b9e9c906" name="Inheritance" value="none">
+                      <elementDefinition Id="f1722629-28a1-42a7-997d-645f69fba0f2" />
+                    </propertyInstance>
+                    <elementDefinition Id="986ceeff-9591-400a-8df7-e4e3c70a2412" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e0bdb2b5-d10c-42f6-9ced-ca89591f4eb9">
+                    <propertyInstance Id="7033bd62-528e-40b8-8932-ac80f9995ddb" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="a3fd888f-5f8a-48f0-bf57-c33d8519cfb9" />
+                    </propertyInstance>
+                    <elementDefinition Id="56329358-cd5e-458b-a0ef-4e0cdae6235e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5ce3cc00-ee46-4463-9cd5-59cf4efea1e0">
+                    <propertyInstance Id="6934e712-3720-40b8-8970-fda04d098020" name="params" value="True">
+                      <elementDefinition Id="4962273d-823c-4453-be2e-e61f397ac5ed" />
+                    </propertyInstance>
+                    <elementDefinition Id="5c4d9800-22c2-48af-a063-591fa1bd1ac2" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="77cb6919-4c57-4b9f-a4f7-c0adbded45a4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="99a92a69-7843-48dc-a406-3e75cb68dc5a" name="expr" direction="In">
+                  <referencesInternal>
+                    <reference Id="baf1c976-4f8f-4866-b234-8bfc1dcfc506" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D3 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D0)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))]) ParameterIdentifier%3Dexpr" tag="ViewCode">
+                      <elementDefinition Id="ad35a688-f141-4f9c-a426-114da2aae89c" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="a8d3beec-c7ec-4eee-a82b-7eb95f651696" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="613e1050-a9d2-4250-85b4-6d789f7ffaf1" LastKnownName="Expression&lt;Func‎&lt;TItem‎, TConst‎, Boolean‎&gt;‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="28d60b1a-c6a7-4a35-b310-a4401750db2d" name="key" direction="In" isOrdered="true">
+                  <referencesInternal>
+                    <reference Id="aa658ff7-ba5b-431e-9c31-7154976fd9e6" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetKeyValueExpression GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D3 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(ParameterIdentifier%3D0)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))]) ParameterIdentifier%3Dkey" tag="ViewCode">
+                      <elementDefinition Id="1b6ac578-52e9-44f3-b25d-71b38a735402" />
+                    </reference>
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString Id="f6d8ca40-a298-4a66-b71f-b3f754c5adeb" name="Lower" value="*">
+                      <elementDefinition Id="06598b6a-c8f4-40a9-83e0-ab61798a8bda" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="9760f1d7-3d87-43d6-bb42-aa3d510de936" name="Upper" value="*">
+                      <elementDefinition Id="d2b6836b-00ac-4513-9e1e-5baeab77ef32" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="4b1f455a-8dc5-4bad-82ab-d05c1021d1f6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b8369dc8-fb53-496f-9107-ca0f85389b02" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a6ae5999-6228-49ef-8244-ecdbba07d26d" name="ConditionalFilterGenerator" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="80fa1830-7a92-4eb1-9bf4-597ae5c49208" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.dll&quot; Namespace%3DSystem.Collections.Specialized Type%3DNameValueCollection)])" tag="ViewCode">
+                <elementDefinition Id="77cfe18f-818b-4da9-aaf0-e8657c1de787" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="36b4606e-91c0-4107-8140-e3cd63128630" name="method" profile="CSharpProfile">
+                <elementDefinition Id="efb01933-a27b-4c5e-abae-9e9c507af0ff" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9d4a05bd-cbdd-4e8a-bd4e-e227b7289969">
+                    <propertyInstance Id="89dd6334-bbb7-4874-8345-107a97e9ea11" name="ClrAttributes">
+                      <elementDefinition Id="26d6be3a-321b-4d0a-988c-09eab6779227" />
+                    </propertyInstance>
+                    <elementDefinition Id="0e5140c8-c041-485c-af22-fc70ca57adb1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f6ec20bb-1fd3-4641-b0da-b7bc8b2254e0">
+                    <propertyInstance Id="6ffc1b01-14f6-4fc5-8e2b-9ec3578044e8" name="IsPartial" value="false">
+                      <elementDefinition Id="3050bb74-4123-46a3-baab-79d1819fc69e" />
+                    </propertyInstance>
+                    <elementDefinition Id="0cb30675-9493-495a-b529-011b653ad735" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c5d0be03-1f3c-490d-b0f2-80c15febf190">
+                    <propertyInstance Id="a5cd5ca9-76a0-4371-a927-da6288370387" name="IsUnsafe" value="false">
+                      <elementDefinition Id="fa650183-cce0-4e1a-87dd-14eac2c44829" />
+                    </propertyInstance>
+                    <elementDefinition Id="421d7abe-b164-427a-a935-4f452777d386" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1fcf56cb-5f9f-4112-bdbb-8b2deab724e5">
+                    <propertyInstance Id="3cb888ce-c939-41d1-9317-65e0b6e5cba2" name="Inheritance" value="none">
+                      <elementDefinition Id="fe6bd382-0328-4204-82dc-a4f4582e8888" />
+                    </propertyInstance>
+                    <elementDefinition Id="1e6b4808-ed57-44c1-815f-d51d5bee9236" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="41671bf7-3ebe-4e31-bf25-801dc2882d2f">
+                    <propertyInstance Id="334d1650-6036-45e9-95c8-fe41074e05a1" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="835f0b82-4abf-4401-be30-37ccbea0d420" />
+                    </propertyInstance>
+                    <elementDefinition Id="85f2b889-2d2a-426a-9264-dbabb6b0ee6c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b6cd60fd-ecf6-4517-a5a8-f8d387a66f68">
+                    <propertyInstance Id="7c1c3fa6-ec76-4bde-a9b2-e961925cbf31" name="params" value="false">
+                      <elementDefinition Id="c25ae2d7-64e9-4f39-8c49-f6a272b5d0f0" />
+                    </propertyInstance>
+                    <elementDefinition Id="eb830d43-a46b-47ae-b728-1414a1fe4c0a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="66296d4c-be2a-40fc-8e03-e5e1ae8aa3a2" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7d4933a2-7978-4162-bda1-5e35c6774de8" name="dic" direction="In">
+                  <referencesInternal>
+                    <reference Id="19d9be7a-b4db-4a54-8b2b-f31a3d1ad964" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.dll&quot; Namespace%3DSystem.Collections.Specialized Type%3DNameValueCollection)]) ParameterIdentifier%3Ddic" tag="ViewCode">
+                      <elementDefinition Id="b89abcaa-9eee-4f0a-8deb-9648d1d1fcfe" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="babfde98-a163-48b4-a565-55bdf396d282" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4f1337fc-e926-4bb7-83e9-12c4baacb38d" LastKnownName="NameValueCollection" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="928690d2-05c0-4048-966e-d0dc297582b9" name="And‎&lt;T‎&gt;" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="f5f11f0c-c39c-4448-bd38-0a8bad1e350c" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3DAnd GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(ParameterIdentifier%3D0)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3DInvocationExpression)])" tag="ViewCode">
+                <elementDefinition Id="ecf5c166-3764-4960-b34c-92cda0283678" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="1160588a-6821-4438-8582-f6245dcd4da2" name="method" profile="CSharpProfile">
+                <elementDefinition Id="8dbb0d2c-4836-4962-bff9-cc0dadfab294" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4b8be271-f219-44f7-a400-a9f4cccf8735">
+                    <propertyInstance Id="7a146965-0dae-4212-b363-9059019c2775" name="ClrAttributes">
+                      <elementDefinition Id="e41a9b40-4cf2-4020-9dac-d2b47b223fe0" />
+                    </propertyInstance>
+                    <elementDefinition Id="5166a297-f561-4de0-af2e-66b299d1304b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="0df2bb76-5432-40c5-9b8f-d86127fdec73">
+                    <propertyInstance Id="35b2ea9e-63c4-41a4-a0b6-f02c26b12527" name="IsPartial" value="false">
+                      <elementDefinition Id="0a507044-0f30-49c3-a4d1-2a7152af1ac9" />
+                    </propertyInstance>
+                    <elementDefinition Id="06b20a10-78f9-4e61-9c6e-884eb8e49c16" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="38323a97-6e4a-4a8d-ad74-ab7ee5785af1">
+                    <propertyInstance Id="d6ab0dc9-fa49-4ad3-a4c1-fbadf51411eb" name="IsUnsafe" value="false">
+                      <elementDefinition Id="53b46aa3-9585-4822-be21-2d70103170bc" />
+                    </propertyInstance>
+                    <elementDefinition Id="a7f385a7-f23d-4b98-83d3-d969a16053c7" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b713550a-351f-40a1-a1e9-2a20f5e2b803">
+                    <propertyInstance Id="69a60260-f0fb-4e96-92a1-0ed6d781abab" name="Inheritance" value="none">
+                      <elementDefinition Id="e85b1fe8-e395-4bfb-8233-d6793a275387" />
+                    </propertyInstance>
+                    <elementDefinition Id="ef425c17-a7cc-456a-9734-6199d207652b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="13dee4d9-96ea-4cf9-a7fc-5fe21dfa99bb">
+                    <propertyInstance Id="fd40874d-73ba-40aa-8cf9-14389833f116" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="6b7020ea-16cf-4847-bb93-8a2283447a8f" />
+                    </propertyInstance>
+                    <elementDefinition Id="b569c4cf-ed49-4105-a0a7-deb39ec75874" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2bfc175a-4afc-4687-aecb-e87401fbad93">
+                    <propertyInstance Id="a75b34cf-e19a-469a-bf42-c6b771fb2e16" name="params" value="false">
+                      <elementDefinition Id="47276367-f537-4210-9f18-866f726b26f0" />
+                    </propertyInstance>
+                    <elementDefinition Id="fd185161-3f86-4369-9b7f-fe49308feb67" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="1ddd8310-4dfb-449d-8106-e6c0c3cd1496" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6806f20a-ab17-43ab-b0c9-0c6b4108a112" direction="Return">
+                  <elementDefinition Id="c7567050-d4b1-45eb-ba95-703d2460f11a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="38264839-4c32-4732-9f93-80a7c14e047d" LastKnownName="Expression&lt;Func‎&lt;T‎, Boolean‎&gt;‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0b5f39e7-3b46-4b25-b5d2-7237b001af42" name="expr1" direction="In">
+                  <referencesInternal>
+                    <reference Id="f7bd0813-7382-4751-857a-b61ca46dd8a5" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3DAnd GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(ParameterIdentifier%3D0)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3DInvocationExpression)]) ParameterIdentifier%3Dexpr1" tag="ViewCode">
+                      <elementDefinition Id="54d43f45-8f0b-4b98-bbb5-c386c09a14f8" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="e5edf525-90a4-4baa-b446-24c592efe7cb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="38264839-4c32-4732-9f93-80a7c14e047d" LastKnownName="Expression&lt;Func‎&lt;T‎, Boolean‎&gt;‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="96d78b04-f5be-4411-b247-83c492871f20" name="invokedExpr" direction="In">
+                  <referencesInternal>
+                    <reference Id="fb6f9fb6-7927-478e-bbea-a7eb8c55fca6" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3DAnd GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(ParameterIdentifier%3D0)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3DInvocationExpression)]) ParameterIdentifier%3DinvokedExpr" tag="ViewCode">
+                      <elementDefinition Id="7ef764da-e2d9-4bf2-9c6e-908634af006a" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="d4111193-2bd4-41ed-a001-8e9fe22e38bc" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0f80605c-153d-4270-a2e6-1245683c8530" LastKnownName="InvocationExpression" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="0bcdabb1-6e6b-4125-b79b-677255dc7fe6" name="SetupValue" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="c07d421d-c39b-4c2b-b648-4939233f833a" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetupValue OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)])" tag="ViewCode">
+                <elementDefinition Id="37d72d09-a83b-4f68-bdeb-1c7411697675" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="0ee9a063-e5dd-4995-9844-c7103bdaa6d0" name="method" profile="CSharpProfile">
+                <elementDefinition Id="c3f96248-5218-4cbe-a87a-9cd7458777f9" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c9895d4f-5ef7-4590-95dd-922d5370ca99">
+                    <propertyInstance Id="e987da22-f002-4be7-970a-64f7a2a9a115" name="ClrAttributes">
+                      <elementDefinition Id="bfefdc3e-bfac-4fb7-a53a-7bc4d2bb6c26" />
+                    </propertyInstance>
+                    <elementDefinition Id="7e024050-a6ba-4382-87c1-f9581f7220d1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6fb95dc5-de04-4d9b-9b7a-0a5321936bd4">
+                    <propertyInstance Id="d487b67f-cec2-420e-ad40-eec9ebc53e11" name="IsPartial" value="false">
+                      <elementDefinition Id="e403cf33-01ed-49ba-9441-1c65159d2a35" />
+                    </propertyInstance>
+                    <elementDefinition Id="e951a243-349f-4ae3-9cd9-5587bd55559f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="89605b7f-7efb-4871-a165-d7bc78c8ea86">
+                    <propertyInstance Id="9e5e14f4-8395-4280-a9c3-315377c8082b" name="IsUnsafe" value="false">
+                      <elementDefinition Id="6ecbe867-4f66-43f4-8112-d27f798e519b" />
+                    </propertyInstance>
+                    <elementDefinition Id="23f3b417-4b11-47e6-9365-0920e8cb8060" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="910ad4e2-2dbd-4601-b9f0-130f5234059e">
+                    <propertyInstance Id="6cbbab67-5604-4a36-b15f-e81a64a69583" name="Inheritance" value="none">
+                      <elementDefinition Id="2d23df4b-2f6f-476f-a39e-b7840fd11d68" />
+                    </propertyInstance>
+                    <elementDefinition Id="576aa8d3-f284-4af8-9d42-279c08432980" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2865b2a5-15ee-421f-ad3e-349654fb6915">
+                    <propertyInstance Id="db653b3f-1d91-497e-845a-4cbbf4032378" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="c7a869f9-6184-4081-8525-c8191496f947" />
+                    </propertyInstance>
+                    <elementDefinition Id="46e86fd5-7701-47e2-a28b-c8236ee3b54c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d2e45c8a-a8aa-44dd-af23-c7820a7e11f3">
+                    <propertyInstance Id="fbfcfb82-7de9-4672-8276-293dded3d3f9" name="params" value="false">
+                      <elementDefinition Id="f82c7da0-252e-4303-9663-3f49a914d0b9" />
+                    </propertyInstance>
+                    <elementDefinition Id="f1394bf7-054d-4291-a81a-1d3dfdd98819" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="3c93639d-b9cf-49b9-a482-155c1df8b9fb" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f1c81362-e461-4b88-a474-a7026926031e" direction="Return">
+                  <elementDefinition Id="21e7d222-36ff-4daf-a64b-74ab4d93c1af" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="60d600b8-6f25-4fa4-aa30-21951ee904f8" LastKnownName="Expression" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="660ae44f-920b-4fdc-87fc-d8280ba357a1" name="val" direction="In">
+                  <referencesInternal>
+                    <reference Id="7231b76c-1116-4893-b113-d99ced9be184" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetupValue OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)]) ParameterIdentifier%3Dval" tag="ViewCode">
+                      <elementDefinition Id="2e4550b9-0fe9-4f93-a19f-bbc6ca570d6e" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="a0b87d57-ce9d-4573-9467-31c80baf9174" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b8369dc8-fb53-496f-9107-ca0f85389b02" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5a781228-5c05-40dc-9d9c-6a1a988ae365" name="type" direction="In">
+                  <referencesInternal>
+                    <reference Id="36d46745-5285-4adb-9129-3d1b0ae7dfbf" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3D(Name%3DSetupValue OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)]) ParameterIdentifier%3Dtype" tag="ViewCode">
+                      <elementDefinition Id="593f64fe-c529-4aca-b356-01510ea7dad8" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="60c175b6-f137-46be-b5b6-f34e2927689a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bfa6873a-4122-441d-ba19-a14f31d19959" LastKnownName="Type" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="d0e2a0a6-7736-4197-9518-58ca31ca0440" name="GetConditional" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="a804e1b5-adee-4aba-8458-5d1cedc7db51" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFilterWeb%2Fbin%2FDebug%2FFilterWeb.dll Namespace%3DFilterWeb.FilterBinder Type%3D(Name%3DConditionalFilterGenerator GenericParameterCount%3D1) Member%3DGetConditional" tag="ViewCode">
+                <elementDefinition Id="0d36c068-5e6d-46e2-a8f1-cc6425441a82" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="f7b2f1cd-b91d-4c5b-a150-a01928cd4dc2" name="method" profile="CSharpProfile">
+                <elementDefinition Id="d421dfa2-e42d-4192-8a28-a4f6a04ea441" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ce2754a6-7a96-4009-ad3d-648147519417">
+                    <propertyInstance Id="b7bedae6-e7e5-4ad3-96c5-1bc8a487c27c" name="ClrAttributes">
+                      <elementDefinition Id="8dfd77f9-8368-433a-93fd-f2e308d480c8" />
+                    </propertyInstance>
+                    <elementDefinition Id="30648f6f-cd77-4597-aad5-8fcc4478cb3e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d7936fa1-f615-4056-957e-030b6f0a7440">
+                    <propertyInstance Id="48076525-87c8-4ee7-8704-83c0f6fddce6" name="IsPartial" value="false">
+                      <elementDefinition Id="a1e4f94b-dbec-4927-9d51-f3f2538a2c93" />
+                    </propertyInstance>
+                    <elementDefinition Id="4dd075bb-e4ca-4d68-838f-93480a259198" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e38353bb-3519-4dca-82c5-ef7c2fe27df2">
+                    <propertyInstance Id="0a565e45-9e67-43a4-a301-b9d832602500" name="IsUnsafe" value="false">
+                      <elementDefinition Id="666bdc15-5ad8-48a5-b615-831b64d7f5b2" />
+                    </propertyInstance>
+                    <elementDefinition Id="da644b4f-1b6a-4913-8c8b-6e5f3b42760e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4508ea7e-7526-4a17-ada2-f7ed3ec25104">
+                    <propertyInstance Id="5dde3ad4-13fb-4a48-8eb9-198e3bb2e613" name="Inheritance" value="none">
+                      <elementDefinition Id="2c54099c-ec74-4547-8417-9ff1463b3ac1" />
+                    </propertyInstance>
+                    <elementDefinition Id="a4600d9a-45b0-4da4-8843-5797af3b515d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="85ef20a7-6647-41c6-9d5c-8979b809332f">
+                    <propertyInstance Id="1cc4bc3c-11c2-4e2f-8a33-a748902603ff" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="fd9636f6-0243-4317-b320-8b8c2eae298e" />
+                    </propertyInstance>
+                    <elementDefinition Id="76943bfe-aa25-4d59-ab27-b7024a38470a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="aaad8b5b-3a59-4cb4-aa33-d601856435d1">
+                    <propertyInstance Id="7f5d003b-9f6e-41ba-a35b-9a2b0e8cf22a" name="params" value="false">
+                      <elementDefinition Id="f7471ada-36e0-4f99-b575-1a0d1fcc7a97" />
+                    </propertyInstance>
+                    <elementDefinition Id="ff595b9d-ee32-4c3a-b24e-842d6bdb2c7f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="2a37b09e-1351-4cf4-a547-5b621ec8e091" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="27ece458-13f4-4a08-9cf8-9bd6d143915d" direction="Return">
+                  <elementDefinition Id="0791f7ce-456c-4dad-898e-e5ceed6604d9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9f33a79a-acf9-495b-9fac-40944fa65253" LastKnownName="Expression&lt;Func‎&lt;TItem‎, Boolean‎&gt;‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="f30a9169-a798-44c6-9d54-b7ae7deeb7c4" name="Lazy&lt;List‎&lt;ConditionalFilterGenerator‎&lt;TItem‎&gt;‎‎‎.ContainerExpression‎&gt;‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="SolutionModeling::System::Lazy&lt;List‎&lt;ConditionalFilterGenerator‎&lt;TItem‎&gt;‎‎‎.ContainerExpression‎&gt;‎&gt;">
+        <elementDefinition Id="2a428369-f6b4-4156-91e9-5c0f8dfd0012" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="842f19a9-e822-4a7c-bd2e-c4689a3cb634" name="Expression&lt;Func‎&lt;TItem‎, TConst‎, TConst1‎, Boolean‎&gt;‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="SolutionModeling::System::Linq::Expressions::Expression&lt;Func‎&lt;TItem‎, TConst‎, TConst1‎, Boolean‎&gt;‎&gt;">
+        <elementDefinition Id="c019d0ec-b061-4e59-b528-a863bb95931b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="748dbe3f-507b-4068-93ae-75f7d683df72" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f78f5a90-40d7-4cae-81e1-946f6893adba" name="Expression&lt;Func‎&lt;TItem‎, TConst‎, TConst1‎, Boolean‎&gt;‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="SolutionModeling::System::Linq::Expressions::Expression&lt;Func‎&lt;TItem‎, TConst‎, TConst1‎, Boolean‎&gt;‎&gt;">
+        <elementDefinition Id="e9bc942b-db81-4696-a228-85771a06a939" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cc92d844-3635-433f-8813-85ff4721f4ad" name="Expression&lt;Func‎&lt;TItem‎, TConst‎, Boolean‎&gt;‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="SolutionModeling::System::Linq::Expressions::Expression&lt;Func‎&lt;TItem‎, TConst‎, Boolean‎&gt;‎&gt;">
+        <elementDefinition Id="df0c968d-d973-4607-bcdc-848edf95da47" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="613e1050-a9d2-4250-85b4-6d789f7ffaf1" name="Expression&lt;Func‎&lt;TItem‎, TConst‎, Boolean‎&gt;‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="SolutionModeling::System::Linq::Expressions::Expression&lt;Func‎&lt;TItem‎, TConst‎, Boolean‎&gt;‎&gt;">
+        <elementDefinition Id="fd802378-29cd-482a-a22a-5a38c2cd19e4" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="38264839-4c32-4732-9f93-80a7c14e047d" name="Expression&lt;Func‎&lt;T‎, Boolean‎&gt;‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="SolutionModeling::System::Linq::Expressions::Expression&lt;Func‎&lt;T‎, Boolean‎&gt;‎&gt;">
+        <elementDefinition Id="7878fe19-ab38-4724-b786-bfca59cb1596" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0f80605c-153d-4270-a2e6-1245683c8530" name="InvocationExpression" isAbstract="false" isLeaf="false" cachedFullName="SolutionModeling::System::Linq::Expressions::InvocationExpression">
+        <elementDefinition Id="ee4b036c-90d6-4081-b9f8-62e5f1fd035b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="60d600b8-6f25-4fa4-aa30-21951ee904f8" name="Expression" isAbstract="false" isLeaf="false" cachedFullName="SolutionModeling::System::Linq::Expressions::Expression">
+        <elementDefinition Id="29e3652c-4b1f-4c8d-8a43-f3b214b9bd05" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="bfa6873a-4122-441d-ba19-a14f31d19959" name="Type" isAbstract="false" isLeaf="false" cachedFullName="SolutionModeling::System::Type">
+        <elementDefinition Id="d6dc0d1f-efe3-4bf4-acea-a9ad88a78646" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9f33a79a-acf9-495b-9fac-40944fa65253" name="Expression&lt;Func‎&lt;TItem‎, Boolean‎&gt;‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="SolutionModeling::System::Linq::Expressions::Expression&lt;Func‎&lt;TItem‎, Boolean‎&gt;‎&gt;">
+        <elementDefinition Id="029a811e-0795-4e01-a279-796c12d5a4a9" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="e8fc2a91-b1b0-4ccb-8111-6cb23f8c65dd" name="SolutionModeling">
+    <elementDefinition Id="5c256a13-24d3-4af5-91a1-0770e6283930" />
+  </package>
+</logicalClassDesignerModel>

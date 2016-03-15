@@ -1,0 +1,32 @@
+﻿nav {
+    display: inline-block;
+    width: 100px;
+    float: left;
+    position: relative;
+    position: fixed;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+nav:hover {
+    width:300px;
+}
+nav:hover ~ article{
+    margin-left: 310px;
+}
+nav .navbar {
+    float: none !important;
+
+}
+.menu-left .navbar-nav {
+    float: none;
+}
+.menu-left li {
+    display: block;
+    float: none !important;
+}
+article {
+    margin-left: 110px;
+    transition: margin-left .5s;
+}

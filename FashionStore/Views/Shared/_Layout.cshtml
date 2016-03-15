@@ -1,42 +1,44 @@
-﻿<!DOCTYPE html>
+﻿@using System.Threading
+@{
+    var symbol = Thread.CurrentThread.CurrentUICulture.NumberFormat.CurrencySymbol;
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    @*<meta name="viewport" content="width=device-width, initial-scale=1.0">*@
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/bundles/layoutCss")
+    @Scripts.Render("~/bundles/base")
+
+ 
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+<body ng-app="globalApp" ng-controller="globalCtrl" ng-init="initSymbol('@symbol')">
+    <toaster-container toaster-options="{'time-out': 3000, 'close-button':false, 'animation-class': 'toast-top-right'}"></toaster-container>
+    <div class="navbar navbar-inverse">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a class="navbar-brand" href="@Url.Action("Index", "Main")">
+                    <img src="/Image/title.png" alt="fashion form-angular fashion" />
+                </a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
+            @Html.Action("NavBar", "Main")
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
+    <div class="body-content">
+        <section>
+            @RenderBody()
+        </section>
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            @Html.Partial("Footer/_Footer")
         </footer>
     </div>
+    <div id="up">
+        <div class="btn btn-primary"><span class="glyphicon glyphicon-arrow-up"></span></div>
+    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/layoutJs")
     @RenderSection("scripts", required: false)
 </body>
 </html>

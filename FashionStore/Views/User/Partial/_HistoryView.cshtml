@@ -1,0 +1,71 @@
+﻿@{
+    var href = "/Fashion/Good";
+}
+<div class="col-xs-12 history">
+    <div class="row">
+        <div class="col-xs-8" ng-controller="historyUserCtrl as histVm">
+            <uib-accordion close-others="false">
+                <uib-accordion-group ng-repeat="item in histVm.items">
+                    <uib-accordion-heading>
+                        <span class="text-uppercase"><b>@Resource.Date:&nbsp;</b>{{::item.dateSale}}</span>
+                        <span class="text-uppercase"><b>@Resource.Count:&nbsp;</b>{{::item.goods.length}}</span>
+                    </uib-accordion-heading>
+                    <div ng-repeat="good in item.goods">
+                        <table class="table table-striped table-hist" style="width: 100%;">
+                            <col width="30"></col>
+                            <col width="40%"></col>
+                            <col width="15%"></col>
+                            <col width="15%"></col>
+                            <thead>
+                            <tr>
+                                <th colspan="2">@Resource.Desc</th>
+                                <th>@Resource.Count</th>
+                                <th>@Resource.Price</th>
+                            </tr>
+                            </thead>
+                            <tfoot>
+                            <tr>
+                                <td colspan="4" class="text-right">
+                                    <b class="text-uppercase">@Resource.Summa:&nbsp;</b>{{::(item.goods|filter:{'goodId':good.goodId}|sum:'priceWithDiscount':'countGood')|currencyExtend:0}}
+                                </td>
+                            </tr>
+                            </tfoot>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <a ng-href="@href/{{::good.goodId}}">
+                                        <div ng-style="{'background':'url(/Image/Products/{{::good.photo}}) no-repeat center','background-size': 'contain'}" class="hist-img" ng-if="good.photo!=null">
+                                        </div>
+                                        <div class="none-img" ng-if="good.photo==null"></div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <div>{{::good.goodName}}</div>
+                                </td>
+                                <td>
+                                    <div>{{::good.countGood}}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>{{::good.priceWithDiscount|currencyExtend:0}}<span class="new-price">&nbsp;({{good.discount}}%)</span></div>
+                                </td>
+                            </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </uib-accordion-group>
+            </uib-accordion>
+            <div id="history-orders" class="text-center">
+                <img src="/Image/loader.gif" alt="Loading..."/>
+            </div>
+        </div>
+        <div class="col-xs-3 col-xs-push-1">
+            @*Left side*@
+            <div class="col-xs-12">
+                <h4 class="text-center text-uppercase">@Resource.Exclusive</h4>
+                @Html.Partial("Widgets/_ExclusiveGood")
+            </div>
+        </div>
+    </div>
+</div>

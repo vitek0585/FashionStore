@@ -1,0 +1,36 @@
+﻿@{
+    var hrefImage = "/Image/Products/";
+    var hrefProduct = "/Fashion/Good/";
+
+}
+<div class="rand-crod-carousel" ng-controller="randomCtrl">
+    <slick infinite="true" slides-to-show="3" slides-to-scroll="1" arrows="false" autoplay-speed="2000"
+           speed="500" vertical="true" data="randomItem" init-onload="true" autoplay="true"
+           id="carousel-base">
+        <div ng-repeat="item in randomItem" class="clearfix anim-show">
+            <div class="col-xs-12 widget-random" ng-cloak>
+
+                <div class="col-xs-6">
+                    <a href="{{::'@hrefProduct'+item.goodId}}">
+                        <div ng-if="item.photos[0]" class="img" ng-style="{'background-image':'url({{::'@hrefImage'+item.photos[0]}})'}"></div>
+                        <div ng-if="!item.photos[0]" class="img" style="background-image: url(/Image/not-image.png)"></div>
+                    </a>
+                </div>
+                <div class="col-xs-6">
+                    <div ng-if="::item.discount>0" class="text-uppercase sale-shape small">@Resource.Discount</div>
+                    <div class="text-uppercase small-very">{{::item.goodName}}</div>
+                    <div class="price-prod small" ng-class="::item.discount>0?'old-price':''">{{::item.priceUsd | currencyExtend:0}}</div>
+                    <div class="new-price small text-left" ng-if="::item.discount>0">{{::item.priceWithDiscount | currencyExtend:0}}</div>
+                    <div class="text-lowercase small">
+                        <a class="color-h" href="{{::'@hrefProduct'+item.goodId}}">@Resource.GoView</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </slick>
+    <div class="loader-products" ng-if="isWaiter" style="background: white">
+        <div class="flexbox-container" style="height: 555px">
+            <img src="~/Image/loader.gif" alt="loading" style="height: 3em; width: 3em">
+        </div>
+    </div>
+</div>

@@ -29,7 +29,8 @@ paging.directive("pagingSetup", [function () {
             var info = scope.info;
             initialize(buttons);
 
-            var paging = function () {
+            var Paging = function () {
+                var self = this;
 
                 //удаление данных с кнопок 
                 var clearAttrDataFromButton = function () {
@@ -52,7 +53,7 @@ paging.directive("pagingSetup", [function () {
                 //генерация левой стороны
                 var leftButtonGenerate = function (opjForButton) {
 
-                    if (opjForButton.numberButton > 2) {
+                    if (opjForButton.numberButton > 2 && info.totalPages > 0) {
                         setupButton(buttons[opjForButton.currentItem++], 1);
                         setupButton(buttons[opjForButton.currentItem], opjForButton.numberButton - 1);
                         buttons[opjForButton.currentItem++].value = info.leftPrev;
@@ -119,7 +120,10 @@ paging.directive("pagingSetup", [function () {
                     }
                 }
                 //генерация кнопок
-                this.calculatePaging = function (item) {
+                self.calculatePaging = function (item) {
+                    if (info.currentPage == undefined) {
+                        return;
+                    }
                     if (item) {
 
                         if (!item.isRefresh) {
@@ -135,12 +139,22 @@ paging.directive("pagingSetup", [function () {
 
                     clearAttrDataFromButton();
                     leftButtonGenerate(opjForButton);
-                    middleButtonGenerate(opjForButton, info.currentPage);
+                    middleButtonGenerate(opjForButton, parseInt(info.currentPage, 10));
                     rightButtonGenerate(opjForButton);
                     hideButtons(opjForButton);
                 }
+                self.remoteClick = function (number) {
+                    var activeButton = buttons.filter(function (item) {
+                        return item.isActive;
+                    })[0];
+                    if (activeButton != null && activeButton.currentPage != number && info.totalPages >= number) {
+
+                        info.currentPage = number;
+                        self.calculatePaging();
+                    }
+                };
             }
-            var g = new paging();
+            var g = new Paging();
             g.calculatePaging(null);
 
             scope.buttons = buttons;
@@ -157,10 +171,13 @@ paging.directive("pagingSetup", [function () {
             }
             scope.$watch(function () {
                 return info.totalPages;
-            }, function () {
-                g.calculatePaging();
-            });
+            }, function (newTotal, oldTotal) {
+                if (newTotal != undefined && oldTotal != undefined && oldTotal != newTotal) {
+                    g.calculatePaging();
 
+                }
+            });
+            info.remoteClick = g.remoteClick;
             info.refresh = g.calculatePaging;
 
         },
@@ -171,3 +188,29 @@ paging.directive("pagingSetup", [function () {
         }
     }
 }]);
+
+//by client side
+//s.info = {
+//    refresh: function () { },
+//    currentPage: undefined,
+//    totalPages: 0,
+//    css: 'btn btn-pagging',
+//    cssActive: 'btn btn-primary active',
+//    rightPrev: '>>',
+//    leftPrev: '<<',
+//};
+//s.init = function () {
+//    $rootScope.$on('$locationChangeStart', function (event, next, current) {
+//        getGoods(getPageFromUrl());
+//        s.info.currentPage = getPageFromUrl();
+//        s.info.remoteClick(s.info.currentPage);
+//    });
+//};
+//get current page from url
+//function getPageFromUrl() {
+//    var page = 1;
+//    if ($location.search() && $location.search().page) {
+//        page = $location.search().page;
+//    }
+//    return page;
+//}

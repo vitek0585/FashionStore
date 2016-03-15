@@ -1,0 +1,72 @@
+﻿@{
+    var name = Html.GetName<LoginViewModel>(m => m.UserName);
+    var password = Html.GetName<LoginViewModel>(m => m.Password);
+    var remember = Html.GetName<LoginViewModel>(m => m.RememberMe);
+
+    var predicate = "{0}&&loginForm.{0}.$invalid";
+
+    var namePredicate = predicate.F(name);
+    var pswdPredicate = predicate.F(password);
+}
+
+<form method="POST" class="form-horizontal" role="form" novalidate name="loginForm" id="loginForm" ng-submit="submit()">
+    @*<toaster-container toaster-options="{'time-out': 3000, 'close-button':false, 'animation-class': 'toast-top-right'}"></toaster-container>*@
+    @Html.AntiForgeryToken()
+    <input type="hidden" value="@ViewBag.ReturnUrl"/>
+    @*Name user*@
+    <div class="form-group" ng-init="blurs('@name')">
+        <div class="col-sm-12">
+            <input type="text"
+                   class="form-control"
+                   id="@name"
+                   placeholder="@Resource.Name"
+                   name="@name"
+                   ng-model="user.@name"
+                   ng-pattern="/^[A-Za-z]\w{2,20}$/"
+                   ng-blur="@name=true"
+                   ng-required="true"
+                   ng-class="@namePredicate?'custom-invalid':'custom-valid'">
+        </div>
+        <div class="col-sm-12 errro-input"
+             ng-class="@namePredicate?'custom-invalid':'custom-valid'"
+             ng-cloak>
+            <span ng-show="@namePredicate">@Resource.NameInValid</span>
+        </div>
+    </div>
+    @*Password*@
+    <div class="form-group" ng-init="blurs('@password')">
+        <div class="col-sm-12 ">
+            <input type="password"
+                   ng-pattern="/^(?=[a-zA-Z])(?=[a-zA-Z0-9]*)(?!.*\s).{6,20}$/"
+                   class="form-control"
+                   id="@password"
+                   placeholder="@Resource.Password"
+                   name="@password"
+                   ng-model="user.@password"
+                   ng-required="true"
+                   ng-blur="@password=true"
+                   ng-class="@pswdPredicate?'custom-invalid':''">
+        </div>
+        <div class="col-sm-12 errro-input"
+             ng-class="@pswdPredicate?'custom-invalid':'custom-valid'"
+             ng-cloak>
+            <span ng-show="@pswdPredicate">@Resource.PaswdInValid</span>
+        </div>
+    </div>
+    @*Remember*@
+    <div class="form-group">
+        <div class="col-sm-12 remember-me">@Resource.RememberMe&nbsp;
+            <input type="checkbox"
+                  
+                   id="@remember"
+                   name="@remember"
+                   ng-model="user.@remember">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-12 text-right">
+            <button class="btn btn-primary btn-buy" type="submit" ng-disabled="!loginForm.$valid">@Resource.LogIn</button>
+        </div>
+    </div>
+
+</form>

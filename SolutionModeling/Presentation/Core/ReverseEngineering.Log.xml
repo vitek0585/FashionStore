@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2016-02-22T09:52:38" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '3cff50e3-03e6-4aca-b519-b6941158e463' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore' -  (Package)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Core' -  (Package)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Core::Binder' -  (Package)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Medium" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Core::Binder::HttpFilterBinder' -  (Class)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Core::Binder::HttpFilterBinder::_generator' -  (Property)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Core::Binder::HttpFilterBinder::BindModel' -  (Operation)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Core::Binder::HttpFilterBinder::BindModel::actionContext' -  (Parameter)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Core::Binder::HttpFilterBinder::BindModel::bindingContext' -  (Parameter)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Core::Binder::HttpFilterBinder::HttpFilterBinder' -  (Operation)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Medium" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Core::Binder::HttpOrderBinder' -  (Class)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Core::Binder::HttpOrderBinder::BindModel' -  (Operation)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Core::Binder::HttpOrderBinder::BindModel::actionContext' -  (Parameter)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Core::Binder::HttpOrderBinder::BindModel::bindingContext' -  (Parameter)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Core::Binder::HttpOrderBinder::HttpOrderBinder' -  (Operation)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Domain' -  (Package)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Domain::Core' -  (Package)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Domain::Core::Entities' -  (Package)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Domain::Core::Entities::Store' -  (Package)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FashionStore::Domain::Core::Entities::Store::Good' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FilterWeb' -  (Package)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FilterWeb::FilterBinder' -  (Package)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FilterWeb::FilterBinder::ConditionalGeneratorSimple' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::FilterWeb::FilterBinder::ConditionalGeneratorSimple&lt;Good‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System' -  (Package)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Web' -  (Package)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Web::Http' -  (Package)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Web::Http::Controllers' -  (Package)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Web::Http::Controllers::HttpActionContext' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Web::Http::ModelBinding' -  (Package)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Web::Http::ModelBinding::IModelBinder' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'SolutionModeling::System::Web::Http::ModelBinding::ModelBindingContext' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: SolutionModeling::FashionStore::Core::Binder::HttpFilterBinder to SolutionModeling::System::Web::Http::ModelBinding::IModelBinder (InterfaceRealization)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: SolutionModeling::FashionStore::Core::Binder::HttpOrderBinder to SolutionModeling::System::Web::Http::ModelBinding::IModelBinder (InterfaceRealization)" />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="High" Text="(2) type(s) fully reverse engineered." />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="High" Text="(6) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2016-02-22T09:52:43" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

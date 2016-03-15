@@ -1,0 +1,9 @@
+﻿<h3 class="text-center text-uppercase color-h">@Resource.Cart</h3>
+<hr />
+<div ng-if="cart[0]">
+    <p>@Resource.CartItems.F("{{cart.length}}")</p>
+    <hr />
+
+</div>
+<p ng-if="!cart[0]">@Resource.CartNoItems</p>
+

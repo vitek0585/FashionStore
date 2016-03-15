@@ -1,0 +1,12 @@
+﻿<div class="row row-nomargin account-modal">
+    <div class="col-xs-8 col-xs-push-2" ng-if="!responseHandler.isSuccededRegister">
+        <h2 class="text-center text-uppercase account-title">@Resource.Register</h2>
+        @Html.Partial("Auth/Form/RegisterForm")
+        <spin-wait show-when="responseHandler.isBusy" />
+    </div>
+    <div class="col-xs-12" ng-if="responseHandler.isSuccededRegister" ng-cloak>
+        <div class="text-uppercase message-info">{{responseHandler.succesMessage}}</div>
+    </div>
+    @Html.Partial("Auth/SocialButton")
+</div>
+

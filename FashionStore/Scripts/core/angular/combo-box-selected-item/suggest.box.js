@@ -163,10 +163,48 @@
                             }
                         }
                     };
-
+                    //select first element
                     if (scope.sbSelectFirstListItem)
                         scope.indexes.push(0);
+                    //select zero or more element by id
+                    if (scope.sbSelectItemsByList) {
+                        var elem = [];
+                        scope.list.forEach(function (e, i) {
+                            if (!e[scope.sbKeyId]) {
+                                throw "sb-key-id is not correct";
+                            }
+                            var isContains = scope.sbSelectItemsByList.some(function(elem, i) {
+                                return elem[scope.sbKeyId] == e[scope.sbKeyId];
+                            });
+                            if (isContains)
+                                elem.push(i);
+                        });
+                        if (elem.length>0) {
 
+                            elem.forEach(function (e) {
+                                scope.indexes.push(e);
+
+                            });
+                        }
+                    }
+                    //select one element by key
+                    if (scope.sbSelectItemById) {
+
+                        var elem = undefined;
+                        scope.list.forEach(function (e, i) {
+                            if (!e[scope.sbKeyId]) {
+                                throw "sb-key-id is not correct";
+                            }
+                            if (e[scope.sbKeyId] == scope.sbSelectItemById)
+                                elem = i;
+                        });
+                        if (angular.isDefined(elem)) {
+                            scope.indexes.push(elem);
+
+                        } else
+                            scope.indexes.push(0);
+
+                    }
 
                     scope.highlightNone = function () {
                         if (scope.highlightedItem > -1) {
@@ -355,6 +393,13 @@
                         }
                         scope.selectedItems();
                     });
+                    //refresh if the remote item has changed
+                    scope.$watch('observer', function () {
+                        if (angular.isDefined(scope.observer) && angular.isDefined(scope.model[0])) {
+                            scope.model[0] = scope.list[0];
+                        }
+
+                    });
 
                     scope.getSelectionCount = function () {
                         return scope.model.length;
@@ -381,6 +426,7 @@
                     list: '=sbList',
                     indexesAlias: '@sbModelAlias',
                     model: '=sbModel',
+
                     indexes: '=sbSelectedIndexes',
                     sbMaxSelection: '=',
                     sbAllowDuplicates: '=',
@@ -396,9 +442,20 @@
                     sbOnSelectionChange: '&',
                     sbIsOpen: '@',
                     //my additional
+
                     sbIsOpenAlways: '@',
                     sbNotRemoveCurrent: '@',
-                    sbModelSelected:'='
+                    //returns objects that have been selected
+                    sbModelSelected: '=',
+                    //for change model
+                    observer: '=observer',
+                    //select one elements by key
+                    sbSelectItemById: '=',
+                    //key comparer
+                    sbKeyId: '@',
+                    //select several elements by key
+                    sbSelectItemsByList: "="
+
                 },
                 link: function (scope) {
                     scope.init();
@@ -566,7 +623,8 @@
                                 $scope.closeDropDown();
                             }
                             $scope.weSentBroadcast = false;
-                            $scope.$apply();
+
+                            //$scope.$apply();
                         });
                         $scope.selectListItem(0);
                     };
@@ -589,7 +647,7 @@
             return {
                 restrict: 'AE',
                 link: function (scope, element, attrs) {
-                    element.on('click', function () {
+                    element.on('click', function (e) {
                         scope.sendBroadcast();
 
                         if (scope.dropDownState()) {
@@ -599,6 +657,8 @@
                             scope.openDropDown();
                         }
                         scope.$apply();
+                        e.stopPropagation();
+                        e.preventDefault();
                     });
                 },
                 controller: ['$rootScope', '$scope', function ($rootScope, $scope) {

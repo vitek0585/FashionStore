@@ -1,0 +1,89 @@
+﻿@using FashionStore.Models.Order
+
+@model IEnumerable<UserOrderModel>
+@{
+    ViewBag.Title = Resource.Cart;
+    var data = Html.SerializeToJson(Model);
+    var priceDisc = Html.GetName<UserOrderModel>(o => o.PriceWithDiscount);
+    var count = Html.GetName<UserOrderModel>(o => o.CountGood);
+
+
+}
+<div class="container cart-base" ng-controller="cartController as cartVm">
+    <div class="row">
+        @Html.GenerateBreadCrumbs(new BreadCrumbsCompose(new SimpleBcBuilder(Url,Resource.Main, Resource.Cart)))
+        <h3 class="color-h text-uppercase">@Resource.Cart</h3>
+        <hr />
+        @*Left side*@
+        <div class="col-xs-3">
+            <h4 class="text-center text-uppercase">@Resource.NewGoods</h4>
+            @Html.Partial("Widgets/_ExclusiveGood")
+        </div>
+        @*End Left side*@
+
+        @*Right side*@
+        @if (Model.Any())
+        {
+            <div class="col-xs-9 cart" ng-if="cartVm.items[0]">
+                <div class="col-xs-12">
+                    <div class="to-right" ng-cloak>
+                        <h4>
+                            <span class="color-h text-uppercase bold">@Resource.TotalCoast: </span>
+                            {{(cartVm.items|sum:'@priceDisc':'@count')|currencyExtend:0}}
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-xs-12 table-cart">
+                    @Html.Partial("Partial/_Orders", Model)
+                </div>
+
+                <div class="col-xs-12">
+                    <button class=" btn btn-primary btn-buy to-right" tooltip="@Resource.FullOrderTool" tooltip-pos="top"
+                            ng-click="cartVm.doOrder()">
+                        @Resource.Checkout<i class="glyphicon glyphicon-shopping-cart"></i>
+                    </button>
+                </div>
+                @if (!Request.IsAuthenticated)
+                {
+
+                    <br />
+                    <hr class="clear-float  col-xs-12" />
+                    <div ng-controller="modalCtrl" class="clear-float col-xs-12">
+                        <button class="btn btn-primary btn-buy to-right" tooltip="@Resource.FastOrderTool" tooltip-pos="top"
+                                ng-click="openModal('checkoutTmpl','checkoutCtrl')">
+                            @Resource.FastCheckout<i class="glyphicon glyphicon-shopping-cart"></i>
+                        </button>
+                        <script type="text/ng-template" id="checkoutTmpl">
+                            @Html.Partial("Partial/_CheckoutFast")
+                        </script>
+                    </div>
+                }
+                <spin-wait show-when="cartVm.isBusy" />
+            </div>
+            <div class="col-xs-9" ng-if="!cartVm.items[0]" ng-cloak>
+                <h3 class="cart-empty">@Resource.BagEmpty</h3>
+            </div>
+            <div ng-init="cartVm.initModel(@data);cartVm.auth('@Request.IsAuthenticated')"></div>
+        }
+        else
+        {
+            <div class="col-xs-9">
+                <h3 class="cart-empty">@Resource.BagEmpty</h3>
+            </div>
+        }
+    </div>
+    @Html.Action("RecentlyViewedUser", "Good")
+    @Html.Partial("Widgets/_PayCardPartial")
+</div>
+
+
+@section scripts
+{
+    @Styles.Render("~/bundles/cartCss")
+    @Scripts.Render("~/bundles/cartJs")
+
+
+    
+}
+
+

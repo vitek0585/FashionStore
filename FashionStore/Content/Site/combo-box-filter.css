@@ -1,0 +1,92 @@
+﻿.filter-container .suggest-box .select {
+    border-radius: 0;
+    border: none;
+}
+
+.filter-container .suggest-box .dropdown {
+    height: 200px;
+    overflow: auto;
+    position: relative;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid rgba(0,0,0,.15);
+    padding: 5px 0;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+.filter-container .glyphicon-menu-down:before {
+    padding: 0;
+}
+
+.filter-container .suggest-box .select .input .selection-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: #999999;
+    background-color: #f3f3f3;
+    border: #ddd 1px solid;
+    padding: 1px 5px;
+    margin: 2px 6px 2px 0;
+    font-size: 12px;
+    border-radius: 0;
+}
+
+.filter-container .suggest-box .select .input {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1;
+    padding: 5px 0;
+    border-right: none;
+}
+
+.fa-remove:hover:before, .fa-close:hover:before, .fa-times:hover:before {
+    color: black;
+}
+
+.filter-container .suggest-box .select button i {
+    padding: 0;
+   
+}
+
+.clear-filter-btn > i {
+    transition: color .2s;
+    color: #999999;
+}
+
+.clear-filter-btn:hover > i {
+    color: black;
+}
+
+.clear-filter-btn:hover {
+    transform: scale(1.5);
+    transition: all .2s;
+    color: black;
+}
+
+.suggest-box .select button {
+    color: #333;
+    padding: 0;
+}
+@-webkit-keyframes hvr-back-pulse {
+  50% {
+    background-color: #E5E4E9;
+  }
+}
+
+@keyframes hvr-back-pulse {
+  50% {
+    background-color: #E5E4E9;
+  }
+}
+.btn-white:hover {
+    /*background-color: #999999;*/
+    color: black;
+}

@@ -1,0 +1,128 @@
+﻿@{
+    var name = Html.GetName<RegisterViewModel>(m => m.UserName);
+    var email = Html.GetName<RegisterViewModel>(m => m.Email);
+    var teleph = Html.GetName<RegisterViewModel>(m => m.PhoneNumber);
+
+    var password = Html.GetName<RegisterViewModel>(m => m.Password);
+    var confirmPassw = Html.GetName<RegisterViewModel>(m => m.ConfirmPassword);
+    var predicate = "{0}&&registerForm.{0}.$invalid";
+
+    var namePredicate = predicate.F(name);
+    var telephPredicate = predicate.F(teleph);
+    var emailPredicate = predicate.F(email);
+    var pswdPredicate = predicate.F(password);
+    var confPswdPredicate = predicate.F(confirmPassw);
+}
+<form method="POST" class="form-horizontal" role="form" novalidate name="registerForm" id="registerForm">
+    @Html.AntiForgeryToken()
+    @*Name user*@
+    <div class="form-group" ng-init="blurs('@name')">
+        @*<label class="col-sm-4 control-label" for="">@Resource.Name</label>*@
+        <div class="col-sm-12">
+            <input type="text"
+                   class="form-control"
+                   id="@name"
+                   placeholder="@Resource.Name"
+                   name="@name"
+                   ng-model="user.@name"
+                   ng-pattern="/^[A-Za-z]\w{2,20}$/"
+                   ng-blur="@name=true"
+                   ng-required="true"
+                   ng-class="@namePredicate?'custom-invalid':'custom-valid'">
+        </div>
+        <div class="col-sm-12 errro-input"
+             ng-class="@namePredicate?'custom-invalid':'custom-valid'"
+             ng-cloak>
+            <span ng-show="@namePredicate">@Resource.NameInValid</span>
+        </div>
+    </div>
+    @*Telephone user*@
+    <div class="form-group" ng-init="blurs('@teleph')">
+        <div class="col-sm-12">
+            <input type="text"
+                   class="form-control"
+                   id="@teleph"
+                   placeholder="@Resource.PhoneNumber"
+                   name="@teleph"
+                   ng-model="user.@teleph"
+                   ng-pattern="/^[0-9]{10,15}$/"
+                   ng-blur="@teleph=true"
+                   ng-required="true"
+                   ng-class="@telephPredicate?'custom-invalid':'custom-valid'">
+        </div>
+        <div class="col-sm-12 errro-input"
+             ng-class="@telephPredicate?'custom-invalid':'custom-valid'"
+             ng-cloak>
+            <span ng-show="@telephPredicate">@Resource.PhoneInValid</span>
+        </div>
+    </div>
+    @*Email*@
+    <div class="form-group" ng-init="blurs('@email')">
+        <div class="col-sm-12">
+            <input ng-pattern="/^\w+&#64[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/"
+                   class="form-control custom-valid"
+                   id="@email"
+                   placeholder="email"
+                   name="@email"
+                   ng-model="user.@email"
+                   ng-required="true"
+                   ng-blur="@email=true"
+                   ng-class="@emailPredicate?'custom-invalid':''">
+        </div>
+        <div class="col-sm-12 errro-input"
+             ng-class="@emailPredicate?'custom-invalid':'custom-valid'"
+             ng-cloak>
+            <span ng-show="@emailPredicate">@Resource.EmailInValid</span>
+        </div>
+    </div>
+    @*Password*@
+    <div class="form-group" ng-init="blurs('@password')">
+        <div class="col-sm-12 ">
+            <input type="password"
+                   ng-pattern="/^(?=[a-zA-Z])(?=[a-zA-Z0-9]*)(?!.*\s).{6,20}$/"
+                   class="form-control"
+                   id="@password"
+                   placeholder="@Resource.Password"
+                   name="@password"
+                   ng-model="user.@password"
+                   ng-required="true"
+                   ng-blur="@password=true"
+                   ng-class="@pswdPredicate?'custom-invalid':''">
+        </div>
+        <div class="col-sm-12 errro-input"
+             ng-class="@pswdPredicate?'custom-invalid':'custom-valid'"
+             ng-cloak>
+            <span ng-show="@pswdPredicate">@Resource.PaswdInValid</span>
+        </div>
+    </div>
+    @*Confirm password*@
+    <div class="form-group" ng-init="blurs('@confirmPassw')">
+        <div class="col-sm-12">
+            <input compare-to source="user.@password"
+                   type="password"
+                   class="form-control"
+                   id="@confirmPassw"
+                   placeholder="@Resource.ConfirmPswd"
+                   name="@confirmPassw"
+                   ng-model="user.@confirmPassw"
+                   ng-minlength="6"
+                   ng-maxlength="20"
+                   ng-required="true"
+                   ng-blur="@confirmPassw=true"
+                   ng-class="@confPswdPredicate?'custom-invalid':''">
+        </div>
+        <div class="col-sm-12 errro-input"
+             ng-class="@confPswdPredicate?'custom-invalid':'custom-valid'"
+             ng-cloak>
+            <span ng-show="@confPswdPredicate">@Resource.ConfirmPswdInValid</span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-12 text-right">
+            <button class="btn btn-primary btn-buy" ng-click="submit(registerForm)"
+                    ng-disabled="!registerForm.$valid">
+                @Resource.Register
+            </button>
+        </div>
+    </div>
+</form>

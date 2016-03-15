@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="bc0d385c-1bd4-4d07-9049-066e66d688aa"
+  name="Type"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="882f06a5-4c55-4e95-a5b8-fd62c41e3c50"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DWebLogger.Type"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <enumeration
+        Id="dc6d357b-fbb8-4c42-987a-a5767f12503a"
+        name="TypeLog"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="57afbc8f-f6fa-4df1-aa95-2dcfe0344e46"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.Type Type%3DTypeLog"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="abba69a4-91fe-49dd-b426-8102de83bfa7"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5fec87dc-7876-4c36-879e-2521595743fd">
+                <propertyInstance
+                  Id="a4d9617c-16ad-4611-85a7-f75131d74643"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="047763f4-15e6-4446-8fb3-3c57e01b86c7">
+                <propertyInstance
+                  Id="0bb01074-4746-43a7-8373-067893c7d4ea"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7e155dfe-38d2-4365-a9e6-ae523b6eb25e">
+                <propertyInstance
+                  Id="fbfea97e-e93b-4ada-bf70-bb6ef631edaa"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="f43c9f07-14e0-4fe1-a69a-9af3816ecba8"
+            name="Error">
+            <referencesInternal>
+              <reference
+                Id="d72492be-f706-45b4-9ce4-acb31bf61142"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.Type Type%3DTypeLog Member%3DError"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="cf35fdde-7bc0-4cf6-917d-b2811a31358d"
+            name="Info">
+            <referencesInternal>
+              <reference
+                Id="235a9e7e-483d-4b35-bfdc-614af72e3cc1"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.Type Type%3DTypeLog Member%3DInfo"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="bd038ed8-60e6-4428-85bc-74031f9af87b"
+            name="Wrong">
+            <referencesInternal>
+              <reference
+                Id="d102af4c-f53a-4f2a-ab08-baa15570d522"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.Type Type%3DTypeLog Member%3DWrong"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

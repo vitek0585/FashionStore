@@ -1,0 +1,27 @@
+﻿@{
+    var path = "/Image/Products/";
+    var ctrlAs = "eVm";
+    var NAME = "product".ControllerAs(ctrlAs);
+}@*add image*@
+
+<div id="image-upload" ng-controller="ctrlUpload" class="col-xs-12">
+    <div class="row">
+        <div ng-show="eVm.product.goodId!=null || !mode.isEdit">
+            <button class="btn btn-primary btn-sm margin-top" ng-click="selectFile();">
+                Upload&nbsp;<i class="glyphicon glyphicon-open"></i>
+            </button>
+            <button class="btn btn-primary btn-sm margin-top" ng-click="uploadAll()" ng-disabled="(files|filter:{upload:false}).length==0">Save all&nbsp;<i class="glyphicon glyphicon-floppy-saved"></i></button>
+
+            <button class="btn btn-danger btn-sm margin-top" ng-click="clear()" ng-disabled="!files[0]">Clear&nbsp;<i class="glyphicon glyphicon-trash"></i></button>
+
+            <input ng-hide="true" type="file" id="uploadImage" multiple ng-cloak />
+        </div>
+    </div>
+    @*eVm.product выбранный продукт из editCtrl*@
+    @*files имеющиеся файла из ctrlUpload*@
+    <div id="container" class="row" upload-image files="files" current-item="eVm.product">
+
+    </div>
+    
+</div>
+

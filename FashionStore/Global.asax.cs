@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
+using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using FashionStore.Configuration.Mapper;
+using FashionStore.Controllers.Controller;
 
 namespace FashionStore
 {
@@ -12,10 +13,25 @@ namespace FashionStore
     {
         protected void Application_Start()
         {
+            MapperConfig.SetupMap();
+
             AreaRegistration.RegisterAllAreas();
+            GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+
+        
+        protected void Application_EndRequest()
+        {
+            if (Response.StatusCode == 404)
+            {
+                //HttpContext.Current.Response.StatusCode = 500;
+                //HttpContext.Current.Response.TrySkipIisCustomErrors = true;
+                //Response.Write("Hello");
+            }
+          
         }
     }
 }

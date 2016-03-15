@@ -1,0 +1,45 @@
+﻿@{
+    var list = new List<Tuple<string, string>>()
+    {
+        new Tuple<string, string>("date", "date"),
+        new Tuple<string, string>("message", "message"),
+        new Tuple<string, string>("exception type", "exceptionType"),
+        new Tuple<string, string>("stack trace", "stackTrace"),
+        new Tuple<string, string>("exception message", "exceptionMsg"),
+        new Tuple<string, string>("http method", "httpMethod"),
+        new Tuple<string, string>("url referrer", "urlReferrer"),
+        new Tuple<string, string>("user agent", "userAgent"),
+        new Tuple<string, string>("is authenticated", "isAuthenticated"),
+    };
+
+    var NAME = "logs".ControllerAs("lVm");
+    var i = 0;
+}
+<div class="row my-row logs">
+    <button class="btn btn-primary" ng-click="lVm.closeAllCollapse()">Collapse all</button>
+    <div ng-repeat="item in lVm.logs.items track by $index" >
+        <span><b class="text-uppercase">@list[0].Item1:</b>&nbsp;{{@list[0].Item2.ControllerAs("item")|date:'dd.MM.yy HH:mm'}}</span>
+        @foreach (var item in list.Skip(1))
+        {
+
+            var coll = "sc.isCollapsed" + i;
+
+            <span ng-init="@coll=true;lVm.addToCollapse(sc)">
+                <button type="button" class="btn btn-default color-text logs-btn" ng-click="@coll = !@coll">@item.Item1</button>
+
+                <div uib-collapse="@coll">
+                    <div class="well well-lg">{{@item.Item2.ControllerAs("item")}}</div>
+                </div>
+            </span>
+
+            i++;
+        }
+        <button type="button" class="btn btn-danger logs-btn" ng-click="lVm.openR(item)">
+            <i class="glyphicon glyphicon-remove"></i>
+        </button>
+        <hr />
+    </div>
+
+    <div paging-setup click-page="lVm.clickPage" info="lVm.info" class="paging"></div>
+</div>
+

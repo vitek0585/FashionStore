@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="2104e613-8bf4-4d54-ac36-aba558c17e53"
+  name="Container"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="d932b687-4417-4885-b9cc-3aa3233b6a2e"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Container"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="077b9570-2f9e-410e-9eb2-0732165c986e"
+        name="BreadCrumbsContainer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="5983517b-d7c6-492d-a343-5a794f941b6e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Container Type%3DBreadCrumbsContainer"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="06c54bdf-3662-49be-afb3-f40b5067d6d5"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="852f25bb-39e6-462e-b0f3-f6a230f8b76c">
+                <propertyInstance
+                  Id="62fd9097-f3b3-46b3-934a-2a82bc1d7cf5"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="273b5c62-0f09-4464-a0ec-fa4aac57092f">
+                <propertyInstance
+                  Id="a171b355-5d01-436c-818f-2c394c56f787"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="761ae83b-c526-456a-8c64-faabe6bfc040">
+                <propertyInstance
+                  Id="5342e4c8-57ea-4f15-aa6f-daf0874b02bf"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="83ae2a63-f16e-4017-9ad3-095e7319dc2b">
+                <propertyInstance
+                  Id="db2b6312-1836-405e-80b8-9adf0e7de8e5"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1754d3ee-4bd2-4de8-ada7-5d983485ff39">
+                <propertyInstance
+                  Id="2d95dd36-a30d-466f-91c4-c708bc78beed"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="6ee84c2c-de75-47f5-970d-7da03af349e9"
+            isSubstitutable="false">
+            <classMoniker
+              Id="c9468805-b26f-40ed-9c6b-99233a062514"
+              LastKnownName="BreadCrumbsContainerBase"
+              LastKnownLocation="Package_1850.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="52f2c13d-59eb-4223-a4c6-8ba439bc07e4"
+            name="_log"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="54e94b64-db9d-4b7f-b706-7c000898ad74"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Container Type%3DBreadCrumbsContainer Member%3D_log"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9035f84e-8fca-49c2-82a3-9a4698a12d8b"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="66c251ef-61cf-4736-b329-aa236fc65a83">
+                    <propertyInstance
+                      Id="57c016ab-966d-4359-b0b6-db7f937ae8f4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="77034cb0-be68-47c6-bc0c-bbc3c5c0ae45">
+                    <propertyInstance
+                      Id="c6fdc77c-4c65-46f6-8fea-6542eeca68c7"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="769d4efd-fdc7-4064-8051-a6d747050c7b">
+                    <propertyInstance
+                      Id="501a6ee6-87c1-4737-bf1a-fcc387e2adad"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="350530d1-4bdc-4641-883f-c6f7336d8ba2">
+                    <propertyInstance
+                      Id="e9e8a741-9458-4c28-a946-4bed1b65284a"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="82b538ca-53da-427a-93de-d697e382d41e">
+                    <propertyInstance
+                      Id="dff438b8-4160-4f1c-bb21-f093977d6e93"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="7db44d1a-cdd3-4d19-acaa-3e98d1f9f70d"
+                LastKnownName="ILogWriter&lt;String‎&gt;"
+                LastKnownLocation="Package14_1720.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="45bebe55-b863-4b24-94c9-654c246122ba"
+            name="Generate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ef26d31f-6f61-4a03-95dc-e13bcd669f66"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Container Type%3DBreadCrumbsContainer Member%3DGenerate"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="23f6f42e-5d2f-45e0-af83-9429af0d674a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="480a2fff-7ffb-461e-a0f0-3869186f8358">
+                    <propertyInstance
+                      Id="c4c6f094-3590-41d4-a530-3b63297e8b87"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3b5d7d8f-e3fe-47c7-96b2-6c503026f9ee">
+                    <propertyInstance
+                      Id="38f03600-3e10-4731-9f98-5a8e7b8fcd66"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2baade55-dafe-4450-b67c-df2186e8b589">
+                    <propertyInstance
+                      Id="84826ccd-5bd1-4f91-bfdb-1838f00ae3d1"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be13c35e-e3c2-456b-b581-6e55dbb48cea">
+                    <propertyInstance
+                      Id="62631c7f-793d-4d0d-8581-bd7733c33af6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="28ecd3d6-df27-4600-9e4d-dfc710220237">
+                    <propertyInstance
+                      Id="3ed77121-810a-487e-91cc-351c2363d0f4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="51dbe5a8-6bc8-4013-9a9a-3133cdc80237">
+                    <propertyInstance
+                      Id="42da9642-0c8f-421d-ba5f-a9d6486e566e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2719f226-de78-44ae-84af-ed9fc533ef5d"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="741f1530-efe4-4c3c-a4de-612615479074"
+                      LastKnownName="MvcHtmlString"
+                      LastKnownLocation="Package4_0852.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4f43e7b4-93b4-42e8-b4c2-fe613ac4c969"
+            name="BreadCrumbsContainer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="20943155-79c7-47f3-af02-628d2b5cc6a7"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FFashionStore%2Fbin%2FFashionStore.dll Namespace%3DFashionStore.WorkFlow.BreadCrumbs.Container Type%3DBreadCrumbsContainer Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="83f4aad4-65eb-4edf-a002-f8583c850d1a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b325b3db-b509-4f92-aa83-f9a596c7d8b2">
+                    <propertyInstance
+                      Id="39069eab-bf3d-4999-b9a2-6316d19eae23"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="97d817cc-201d-4e02-a570-8ee2502a64fd">
+                    <propertyInstance
+                      Id="70d46e69-daf8-4a44-a7b2-3c663c619e4c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="727a602b-7d8c-4745-922f-559a82cc81a7">
+                    <propertyInstance
+                      Id="f5009c7c-db86-47e7-bc69-b834eb430057"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b3ffb2a8-d76d-4496-b599-9656e227212d">
+                    <propertyInstance
+                      Id="a31cd9e1-5dbe-49a3-a6bc-9c23ddb250f6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e95f8bd9-cb5e-40bc-b8d5-b1e093c5e35e">
+                    <propertyInstance
+                      Id="839fe9cd-550b-4011-ad99-4c6809c108e0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7fdfbdcc-b6cb-4c58-8a68-9c85fc317c48">
+                    <propertyInstance
+                      Id="6c7f1ea0-5e68-429f-b704-c9d1dad6f4b6"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="14e1cd77-6c43-446a-8fa0-dd2251ca5ee4"
+        LastKnownName="Base"
+        LastKnownLocation="Package_1850.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

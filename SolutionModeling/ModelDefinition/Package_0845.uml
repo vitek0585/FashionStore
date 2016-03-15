@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="81792983-a016-4ac7-a4df-d113d298f51c"
+  name="Sql"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="bcff2c4a-b4e5-47f8-ac3d-547f1b61e19e"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DWebLogger.Abstract.Interface.Sql"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="00cbbb2c-48e8-4b29-b02f-ed4d9a33465f"
+        name="ILogReaderSql"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="96df46dc-3acc-49a4-9c9f-9e3b3334cafd"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.Abstract.Interface.Sql Type%3DILogReaderSql"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="49710850-27ec-4469-93c2-a92e26df065e"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="785dd94c-dd58-4c34-982f-5a842a32181a">
+                <propertyInstance
+                  Id="3831c6ce-ddaf-4fb9-a325-04676abe0689"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b7c87c79-a104-4bf4-8d77-6663cc74e895">
+                <propertyInstance
+                  Id="5cf41638-fc3d-4bfc-ad25-531527824a18"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f542762b-ca2b-4bf8-9714-9d5c9c50198b">
+                <propertyInstance
+                  Id="8136668c-dca5-4c4e-87ed-4c28bb8ca240"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fafd52df-73a6-4fe7-a14d-650089a05f8d">
+                <propertyInstance
+                  Id="b8f50fc4-6975-4018-bb59-a8cae0c4c0d0"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="c497c401-2dad-4ab4-8397-72769779d7d8"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="0a7f9f11-60e3-43f9-89dd-f7806ba31627"
+              LastKnownName="ILogReader&lt;ExpandoObject‎&gt;"
+              LastKnownLocation="Package14_1720.uml" />
+          </generalization>
+          <generalization
+            Id="4ee95a23-d2b0-4560-a4f5-e6cf118e582f"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="2a9c4d1c-59ee-411a-9d26-cfe01625b054"
+              LastKnownName="ILogReader"
+              LastKnownLocation="Package14_1720.uml" />
+          </generalization>
+          <generalization
+            Id="2326d915-924d-451c-970a-a822e9b54b49"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="7528219a-aa05-412e-aa4a-21a0d946abc6"
+              LastKnownName="ILogReader&lt;TRead‎&gt;"
+              LastKnownLocation="Package14_1720.uml" />
+          </generalization>
+        </generalsInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="75894d09-74de-43ad-b702-e7f52286fe38"
+        name="ILogWriterSql"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="f44040a3-7cf5-4d02-bed3-e25421bc5d0c"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FD:%2FDiplom%2FFashionStore%2FLogger%2Fbin%2FDebug%2FLogger.dll Namespace%3DWebLogger.Abstract.Interface.Sql Type%3DILogWriterSql"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a50f6950-50b2-4981-bd23-61851d1b7399"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1073c455-6912-478f-bab2-0dcfa824de5b">
+                <propertyInstance
+                  Id="982bcab9-6fb1-488d-98ba-d10596c0da79"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="769f4359-bcc7-4471-bd50-4be0874f67e1">
+                <propertyInstance
+                  Id="54e3471a-d39b-4266-a3a6-87d5c9e1d3c7"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="837e971b-65e2-40b4-abba-a4eacbc536ba">
+                <propertyInstance
+                  Id="a005d1d8-ee29-4c11-b852-1fc38786653c"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="de8a436c-874c-4163-ab0f-dfe1f071c3be">
+                <propertyInstance
+                  Id="bf616388-9eab-4977-b3a4-23d1a055324e"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="d4de9e51-8924-4e67-b3ca-c3b4dbebbf08"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="7db44d1a-cdd3-4d19-acaa-3e98d1f9f70d"
+              LastKnownName="ILogWriter&lt;String‎&gt;"
+              LastKnownLocation="Package14_1720.uml" />
+          </generalization>
+          <generalization
+            Id="63bb3bc1-1140-4289-86ae-91ea9939d209"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="b9390ed8-126c-4dae-b3c1-bd8be3c26e91"
+              LastKnownName="ILogWriter"
+              LastKnownLocation="Package14_1720.uml" />
+          </generalization>
+          <generalization
+            Id="1d00c323-2cd6-4182-9d67-beaaa3ae6015"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="c003e079-6b36-4ec7-b54c-199459d8cf05"
+              LastKnownName="ILogWriter&lt;TWrite‎&gt;"
+              LastKnownLocation="Package14_1720.uml" />
+          </generalization>
+        </generalsInternal>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

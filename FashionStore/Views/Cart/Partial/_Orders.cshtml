@@ -1,0 +1,115 @@
+﻿@using FashionStore.Models.Order
+
+@{
+    var href = "/Fashion/Good";
+    var name = Html.GetName<UserOrderModel>(o => o.GoodName);
+    var id = Html.GetName<UserOrderModel>(o => o.GoodId);
+    var clsId = Html.GetName<UserOrderModel>(o => o.ClassificationId);
+    var color = Html.GetName<UserOrderModel>(o => o.ColorName);
+    var colorId = Html.GetName<UserOrderModel>(o => o.ColorId);
+    var photos = Html.GetName<UserOrderModel>(o => o.Photos);
+    var price = Html.GetName<UserOrderModel>(o => o.PriceUsd);
+    var priceDisc = Html.GetName<UserOrderModel>(o => o.PriceWithDiscount);
+    var discount = Html.GetName<UserOrderModel>(o => o.Discount);
+    var count = Html.GetName<UserOrderModel>(o => o.CountGood);
+    var size = Html.GetName<UserOrderModel>(o => o.SizeName);
+    var sizeId = Html.GetName<UserOrderModel>(o => o.SizeId);
+}
+
+<table class="table table-bordered" ng-cloak="true">
+    <col width="15%"></col>
+    <col width="20%"></col>
+    <col width="15%"></col>
+    <col width="30%"></col>
+    <col width="15%"></col>
+
+    <tr>
+        <th colspan="2">@Resource.Name</th>
+        <th>@Resource.Price</th>
+        <th>@Resource.Details</th>
+        <th>@Resource.Summa</th>
+    </tr>
+
+    <tr ng-repeat="item in cartVm.items" ng-controller="goodsDetailsCtrl as detailVm">
+        <td>
+            <a ng-href="@href/{{::item.@id}}">
+                <div ng-style="{'background':'url(/Image/Products/{{::item.@photos&nbsp;[0]}}) no-repeat center','background-size': 'contain'}" class="cart-img" ng-if="item.photos!=null">
+                </div>
+                <div class="none-img" ng-if="item.@photos==null"></div>
+            </a>
+        </td>
+        <td style="position: relative">
+            <div>
+                {{item.@name}}
+            </div>
+            <a class="btn btn-sm btn-danger remove btn-cart-table"
+               ng-click="detailVm.openModal(item.@clsId)">
+                @Resource.Remove <i class="glyphicon glyphicon-remove"></i>
+            </a>
+            <div modal-window
+                 ok-txt="@Resource.Ok"
+                 open="detailVm.open"
+                 cancel-txt="@Resource.Cancel"
+                 msg="'@Resource.DoYouWantRemove'"
+                 ok-hadler="detailVm.remove()"></div>
+           
+        </td>
+        <td>
+            {{item.@priceDisc|currencyExtend:0}}
+        </td>
+        <td style="position: relative" ng-init="detailVm.initCurrent(item);" class="cart-details">
+            <div ng-switch on="detailVm.view">
+                @*details*@
+                <div ng-switch-when="det">
+                    <p>
+                        <b>@Resource.Count:</b>&nbsp;{{detailVm.current.@count}}
+                    </p>
+                    <p>
+                        <b>@Resource.Color:</b>&nbsp;<label ng-style="{'background-color':detailVm.current.@color}" class="color-size">&nbsp;</label>
+                    </p>
+                    <p>
+                        <b>@Resource.Size:</b>&nbsp;{{detailVm.current.@size}}
+                    </p>
+                    <a class="btn btn-primary btn-buy btn-cart-table" ng-click="detailVm.getDetails(item.@id)">@Resource.Change</a>
+                </div>
+                @*details change*@
+                <div ng-switch-when="det-corr">
+                    <div><b>@Resource.Count MAX:</b>&nbsp;{{detailVm.details|filterBy:detailVm.current:'@count'}} </div>
+                    <div>
+                        <input name="@count" ng-model="detailVm.current.@count" type="number" class="form-control" min="1" ng-class="{'custom-invalid': (detailVm.details|correctBy:detailVm.current:'@count')}" />
+                    </div>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-primary" ng-repeat="(key,value) in detailVm.details|groupBy : 'colorId'"
+                               ng-class="{'active': value[0].@colorId==detailVm.current.@colorId}"
+                               ng-style="::{'background-color':value[0].colorName}"
+                               ng-click="detailVm.select(value[0],'@colorId','@sizeId')">
+                            <input type="radio" name="options">
+                        </label>
+                    </div>
+                    <div select-by-radio details="detailVm.details" ng-cloak="true" class="selectpicker" current="detailVm.current"></div>
+                    <div class="btn-cart-table">
+                        <button class="btn btn-primary btn-buy" ng-click="detailVm.saveDetail('@size','@color','@clsId','@count');"
+                                ng-disabled="(detailVm.details|correctBy:detailVm.current:'@count')">
+                            @Resource.Save
+                        </button>
+                        <a class="btn btn-primary btn-buy" ng-click="detailVm.cancel()">@Resource.Cancel</a>
+                    </div>
+                </div>
+            </div>
+            @*spiner*@
+            <div class="loader-products" ng-if="vm.isWaiter">
+                <div class="flexbox-container" style="height: 170px">
+                    <img src="~/Image/loader.gif" alt="loading" style="height: 3em; width: 3em">
+                </div>
+            </div>
+        </td>
+        <td>
+            <div ng-cloak>
+                {{(item.@priceDisc*detailVm.current.@count)|currencyExtend:0}}
+            </div>
+        </td>
+
+    </tr>
+
+</table>
+

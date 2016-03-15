@@ -1,0 +1,73 @@
+﻿@model ITypeCategoryModel<ICategoryModel>
+
+@{
+    ViewBag.Title = string.Concat(Resource.Categories.ToUpper(), "-", Model.TypeName);
+    var hreffCss = string.Format(@"/Content/Site/categories-{0}.css", Model.TypeByHref.ToLower());
+    var imgSrc = Model.TypeByHref.ToLower();
+}
+<div class="row home" ng-cloak id="container">
+    <div class="container">
+        @Html.GenerateBreadCrumbs(new BreadCrumbsCompose(new SimpleBcBuilder(Url, Resource.Main, Model.TypeName)))
+        <div class="row">
+            <div class="text-center">
+                <p class="separator"></p>
+                <span class="separator-text">@Model.TypeName</span>
+            </div>
+        </div>
+
+        @*Carousel*@
+        <div class="index-caroudel shadow">
+            <slick infinite="true" slides-to-show="1" slides-to-scroll="1" arrows="false" autoplay-speed="4000" autoplay="true"
+                   speed="700" fade="true"
+                   id="carousel-base">
+                <div class="carousel-slide filter-graysc" style="background: url(/Image/Carousel/banner-@imgSrc-big.jpg) no-repeat;background-position: 50%;" >
+                    @Html.Partial("Widgets/_CarouselSlide")
+                </div>
+                <div class="carousel-slide  filter-graysc" style="background: url(/Image/Carousel/banner-@imgSrc-big2.jpg) no-repeat;background-position: 50%;" >
+                    @Html.Partial("Widgets/_CarouselSlide")
+                </div>
+                <div class="carousel-slide  filter-graysc" style="background: url(/Image/Carousel/banner-@imgSrc-big3.jpg) no-repeat; background-position: 50%;" >
+                    @Html.Partial("Widgets/_CarouselSlide")
+                </div>
+                <div class="carousel-slide  filter-graysc" style="background: url(/Image/Carousel/banner-@imgSrc-big4.jpg) no-repeat;background-position: 50%;" >
+                    @Html.Partial("Widgets/_CarouselSlide")
+                </div>
+            </slick>
+        </div>
+        @*Sales*@
+        <div class="row">
+            <div class="sale-widg-prods">
+                @Html.Action("Sale", new { type = Model.TypeByHref })
+            </div>
+        </div>
+        @*End Sales*@
+        @*Categories*@
+        <div class="row">
+            <div class="col-xs-12 all-product">
+                <div class="row">
+                    <div class="text-center">
+                        <p class="separator"></p>
+                        <span class="separator-text">@Model.TypeName</span>
+                    </div>
+                </div>
+                <div>
+                    @foreach (var item in Model.Items)
+                    {
+                        @Html.Partial("Partial/_CategoryWidget", item, new ViewDataDictionary { { "type", Model.TypeByHref } })
+
+                    }
+                </div>
+            </div>
+        </div>
+        @*End Categories*@
+    </div>
+   
+
+</div>
+
+
+@section scripts
+{
+    @Styles.Render("~/bundles/categoriesCss")
+    <link href="@hreffCss" rel="stylesheet" />
+}

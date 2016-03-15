@@ -37,8 +37,8 @@
                                 left = elePos.left - 25;
                                 break;
                             case 'right':
-                                top = elePos.top - 5;
-                                left = elePos.left + $(element).width() + 15;
+                                top = elePos.top - 15;
+                                left = elePos.left + $(element).width() + 10;
                                 break;
                             case 'left':
                                 top = elePos.top - 5;

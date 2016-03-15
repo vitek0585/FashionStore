@@ -1,0 +1,79 @@
+﻿@model IFilterModel
+
+    <div class="filter-container">
+        @*Filter*@
+        <h4 class="text-center text-uppercase">@Resource.Filter</h4>
+        <uib-accordion close-others="false" ng-init="initFilterData(@Model.Min,@Model.Max,@Html.SerializeToJson(Model.Colors),@Html.SerializeToJson(Model.Sizes))" ng-cloak>
+            @*Price*@
+            <uib-accordion-group is-open="status.isOpenPrice">
+                <uib-accordion-heading>
+                    <span class="text-uppercase">@Resource.Price</span>
+                    <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isOpenPrice, 'glyphicon-chevron-right': !status.isOpenPrice}"></i>
+                </uib-accordion-heading>
+                <div range-slider
+                     floor="@Model.Min"
+                     ceiling="@Model.Max"
+                     precision="0"
+                     highlight="true"
+                     ng-model-low="filter.priceMin"
+                     ng-model-high="filter.priceMax">
+                </div>
+                <p>@Resource.Price: {{filter.priceMin|currencyExtendConvertToGrn:@Model.ExchangeRates}} - {{filter.priceMax|currencyExtendConvertToGrn:@Model.ExchangeRates}}</p>
+            </uib-accordion-group>
+            @*End Price*@
+            @*Color*@
+            <uib-accordion-group is-open="status.isOpenColor">
+                <uib-accordion-heading>
+                    <span class="text-uppercase">@Resource.Color</span>
+                    <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isOpenColor, 'glyphicon-chevron-right': !status.isOpenColor}"></i>
+                </uib-accordion-heading>
+                <div az-suggest-box sb-list="colors" class="suggest-box"
+                     sb-model-selected="filter.colorsSelect"
+                     sb-is-open-always="true"
+                     sb-is-open="true" sb-allow-duplicates="false">
+                    <div class="select">
+                        <div class="input">
+                            <div sb-selection-item class="selection-item">
+                                <span ng-style="::{'background-color':s.color}" style="width: 10px; height: 10px; border-radius: 50%"></span>&nbsp;
+                                {{::s.name}}&nbsp;
+                                <span sb-remove-item-from-selection class="rem-btn"><i class="fa fa-times"></i></span>
+                            </div>
+                            @*<input sb-trigger-area sb-type-ahead tabindex="1">*@
+                        </div>
+                        <button ng-show="model.length>0" ng-click="clearAll()" class="clear-filter-btn" tooltip="@Resource.ClearFilter" tooltip-pos="top"><i class="glyphicon glyphicon-remove-circle"></i></button>
+                    </div>
+                    <ul class="dropdown">
+                        <li sb-dropdown-item class="item">{{::i.name}}</li>
+                    </ul>
+                </div>
+            </uib-accordion-group>
+            @*End Color*@
+            @*Size*@
+            <uib-accordion-group is-open="status.isOpenSize">
+                <uib-accordion-heading>
+                    <span class="text-uppercase">@Resource.Size</span>
+                    <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isOpenSize, 'glyphicon-chevron-right': !status.isOpenSize}"></i>
+                </uib-accordion-heading>
+                <div az-suggest-box sb-list="sizes" class="suggest-box" sb-is-open-always="true"
+                     sb-model-selected="filter.sizesSelect"
+                     sb-is-open="true" sb-allow-duplicates="false">
+                    <div class="select">
+                        <div class="input">
+                            <div sb-selection-item class="selection-item">
+                                {{::s.name}}&nbsp;
+                                <span sb-remove-item-from-selection class="rem-btn"><i class="fa fa-times"></i></span>
+                            </div>
+                        </div>
+                        <button ng-show="model.length>0" ng-click="clearAll()" class="clear-filter-btn" tooltip="@Resource.ClearFilter" tooltip-pos="top"><i class="glyphicon glyphicon-remove-circle"></i></button>
+                    </div>
+                    <ul class="dropdown">
+                        <li sb-dropdown-item class="item">{{::i.name}}</li>
+                    </ul>
+                </div>
+            </uib-accordion-group>
+            @*End Size*@
+        </uib-accordion>
+        <button class="btn btn-white hvr-back-pulse" ng-click="filterAccept()">@Resource.Accept</button>
+        @*End Filter*@
+    </div>
+

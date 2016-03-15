@@ -1,0 +1,46 @@
+﻿/*for sale effect*/
+.text-effect {
+
+  color: rgba(255,255,255,1);
+text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #cecfe0 , 0 0 70px #d66fad , 0 0 80px #00ddff , 0 0 100px #003fff ;
+
+}
+
+.sale-widg-prods:hover .text-effect {
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;
+ 
+}
+
+.sale-widg-prods .category-text-widg {
+    color: #F4F3F8;
+        background: rgba(193, 38, 80, 0.57);
+   
+}
+.sale-widg-prods .category-widg:hover .category-text-widg {
+            background: rgba(193, 38, 80,1);
+
+}
+
+.sale-widg-prods .slick-dots li button:before {
+   
+    color: #F70202;
+  
+}
+.sale-widg-prods .slick-dots li.slick-active button:before {
+   color: #F70202;
+}
+.sale-widg-prods .btn-buy {
+    background: #EF6ABF;
+}
+.sale-widg-prods .btn-buy:hover {
+    background: #FB04A2;
+}
+
+.category-text-widg {
+    color: #F4F3F8;
+    background: rgba(239, 106, 191,0.57);
+
+}
+.category-widg:hover .category-text-widg {
+    background:#FB04A2;
+}

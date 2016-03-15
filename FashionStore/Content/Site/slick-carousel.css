@@ -1,0 +1,242 @@
+﻿/*#carousel-base .slick-slide img {
+     display: inline-block; 
+}*/
+.index-caroudel {
+    width: 100%;
+    max-height: 420px;
+        overflow: hidden;
+}
+
+.shadow {
+    box-shadow: 0 0 20px #EFEEF3;
+}
+/*.slick-slide .img {
+      height: 420px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    display: inline-block;
+    width:100%
+}*/
+.slick-prev:before, .slick-next:before {
+    font-size: 15px;
+    color: #888888;
+    background: transparent;
+}
+
+.slick-next {
+    right: 10px;
+    z-index: 100;
+}
+
+.slick-prev {
+    left: 10px;
+    z-index: 100;
+}
+
+    .slick-prev:before {
+        font-family: 'Glyphicons Halflings';
+        content: '\e079';
+    }
+
+.slick-next:before {
+    font-family: 'Glyphicons Halflings';
+    content: '\e080';
+}
+
+.slick-next:hover::before,
+.slick-prev:hover::before {
+    color: #000;
+}
+
+
+/*inner carousel*/
+.carousel-slide {
+    width: 100%;
+    height: 420px;
+    background: #F1F1EF;
+    text-transform: uppercase;
+}
+
+.flexbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-text {
+    margin-top: 1em;
+    font-size: 4em;
+    font-weight: 500;
+}
+
+.title-text-sait {
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 2;
+}
+
+.title-text-sale {
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 2;
+    position: absolute;
+    bottom: 10px;
+}
+
+.btn-buy {
+    background: #DBB879;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    /*height: 2.5em;
+    width: 9em;
+    font-size: 1.1em;*/
+    transition: background .2s;
+}
+
+    .btn-buy:hover {
+        background: #000;
+    }
+
+/*products for gender*/
+.prod-container {
+    position: relative;
+}
+
+.other-prod {
+    margin-top: 6px;
+}
+
+    .other-prod img {
+        width: 100%;
+    }
+
+    .fast-info-big-base,
+    .other-prod .fast-info-big,
+    .other-prod .fast-info,
+    .category-widg .fast-info {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 5px;
+        right: 5px;
+        background: rgba(241, 241, 239, 0.65);
+    }
+
+.fast-info-big-base {
+    background: none;
+}
+
+.fast-info {
+    transform: scale(0,1);
+    transition: .4s;
+}
+
+.category-widg .fast-info {
+    margin: 0 -5px;
+}
+
+.fast-info-big {
+    transform: scale(0,0);
+    transition: 0s;
+}
+
+    .fast-info-big-base .speed-info-title,
+    .fast-info-big .speed-info-title {
+        margin-top: 1em;
+        font-size: 3em;
+        font-weight: 500;
+    }
+
+.category-widg:hover .fast-info {
+    transform: scale(1,1);
+}
+
+.other-prod > .col-xs-5:hover > .fast-info-big {
+    transform: scale(1,1);
+    transition: .5s;
+}
+
+.other-prod > .col-xs-5:hover > .fast-info-big-base {
+    opacity: 0;
+    z-index: -1;
+}
+
+.speed-info-title {
+    text-transform: uppercase;
+}
+
+    .speed-info-title .btn-buy {
+        width: 3em;
+    }
+/*Post*/
+.post {
+    font-size: .8em;
+    height: 190px;
+}
+
+.btn-post {
+    margin-top: 1em;
+    background: #fff;
+    text-transform: uppercase;
+    color: #000000;
+    border: 1px #F1F1EF solid;
+    height: 3em;
+    width: 10em;
+    font-size: .8em;
+    transition: all .2s;
+}
+
+    .btn-post:hover {
+        background: #DBB879;
+        color: #ffffff;
+    }
+
+@media (min-width: 992px) {
+    .other-prod .col-xs-4 {
+        margin-bottom: 36px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .prod-container {
+        width: 1300px;
+        margin: auto;
+    }
+}
+
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 50px;
+    height: 75px;
+    padding: 0;
+    margin-top: -10px\9;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    /*background: rgb(0, 0, 0);*/
+}
+
+    /*.slick-prev:hover:after, .slick-next:hover:after {
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        content: ' ';
+        background: green;
+    }
+
+    .slick-prev:hover, .slick-next:hover {
+        height: 100%;
+        background: white;
+    }*/
