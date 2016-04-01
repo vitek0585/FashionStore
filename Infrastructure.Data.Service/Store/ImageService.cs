@@ -20,7 +20,7 @@ namespace FashionStore.Infrastructure.Data.Service.Store
 
         }
 
-        public async Task<Image> AddImage(int id, byte[] image, string path)
+        public async Task<Image> AddImageAsync(int id, byte[] image, string path)
         {
             if (File.Exists(path))
                 throw new ArgumentException("The file name already exists");

@@ -6,6 +6,6 @@ namespace FashionStore.Service.Interfaces.Services
 {
     public interface IImageService : IEntityService<Image>
     {
-        Task<Image> AddImage(int id, byte[] image, string path);
+        Task<Image> AddImageAsync(int id, byte[] image, string path);
     }
 }

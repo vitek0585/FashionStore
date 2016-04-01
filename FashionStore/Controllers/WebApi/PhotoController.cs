@@ -20,25 +20,24 @@ namespace FashionStore.Controllers.WebApi
     public class PhotoController : ApiController
     {
         private IUnitOfWork _unit;
-        private IImageService _image;
+        private IImageService _imageService;
         private ILogWriterSql _log;
 
-        public PhotoController(IUnitOfWorkStore unit, IImageService image, ILogWriterSql log)
+        public PhotoController(IUnitOfWorkStore unit, IImageService imageService, ILogWriterSql log)
         {
-            _image = image;
+            _imageService = imageService;
             _log = log;
             _unit = unit;
         }
         [HttpPost]
         [Route("AddPhoto")]
-        public async Task<HttpResponseMessage> AddPhoto(int id, FileData file)
+        public async Task<HttpResponseMessage> AddImage(int id, FileData file)
         {
 
             try
             {
-
-                var path = HttpContext.Current.Server.MapPath(ValuesApp.ConvertImageNameToAbsolutePath(file.FileName));
-                var img = await _image.AddImage(id, file.Data, path);
+                var path = GetPath(file);
+                var img = await _imageService.AddImageAsync(id, file.Data, path);
                 return Request.CreateResponse(HttpStatusCode.Created, img.ImagePath);
 
             }
@@ -54,6 +53,11 @@ namespace FashionStore.Controllers.WebApi
                 return Request.CreateResponse(HttpStatusCode.BadRequest);
             }
 
+        }
+
+        private string GetPath(FileData file)
+        {
+            return HttpContext.Current.Server.MapPath(ValuesApp.ConvertImageNameToAbsolutePath(file.FileName));
         }
 
         [HttpPost]
